@@ -1,0 +1,816 @@
+name,name_type
+pip方式,安装方式
+MindSpore Ascend,工具
+910,数字
+mindspore-ascend-,工具
+版本,系统名词
+Open MPI-,工具
+open-mpi-可选,工具
+MindSpore,工具
+mindspore,工具
+https://gitee.com/mindspore/docs/blob/r1.7/install/mindspore_ascend_install_pip.md,链接
+ target=_bla,命令
+src,工具
+https://mindspore-website.obs.cn-north-4.myhuaweicloud.com/website-images/r1.7/resource/_static/logo_source.png,链接
+Ascend,工具
+Linux,系统
+昇腾AI处理器配套软件包,工具
+EulerOS 2.8,系统
+pip,工具
+https://gitee.com/mindspore/mindspore/raw/r1.7/scripts/install/euleros-ascend-pip.sh,链接
+脚本,系统名词
+依赖,系统名词
+系统,系统名词
+Ubuntu 18.04,系统
+CentOS 7.6,系统
+OpenEuler20.03,系统
+KylinV10 SP1,系统
+Python，GCC,工具
+昇腾ai处理器配套软件包,工具
+命令,系统名词
+1.6.0,数字
+wget,命令
+1.7.0,数字
+Python,工具
+3.7,数字
+LOCAL_ASCEND,命令
+路径,系统名词
+/usr/local/Asce,命令
+nd,链接
+3.9,数字
+/home/xxx/Ascend,链接
+GCC，gmp,工具
+APT,安装方式
+Python3,工具
+pip3,工具
+OPENMPI,工具
+Open MPI,工具
+终端窗口,系统名词
+环境变量,系统名词
+虚拟环境,系统名词
+系统环境,系统名词
+软件名称,系统名词
+编译和运行Mind,系统
+re的操作系统,系统
+3.7-3.9,数字
+环境,系统名词
+python,工具
+AI计算库,系统名词
+GCC,工具
+7.3.0,数字
+MindSpore的C++,工具
+gcc,工具
+gmp,工具
+6.1.2,数字
+多精度算术库,系统名词
+4.0.3,数字
+高性,系统名词
+消息传递库,系统名词
+单机多卡,系统名词
+多机多卡,系统名词
+https://www.python.org/,链接
+Conda,工具
+curl,命令
+https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-py37_4.10.3-Linux-x86_64.sh,链接
+清华源,系统名词
+https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/,链接
+3.7.5,数字
+python --ver,命令
+sion,工具
+19.3,数字
+Ascend Data Center Solution,工具
+22.0.RC,命令
+https://support.huawei.com/enterprise/zh/doc/EDOC1100246310,链接
+用户,人物
+权限,系统名词
+root用户,人物
+用户组,人物
+whl,工具
+指令,系统名词
+CentOS 7,系统
+GCC 7,工具
+EulerOS,系统
+OpenEuler,系统
+，EulerOS,系统
+https://www.open-mpi.org/,链接
+https://download.open-mpi.org/release/open-mpi/v4.0/openmpi-4.0.3.tar.gz,链接
+ma,工具
+ke,工具
+https://www.mindspore.cn/versions,链接
+SHA-256,工具
+系统架构,系统名词
+x86_64,系统名词
+3.8,数字
+aarc,系统名词
+64,系统名词
+安装包,系统名词
+https://gitee.com/mindspore/mindspore/blob/r1.7/setup.py,链接
+ModelZoo,工具
+https://gitee.com/mindspore/models/tree/r1.7/,链接
+https://gitee.com/mindspore/mindspore/blob/r1.7/requirements.txt,链接
+AL_ASCEND=/usr/local/Ascend`的`/usr/local/A,命令
+ envir,命令
+onmental options,工具
+LOCAL_ASCEND=/usr/local/Ascend,命令
+ot directory of r,工具
+un pac,命令
+kage,工具
+ronment variables that must be conf,命令
+igured,工具
+AICPU p,命令
+"ath
+",工具
+python -c import ,命令
+mindspor,工具
+e;mindspore.run_c,命令
+heck(,工具
+MindSpore version:,工具
+"he result of multiplication calculation is correct, Mi",命令
+ndSpore h,工具
+as been installed succ,命令
+fr,工具
+"om mindspore import Tensor
+",工具
+impor,命令
+t mindspore.context as context,工具
+.astype(np.fl,命令
+oat,工具
+32,链接
+源码编译方式,安装方式
+MindSpore CPU,工具
+macOS,工具
+-macOS,工具
+mindspore-cpu版本-macos,工具
+代码,系统名词
+源码,系统名词
+https://gitee.com/mindspore/docs/blob/r1.7/install/mindspore_cpu_mac_install_source.md,链接
+mac,工具
+芯片,系统名词
+OS,系统名词
+计算架构,系统名词
+M1,系统名词
+ARM,工具
+11.3,数字
+3.8-3.9,数字
+Intel,工具
+10.15/11.3,数字
+https://www.python.org/ftp/python/3.7.5/python-3.7.5-macosx10.9.pkg,链接
+https://repo.huaweicloud.com/python/3.7.5/python-3.7.5-macosx10.9.pkg,链接
+3.8.0,数字
+https://www.python.org/ftp/python/3.8.0/python-3.8.0-macosx10.9.pkg,链接
+https://repo.huaweicloud.com/python/3.8.0/python-3.8.0-macosx10.9.pkg,链接
+3.9.0,数字
+https://www.python.org/ftp/python/3.9.0/python-3.9.0-macosx10.9.pkg,链接
+https://repo.huaweicloud.com/python/3.9.0/python-3.9.0-macosx10.9.pkg,链接
+Xcode,工具
+https://xcodereleases.com/,链接
+13.0,数字
+12.4,数字
+86,系统名词
+Command Line Tools for Xcode,工具
+code-select --install,命令
+Command Line Tools,工具
+CMake,工具
+3.18.3,数字
+https://cmake.org/download/,链接
+install cmake,工具
+patch 2.5,工具
+https://ftp.gnu.org/gnu/patch/,链接
+install patch,工具
+wheel,工具
+0.32.0,数字
+https://pypi.org/project/wheel/,链接
+git clone https://gitee.com/mindspore/mindspore.git -b r,命令
+1.7,链接
+bash build.sh -e cp,命令
+CPU,工具
+线程方式,安装方式
+scipy包时出,工具
+scipy包,工具
+MindSpore包,工具
+pip install --upgrade mindspo,命令
+re,工具
+MindSpore Ascend ,工具
+310,数字
+https://gitee.com/mindspore/docs/blob/r1.7/install/mindspore_ascend310_install_pip.md,链接
+MindSpore，Ascend,工具
+https://gitee.com/mindspore/mindspore/raw/r1.7/scripts/install/euleros-ascend310-pip.sh,链接
+cmake,工具
+https://cmake.org/,链接
+sudo apt-add-repository deb ,命令
+"ttps://apt.kitware.com/ubuntu/ $(lsb_release -cs) main
+",命令
+rc,工具
+h64,工具
+mkdi,工具
+r /usr/local/cmake-3.19.,命令
+"ibraries that the mindspore depends on, modify pip3 according to ",命令
+th,工具
+e actual situati,命令
+on,工具
+/home/HwHiAiUser/Ascend/ascend-toolkit/20.0.RC1/acllib_linux.arm64/sample/acl_execute_model/ascend310_single_op_samp,命令
+https://obs.dualstack.cn-north-4.myhuaweicloud.com/mindspore-website/sample_resources/ascend310_single_op_sample.zip,链接
+CMakeLists.txt,工具
+or_add.mindir ,工具
+MindIR模型,工具
+Conda方式,安装方式
+MindSpore GPU,工具
+mindspore-gpu,工具
+conda方式,安装方式
+TensorRT-可选,工具
+tensorrt-,工具
+conda,工具
+https://gitee.com/mindspore/docs/blob/r1.7/install/mindspore_gpu_install_conda.md,链接
+https://docs.conda.io/en/latest/,链接
+包管理与环境,系统名词
+二进制软件包,系统名词
+GPU,工具
+https://gitee.com/mindspore/mindspore/raw/r1.7/scripts/install/ubuntu-gpu-conda.sh,链接
+CUDA，Conda，GCC,工具
+NVIDIA GPU驱动,工具
+CUDA,工具
+418.3,数字
+.8,数字
+GPU驱动,工具
+软件源,系统名词
+root,人物
+11.,数字
+Python，CUDA,工具
+10.1,数字
+cuD,工具
+Conda并为MindSpore,工具
+Ubuntu|18.04,系统
+Mi,工具
+dS,工具
+10.1或11.1,数字
+cuda,工具
+cuDNN,工具
+7.6.x,数字
+或8.0.x,数字
+速库,系统名词
+cudnn,工具
+conda)|Anaconda3或Miniconda3,工具
+9.4.0,数字
+TensorRT,工具
+7.2.2,数字
+SDK,工具
+Serving,工具
+方式,安装方式
+https://developer.nvidia.com/cuda-toolkit-archive,链接
+https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html,链接
+file方式,安装方式
+CUDA前,工具
+sudo apt-get install linux-headers-$(uname -r,命令
+gcc-7,工具
+.80.0,数字
+驱动,系统名词
+https://developer.download.nvidia.com/compute/cuda/11.1.1/local_installers/cuda_11.1.1_455.32.00_linux.run,链接
+https://developer.download.nvidia.com/compute/cuda/10.1/Prod/local_installers/cuda_10.1.243_418.87.00_linux.run,链接
+https://developer.nvidia.com/zh-cn/cudnn,链接
+cuDN,工具
+10.,数字
+11.1,数字
+cuCUDA,工具
+11,数字
+者CUDA,工具
+Miniconda,工具
+"gmp
+",工具
+GCC 8,工具
+GCC 9（注意，GCC,工具
+nsorR,工具
+https://developer.nvidia.com/nvidia-tensorrt-7x-download,链接
+TensorR,工具
+AR格,工具
+7.2.2.3.Ubuntu-18.04.x86_64-gnu.cuda-11.1.cudnn8.0,链接
+ 3.8,数字
+conda install mindspore-gpu cudatoolkit=10.1 -c mi,命令
+ndspore -c conda-forge,工具
+conda install mindspore-gpu cudatoolkit=11.1 -c mi,命令
+MindSpore时会,工具
+nvcc,工具
+CUD,工具
+context.set_context(device_target=,命令
+GPU,工具
+-Window,命令
+indows,工具
+mindspore-cpu版本-windows,工具
+https://gitee.com/mindspore/docs/blob/r1.7/install/mindspore_cpu_win_install_pip.md,链接
+ target=_blan,命令
+社区,系统名词
+Windows（CPU,工具
+源码编译,安装方式
+https://www.mindspore.cn/news/newschildren?id,链接
+364,系统名词
+mingfu,工具
+https://gitee.com/lvmingfu,链接
+Windows,工具
+10,数字
+x86架构64,系统名词
+https://www.python.org/ftp/python/3.7.5/python-3.7.5-amd64.exe,链接
+https://mirrors.huaweicloud.com/python/3.7.5/python-3.7.5-amd64.exe,链接
+https://www.python.org/ftp/python/3.8.0/python-3.8.0-amd64.exe,链接
+https://mirrors.huaweicloud.com/python/3.8.0/python-3.8.0-amd64.exe,链接
+https://www.python.org/ftp/python/3.9.0/python-3.9.0-amd64.exe,链接
+https://mirrors.huaweicloud.com/python/3.9.0/python-3.9.0-amd64.exe,链接
+系统环境变量,系统名词
+系统变量,系统名词
+Path，将`python.exe,工具
+python.exe,工具
+1.5.0,数字
+MindSpore CPU Nightly,工具
+mindspore-cpu-nightly,工具
+https://gitee.com/mindspore/docs/blob/r1.7/install/mindspore_cpu_install_nightly.md,链接
+MindSpore Nightly,工具
+Ub,系统
+36,系统名词
+https://gitee.com/damon0626,链接
+Ubuntu,系统
+18.0,数字
+ 3.7,数字
+ 7.3.0,数字
+MindSpore的C++编,工具
+6.1.,数字
+conda init bas,命令
+"h
+",工具
+conda create -n mindspore_py37 python=3.7.5 ,命令
+-y,工具
+Nightly,工具
+MindSpore，如,工具
+setuptools,工具
+git gmp tclsh patch NUMA Flex,工具
+git-gmp-tclsh-patch-numa-flex,工具
+https://gitee.com/mindspore/docs/blob/r1.7/install/mindspore_ascend_install_source.md,链接
+https://gitee.com/mindspore/mindspore/raw/r1.7/scripts/install/euleros-ascend-source.sh,链接
+GCC，CMake,工具
+44.0,数字
+git,工具
+源代码,系统名词
+git-lfs,工具
+-|MindSpore,工具
+Flex,工具
+2.5.35,数字
+词法分析器,系统名词
+tclsh,工具
+MindSpore sqlite,工具
+patch,工具
+2.5,数字
+NUMA,工具
+2.0.11,数字
+非一致性内存访问库,系统名词
+https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh,链接
+sudo bash,链接
+git-lfs-linux-*-v,工具
+3.1,数字
+.2.tar.gz -C ,命令
+"git-lfs
+",工具
+cd mi,命令
+ndspore,工具
+bash build.sh -e ascend -S ,命令
+github,工具
+gitee,工具
+镜像,系统名词
+pip install --upgrade mindspore-asce,命令
+https://gitee.com/mindspore/docs/blob/r1.7/install/mindspore_cpu_win_install_source.md,链接
+源码编译方法,安装方式
+https://www.mindspore.cn/news/newschildren?id=3,链接
+Visual C++,工具
+Redistribut,工具
+able for ,命令
+Visual,工具
+Studio,工具
+https://www.microsoft.com/zh-CN/download/details.aspx?id=48145,链接
+https://github.com/git-for-windows/git/releases/download/v2.29.2.windows.2/Git-2.29.2.2-64-bit.exe,链接
+git没,工具
+ProgramFiles,工具
+patch.exeD:,命令
+\git,工具
+set MS_PATCH_PATH=D:\git\,命令
+MinGW-W64,工具
+GCC-7,工具
+.3.0,数字
+https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting,链接
+%20Win64/Personal%20Builds/mingw-builds/7.3.0/threads-posix/seh/x86_64-7.3.0-release-posix-seh-rt_v5-r,命令
+ev0.7z,链接
+MinGW\bin,工具
+D:\gcc,工具
+Path中,工具
+https://github.com/Kitware/Cmake/releases/tag/v3.18.3,链接
+ActivePerl,工具
+5.28.1.,数字
+https://downloads.activestate.com/ActivePerl/releases/5.28.1.2801/ActivePerl-5.28.1.2801-MSWin32-x64-24563874.exe,链接
+Path中，Python,工具
+port mindspore`应在MindSpore源码,工具
+ndows,工具
+-ma,命令
+-mac,工具
+https://gitee.com/mindspore/docs/blob/r1.7/install/mindspore_cpu_mac_install_pip.md,链接
+-Windows,工具
+本-windows,工具
+https://gitee.com/mindspore/docs/blob/r1.7/install/mindspore_cpu_win_install_nightly.md,链接
+damon0,工具
+Ubuntu18.04,系统
+ms-sd@,链接
+mssd:~$ ,工具
+unam,链接
+e -a,工具
+Linux mssd 5.4.0-42-generic #46~18.04.1-Ub,命令
+tuS,系统
+ri,工具
+ul,系统
+86_64,系统名词
+GNU,工具
+GCC ,工具
+7.5.0,数字
+Ubuntu7.5.0-3ubuntu1~18.04,系统
+.5.0,系统
+Copy,命令
+right (C,工具
+2017,数字
+Free,工具
+"Software Foundation, Inc.",工具
+GCC7,工具
+https://ftp.gnu.org/gnu/gcc/gcc-7.3.0/gcc-7.3.0.tar.gz,链接
+cd gcc-7,命令
+this from the top level of the,工具
+gcc source tree and the,工具
+gc,工具
+c build will ,命令
+do the right thing.,工具
+2020-12-19 09:58:33 URL: ftp://gcc.gnu.org/pub/gcc/infrastructure/gmp-6.1.0,命令
+.tar.,链接
+238,系统
+./gmp-6,命令
+.1.0.tar.,链接
+2020-12-19 10:00:01 URL: ftp://gcc.gnu.org/pub/gcc/infrastructure/mpfr-3.1.4.tar,命令
+284,系统名词
+./mpfr,命令
+-3.1.4.tar.,链接
+2020-12-19 10:00:50 URL: ftp://gcc.gnu.org/pub/gcc/infrastructure/mpc-1.0,命令
+.3.tar.,链接
+669,系统名词
+925,工具
+./mpc-,命令
+1.0.3.tar.,链接
+2020-12-19 10:03:10 URL: ftp://gcc.gnu.org/pub/gcc/infrastructure/isl-0,命令
+.16.1.tar,链接
+1626446,系统名词
+./isl-0.16,命令
+.1.t,链接
+mpfr-,命令
+3.1.4.,数字
+线程,系统名词
+ms-sd@mssd:~/gcc-7.3.0/build$ m,命令
+ak,链接
+mssd:~$ sudo make instal,工具
+变更,系统名词
+ms-sd@mssd:~$ gcc --ver,命令
+right ,工具
+Ubuntu18.,系统
+3.6.9,数字
+多个,系统名词
+ms-sd@mssd:~$ python3 --vers,命令
+ion,工具
+https://www.python.org/ftp/python/3.7.5/Python-3.7.5.tgz,链接
+ms-sd@mssd:~$ cd Python-,命令
+/usr/local/python3.7,命令
+.1/includ,链接
+源/,命令
+usr/local/p,命令
+ython3.7,链接
+ms-sd@mssd:~/Py,命令
+thon-3.7.5$ ,链接
+make -j,工具
+thon-3.7.5$ sudo m,链接
+ake insta,工具
+7p,工具
+ython/python3,工具
+ms-sd@mssd:~$ ls -l /usr/bin/ | grep ,命令
+lrwxrw,命令
+xrwx,工具
+pdb3.,命令
+../lib/python3.6/pdb.py,命令
+lrwxrwxr,命令
+wx,工具
+:44 py3versions -> ../share/python3/py3versions.py,命令
+python3,工具
+3.6,数字
+-rw,链接
+xr-xr-x,工具
+ 2 ro,命令
+ot root,工具
+4526456,系统名词
+3.6m,数字
+python3m,工具
+8p,工具
+ython3,工具
+ms-sd@mssd:~/Python-3.7.5$ p,命令
+linux,工具
+"Type help, copyright, credits or license for m",命令
+ore information.,工具
+update-alternatives```py,命令
+tho,工具
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3,命令
+.110,数字
+ms-sd@mssd:~$ sudo update-alternatives --config py,命令
+thon,工具
+There,工具
+are,工具
+choices for the alternative python (providing /usr/bin/pytho,命令
+Selection,工具
+Path ,工具
+Priority Status,工具
+in/python3,链接
+mode,工具
+manual mode,工具
+110,数字
+Press,工具
+ter,工具
+keep the currentchoice,工具
+type selection number:,工具
+OpenSSL,工具
+1.1.1,数字
+OpenSSL 1.1.1,系统
+OpenSSL 1.1.,系统
+Se,工具
+p2018,系统
+Ubuntu 18.0,系统
+penssl,工具
+https://www.cnblogs.com/thechosenone95/p/10603110.html,链接
+CMake ,工具
+3.18,数字
+https://github.com/Kitware/CMake/releases/download/v3.18.5/cmake-3.18.5.tar.gz,链接
+"example, if you simply want to build and install C",命令
+"Make from source,",工具
+you,工具
+can build directly ,命令
+in the source tree,工具
+./boot,命令
+str,链接
+make,工具
+make install,工具
+you plan to develop CMake or otherwise run,工具
+the,工具
+create,工具
+$.mkdir cmake-build,工具
+cmake-build,工具
+$./cmake-source/boo,命令
+tsrap,链接
+ms-sd@mssd:~/cmake-3.18.5$ ,命令
+ms-sd@mssd:~$ cmake --versi,命令
+（1）更新pi,命令
+p源,工具
+index-url,命令
+https://pypi.tuna.tsinghua.edu.cn/simple,链接
+ubuntu18.04,系统
+2.7.6,数字
+ms-sd@mssd:~$ patch --ver,命令
+GNU patch 2.,命令
+7.,数字
+"Copyright (C) 2003,",命令
+Copyr,命令
+ight (C,工具
+198,数字
+8 Larr,命令
+License GPLv3+: GNU GPL version 3 or later,命令
+http://gnu.org/licenses/gpl.html>.,链接
+his is free software: you are,工具
+ree,工具
+change and,工具
+ redis,命令
+tribute,工具
+Written by Larry Wall ,命令
+and Paul,工具
+ggert,工具
+NUMA ,工具
+MindSpore源码,工具
+ms-sd@mssd:~$ sudo apt-get install python3.7-dev pybind11  python3-wheel python3-setuptools python3.7-,命令
+"minimal
+",工具
+---------- mindspore: build end,工具
+-----,工具
+5）pip3,工具
+mindspore version:,工具
+本-macos,工具
+Docker方式,安装方式
+mindspore-cpu,工具
+docker方式,安装方式
+https://gitee.com/mindspore/docs/blob/r1.7/install/mindspore_cpu_install_docker.md,链接
+Docker,工具
+https://docs.docker.com/get-docker/,链接
+容器,系统名词
+MindSpore的Docker,工具
+https://support.huaweicloud.com/swr/index.html,链接
+mindspore/mindspore-cpu,工具
+产环境,系统名词
+发环境,系统名词
+MindSpore（`CPU,工具
+https://www.mindspore.cn/install,链接
+制包,系统名词
+1.1.0,数字
+MindSpore时，,工具
+x86架构,系统名词
+Lin,工具
+uUbuntu 18.04,系统
+docker run -it --network host swr.cn,命令
+-south-,工具
+1.,链接
+myhu,工具
+"aweicloud.com/mindspore/mindspore-cpu:{tag} /bin/bash
+",命令
+MindSpore容器后，测试Docker,工具
+输出,系统名词
+"context.set_context(mode=context.PYNATIVE_MODE, device_target=",命令
+CPU,工具
+ight start --port ,工具
+status为success,工具
+Linux-x8,系统
+_64,系统
+Source,工具
+MindSpore Docker,工具
+docker repo,工具
+https://gitee.com/mindspore/mindspore/blob/r1.7/scripts/docker/README.md,链接
+https://gitee.com/mindspore/docs/blob/r1.7/install/mindspore_cpu_install_conda.md,链接
+https://gitee.com/mindspore/mindspore/raw/r1.7/scripts/install/ubuntu-cpu-conda.sh,链接
+Conda，GCC,工具
+conda update mindspore-cpu -c mindspore -c conda-f,命令
+orge,工具
+https://gitee.com/mindspore/docs/blob/r1.7/install/mindspore_cpu_install_pip.md,链接
+https://gitee.com/mindspore/mindspore/raw/r1.7/scripts/install/ubuntu-cpu-pip.sh,链接
+conda create -n mindspore_py37 py,命令
+sudo apt-get install software-properties-common ,命令
+-m pip install pip -i https://repo.huaweicloud.com/repository/pypi/simple,命令
+pip config set global.index-url ,命令
+"ttps://repo.huaweicloud.com/repository/pypi/simple
+",命令
+https://gitee.com/mindspore/docs/blob/r1.7/install/mindspore_ascend_install_conda.md,链接
+https://gitee.com/mindspore/mindspore/raw/r1.7/scripts/install/euleros-ascend-conda.sh,链接
+gitgmptclshpatchnumaflex,工具
+mindspore-ascend,工具
+conda install mindspore-ascend -c mindspore -c conda-fo,命令
+rge,工具
+conda update mindspore-ascend -c mindspore -c conda-fo,命令
+GCC git等,工具
+gcc-git等依赖,工具
+https://gitee.com/mindspore/docs/blob/r1.7/install/mindspore_gpu_install_source.md,链接
+MindSpore编,工具
+https://gitee.com/mindspore/mindspore/raw/r1.7/scripts/install/ubuntu-gpu-source.sh,链接
+CUDA，Python，GCC,工具
+运行Mind,系统
+Autoconf,工具
+2.69,数字
+Libtool,工具
+2.4.6,数字
+9.,数字
+c30,数字
+Automake,工具
+1.15.1,数字
+LLVM,工具
+llvm-,工具
+12.0.1,数字
+图算融合,系统名词
+稀疏计算,系统名词
+GCC git,工具
+GCC，git，Autoconf，Libtool，Automake，gmp，Flex，tclsh，patch，NUMA,工具
+wge,命令
+https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/nullsudo apt-key add,链接
+https://llvm.org/,链接
+https://apt.llvm.org/llvm-snapshot.gpg.keysudo apt-key add,链接
+bash build.sh -e gpu -S ,命令
+1.3.0,数字
+CU,工具
+A10,数字
+https://gitee.com/mindspore/docs/blob/r1.7/install/mindspore_gpu_install_pip.md,链接
+https://gitee.com/mindspore/mindspore/raw/r1.7/scripts/install/ubuntu-gpu-pip.sh,链接
+A10.1,数字
+A11.1,数字
+nvidia-container-toolkit,工具
+nvidia-container-to,命令
+https://gitee.com/mindspore/docs/blob/r1.7/install/mindspore_gpu_install_docker.md,链接
+mindspore/mindspore-gpu-{cuda,工具
+生产环境,系统名词
+mindspore/mindspore-gpu,工具
+MindSpore（`GPU CUD,工具
+进制,工具
+whl包,工具
+dia-container-to,命令
+Acquire version of operating system versi,命令
+curl -s,命令
+https://nvidia.github.io/nvidia-docker/gpgkeysudo apt-key add,链接
+https://nvidia.github.io/nvidia-docker/$DISTRIBUTION/nvidia-docker.list,链接
+sudo tee /etc/apt/sources.list.d/nvidia-docker.list,命令
+sudo apt-get update sudo apt-get install -y nvidia-container-toolkit nvidia-do,命令
+cker2,工具
+sudo systemctl restart doc,命令
+ker,工具
+再次重启Doc,命令
+ker:,工具
+dev/shm:/dev,命令
+Linux-x86,系统
+https://gitee.com/mindspore/docs/blob/r1.7/install/mindspore_ascend310_install_conda.md,链接
+https://gitee.com/mindspore/docs/blob/r1.7/install/mindspore_cpu_win_install_conda.md,链接
+欢Conda提供,工具
+Anaconda3,工具
+https://repo.anaconda.com/archive/,链接
+Conda软件包,工具
+Miniconda3,工具
+https://repo.anaconda.com/miniconda/,链接
+conda create -c conda-forge -n mindspore_py37 -c conda-forge p,命令
+ython,工具
+3.7.,数字
+conda create -c conda-forge -n mindspore_py38 -c conda-forge p,命令
+conda create -c conda-forge -n mindspore_py39 -c conda-f,命令
+orge python,工具
+conda install mindspore-cpu -c mindspore -c conda-fo,命令
+二进制包方式,安装方式
+https://ms-release.obs.cn-north-4.myhuaweicloud.com/${MS_VERSION}/MindSpore/ascend/{arch}/mindspore_ascend-${MS_VERSION/-/}-linux_x86_64.tar.gz --no-check-certificate,链接
+https://ms-release.obs.cn-north-4.myhuaweicloud.com/${MS_VERSION}/MindSpore/ascend/{arch}/mindspore_ascend-${MS_VERSION/-/}-linux_aarch64.tar.gz --no-check-certificate,链接
+indspore_path}`表示M,命令
+indSpore,工具
+GCC git gmp tclsh patch和NUMA,工具
+gcc-git-gmp-tclsh-patch和numa,工具
+https://gitee.com/mindspore/docs/blob/r1.7/install/mindspore_cpu_install_source.md,链接
+https://gitee.com/mindspore/mindspore/raw/r1.7/scripts/install/ubuntu-cpu-source.sh,链接
+-|MindSpore sqlite,工具
+GCC，git，gmp，tclsh，patch和NUMA,工具
+bash build.sh -e cpu -j4 -S ,命令
+https://gitee.com/mindspore/docs/blob/r1.7/install/mindspore_ascend_install_docker.md,链接
+MindSpore的Ascend,工具
+Ascend Hub,工具
+https://ascend.huawei.com/ascendhub/#/main,链接
+public-ascendhub/mindspor,命令
+生产,工具
+Atlas Data Center Solution,工具
+昇腾商用版,系统名词
+CANN,工具
+https://www.hiascend.com/software/cann/community-history,链接
+1.RC1.al,命令
+https://www.hiascend.com/hardware/firmware-drivers?tag=community,链接
+固件,系统名词
+驱动安,系统名词
+基础驱动,系统名词
+件包,系统名词
+基础,系统名词
+toolbo,命令
+Ascend-cann-toolbox-{version}.,命令
+Ascend NPU,工具
+Ascend Docker runtime,工具
+https://ascend.huawei.com/ascendhub/#/home,链接
+https://ascendhub.huawei.com/#/detail/mindspore-modelzoo,链接
+docker run -it -u root -,命令
+-ipc=host \,工具
+ndh,工具
+ub.huawei.com/public-ascendhub/mindspore-modelzoo:{tag} \,命令
+MindInsight,工具
+--network,命令
+import ,命令
+mindspore as ms,工具
+nsor,工具
+t --port ,工具
+Ascend AI处理器配套软件包,工具
+docker,工具
+git gmp tclsh patch Flex,工具
+git-gmp-tclsh-patch-flex,工具
+https://gitee.com/mindspore/docs/blob/r1.7/install/mindspore_ascend310_install_source.md,链接
+sudo apt-get install git libgmp-dev tcl patch flex ,命令
+bash build.sh -e ascend -V 310 -S ,命令
+indspore_path}`表示,命令
+二进制包,系统名词
+Python与Conda,工具
+Mambaforge,工具
+Miniforge,工具
+Anaconda 或 MiniConda,工具
+https://github.com/conda-forge/miniforge,链接
+iforge,工具
+S ,工具
+10.15,数字
+conda create -c conda-,命令
+forge,工具
+ -n mindspore_py37 -c ,命令
+conda-forge python,工具
+10.111.3,数字
+forg,工具
+e -n mindspore_py38 -c c,命令
+onda-forge python,工具
+conda create -c co,命令
+nda-forge -n mindsp,工具
+ore_py39 ,命令
+-c conda-forge python,工具
+MindSpore GPU Nightly,工具
+mindspore-gpu-nightly,工具
+Li,工具
+https://www.mindspore.cn/news/newschildren?id=401,链接
+https://gitee.com/zhang_yi2020,链接
+10.111.1,数字
+计算架,系统名词
+cucudnn,工具
+8.0,数字
+6.1,数字
+4.0,数字
+.3,数字
+高性能消息传递库,系统名词
+tensorrt-可选,工具
+Ser,工具
+MindSpore GPU nightly仅提供CUDA11,工具

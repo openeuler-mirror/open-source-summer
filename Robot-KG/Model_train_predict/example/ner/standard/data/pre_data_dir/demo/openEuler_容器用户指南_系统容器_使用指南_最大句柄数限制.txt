@@ -1,0 +1,41 @@
+最大句柄数限制
+功能描述
+系统容器支持对容器内使用文件句柄数进行限制，文件句柄包括普通文件句柄和网络套接字，启动容器时，可以通过指定–files-limit参数限制容器内打开的最大句柄数。
+
+参数说明
+
+命令
+
+参数
+
+参数指定值说明
+
+isula create/run
+
+--files-limit
+
+  
+
+整数值，不能为负数。
+指定为0表示不受限制，最大值限制由当前内核files cgroup决定。
+约束限制
+如果--files-limit指定的值太小，可能会导致系统容器无法通过exec执行命令，报"open too many files"错误，所以files limit的值应该设置大一些。
+文件句柄包括普通文件句柄和网络套接字。
+使用示例
+使用--files-limit限制容器内打开文件句柄数需要内核支持files cgroup，可以执行以下命令查看：
+
+[root@localhost ~]# cat /proc/1/cgroup | grep files
+10:files:/
+结果显示files，说明内核支持files cgroup。
+
+容器启动指定–files-limit参数，并检查files.limit参数是否成功写入：
+
+[root@localhost ~]# isula run  -tid --files-limit 1024 --system-container  --external-rootfs /tmp/root-fs  empty init 01e82fcf97d4937aa1d96eb8067f9f23e4707b92de152328c3fc0ecb5f64e91d 
+[root@localhost ~]# isula exec -it 01e82fcf97d4 bash 
+[root@localhost ~]# cat /sys/fs/cgroup/files/files.limit 
+1024 
+
+可以看出，容器内文件句柄数被成功限制。
+
+返回顶部
+有奖捉虫

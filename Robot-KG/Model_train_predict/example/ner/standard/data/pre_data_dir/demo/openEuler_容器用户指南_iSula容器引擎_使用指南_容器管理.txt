@@ -1,0 +1,1473 @@
+容器管理
+容器管理
+创建容器
+启动容器
+运行容器
+停止容器
+强制停止容器
+删除容器
+接入容器
+重命名容器
+在容器中执行新命令
+查询单个容器信息
+查询所有容器信息
+重启容器
+等待容器退出
+查看容器中进程信息
+查看容器使用的资源
+获取容器日志
+容器与主机之间数据拷贝
+暂停容器
+恢复容器
+从服务端实时获取事件消息
+创建容器
+描述
+isula create 命令用于创建一个新的容器。容器引擎会使用指定的容器镜像创建容器读写层，或者使用指定的本地rootfs作为容器的运行环境。创建完成后，会将容器的ID输出到标准输出，后续可以使用isula start 命令启动该容器。新创建的容器状态为inited状态
+
+用法
+isula create [OPTIONS] IMAGE [COMMAND] [ARG...]
+参数
+create命令支持参数参考下表。
+
+表 1 create命令参数列表
+
+
+命令
+
+参数
+
+说明
+
+create
+
+  
+
+--annotation
+
+设置容器的annotations。例如支持native.umask选项：
+
+--annotation native.umask=normal # 启动的容器umask值为0022
+--annotation native.umask=secure # 启动的容器umask值为0027
+注意如果没有配置该参数，则使用isulad中的umask配置。
+
+--cap-drop
+
+删除Linux 权限功能
+
+--cgroup-parent
+
+指定容器cgroup父路径
+
+--cpuset-cpus
+
+允许执行的CPU（e.g. 0-3，0，1）
+
+--cpu-shares
+
+CPU份额（相对权重）
+
+--cpu-quota
+
+限制CPU CFS（完全公平调度器）的配额
+
+--device=[]
+
+为容器添加一个主机设备
+
+--dns
+
+添加DNS服务器
+
+--dns-opt
+
+添加DNS选项
+
+--dns-search
+
+设定容器的搜索域
+
+-e, --env
+
+设置环境变量
+
+--env-file
+
+通过文件配置环境变量
+
+--entrypoint
+
+启动容器时要运行的入口点
+
+--external-rootfs=PATH
+
+指定一个不由iSulad管理的rootfs(可以为文件夹或块设备)给容器
+
+--files-limit
+
+调整容器内能够打开的文件句柄数（-1表示不限制）
+
+--group-add=[]
+
+指定额外的用户组添加到容器
+
+--help
+
+打印帮助信息
+
+--health-cmd
+
+在容器内执行的命令
+
+--health-exit-on-unhealthy
+
+检测到容器非健康时是否杀死容器
+
+--health-interval
+
+相邻两次命令执行的间隔时间
+
+--health-retries
+
+健康检查失败最大的重试次数
+
+--health-start-period
+
+容器初始化时间
+
+--health-timeout
+
+单次检查命令执行的时间上限
+
+--hook-spec
+
+钩子配置文件
+
+-H, --host
+
+指定要连接的iSulad socket文件路径
+
+-h, --hostname
+
+容器主机名称
+
+-i, --interactive
+
+即使没有连接到容器的标准输入，也要保持容器的标准输入打开
+
+--hugetlb-limit=[]
+
+大页文件限制，例如：--hugetlb-limit 2MB:32MB
+
+--log-opt=[]
+
+日志驱动程序选项，默认禁用记录容器串口日志功能，可以通过"--log-opt disable-log=false"来开启。
+
+-l，--label
+
+为容器设置标签
+
+--lablel-file
+
+通过文件设置容器标签
+
+-m, --memory
+
+内存限制
+
+--memory-reservation
+
+设置容器内存限制，默认与--memory一致。可认为--memory是硬限制，--memory-reservation是软限制；当使用内存超过预设值时，会动态调整（系统回收内存时尝试将使用内存降低到预设值以下），但不确保一定不超过预设值。一般可以和--memory一起使用，数值小于--memory的预设值，最小设置为4MB。
+
+--memory-swap
+
+正整数，内存 + 交换空间，-1 表示不限制
+
+--memory-swappiness
+
+正整数，swappiness参数值可设置范围在0到100之间。 此参数值越低，就会让Linux系统尽量少用swap分区，多用内存；参数值越高就是反过来，使内核更多的去使用swap空间，默认值为-1，表示使用系统默认值。
+
+--mount
+
+挂载主机目录/卷/文件系统到容器中
+
+--no-healthcheck
+
+禁用健康检查配置
+
+--name=NAME
+
+容器名
+
+--net=none
+
+容器连接到网络
+
+--pids-limit
+
+调整容器内能够执行的进程数（-1表示不限制）
+
+--privileged
+
+给予容器扩展的特权
+
+-R, --runtime
+
+容器运行时，参数支持"lcr"，忽略大小写，因此"LCR"和"lcr"是等价的
+
+--read-only
+
+设置容器的根文件系统为只读
+
+--restart
+
+当容器退出时重启策略
+
+系统容器支持--restart on-reboot
+
+--storage-opt
+
+配置容器的存储驱动选项
+
+-t, --tty
+
+分配伪终端
+
+--ulimit
+
+为容器设置ulimit限制
+
+-u, --user
+
+用户名或UID，格式[<name|uid>][:<group|gid>]
+
+-v, --volume=[]
+
+挂载一个卷
+
+--volumes-from=[]
+
+使用指定的容器的挂载配置
+
+约束限制
+使用–user或–group-add参数，在容器启动阶段校验user或group时，容器如果使用的是OCI镜像，是从镜像的真实rootfs的etc/passwd和etc/group文件中校验，如果使用的是rootfs文件夹或块设备作为容器的rootfs，则校验的是host中的etc/passwd和etc/group文件；查找时使用的rootfs会忽略-v 和–mount等挂载参数，意味着使用这些参数尝试覆盖etc/passwd和etc/group两个文件时，在查找阶段不生效，只在容器真正启动时生效。生成的配置保存在"iSulad根目录/engine/容器ID/start_generate_config.json"，文件格式如下：
+
+{
+    "uid": 0,
+    "gid": 8,
+    "additionalGids": [
+        1234,
+        8
+    ]
+}
+示例
+创建一个新容器
+
+# isula create busybox
+fd7376591a9c3d8ee9a14f5d2c2e5255b02cc44cddaabca82170efd4497510e1
+# isula ps -a
+STATUS PID IMAGE   COMMAND EXIT_CODE RESTART_COUNT STARTAT FINISHAT RUNTIME ID           NAMES                                                            inited -   busybox "sh"    0         0             -       -        lcr     fd7376591a9c fd7376591a9c4521...
+启动容器
+描述
+isula start命令用于启动一个或多个容器。
+
+用法
+isula start [OPTIONS] CONTAINER [CONTAINER...]
+参数
+start命令支持参数参考下表。
+
+表 1 start命令参数列表
+
+
+命令
+
+参数
+
+说明
+
+start
+
+-H, --host
+
+指定要连接的iSulad socket文件路径
+
+-R, --runtime
+
+容器运行时，参数支持"lcr"，忽略大小写，因此"LCR"和"lcr"是等价的
+
+示例
+启动一个新容器
+
+# isula start fd7376591a9c3d8ee9a14f5d2c2e5255b02cc44cddaabca82170efd4497510e1
+运行容器
+描述
+isula run命令命令用于创建一个新的容器。会使用指定的容器镜像创建容器读写层，并且为运行指定的命令做好准备。创建完成后，使用指定的命令启动该容器。run命令相当于create然后start容器。
+
+用法
+isula run [OPTIONS] ROOTFS|IMAGE [COMMAND] [ARG...]
+参数
+run命令支持参数参考下表。
+
+表 1 run命令参数列表
+
+
+命令
+
+参数
+
+说明
+
+run
+
+--annotation
+
+设置容器的annotations。例如支持native.umask选项：
+
+--annotation native.umask=normal # 启动的容器umask值为0022
+--annotation native.umask=secure # 启动的容器umask值为0027
+注意如果没有配置该参数，则使用isulad中的umask配置。
+
+--cap-add
+
+添加Linux功能
+
+--cap-drop
+
+删除Linux功能
+
+--cgroup-parent
+
+指定容器cgroup父路径
+
+--cpuset-cpus
+
+允许执行的CPU（e.g. 0-3，0，1）
+
+--cpu-shares
+
+CPU份额（相对权重）
+
+--cpu-quota
+
+限制CPU CFS（完全公平调度器）的配额
+
+-d, --detach
+
+后台运行容器并打印容器ID
+
+--device=[]
+
+为容器添加一个主机设备
+
+--dns
+
+添加DNS服务器
+
+--dns-opt
+
+添加DNS选项
+
+--dns-search
+
+设定容器的搜索域
+
+-e, --env
+
+设置环境变量
+
+--env-file
+
+通过文件配置环境变量
+
+--entrypoint
+
+启动容器时要运行的入口点
+
+--external-rootfs=PATH
+
+指定一个不由iSulad管理的rootfs(可以为文件夹或块设备)给容器
+
+--files-limit
+
+调整容器内能够打开的文件句柄数（-1表示不限制）
+
+--group-add=[]
+
+指定额外的用户组添加到容器
+
+--help
+
+打印帮助信息
+
+--health-cmd
+
+在容器内执行的命令
+
+--health-exit-on-unhealthy
+
+检测到容器非健康时是否杀死容器
+
+--health-interval
+
+相邻两次命令执行的间隔时间
+
+--health-retries
+
+健康检查失败最大的重试次数
+
+--health-start-period
+
+容器初始化时间
+
+--health-timeout
+
+单次检查命令执行的时间上限
+
+--hook-spec
+
+钩子配置文件
+
+-H, --host
+
+指定要连接的iSulad socket文件路径
+
+-h, --hostname
+
+容器主机名称
+
+--hugetlb-limit=[]
+
+大页文件限制，例如：--hugetlb-limit 2MB:32MB
+
+-i, --interactive
+
+即使没有连接到容器的标准输入，也要保持容器的标准输入打开
+
+--log-driver
+
+设置日志驱动，支持syslog和json-file。
+
+--log-opt=[]
+
+日志驱动程序选项，默认禁用记录容器串口日志功能，可以通过"--log-opt disable-log=false"来开启。
+
+-m, --memory
+
+内存限制
+
+--memory-reservation
+
+设置容器内存限制，默认与--memory一致。可认为--memory是硬限制，--memory-reservation是软限制；当使用内存超过预设值时，会动态调整（系统回收内存时尝试将使用内存降低到预设值以下），但不确保一定不超过预设值。一般可以和--memory一起使用，数值小于--memory的预设值，最小设置为4MB。
+
+--memory-swap
+
+正整数，内存 + 交换空间，-1 表示不限制
+
+--memory-swappiness
+
+正整数，swappiness参数值可设置范围在0到100之间。 此参数值越低，就会让Linux系统尽量少用swap分区，多用内存；参数值越高就是反过来，使内核更多的去使用swap空间，默认值为-1，表示使用系统默认值。
+
+--mount
+
+挂载主机目录到容器中
+
+--no-healthcheck
+
+禁用健康检查配置
+
+--name=NAME
+
+容器名
+
+--net=none
+
+容器连接到网络
+
+--pids-limit
+
+调整容器内能够执行的进程数（-1表示不限制）
+
+--privileged
+
+给予容器扩展的特权
+
+-R, --runtime
+
+容器运行时，参数支持"lcr"，忽略大小写，因此"LCR"和"lcr"是等价的
+
+--read-only
+
+设置容器的根文件系统为只读
+
+--restart
+
+当容器退出时重启策略
+
+系统容器支持--restart on-reboot
+
+--rm
+
+当容器退出时自动清理容器
+
+--storage-opt
+
+配置容器的存储驱动选项
+
+-t, --tty
+
+分配伪终端
+
+--ulimit
+
+为容器设置ulimit限制
+
+-u, --user
+
+用户名或UID，格式[<name|uid>][:<group|gid>]
+
+-v, --volume=[]
+
+挂载一个卷
+
+约束限制
+容器父进程进程退出时，则对应的容器也自动退出。
+
+创建普通容器时父进程不能为init，因为普通容器的权限不够，导致容器可以创建成功，但是attach进去的时候会卡住。
+
+运行容器时，不指定–net，默认hostname为localhost。
+
+使用–files-limit参数传入一个很小的值，如1时，启动容器时，iSulad创建cgroup子组后先设置files.limit值，再将容器进程的PID写入该子组的cgroup.procs文件，此时容器进程已经打开超过1个句柄，因而写入报错导致启动失败启动容器会失败。
+
+–mount参数和–volume参数同时存在时，如果目的路径有冲突，则–mount会在–volume之后挂载(即将–volume中的挂载点覆盖掉)。
+
+备注：轻量级容器的参数中type支持bind或squashfs，当type=squashfs时，src是镜像的路径；原生docker的参数type支持bind、volume、tmpfs。
+
+restart重启策略不支持unless-stopped。
+
+以下三种情况与docker 返回值不一致，docker返回127,轻量级容器返回125
+
+–device参数指定主机设备为不存在的设备
+
+–hook-spec参数指定不存在的hook json文件
+
+–entrypoint 参数指定不存在的入口参数
+
+使用–volume参数时，由于容器启动时会对/dev/ptmx设备进行删除重建，因此请勿将/dev目录挂载至容器/dev目录，应使用–device对/dev下的设备在容器中进行挂载
+
+禁止使用echo的方式向run命令的stdin输入数据，会导致客户端卡死。应该直接将echo的值作为命令行参数传给容器
+
+# echo ls | isula run -i busybox /bin/sh
+
+
+^C
+#
+上述命令出现客户端卡死现象，这是由于上述命令相当于往stdin输入ls，随后EOF被读取，客户端不再发送数据，等待服务端退出，但是服务端无法区分客户端是否需要继续发送数据，因而服务端卡在read数据上，最终导致双方均卡死。
+
+正确的执行方式为：
+
+# isula run -i busybox ls
+bin
+dev
+etc
+home
+proc
+root
+sys
+tmp
+usr
+var
+#
+使用host的根目录（/）作为容器的文件系统，那么在挂载路径时，如果有如下情况
+
+表 2 挂载情况
+
+
+Host 路径（source）
+
+容器路径（dest）
+
+/home/test1
+
+/mnt/
+
+/home/test2
+
+/mnt/abc
+
+ 须知：
+第一种情况，先挂载/home/test1，然后挂载/home/test2，这种情况会导致/home/test1的内容覆盖掉原来/mnt下面的内容，这样可能导致/mnt下面不存在abc目录，这样会导致挂载/home/test2到/mnt/abc失败。
+第二种情况，先挂载/home/test2，然后挂载/home/test1。这种情况，第二次的挂载会把/mnt的内容替换为/home/test1的内容，这样第一次挂载的/home/test2到/mnt/abc的内容就看不到了。
+因此，不支持第一种使用方式；第二种使用用户需要了解这种数据无法访问的风险
+
+ 须知：
+
+高并发场景（并发启动200容器）下，glibc的内存管理机制会导致内存空洞以及虚拟内存较大（例如10GB）的问题。该问题是高并发场景下glibc内存管理机制的限制，而不是内存泄露，不会导致内存消耗无限增大。可以通过设置MALLOC_ARENA_MAX环境变量来减少虚拟内存的问题，而且可以增大减少物理内存的概率。但是这个环境变量会导致iSulad的并发性能下降，需要用户根据实际情况做配置。
+参考实践情况，平衡性能和内存，可以设置MALLOC_ARENA_MAX为4。（在arm64服务器上面对iSulad的性能影响在10%以内）  
+配置方法：  
+1. 手动启动iSulad的场景，可以直接export MALLOC_ARENA_MAX=4，然后再启动iSulad即可。  
+2. systemd管理iSulad的场景，可以修改/etc/sysconfig/iSulad，增加一条MALLOC_ARENA_MAX=4即可。  
+示例
+运行一个新容器
+
+# isula run -itd busybox
+9c2c13b6c35f132f49fb7ffad24f9e673a07b7fe9918f97c0591f0d7014c713b
+停止容器
+描述
+isula stop命令用于停止一个或多个运行中的容器。首先向容器中的首进程会发送SIGTERM信号，在指定时间（默认为10s）内容器未停止时，会发送SIGKILL。
+
+用法
+isula stop [OPTIONS] CONTAINER [CONTAINER...]
+参数
+stop命令支持参数参考下表。
+
+表 1 stop命令参数列表
+
+
+命令
+
+参数
+
+说明
+
+stop
+
+-f, --force
+
+强制停止正在运行的容器
+
+-H, --host
+
+指定要连接的iSulad socket文件路径
+
+-t, --time
+
+先优雅停止，超过这个时间，则强行终止
+
+约束限制
+指定t参数且t<0时，请确保自己容器的应用会处理stop信号。
+
+Stop的原理：Stop会首先给容器发送Stop 信号（SIGTERM），然后等待一定的时间（这个时间就是用户输入的 t），过了指定时间如果容器还仍处于运行状态，那么就发送kill信号（SIGKILL）使容器强制退出。
+
+输入参数t的含义：
+
+t<0 : 表示一直等待，不管多久都等待程序优雅退出，既然用户这么输入了，表示对自己的应用比较放心，认为自己的程序有 合理的stop信号的处理机制。
+
+t=0 ： 表示不等，立即发送kill -9 到容器。
+
+t>0 ： 表示等一定的时间，如果容器还未退出，就发送kill -9 到容器。
+
+所以如果用户使用t<0 （比如t=-1），请确保自己容器的应用会正确处理SIGTERM. 如果容器忽略了该信号，会导致isula stop一直卡住。
+
+示例
+停止一个容器
+
+# isula stop fd7376591a9c3d8ee9a14f5d2c2e5255b02cc44cddaabca82170efd4497510e1
+fd7376591a9c3d8ee9a14f5d2c2e5255b02cc44cddaabca82170efd4497510e1
+强制停止容器
+描述
+isula kill命令用于强制停止一个或多个运行中的容器。
+
+用法
+isula kill [OPTIONS] CONTAINER [CONTAINER...]
+参数
+kill命令支持参数参考下表。
+
+表 1 kill命令参数列表
+
+
+命令
+
+参数
+
+说明
+
+kill
+
+-H, --host
+
+指定要连接的iSulad socket文件路径
+
+-s, --signal
+
+发送给容器的信号
+
+示例
+杀掉一个容器
+
+# isula kill fd7376591a9c3d8ee9a14f5d2c2e5255b02cc44cddaabca82170efd4497510e1
+fd7376591a9c3d8ee9a14f5d2c2e5255b02cc44cddaabca82170efd4497510e1
+删除容器
+描述
+isula rm命令用于删除一个或多个容器。
+
+用法
+isula rm [OPTIONS] CONTAINER [CONTAINER...]
+参数
+rm命令支持参数参考下表。
+
+表 1 rm命令参数列表
+
+
+命令
+
+参数
+
+说明
+
+rm
+
+-f, --force
+
+强制移除正在运行的容器
+
+-H, --host
+
+指定要连接的iSulad socket文件路径
+
+-v, --volume
+
+移除挂载在容器上的卷（备注：目前iSulad尚不使用此功能）
+
+约束限制
+在IO正常情况，空环境（只有1个容器）删除一个running容器的时间为T1，200个容器的环境（容器无大量IO操作，host IO正常）删除一个running容器所需时间为T2。T2的规格为：T2 = max { T1 * 3, 5 } 秒钟。
+示例
+删除一个停止状态的容器
+
+# isula rm fd7376591a9c3d8ee9a14f5d2c2e5255b02cc44cddaabca82170efd4497510e1
+fd7376591a9c3d8ee9a14f5d2c2e5255b02cc44cddaabca82170efd4497510e1
+接入容器
+描述
+isula attach命令用于将当前终端的标准输入、标准输出和标准错误连接到正在运行的容器。仅支持runtime类型为lcr的容器。
+
+用法
+isula attach [OPTIONS] CONTAINER
+参数
+attach命令支持参数参考下表。
+
+表 1 attach命令参数列表
+
+
+命令
+
+参数
+
+说明
+
+attach
+
+--help
+
+打印帮助信息
+
+-H, --host
+
+指定要连接的iSulad socket文件路径
+
+-D, --debug
+
+开启debug模式
+
+约束限制
+原生docker attach容器会直接进入容器，而isulad attach容器后需要敲一个回车才进入。
+示例
+接入一个运行状态的容器
+
+# isula attach fd7376591a9c3d8ee9a14f5d2c2e5255b02cc44cddaabca82170efd4497510e1
+/ #
+/ #
+重命名容器
+描述
+isula rename命令用于重命名容器。
+
+用法
+isula rename [OPTIONS] OLD_NAME NEW_NAME
+参数
+rename命令支持参数参考下表。
+
+表 1 rename 命令参数列表
+
+
+命令
+
+参数
+
+说明
+
+rename
+
+-H, --host
+
+重命名容器
+
+示例
+重命名一个容器
+
+# isula rename my_container my_new_container
+在容器中执行新命令
+描述
+isula exec命令用于正在运行的容器中运行一个新命令。新执行的命令将在容器的默认目录中运行。如果基础镜像指定了自定义目录，则将使用该目录。
+
+用法
+isula exec [OPTIONS] CONTAINER COMMAND [ARG...]
+参数
+exec命令支持参数参考下表。
+
+表 1 exec命令参数列表
+
+
+命令
+
+参数
+
+说明
+
+exec
+
+  
+
+-d, --detach
+
+后台运行命令
+
+-e, --env
+
+设置环境变量（备注：目前iSulad尚不使用此功能）
+
+-H, --host
+
+指定要连接的iSulad socket文件路径
+
+-i, --interactive
+
+没有连接，也要保持标准输入打开（备注：目前iSulad尚不使用此功能）
+
+-t, --tty
+
+分配伪终端（备注：目前iSulad尚不使用此功能）
+
+-u, --user
+
+指定用户登录容器执行命令
+
+约束限制
+isula exec 不指定任何参数时，会默认使用-it参数， 表示分配一个伪终端，以交互式的方式进入容器
+
+当使用isula exec 执行脚本，在脚本中执行后台进程时，需使用nohup标志忽略SIGHUP信号。
+
+使用isula exec运行脚本,在脚本中运行后台进程需使用nohup标志。否则内核会在exec执行的进程（session首进程）退出时，向后台执行的进程发送SIGHUP信号，导致后台进程退出，出现僵尸进程。
+
+isula exec 进入容器进程后，不能执行后台程序，否则会出现卡死现象。
+
+isula exec执行后台进程的方式如下：
+
+使用isula exec进入容器终端，isula exec container_name bash
+进入容器后，执行 script &
+执行exit，导致终端卡死
+isula exec 进入容器后，执行后台程序卡住的原因为isula exec进入容器运行后台while1程序，当bash退出时，while1程序并不会退出，变为孤儿进程由1号
+进程接管，while1程序是由容器的初始bash进程fork &exec执行的，while1进程复制了bash进程的文件句柄，导致bash退出时，句柄并未完全关闭，导致
+console进程收不到句柄关闭事件，epoll_wait卡住，进程不退出。
+isula exec 不能用后台方式执行，否则可能会出现卡死现象。
+
+isula exec后台执行的方式如下：
+
+使用**isula exec 脚本 & **的方式后台执行exec，如：isula exec container_name script & ，isula exec 后台执行，执行的脚本中不断cat某一文件，正常时在当前终端有输出，如果在当前终端执行回车操作，客户端会因读IO失败而退出读stdout的动作，使终端不再输出，服务端由于进程仍然在cat文件，会继续往fifo的buffer里写入数据，当缓存写满时，容器内进程会卡死在write动作上。
+
+轻量级容器使用exec执行带有管道操作的命令时，建议使用/bin/bash -c 方式执行该命令。
+
+典型应用场景：
+
+使用isula exec container_name -it ls /test | grep “xx” | wc -l,用于统计test目录下xx的文件个数，因exec执行的为"ls /test",其输出通过管道进行grep、wc 处理。exec执行的为"ls /test"的输出会换行，再针对该输出进行处理时，结果有误。
+
+原因：使用exec 执行ls /test,输出带有换行，针对该输出进行“| grep “xx” | wc -l“，处理结果为2（两行）
+
+# isula exec  -it container ls /test
+xx    xx10  xx12  xx14  xx3   xx5   xx7   xx9
+xx1   xx11  xx13  xx2   xx4   xx6   xx8
+#
+建议处理方式：使用run/exec执行带有管道操作的命令时，使用/bin/bash -c 执行命令，在容器中执行管道操作。
+
+# isula exec  -it container  /bin/sh -c "ls /test | grep "xx" | wc -l"
+15
+#
+禁止使用echo的方式向exec命令的stdin输入数据，会导致客户端卡死。应该直接将echo的值作为命令行参数传给容器
+
+# echo ls | isula exec 38 /bin/sh
+
+
+^C
+#
+上述命令可能出现客户端卡死现象，这是由于上述命令相当于往stdin输入ls，随后EOF被读取，客户端不再发送数据，等待服务端退出，但是服务端无法区分客户端是否需要继续发送数据，因而服务端卡在read数据上，最终导致双方均卡死。
+
+正确的执行方式为：
+
+# isula exec 38 ls
+bin   dev   etc   home  proc  root  sys   tmp   usr   var
+示例
+在运行中的容器中，执行echo命令
+
+# isula exec c75284634bee echo "hello,world"
+hello,world
+查询单个容器信息
+描述
+isula inspect提供了容器的详细信息。
+
+用法
+isula inspect [OPTIONS] CONTAINER|IMAGE [CONTAINER|IMAGE...]
+参数
+inspect命令支持参数参考下表。
+
+表 1 inspect命令参数列表
+
+
+命令
+
+参数
+
+说明
+
+inspect
+
+  
+
+-H, --host
+
+指定要连接的iSulad socket文件路径
+
+-f, --format
+
+使用模板格式化输出
+
+-t, --time
+
+超时时间的秒数，若在该时间内inspect查询容器信息未执行成功，则停止等待并立即报错，默认为120秒，当配置小于等于0的值，表示不启用timeout机制inspect查询容器信息会一直等待，直到获取容器信息成功后返回。
+
+约束限制
+轻量级容器不支持format为“{ {.State} }”的格式化输出，支持“{ {json .State} }”的json格式化输出。当inspect镜像时，不支持-f参数。
+示例
+查询容器信息
+
+# isula inspect c75284634bee
+[
+    {
+        "Id": "c75284634beeede3ab86c828790b439d16b6ed8a537550456b1f94eb852c1c0a",
+        "Created": "2019-08-01T22:48:13.993304927-04:00",
+        "Path": "sh",
+        "Args": [],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "Pid": 21164,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2019-08-02T06:09:25.535049168-04:00",
+            "FinishedAt": "2019-08-02T04:28:09.479766839-04:00",
+            "Health": {
+                "Status": "",
+                "FailingStreak": 0,
+                "Log": []
+            }
+        },
+        "Image": "busybox",
+        "ResolvConfPath": "",
+        "HostnamePath": "",
+        "HostsPath": "",
+        "LogPath": "none",
+        "Name": "c75284634beeede3ab86c828790b439d16b6ed8a537550456b1f94eb852c1c0a",
+        "RestartCount": 0,
+        "HostConfig": {
+            "Binds": [],
+            "NetworkMode": "",
+            "GroupAdd": [],
+            "IpcMode": "",
+            "PidMode": "",
+            "Privileged": false,
+            "SystemContainer": false,
+            "NsChangeFiles": [],
+            "UserRemap": "",
+            "ShmSize": 67108864,
+            "AutoRemove": false,
+            "AutoRemoveBak": false,
+            "ReadonlyRootfs": false,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "Sysctls": {},
+            "Runtime": "lcr",
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "CapAdd": [],
+            "CapDrop": [],
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": [],
+            "HookSpec": "",
+            "CPUShares": 0,
+            "Memory": 0,
+            "OomScoreAdj": 0,
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "CPUPeriod": 0,
+            "CPUQuota": 0,
+            "CPURealtimePeriod": 0,
+            "CPURealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "SecurityOpt": [],
+            "StorageOpt": {},
+            "KernelMemory": 0,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "OomKillDisable": false,
+            "PidsLimit": 0,
+            "FilesLimit": 0,
+            "Ulimits": [],
+            "Hugetlbs": [],
+            "HostChannel": {
+                "PathOnHost": "",
+                "PathInContainer": "",
+                "Permissions": "",
+                "Size": 0
+            },
+            "EnvTargetFile": "",
+            "ExternalRootfs": ""
+        },
+        "Mounts": [],
+        "Config": {
+            "Hostname": "localhost",
+            "User": "",
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "TERM=xterm",
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Tty": true,
+            "Cmd": [
+                "sh"
+            ],
+            "Entrypoint": [],
+            "Labels": {},
+            "Annotations": {
+                "log.console.file": "none",
+                "log.console.filerotate": "7",
+                "log.console.filesize": "1MB",
+                "rootfs.mount": "/var/lib/isulad/mnt/rootfs",
+                "native.umask": "secure"
+            },
+            "HealthCheck": {
+                "Test": [],
+                "Interval": 0,
+                "Timeout": 0,
+                "StartPeriod": 0,
+                "Retries": 0,
+                "ExitOnUnhealthy": false
+            }
+        },
+        "NetworkSettings": {
+            "IPAddress": ""
+        }
+    }
+]
+查询所有容器信息
+描述
+isula ps 用于查询所有容器的信息。
+
+用法
+isula ps [OPTIONS]
+参数
+ps命令支持参数参考下表。
+
+表 1 ps命令参数列表
+
+
+命令
+
+参数
+
+说明
+
+ps
+
+  
+
+  
+
+  
+
+  
+
+-a, --all
+
+显示所有的容器
+
+-H, --host
+
+指定要连接的iSulad socket文件路径
+
+-q, --quiet
+
+只显示容器名字
+
+-f, --filter
+
+增加筛选过滤条件
+
+--format
+
+按照模板声明的方式输出数据
+
+--no-trunc
+
+不对容器ID进行截断打印
+
+示例
+查询所有容器信息
+
+# isula ps -a
+
+ID           IMAGE                                     STATUS  PID    COMMAND EXIT_CODE RESTART_COUNT STARTAT        FINISHAT    RUNTIME NAMES
+e84660aa059c rnd-dockerhub.huawei.com/official/busybox running 304765 "sh"    0         0             13 minutes ago -           lcr     e84660aa059cafb0a77a4002e65cc9186949132b8e57b7f4d76aa22f28fde016
+# isula ps -a --format "table {{.ID}} {{.Image}}" --no-trunc
+ID                                                               IMAGE
+e84660aa059cafb0a77a4002e65cc9186949132b8e57b7f4d76aa22f28fde016 rnd-dockerhub.huawei.com/official/busybox
+
+重启容器
+描述
+isula restart 用于重启一个或者多个容器。
+
+用法
+isula restart [OPTIONS] CONTAINER [CONTAINER...]
+参数
+restart命令支持参数参考下表。
+
+表 1 restart 命令参数列表
+
+
+命令
+
+参数
+
+说明
+
+restart
+
+-H, --host
+
+指定要连接的iSulad socket文件路径
+
+-t, --time
+
+先优雅停止，超过这个时间，则强行终止
+
+约束限制
+指定t参数且t<0时，请确保自己容器的应用会处理stop信号。
+
+restart会首先调用stop停止容器。stop会首先给容器发送stop信号（SIGTERM），然后等待一定的时间（这个时间就是用户输入的 t），过了一定时间如果容器仍处于运行状态，那么就发送kill信号（SIGKILL）使容器强制退出。
+
+输入参数t的含义：
+
+t<0 : 表示一直等待，不管多久都等待程序优雅退出，既然用户这么输入了，表示对自己的应用比较放心，认为自己的程序有合理的stop信号的处理机制。
+
+t=0 ： 表示不等，立即发送kill -9 到容器。
+
+t>0 ： 表示等一定的时间，如果容器还未退出，就发送kill -9 到容器。
+
+所以如果用户使用t<0（比如t=-1），请确保自己容器的应用会正确处理SIGTERM. 如果容器忽略了该信号，会导致isula restart一直卡住。
+
+示例
+重启单个容器
+
+# isula restart c75284634beeede3ab86c828790b439d16b6ed8a537550456b1f94eb852c1c0a
+ c75284634beeede3ab86c828790b439d16b6ed8a537550456b1f94eb852c1c0a 
+等待容器退出
+描述
+isula wait用于等待一个或者多个容器退出。仅支持runtime类型为lcr的容器。
+
+用法
+isula wait [OPTIONS] CONTAINER [CONTAINER...]
+参数
+wait命令支持参数参考下表。
+
+表 1 wait命令参数列表
+
+
+命令
+
+参数
+
+说明
+
+wait
+
+-H, --host
+
+指定要连接的iSulad socket文件路径
+
+/
+
+阻塞，直到容器停止，然后打印退出代码
+
+示例
+等待单个容器退出
+
+# isula wait c75284634beeede3ab86c828790b439d16b6ed8a537550456b1f94eb852c1c0a
+ 137 
+查看容器中进程信息
+描述
+isula top用于查看容器中的进程信息。仅支持runtime类型为lcr的容器。
+
+用法
+isula top [OPTIONS] container [ps options]
+参数
+top命令支持参数参考下表。
+
+表 1 top命令参数列表
+
+
+命令
+
+参数
+
+说明
+
+top
+
+  
+
+-H, --host
+
+指定要连接的iSulad socket文件路径
+
+/
+
+查询运行容器的进程信息
+
+示例
+查询容器中进程信息
+
+# isula top 21fac8bb9ea8e0be4313c8acea765c8b4798b7d06e043bbab99fc20efa72629c
+UID        PID  PPID  C STIME TTY          TIME CMD
+root     22166 22163  0 23:04 pts/1    00:00:00 sh
+查看容器使用的资源
+描述
+isula stats用于实时显示资源使用的统计信息。仅支持runtime类型为lcr的容器。
+
+用法
+isula stats [OPTIONS] [CONTAINER...]
+参数
+stats命令支持参数参考下表。
+
+表 1 stats命令参数列表
+
+
+命令
+
+参数
+
+说明
+
+stats
+
+  
+
+  
+
+-H, --host
+
+指定要连接的iSulad socket文件路径
+
+-a, --all
+
+显示所有容器（默认只显示运行中的容器）
+
+--no-stream
+
+非流式方式的stats，只打印第一次结果
+
+示例
+显示资源使用的统计信息
+
+# isula stats --no-stream 21fac8bb9ea8e0be4313c8acea765c8b4798b7d06e043bbab99fc20efa72629c                                                                                 CONTAINER        CPU %      MEM USAGE / LIMIT          MEM %      BLOCK I / O                PIDS      
+21fac8bb9ea8     0.00       56.00 KiB / 7.45 GiB       0.00       0.00 B / 0.00 B            1  
+获取容器日志
+描述
+isula logs用于获取容器的日志。仅支持runtime类型为lcr的容器。
+
+用法
+isula logs [OPTIONS] [CONTAINER...]
+参数
+logs命令支持参数参考下表。
+
+表 1 logs命令参数列表
+
+
+命令
+
+参数
+
+说明
+
+logs
+
+  
+
+-H, --host
+
+指定要连接的iSulad socket文件路径
+
+-f, --follow
+
+跟踪日志输出
+
+--tail
+
+显示日志行数
+
+约束限制
+容器串口logs日志记录功能，默认为开启状态，需要关闭可以通过 isula create –log-opt disable-log=true 或 isula run –log-opt disable-log=true 关闭。
+示例
+获取容器日志
+
+# isula logs 6a144695f5dae81e22700a8a78fac28b19f8bf40e8827568b3329c7d4f742406
+hello, world
+hello, world
+hello, world
+容器与主机之间数据拷贝
+描述
+isula cp 用于容器与主机之间的数据拷贝，仅支持runtime类型为lcr的容器。
+
+用法
+isula cp [OPTIONS] CONTAINER:SRC_PATH DEST_PATH
+isula cp [OPTIONS] SRC_PATH CONTAINER:DEST_PATH
+参数
+cp命令支持参数参考下表。
+
+表 1 cp命令参数列表
+
+
+命令
+
+参数
+
+说明
+
+cp
+
+-H, --host
+
+指定要连接的iSulad socket文件路径
+
+约束限制
+iSulad在执行拷贝时，不会挂载/etc/hostname， /etc/resolv.conf，/etc/hosts三个文件，也不会对–volume和–mount参数传入的参数挂载到host，所以对这些文件的拷贝使用的是镜像中的原始文件，而不是真实容器中的文件。
+
+# isula cp b330e9be717a:/etc/hostname /tmp/hostname
+# cat /tmp/hostname
+# 
+iSulad在解压文件时，不会对文件系统中即将被覆盖的文件或文件夹做类型判断，而是直接覆盖，所以在拷贝时，如果源为文件夹，同名的文件会被强制覆盖为文件夹；如果源为文件，同名的文件夹会被强制覆盖为文件。
+
+# rm -rf /tmp/test_file_to_dir && mkdir /tmp/test_file_to_dir
+# isula exec b330e9be717a /bin/sh -c "rm -rf /tmp/test_file_to_dir && touch /tmp/test_file_to_dir"
+# isula cp b330e9be717a:/tmp/test_file_to_dir /tmp
+# ls -al /tmp | grep test_file_to_dir
+-rw-r-----    1 root     root             0 Apr 26 09:59 test_file_to_dir
+iSulad 在cp拷贝过程中，会将容器freeze住，在拷贝完成后，恢复容器运行。
+
+示例
+将主机/test/host目录拷贝到容器21fac8bb9ea8的/test目录下。
+
+isula cp /test/host 21fac8bb9ea8:/test
+将容器21fac8bb9ea8的/www目录拷贝到主机的/tmp目录中。
+
+isula cp 21fac8bb9ea8:/www /tmp/
+暂停容器
+描述
+isula pause用于暂停容器中所有的进程，仅支持runtime类型为lcr的容器。
+
+用法
+isula pause CONTAINER [CONTAINER...]
+参数
+
+命令
+
+参数
+
+说明
+
+pause
+
+-H, --host
+
+指定要连接的iSulad socket文件路径
+
+约束限制
+只有状态为running的容器可以被执行pause操作
+当容器被pause后，无法执行其他生命周期管理操作（如restart/exec/attach/kill/stop/rm等）
+当带有健康检查配置的容器被pause后，容器状态最终变为unhealthy状态
+示例
+暂停一个正在运行的容器，命令示例如下：
+
+# isula pause 8fe25506fb5883b74c2457f453a960d1ae27a24ee45cdd78fb7426d2022a8bac
+ 8fe25506fb5883b74c2457f453a960d1ae27a24ee45cdd78fb7426d2022a8bac 
+恢复容器
+描述
+isula unpause用于恢复容器中所有的进程, 为isula pause的逆过程，仅支持runtime类型为lcr的容器。
+
+用法
+isula unpause CONTAINER [CONTAINER...]
+参数
+
+命令
+
+参数
+
+说明
+
+pause
+
+-H, --host
+
+指定要连接的iSulad socket文件路径
+
+约束限制
+只有状态为paused的容器可以被执行unpause操作
+示例
+恢复一个被暂停的容器，命令示例如下：
+
+# isula unpause 8fe25506fb5883b74c2457f453a960d1ae27a24ee45cdd78fb7426d2022a8bac
+ 8fe25506fb5883b74c2457f453a960d1ae27a24ee45cdd78fb7426d2022a8bac 
+从服务端实时获取事件消息
+描述
+isula events用于从服务端实时获取容器镜像生命周期、运行等事件消息, 仅支持runtime类型为lcr的容器。
+
+用法
+isula events [OPTIONS]
+参数
+
+命令
+
+参数
+
+说明
+
+events
+
+-H, --host
+
+指定要连接的iSulad socket文件路径
+
+-n, --name
+
+获取指定容器的事件消息
+
+-S, --since
+
+获取指定时间以来的事件消息
+
+示例
+从服务端实时获取事件消息，命令示例如下：
+
+# isula events
+返回顶部
+有奖捉虫

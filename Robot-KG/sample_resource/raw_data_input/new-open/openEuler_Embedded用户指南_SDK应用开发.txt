@@ -1,0 +1,124 @@
+基于openEuler Embedded的SDK应用开发
+当前发布的镜像除了体验openEuler Embedded的基本功能外，还可以进行基本的应用开发，也即在openEuler Embedded上运行用户自己的程序。本章主要介绍如何基于openEuler Embedded的SDK进行应用开发。
+
+安装SDK
+
+[使用SDK编译hello world样例](#使用SDK编译hello world样例)
+
+使用SDK编译内核模块样例
+
+安装SDK
+执行SDK自解压安装脚本
+运行如下命令：
+
+sh openeuler-glibc-x86_64-openeuler-image-aarch64-qemu-aarch64-toolchain-22.03.sh
+根据提示输入工具链的安装路径，默认路径是/opt/openeuler/\<openeuler version\>/；若不设置，则按默认路径安装；也可以配置相对路径或绝对路径。
+
+举例如下：
+
+sh ./openeuler-glibc-x86_64-openeuler-image-armv7a-qemu-arm-toolchain-22.03.sh``
+openEuler embedded(openEuler Embedded Reference Distro) SDK installer version 22.03
+================================================================
+Enter target directory for SDK (default: /opt/openeuler/22.03): sdk
+You are about to install the SDK to "/usr1/openeuler/sdk". Proceed [Y/n]? y
+Extracting SDK...............................................done
+Setting it up...SDK has been successfully set up and is ready to be used.
+Each time you wish to use the SDK in a new shell session, you need to source the environment setup script e.g.
+$ . /usr1/openeuler/sdk/environment-setup-armv7a-openeuler-linux-gnueabi
+设置SDK环境变量
+运行source命令。上例中前一步执行结束最后已打印source命令，运行即可。
+
+. /usr1/openeuler/myfiles/sdk/environment-setup-armv7a-openeuler-linux-gnueabi
+查看是否安装成功
+运行如下命令，查看是否安装成功、环境设置成功。
+
+arm-openeuler-linux-gnueabi-gcc -v
+使用SDK编译hello world样例
+准备代码
+以构建一个hello world程序为例，运行在openEuler Embedded根文件系统镜像中。
+
+创建一个hello.c文件，源码如下：
+
+#include <stdio.h>
+
+int main(void)
+{
+    printf("hello world\n");
+}
+编写CMakelist.txt，和hello.c文件放在同一个目录。
+
+project(hello C)
+
+add_executable(hello hello.c)
+编译生成二进制
+进入hello.c文件所在目录，使用工具链编译，命令如下：
+
+cmake ..
+make
+把编译好的hello程序拷贝到openEuler Embedded系统的/tmp/某个目录下（例如/tmp/myfiles/）。如何拷贝可以参考前文所述使能共享文件系统场景。
+
+运行用户态程序
+在openEuler Embedded系统中运行hello程序。
+
+cd /tmp/myfiles/
+./hello
+如运行成功，则会输出"hello world"。
+
+使用SDK编译内核模块样例
+准备环境
+在设置好SDK环境的基础之上，编译内核模块还需准备相应环境，但只需要准备一次即可。运行如下命令会创建相应的内核模块编译环境：
+
+cd <SDK_PATH>/sysroots/<target>-openeuler-linux/usr/src/kernel
+make  modules_prepare
+准备代码
+以编译一个内核模块为例，运行在openEuler Embedded内核中。
+
+创建一个hello.c文件，源码如下：
+
+#include <linux/init.h>
+#include <linux/module.h>
+
+static int hello_init(void)
+{
+    printk("Hello, openEuler Embedded!\r\n");
+    return 0;
+}
+
+static void hello_exit(void)
+{
+    printk("Byebye!");
+}
+
+module_init(hello_init);
+module_exit(hello_exit);
+
+MODULE_LICENSE(GPL);
+编写Makefile，和hello.c文件放在同一个目录：
+
+ KERNELDIR := ${KERNEL_SRC_DIR}
+ CURRENT_PATH := $(shell pwd)
+
+ target := hello
+ obj-m := $(target).o
+
+ build := kernel_modules
+
+ kernel_modules:
+ 		$(MAKE) -C $(KERNELDIR) M=$(CURRENT_PATH) modules
+ clean:
+ 		$(MAKE) -C $(KERNELDIR) M=$(CURRENT_PATH) clean
+KERNEL_SRC_DIR 为SDK中内核源码树的目录，该变量在安装SDK后会被自动设置。
+
+编译生成内核模块
+进入hello.c文件所在目录，使用工具链编译，命令如下：
+
+make
+将编译好的hello.ko拷贝到openEuler Embedded系统的目录下。
+
+如何拷贝可以参考前文所述使能共享文件系统场景。
+
+插入内核模块
+在openEuler Embedded系统中插入内核模块:
+
+insmod hello.ko
+如运行成功，则会在内核日志中出现"Hello, openEuler Embedded!"。

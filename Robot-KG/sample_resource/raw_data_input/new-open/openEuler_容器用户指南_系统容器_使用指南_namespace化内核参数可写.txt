@@ -1,0 +1,90 @@
+namespace化内核参数可写
+功能描述
+对于运行在容器内的业务，如数据库，大数据，包括普通应用，有对部分内核参数进行设置和调整的需求，以满足最佳的业务运行性能和可靠性。内核参数要么不允许修改，要么全部允许修改（特权容器）：
+
+在不允许用户在容器内修改时，只提供了–sysctl外部接口，而且容器内不能灵活修改参数值。
+
+在允许用户在容器内修改时，部分内核参数是全局有效的，某个容器修改后，会影响主机上所有的程序，安全性降低。
+
+  
+
+系统容器提供–ns-change-opt参数，可以指定namespace化的内核参数在容器内动态设置，当前仅支持net、ipc。
+
+参数说明
+
+命令
+
+参数
+
+参数指定值说明
+
+isula create/run
+
+--ns-change-opt
+
+字符串变量。
+仅支持配置net、ipc：
+net：支持/proc/sys/net目录下所有namespace化参数。
+
+ipc：支持的namespace化参数列表如下：
+
+/proc/sys/kernel/msgmax
+
+/proc/sys/kernel/msgmnb
+
+/proc/sys/kernel/msgmni
+
+/proc/sys/kernel/sem
+
+/proc/sys/kernel/shmall
+
+/proc/sys/kernel/shmmax
+
+/proc/sys/kernel/shmmni
+
+/proc/sys/kernel/shm_rmid_forced
+
+/proc/sys/fs/mqueue/msg_default
+
+/proc/sys/fs/mqueue/msg_max
+
+/proc/sys/fs/mqueue/msgsize_default
+
+/proc/sys/fs/mqueue/msgsize_max
+
+/proc/sys/fs/mqueue/queues_max
+
+支持通知指定多个namespce配置，多个配置间通过逗号隔开，例如：--ns-change-opt=net,ipc。
+约束限制
+如果容器启动同时指定了–privileged（特权容器）和–ns-change-opt，则–ns-change-opt不生效。
+使用示例
+启动容器， 指定–ns-change-opt=net：
+
+[root@localhost ~]# isula run -tid --ns-change-opt net --system-container --external-rootfs /root/myrootfs none init
+4bf44a42b4a14fdaf127616c90defa64b4b532b18efd15b62a71cbf99ebc12d2
+[root@localhost ~]# isula exec -it 4b mount | grep /proc/sys
+proc on /proc/sys type proc (ro,nosuid,nodev,noexec,relatime)
+proc on /proc/sysrq-trigger type proc (ro,nosuid,nodev,noexec,relatime)
+proc on /proc/sys/net type proc (rw,nosuid,nodev,noexec,relatime)
+可以看到容器内/proc/sys/net挂载点为rw，说明net相关的namespace化的内核参数具有读写权限。
+
+再启动一个容器，指定–ns-change-opt=ipc：
+
+[root@localhost ~]# isula run -tid --ns-change-opt ipc --system-container --external-rootfs /root/myrootfs none init
+c62e5e5686d390500dab2fa76b6c44f5f8da383a4cbbeac12cfada1b07d6c47f
+[root@localhost ~]# isula exec -it c6 mount | grep /proc/sys
+proc on /proc/sys type proc (ro,nosuid,nodev,noexec,relatime)
+proc on /proc/sysrq-trigger type proc (ro,nosuid,nodev,noexec,relatime)
+proc on /proc/sys/kernel/shmmax type proc (rw,nosuid,nodev,noexec,relatime)
+proc on /proc/sys/kernel/shmmni type proc (rw,nosuid,nodev,noexec,relatime)
+proc on /proc/sys/kernel/shmall type proc (rw,nosuid,nodev,noexec,relatime)
+proc on /proc/sys/kernel/shm_rmid_forced type proc (rw,nosuid,nodev,noexec,relatime)
+proc on /proc/sys/kernel/msgmax type proc (rw,nosuid,nodev,noexec,relatime)
+proc on /proc/sys/kernel/msgmni type proc (rw,nosuid,nodev,noexec,relatime)
+proc on /proc/sys/kernel/msgmnb type proc (rw,nosuid,nodev,noexec,relatime)
+proc on /proc/sys/kernel/sem type proc (rw,nosuid,nodev,noexec,relatime)
+proc on /proc/sys/fs/mqueue type proc (rw,nosuid,nodev,noexec,relatime)
+可以看到容器内ipc相关的内核参数挂载点为rw，说明ipc相关的namespace化的内核参数具有读写权限。
+
+返回顶部
+有奖捉虫

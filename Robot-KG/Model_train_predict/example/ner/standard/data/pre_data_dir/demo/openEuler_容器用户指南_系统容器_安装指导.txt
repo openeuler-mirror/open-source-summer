@@ -1,0 +1,19 @@
+安装指导
+ 说明：
+系统容器的安装需要使用root权限。
+
+首先需要安装iSulad容器引擎。
+
+# yum install iSulad
+安装系统容器依赖包。
+
+# yum install syscontainer-tools authz lxcfs-tools lxcfs
+查看iSulad是否已经启动。
+
+# systemctl status isulad
+开启lxcfs和authz服务。
+
+# systemctl start lxcfs
+# systemctl start authz
+返回顶部
+有奖捉虫

@@ -1,0 +1,32 @@
+环境变量持久化
+功能描述
+系统容器支持通过指定–env-target-file接口参数将env变量持久化到容器rootfs目录下的配置文件中。
+
+参数说明
+
+命令
+
+参数
+
+参数指定值说明
+
+isula create/run
+
+--env-target-file
+
+字符串变量。
+env持久化文件必须在rootfs目录下，且配置为绝对路径。
+约束限制
+–env-target-file指定的目标文件如果存在的话，大小不能超过10MB。
+–env-target-file指定的参数为rootfs目录下的绝对路径。
+如果–env和目标文件里面的env出现冲突，以–env指定值的参数为准。
+使用示例
+启动系统容器，指定env环境变量和–env-target-file参数：
+
+[root@localhost ~]# isula run -tid -e abc=123 --env-target-file /etc/environment --system-container --external-rootfs /root/myrootfs none init
+b75df997a64da74518deb9a01d345e8df13eca6bcc36d6fe40c3e90ea1ee088e
+[root@localhost ~]# isula exec b7 cat /etc/environment
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+TERM=xterm
+abc=123
+可以看到容器的env变量（abc=123）已经持久化到/etc/environment配置文件中。

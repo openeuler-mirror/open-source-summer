@@ -1,0 +1,113 @@
+安装与运行
+本章主要介绍如何获取预先构建好的镜像，如何运行镜像。
+
+安装与运行
+获取镜像
+镜像内容
+运行镜像
+极简运行场景
+使能共享文件系统场景
+使能网络场景
+获取镜像
+当前发布的已构建好的镜像，只支持arm和aarch64两种架构，且只支持qemu中ARM virt-4.0平台，您可以通过如下链接获得相应的镜像：
+
+qemu_arm：32位arm架构，ARM Cortex A15处理器
+qemu_aarch64：64位aarch64架构，ARM Cortex A57处理器
+只要相应环境支持qemu仿真器（版本5.0以上），您可以将提供的openEuler Embedded镜像部署在物理裸机、云环境、容器或虚拟机上。
+
+镜像内容
+所下载的镜像，由以下几部分组成：
+
+内核镜像zImage: 基于openEuler社区Linux 5.10代码构建得到。相应的内核配置可通过如下链接获取：
+
+arm(cortex a15)
+arm(cortex a57)，针对aarch64架构，额外增加了镜像自解压功能，可以参见相应的patch
+根文件系统镜像
+
+openeuler-image-qemu-xxx.cpio.gz：标准根文件系统镜像，进行了必要安全加固，增加了audit、cracklib、OpenSSH、Linux PAM、shadow、iSula容器所支持的软件包。
+SDK(Software Development Kit)工具
+
+openeuler-glibc-x86_64-xxxxx.sh：openEuler Embedded SDK自解压安装包，SDK包含了进行开发（用户态程序、内核模块等)所必需的工具、库和头文件等。
+运行镜像
+通过运行镜像，一方面您可以体验openEuler Embedded的功能，一方面也可以完成基本的嵌入式Linux开发。
+
+注意事项
+
+建议使用QEMU 5.0以上版本运行镜像，由于一些额外功能（网络、共享文件系统)需要依赖QEMU的virtio-net, virtio-fs等特性，如未在QEMU中使能，则运行时可能会产生错误，此时可能需要从源码重新编译QEMU。
+运行镜像时，建议把内核镜像和根文件系统镜像放在同一目录下。
+QEMU的下载与安装可以参考QEMU官方网站 , 或者下载源码单独编译安装。安装好后可以运行如下命令确认：
+
+qemu-system-aarch64 --version
+极简运行场景
+该场景下，QEMU未使能网络和共享文件系统，适合快速的功能体验。
+
+启动QEMU
+针对arm(ARM Cortex A15)，运行如下命令：
+
+qemu-system-arm -M virt-4.0 -cpu cortex-a15 -nographic -kernel zImage -initrd initrd
+针对aarch64(ARM Cortex A57)，运行如下命令：
+
+qemu-system-aarch64 -M virt-4.0 -cpu cortex-a57 -nographic -kernel zImage -initrd initrd
+ 说明：
+
+由于标准根文件系统镜像进行了安全加固，因此第一次启动时，需要为登录用户名root设置密码，且密码强度有相应要求， 需要数字、字母、特殊字符组合最少8位，例如openEuler@2021。
+
+检查运行是否成功
+QEMU运行成功并登录后，将会呈现openEuler Embedded的Shell。
+
+使能共享文件系统场景
+通过共享文件系统，可以使得运行QEMU仿真器的宿主机和openEuler Embedded共享文件，这样在宿主机上交叉编译的程序，拷贝到共享目录中，即可在openEuler Embedded上运行。
+
+假设将宿主机的/tmp目录作为共享目录，并事先在其中创建了名为hello_openeuler.txt的文件，使能共享文件系统功能的操作指导如下：
+
+启动QEMU
+针对arm(ARM Cortex A15)，运行如下命令：
+
+qemu-system-arm -M virt-4.0 -cpu cortex-a15 -nographic -kernel zImage -initrd initrd -device virtio-9p-device,fsdev=fs1,mount_tag=host -fsdev local,security_model=passthrough,id=fs1,path=/tmp
+针对aarch64(ARM Cortex A57)，运行如下命令：
+
+qemu-system-aarch64 -M virt-4.0 -cpu cortex-a57 -nographic -kernel zImage -initrd initrd -device virtio-9p-device,fsdev=fs1,mount_tag=host -fsdev local,security_model=passthrough,id=fs1,path=/tmp
+映射文件系统
+在openEuler Embedded启动并登录之后，需要运行如下命令，映射(mount)共享文件系统
+
+cd /tmp
+mkdir host
+mount -t 9p -o trans=virtio,version=9p2000.L host /tmp/host
+即把共享文件系统映射到openEuler Embedded的/tmp/host目录下。
+
+检查共享是否成功
+在openEuler Embedded中，运行如下命令:
+
+cd /tmp/host
+ls
+如能发现hello_openeuler.txt，则共享成功。
+
+使能网络场景
+通过QEMU的virtio-net和宿主机上的虚拟网卡，可以实现宿主机和openEuler Embedded之间的网络通信。除了通过virtio-fs实现文件共享外，还可以通过网络的方式，例如 scp 命令，实现宿主机和 openEuler Embedded传输文件。
+
+启动QEMU
+针对arm(ARM Cortex A15)，运行如下命令：
+
+qemu-system-arm -M virt-4.0 -cpu cortex-a15 -nographic -kernel zImage -initrd initrd -device virtio-net-device,netdev=tap0 -netdev tap,id=tap0,script=/etc/qemu-ifup
+针对aarch64(ARM Cortex A57)，运行如下命令：
+
+qemu-system-aarch64 -M virt-4.0 -cpu cortex-a57 -nographic -kernel zImage -initrd initrd -device virtio-net-device,netdev=tap0 -netdev tap,id=tap0,script=/etc/qemu-ifup
+宿主上建立虚拟网卡
+在宿主机上需要建立名为tap0的虚拟网卡，可以借助脚本实现，创建qemu-ifup脚本，放在/etc/下，具体内容如下：
+
+#!/bin/bash
+ifconfig $1 192.168.10.1 up
+其执行需要root权限：
+
+chmod a+x qemu-ifup
+通过qemu-ifup脚本，宿主机上将创建名为tap0的虚拟网卡，地址为192.168.10.1。
+
+配置openEuler Embedded网卡
+openEuler Embedded登录后，执行如下命令：
+
+ifconfig eth0 192.168.10.2
+确认网络连通
+在openEuler Embedded中，执行如下命令：
+
+ping 192.168.10.1
+如能ping通，则宿主机和openEuler Embedded之间的网络是连通的。
