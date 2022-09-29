@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cephfs-provisioner1
+  namespace: kube-system
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cephfs-provisioner
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: cephfs-provisioner
+    spec:
+      containers:
+      - name: cephfs-provisioner-storage
+        image: "cephfs-provisioner-storage:v4.0"
+        imagePullPolicy: Never
+        env:
+        - name: PROVISIONER_NAME
+          value: ceph.com/cephfs1
+        - name: PROVISIONER_SECRET_NAMESPACE
+          value: kube-system
+        command:
+        - "/usr/local/bin/cephfs-provisioner"
+        args:
+        - "-id=cephfs-provisioner-1"
+      serviceAccount: cephfs-provisioner

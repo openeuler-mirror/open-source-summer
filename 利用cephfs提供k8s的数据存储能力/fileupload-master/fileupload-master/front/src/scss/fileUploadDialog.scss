@@ -1,0 +1,84 @@
+.upload-dialog-main {
+    display: flex;
+    justify-content: space-between;
+    .upload-block {
+        float: left;
+        width: 360px;
+        // height: 400px;
+    }
+    .upload-filelist {
+        height: 180px;
+        width: calc(100% - 400px);
+        border: #33333310 solid 1px;
+        overflow: auto;
+        .filelist-item {
+            border-bottom: #33333310 solid 1px;
+            overflow: hidden;
+            position: relative;
+            .filelist-item-right {
+                width: 100%;
+                padding: 10px 5px;
+                float: right;
+                transition: all 0.3s ease-in-out 0.2s;
+                .filelist-item-info {
+                    margin-bottom: 5px;
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    .filelist-item-name {
+                        display: inline-block;
+                        width: calc(100% - 50px);
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        cursor: default;
+                    }
+                    .filelist-item-status {
+                        display: inline-block;
+                        i {
+                            cursor: pointer;
+                        }
+                        .el-icon-success {
+                            color: green;
+                        }
+                        .el-icon-error {
+                            color: red;
+                        }
+                    }
+                }
+            }
+            .filelist-item-left {
+                // transform: translateX(40px);
+                width: 0;
+                height: 48px;
+                background: red;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: 0;
+                left: 0;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out 0.2s;
+                .el-icon-delete-solid {
+                    color: #fff;
+                }
+            }
+            &:hover {
+                .filelist-item-right {
+                    width: calc(100% - 40px);
+                }
+                .filelist-item-left {
+                    width: 40px;
+                }
+            }
+        }
+    }
+    .non-file {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

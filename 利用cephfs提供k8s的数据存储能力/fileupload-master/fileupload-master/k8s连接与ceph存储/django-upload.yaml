@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: django-upload
+  name: django-upload
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: django-upload
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: django-upload
+    spec:
+      containers:
+      - image: registry.cn-hangzhou.aliyuncs.com/irises/django-upload:1.0
+        name: docker-django
+        resources: {}
+        ports:
+        - containerPort: 8000
+      imagePullSecrets:
+      - name: django-upload-secret
+status: {}

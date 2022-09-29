@@ -1,0 +1,10 @@
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: cephfs1
+provisioner: ceph.com/cephfs1
+parameters:
+    monitors: 192.168.57.60:6789
+    adminId: admin
+    adminSecretNamespace: "kube-system"
+    adminSecretName: ceph-secret-admin1

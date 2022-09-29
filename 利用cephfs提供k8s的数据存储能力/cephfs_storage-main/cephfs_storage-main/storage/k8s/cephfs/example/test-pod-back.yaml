@@ -1,0 +1,19 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: test-pod
+spec:
+  containers:
+  - name: test-pod
+    image: irises/django-upload:1.0
+    args:
+      - "-c"
+      - "touch /var/www/upload/django && exit 0 || exit 1"
+    volumeMounts:
+      - name: pvc
+        mountPath: "/var/www/upload/django"
+  restartPolicy: "Never"
+  volumes:
+    - name: pvc
+      persistentVolumeClaim:
+        claimName: claim-local1
