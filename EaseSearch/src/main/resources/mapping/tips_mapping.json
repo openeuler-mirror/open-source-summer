@@ -1,0 +1,36 @@
+{
+  "properties": {
+    "id": {
+      "type": "text",
+      "fields": {
+        "keyword": {
+          "type": "keyword",
+          "ignore_above" : 256
+        }
+      }
+    },
+    "lang": {
+      "type" : "text",
+      "fields" : {
+        "keyword" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        }
+      }
+    },
+    "textTip": {
+      "type": "completion",
+      "analyzer": "ik_smart",
+      "fields": {
+        "kw": {
+          "type": "keyword"
+        },
+        "py": {
+          "type": "completion",
+          "boost": 1,
+          "analyzer": "pinyin"
+        }
+      }
+    }
+  }
+}
