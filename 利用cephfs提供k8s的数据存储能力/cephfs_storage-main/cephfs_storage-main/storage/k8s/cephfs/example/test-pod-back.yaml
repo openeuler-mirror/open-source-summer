@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 kind: Pod
 apiVersion: v1
 metadata:  
@@ -18,29 +18,3 @@ spec:
       - name: pvc      
         persistentVolumeClaim:        
           claimName: claim-local1
-=======
-kind: Pod
-apiVersion: v1
-metadata:  
-  name: test-pod
-spec:  
-  containers:  
-  - name: test-pod    
-    image: django-upload:1.0
-    # 本地拉取镜像
-    imagePullPolicy: Never
-    # 这些参数应该不必要
-    # args:      
-    #   - "-c"      
-    # 这原先貌似是tom在启动的时候创建了一个空文件测试用的
-    #   - "touch /var/www/upload/django && exit 0 || exit 1"    
-    volumeMounts:      
-      - name: pvc        
-      # /upload文件夹才是存放上传资源的文件夹
-        mountPath: "/var/www/upload/django/upload"  
-    restartPolicy: "Never"  
-    volumes:    
-      - name: pvc      
-        persistentVolumeClaim:        
-          claimName: claim-local1
->>>>>>> bd93135313e2ec5f850d22739bb22be5f78e1269
