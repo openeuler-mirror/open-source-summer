@@ -1,0 +1,30 @@
+enclave {
+	include "secgear_urts.h"
+    from "secgear_tstdc.edl" import *;
+
+    trusted {
+		public void callsm2signtest();
+		public void callsm2exchangetest();
+		public void callsm2crypttest();
+		public void setSignIDA([in, size=len] uint8 *src, size_t len);
+		public void setSignM([in, size=len] uint8 *src, size_t len);
+		public void setSignDA([in, count=32] uint8 *src);
+		public void setSignK([in, count=32] uint8 *src);
+		public void getSignResult([out, size=len] uint8 *buf, size_t len);
+		public void getSignVerifyResult([out, count=1] uint8 buf);
+		public void setExchangeIDA([in, size=len] uint8 *src, size_t len);
+		public void setExchangeIDB([in, size=len] uint8 *src, size_t len);
+		public void setExchangeDA([in, count=32] uint8 *src);
+		public void setExchangeDB([in, count=32] uint8 *src);
+		public void setExchangeKLen([in, count=1] uint64 *src);
+		public void getExchangeResult([out, count=1] uint8 buf);
+		public void setCryptM([in, size=len] uint8 *src, size_t len);
+		public void setCryptDB([in, count=32] uint8 *src);
+		public void getCryptPW([out, size=len] uint8 *buf, size_t len);
+		public void getCryptMSG([out, size=len] uint8 *buf, size_t len);
+    };
+
+    untrusted {
+
+    };
+};
