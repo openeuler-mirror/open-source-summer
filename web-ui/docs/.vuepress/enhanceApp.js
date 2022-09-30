@@ -8,7 +8,7 @@ import'./public/style/markdown.less';
 import directive from './libs/directive';
 import VueLazyload from 'vue-lazyload';
 // import tracing from 'web-tracing'
-import webtracing from '../../packages/eularTrace/eularTrace'
+import eularTrace from '../../packages/eularTrace/eularTrace'
 
 
 export default ({
@@ -21,7 +21,7 @@ export default ({
         preLoad: 1.3,
         attempt: 1
     });
-    Vue.use(webtracing, {
+    Vue.use(eularTrace, {
         requestUrl: 'http://123456webservertest/traceTest',
         appName: 'website-v2',
         event: true,

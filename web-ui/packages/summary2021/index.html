@@ -23,24 +23,6 @@
         s.parentNode.insertBefore(hm, s);
     })();
 </script>
-<script src="../test.umd.js"></script>
-  
-  <script>
-    webtracing.init({
-      requestUrl: 'http://172.15.224.10:33199/trackweb/tra',
-      appName: 'chengxh',
-      event: true,
-      performance: true,
-      pv: true,
-      error: true,
-    })
-    // 主动收集
-    webtracing.methods.tracePerformance('自定义ID', {
-      param1: 'param1',
-      param2: 'param2',
-      param3: 'param3',
-    })
-  </script>
 <body>
     <audio id="bgm" src="./bgm/openEuler_BGM_2021.mp3" autoplay preload loop></audio>
     <div class="bgm-open">
