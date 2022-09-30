@@ -1,0 +1,26 @@
+{
+    "os_list": [
+        {
+            "name": "openEuler 21.03 (Raspberry Pi 3/4/400)",
+            "description": "64-bit server OS for arm64 architectures (Linux Kernel 5.10)",
+            "url": "https://repo.openeuler.org/openEuler-21.03/raspi_img/openEuler-21.03-raspi-aarch64.img.xz",
+            "icon": "https://openeuler.org/Raspberry_Pi_OS_openEuler.png",
+            "extract_size": 2346713088,
+            "extract_sha256": "58712d218b7320901faf1b41b448a1be21b9cc5dd450205c33fcc0c8c780db40",
+            "image_download_size": 248386916,
+            "release_date": "2021-04-01",
+            "image_download_sha256": "0b157cc68dc6c1687da30c1f9731f475951bdf0c5da08dd5cb24e575b59c166b"
+        },
+        {
+            "name": "openEuler 20.03 LTS SP2 (Raspberry Pi 3/4/400)",
+            "description": "64-bit server OS for arm64 architectures (Linux kernel 4.19)",
+            "url": "https://repo.openeuler.org/openEuler-20.03-LTS-SP2/raspi_img/openEuler-20.03-LTS-SP2-raspi-aarch64.img.xz",
+            "icon": "https://openeuler.org/Raspberry_Pi_OS_openEuler.png",
+            "extract_size": 2652897280,
+            "extract_sha256": "2f469da6365bd6025f1559557645bd4ddbf142f23a1a16370cf8862b1b6d9c5c",
+            "image_download_size": 276996588,
+            "release_date": "2021-07-14",
+            "image_download_sha256": "5f6a595a46cd8486d31e10bad35810985ddabf170c9ed947f7cfcb6062580063"
+        }
+    ]
+}

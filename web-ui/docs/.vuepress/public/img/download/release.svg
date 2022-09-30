@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="20px" viewBox="0 0 18 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Outlined/UI/email</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="380" height="316" rx="8"></rect>
+        <filter x="-12.6%" y="-13.3%" width="125.3%" height="130.4%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="6" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="15" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="下载" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="openEuler-下载" transform="translate(-393.000000, -1030.000000)">
+            <rect fill="#FFFFFF" x="0" y="0" width="1920" height="2972"></rect>
+            <g id="Article-Big" transform="translate(360.000000, 816.000000)">
+                <g id="Base">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <g id="Content" transform="translate(30.000000, 36.000000)" fill="#252C32">
+                    <g id="Outlined/UI/email" transform="translate(0.000000, 176.000000)">
+                        <path d="M15.3075,2.24999997 L20.25,7.19249998 L20.25,19.5 C20.25,20.7426407 19.2426407,21.75 18,21.75 L18,21.75 L5.99999998,21.75 C4.75735929,21.75 3.74999997,20.7426407 3.74999997,19.5 L3.74999997,19.5 L3.74999997,2.24999997 L15.3075,2.24999997 Z M13.5,3.74999997 L5.24999998,3.74999997 L5.24999998,19.5 C5.24999998,19.9142136 5.58578642,20.25 5.99999998,20.25 L5.99999998,20.25 L18,20.25 C18.4142136,20.25 18.75,19.9142136 18.75,19.5 L18.75,19.5 L18.75,8.99999999 L15.75,8.99999999 C14.5073593,8.99999999 13.5,7.99264067 13.5,6.74999997 L13.5,6.74999997 L13.5,3.74999997 Z M12,14.25 L12,15.75 L8.24999999,15.75 L8.24999999,14.25 L12,14.25 Z M15.75,11.25 L15.75,12.75 L8.24999999,12.75 L8.24999999,11.25 L15.75,11.25 Z M15,4.05749998 L15,6.74999998 C15,7.16421355 15.3357864,7.49999999 15.75,7.49999999 L15.75,7.49999999 L18.4425,7.49999999 L15,4.05749998 Z" id="Style"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

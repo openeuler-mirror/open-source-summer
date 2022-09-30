@@ -1,0 +1,145 @@
+
+/* 开始编写CSS */
+.pc-box {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    height: 100vh;
+    padding: 50px;
+}
+.contribution,
+.no-contribution {
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+}
+body {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    background-color: white;
+}
+.container {
+    position: relative;
+    width: 330px;
+    height: 750px;
+    overflow: hidden;
+}
+.no-contribution {
+    justify-content: space-around;
+}
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transition: transform .7s ease-in-out;
+}
+.front {
+    background-color: rgb(0, 47, 156);
+    z-index: 10;
+    background-position: -6px -2px;
+    background-repeat: no-repeat;
+}
+.no-contribution .box-one .front {
+    background-image: url(../images/nocontribution1.jpg);
+}
+.no-contribution .box-four .front {
+    background-image: url(../images/nocontribution2.jpg);
+}
+
+.no-contribution .qr-code {
+    padding-top: 50px;
+}
+.noContribution .qr-code img {
+    border: 1px solid black;
+}
+.no-contribution .qr-code  img{
+    border: 1px solid black;
+}
+.no-contribution .qr-code p {
+    padding-top: 20px;
+}
+.box-one .front {
+    background-image:  url(../images/contribution1.jpg);
+}
+.back {
+    transform: rotateY(180deg);
+}
+.box-tow .front {
+    background-image:  url(../images/contribution2.jpg);
+}
+
+.box-three .front {
+    background-image:  url(../images/contribution3.jpg);
+}
+
+.box-four .front {
+    background-image:  url(../images/contribution4.jpg);
+}
+
+.pc-box .euler-title2 {
+    padding: 10px 0;
+}
+.pc-box .euler-title3 {
+    padding: 0 0 10px;
+}
+.contents{
+    width: 100%;
+    height: 100%;
+    background:rgb(0, 47, 156);
+    transform: translateZ(60px);
+}
+.contents .page {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.contents img {
+    width: 100%;
+}
+.contents .page-one {
+    padding-top: 20px;
+}
+.contents .page-five {
+    justify-content:start ;
+    padding-top: 30px;
+}
+.page-five p {
+    font-size: 12px;
+    padding-bottom: 8px;
+}
+.contents .dash-line {
+    top: -80px;
+}
+.contents .bg-five img{
+    position: absolute;
+    width: 100px;
+}
+.contents .bg-five img:nth-child(1) {
+    top: -40px;
+    right: -40px;
+}
+.contents .bg-five img:nth-child(2) {
+    bottom: -20px;
+    left: -30px;
+}
+.contents .border {
+    padding: 20px 10px 0;
+}
+.contents .page-one .text-box {
+    padding: 20px 10px 0;
+}

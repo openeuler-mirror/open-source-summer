@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Style</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="336" height="370" rx="4"></rect>
+        <filter x="-9.8%" y="-7.3%" width="119.6%" height="117.8%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="6" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <filter x="-6.5%" y="-4.3%" width="113.1%" height="111.9%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="1.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="session点开后效果" transform="translate(-468.000000, -364.000000)">
+            <rect id="矩形" fill-opacity="0.2" fill="#5481A3" x="178" y="84" width="870" height="696"></rect>
+            <g id="Article-Big备份-12" transform="translate(442.000000, 242.000000)">
+                <g id="Base">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"></use>
+                </g>
+                <g id="Content" transform="translate(26.000000, 26.000000)" fill="#0B162B" opacity="0.5">
+                    <path d="M12.9230769,104.32 C14.6224146,104.32 16,105.752689 16,107.52 L16,107.52 L16,112 L14.7692308,112 L14.7692308,107.52 C14.7692308,106.459613 13.9426795,105.6 12.9230769,105.6 L12.9230769,105.6 L3.07692308,105.6 C2.05732046,105.6 1.23076923,106.459613 1.23076923,107.52 L1.23076923,107.52 L1.23076923,112 L0,112 L0,107.52 C0,105.752689 1.37758539,104.32 3.07692308,104.32 L3.07692308,104.32 Z M8,96 C10.0392052,96 11.6923077,97.7192266 11.6923077,99.84 C11.6923077,101.960773 10.0392052,103.68 8,103.68 C5.96079477,103.68 4.30769231,101.960773 4.30769231,99.84 C4.30769231,97.7192266 5.96079477,96 8,96 Z M8,97.28 C6.64052985,97.28 5.53846154,98.426151 5.53846154,99.84 C5.53846154,101.253849 6.64052985,102.4 8,102.4 C9.35947015,102.4 10.4615385,101.253849 10.4615385,99.84 C10.4615385,98.426151 9.35947015,97.28 8,97.28 Z" id="Style"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

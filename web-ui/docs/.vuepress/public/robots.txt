@@ -1,0 +1,3 @@
+Sitemap: https://openeuler.org/sitemap.xml
+
+User-agent: *

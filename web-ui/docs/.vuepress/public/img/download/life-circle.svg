@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="24px" viewBox="0 0 18 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Outlined/UI/account备份</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="380" height="316" rx="8"></rect>
+        <filter x="-12.6%" y="-13.3%" width="125.3%" height="130.4%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="6" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="15" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="下载" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="openEuler-下载" transform="translate(-507.000000, -1072.000000)">
+            <rect fill="#FFFFFF" x="0" y="0" width="1920" height="2972"></rect>
+            <g id="Article-Big" transform="translate(360.000000, 816.000000)">
+                <g id="Base">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <g id="Content" transform="translate(30.000000, 36.000000)" fill="#252C32">
+                    <g id="编组-2" transform="translate(0.000000, 176.000000)">
+                        <g id="Outlined/UI/account备份" transform="translate(114.000000, 44.000000)">
+                            <path d="M5.63249998,5.63249998 L6.69749998,6.69749998 C4.55319061,8.8424569 3.91183568,12.0677746 5.07241514,14.8699092 C6.23299461,17.6720438 8.96703076,19.4993524 12,19.5 L12,19.5 L13.1925,19.5 L11.4675,17.7825 L12.5325,16.7175 L15,19.1925 C15.5815854,19.7775562 15.5815854,20.7224438 15,21.3075 L15,21.3075 L12.5325,23.7825 L11.4675,22.7175 L13.1925,21 L12,21 C8.35763986,21.0028664 5.07265685,18.8100536 3.6783981,15.445111 C2.28413934,12.0801685 3.05552825,8.20660416 5.63249998,5.63249998 L5.63249998,5.63249998 Z M11.4675,0.217499962 L12.5325,1.28249997 L10.8075,2.99999997 L12,2.99999997 C15.6423601,2.99713356 18.9273431,5.18994644 20.3216019,8.55488896 C21.7158607,11.9198315 20.9444717,15.7933958 18.3675,18.3675 L18.3675,18.3675 L17.3025,17.3025 C19.4468094,15.1575431 20.0881643,11.9322254 18.9275849,9.13009081 C17.7670054,6.32795623 15.0329692,4.50064759 12,4.49999998 L12,4.49999998 L10.8075,4.49999998 L12.5325,6.21749996 L11.4675,7.28249998 L8.99999999,4.80749998 C8.4184146,4.22244379 8.4184146,3.27755615 8.99999999,2.69249997 L8.99999999,2.69249997 L11.4675,0.217499962 Z" id="Style"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

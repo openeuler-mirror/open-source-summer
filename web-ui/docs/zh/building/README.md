@@ -1,0 +1,3 @@
+<ClientOnly>
+  <building-building />
+</ClientOnly>
