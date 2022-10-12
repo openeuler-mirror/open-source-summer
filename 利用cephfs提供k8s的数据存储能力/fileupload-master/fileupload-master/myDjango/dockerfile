@@ -1,0 +1,23 @@
+FROM python:3.7
+
+RUN mkdir -p /var/www/upload/django
+
+WORKDIR /var/www/upload/django
+COPY . /var/www/upload/django
+
+RUN python -m pip install --upgrade pip \
+    && pip install django==3.2.2 --index https://pypi.tuna.tsinghua.edu.cn/simple/ \
+    && pip install django-cors-headers --index https://pypi.tuna.tsinghua.edu.cn/simple/ \
+    && pip3 install djangorestframework --index https://pypi.tuna.tsinghua.edu.cn/simple/ \
+    && cd /var/www/upload/django
+
+EXPOSE 8000
+
+
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+
+
+
+
+
+

@@ -1,0 +1,344 @@
+﻿一. k8s安装
+(1)k8s的安装计划
+harbor:
+k8s-mater01:
+k8s-node01:
+k8s-node02:
+router:koolshare  
+私有仓库：harbor 
+
+
+(2)节点预备安装
+1.设置节点名称
+hostnamectl set-hostnmae k8s-master-01
+exec /bin/bash
+
+2.安装常用的工具
+yum install -y conntrack ntpdate ntp ipvsadm ipset jq iptables curl sysstat libseccomp wget vim net-tools git
+
+3.安装iptables
+systemctl stop firewalld & systemctl disable firewalld
+yum install -y iptables-services && systemctl start iptables && systemctl enable iptables && iptables -F && service iptables save
+
+4禁用selinux
+swapoff -a && sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab  
+setenforce 0 && sed -i 's/^SELINUX=.*/SELINUX=disabled/' /etc/selinux/config
+
+5.配置k8s:
+cat  >  kubernetes.conf << EOF 
+net.bridge.bridge-nf-call-iptables=1
+net.bridge.bridge-nf-call-ip6tables=1
+net.ipv4.ip_forward=1
+net.ipv4.tcp_tw_recycle=0
+net.ipv6.conf.all.disable_ipv6=1
+net.netfilter.nf_conntrack_max=2310720
+vm.swappiness=0
+vm.overcommit_memory=1
+vm.panic_on_oom=0
+EOF
+modprobe br_netfilter
+cp kubernetes.conf /etc/sysctl.d/kubernetes.conf
+sysctl -p /etc/sysctl.d/kubernetes.conf
+
+6.设置时区
+timedatectl set-timezone Asia/Shanghai
+timedatectl set-local-rtc 0
+systemctl restart rsyslog
+systemctl restart crond
+
+7.停止相关不使用的服务
+systemctl stop postfix && systemctl disable postfix
+
+8.配置systemd journald日志
+mkdir /var/log/journal
+mkdir /etc/systemd/journal.conf.d
+cat >/etc/systemd/journal.conf.d/99-prophet.conf << EOF
+[Journal]
+Storage=persistent
+Compress=yes
+SyncIntervalSec=5m
+RateLimitInterval=30s
+RateLimitBurst=1000
+SystemMaxUse=10G
+SystemMaxFileSize=200M
+MaxRetentionSec=2week
+ForwardToSyslog=no
+EOF
+systemctl restart systemd-journald
+
+
+9.加载防火墙模块
+modprobe br_netfilter
+cat > /etc/sysconfig/modules/ipvs.modules << EOF 
+#!/bin/bash
+modprobe -- ip_vs 
+modprobe -- ip_vs_rr
+modprobe -- ip_vs_wrr
+modprobe -- ip_vs_sh
+modprobe -- nf_conntrack_ipv4
+EOF
+chmod 755 /etc/sysconfig/modules/ipvs.modules && bash /etc/sysconfig/modules/ipvs.modules && lsmod |grep -e ip_vs -e nf_conntrack_ipv4
+
+110安装软件docker
+yum install -y yum-utils device-mapper-persistent-data lvm2 
+yum update -y && yum install -y docker-ce
+
+配置docker:
+mkdir -p /etc/docker
+cat > /etc/docker/daemon.json << EOF 
+{
+    "exec-opts" : ["native.cgroupdirver=systemd"],
+    "log-driver" : "json-file",
+    "log-opts" : {
+	"max-size" : "100m"
+	}
+}
+EOF
+
+mkdir -p /etc/systemd/system/docker.service.d
+systemctl daemon-reload && systemctl restart docker && systemctl enable docker 
+
+
+(3) 使用kubeadm安装k8s集群
+1. 修改镜像源
+cat <<EOF > /etc/yum.repos.d/kubernetes.repo
+[kubernetes]
+name=Kubernetes
+baseurl=http://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64
+enabled=1
+gpgcheck=0
+repo_gpgcheck=0
+gpgkey=http://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg http://mirrors.aliyun.com/kubernetes/yum/doc/rpm-package-key.gpg
+EOF
+
+2.安装k8s的三个组件
+yum install kubectl kubelet kubeadm
+systemctl enable kubelet
+
+1.19.2如下图所示：
+yum install kubectl-1.19.2 kubelet-1.19.2 kubeadm-1.19.2
+systemctl enable kubelet
+
+
+3.kubeadmin初始化
+1》使用配置进行初始化（暂时没有测试）。
+kubeadm config print init-defaults > kubeadm-init.yaml
+该文件有四处需要修改:
+a.将advertiseAddress: 1.2.3.4修改为本机地址
+b.将imageRepository: k8s.gcr.io修改为imageRepository: registry.cn-hangzhou.aliyuncs.com/google_containers
+c.修改配置文件中以下内容：
+networking:
+  dnsDomain: cluster.local
+  podSubnet: 10.244.0.0/16
+  serviceSubnet: 10.96.0.0/12
+scheduler: {}
+d.在最后追加上内容：
+---
+apiVersion: kubeproxy.config.k8s.io/v1alpha1
+kind: KubeProxyConfiguration
+featureGates:
+  SupportIPVSProxyMode: true
+mode: ipvs
+
+d.然后下载镜像:
+kubeadm config images pull --config kubeadm-init.yaml
+
+e.执行初始化
+kubeadm init --config kubeadm-init.yaml
+
+
+2》使用命令进行初始化
+建议参考文档：https://www.cnblogs.com/cerberus43/p/15881294.html
+
+a.先下载容器
+kubeadm config images list --kubernetes-version v1.23.1
+
+
+
+b.再初始化
+kubeadm init --kubernetes-version=v1.23.1 
+--pod-network-cidr=10.244.0.0/16 
+--service-cidr=10.96.0.0/12 
+--apiserver-advertise-address=192.168.57.40
+注意：kublet启动失败报systemd和cgroupfs不一致的错误
+vim /etc/docker/daemon.json
+“exec-opts”: [“native.cgroupdriver=systemd”]
+vim /usr/lib/systemd/system/kubelet.service.d/10-kubeadm.conf
+在KUBELET_KUBECONFIG_ARGS 后面追加 --cgroup-driver=systemd
+Environment="KUBELET_KUBECONFIG_ARGS=--bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --kubeconfig=/etc/kubernetes/kubelet.conf --cgroup-driver=systemd"
+vim /var/lib/kubelet/kubeadm-flags.env
+KUBELET_KUBEADM_ARGS="--cgroup-driver=systemd --network-plugin=cni --pod-infra-container-image=registry.aliyuncs.com/google_containers/pause:3.2"
+然后重启kubelet：
+systemctl daemon-reload
+systemctl restart kubelet
+
+
+4. 配置环境
+mkdir -p $HOME/.kube && sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config && sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+5. 配置网络
+kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+需要配置/etc/hosts 
+185.199.110.133 raw.githubusercontent.com
+kubectl get pods --all-namespaces
+
+6.从节点配置：
+a.从节点拉取images
+docker pull registry.aliyuncs.com/google_containers/kube-proxy:v1.23.1
+docker pull registry.aliyuncs.com/google_containers/pause:3.6
+
+docker tag registry.aliyuncs.com/google_containers/pause:3.6  k8s.gcr.io/pause:3.6
+docker tag registry.aliyuncs.com/google_containers/kube-proxy:v1.23.1  k8s.gcr.io/kube-proxy:v1.23.1
+
+b.加入集群
+如果忘记了kubeadm加入的命令：
+执行kubeadm token create --print-join-command打印出语句。
+kubeadm join 192.168.57.40:6443 --token ztqaas.z9wyywndebjaw2d2 --discovery-token-ca-cert-hash sha256:4373473b3cd1acb311988d2fe4d648fbddf3224c73f731bb0713ec2710008e58
+
+
+
+(4)集群操作
+kubectl get deployments
+a.问题点判断
+创建集群可能发现calico-node-glb7m和calico-kube-controllers-56fcbf9d6b-t7l4j状态异常:
+解决方法：
+1.查看日志
+kubectl describe pod coredns-64897985d-9pzb9 --namespace=kube-system
+2.重新下载calico.yaml
+wget https://docs.projectcalico.org/manifests/calico.yaml
+3.设置yaml文件中通讯的端口
+- name: CLUSTER_TYPE
+  value: "k8s,bgp"
+- name: IP_AUTODETECTION_METHOD
+  value: "interface=enp0s3"
+4.创建calico
+kubectl apply -f calico.yaml
+
+b.使用nginx进行部署：
+1.部署nginx
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: nginx-con
+  template:
+    metadata:
+      labels:
+        app: nginx-con
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80
+
+2.创建service服务
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+spec:
+  type: NodePort      #这里代表是NodePort类型的
+  ports:
+  - port: 80        # 集群内部访问的端口，暴露在cluster ip上的端口，即clusterip:port可以访问。
+    targetPort: 80   # pod控制器定义的端口（应用内部访问的端口），从port/nodeport上来的数据，经过kube-proxy流入到后端pod的targetPort, 最后流入pod.
+    protocol: TCP
+    nodePort: 31200   # 所有的节点都会开放此端口，此端口供外部调用。
+  selector:
+    app: nginx-con          #这里选择器一定要选择容器的标签，之前写name:kube-node是错的。
+
+
+三.组件安装
+(1)dsm-dashboard:
+wget https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0-beta4/aio/deploy/recommended.yaml
+修改recommended.yaml中的配置文件
+kubectl apply -f recommended.yaml 
+
+
+以token进行登录：
+kubectl get secret --all-namespaces |grep dashboard
+kubectl describe secret kubernetes-dashboard-token-z4tdm -n kubernetes-dashboard
+kubectl create clusterrolebinding test:anonymous --clusterrole=cluster-admin --user=system:anonymous
+
+
+以新用户的token进行登录
+#创建账户
+kubectl create serviceaccount dashboard-admin -n kubernetes-dashboard
+#授权
+kubectl create clusterrolebinding dashboard-admin-rb --clusterrole=cluster-admin --serviceaccount=kubernetes-dashboard:dashboard-admin
+#获取账号token
+kubectl get secrets -n kubernetes-dashboard |grep dashboard-admin
+kubectl describe secrets dashboard-admin-token-2bddq -n kubernetes-dashboard
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+~
+
+
+
+安装纯净的docker：
+#docker 容器中安装yum命令
+apt-get update ##跟新
+apt-get install vim
+apt-get install wget
+apt-get install yum
+apt-get install iputils-ping
+apt-get install net-tools

@@ -1,0 +1,18 @@
+[Unit]
+Description=cephfs-provisioner
+Documentation=cephfs-provisioner
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/cephfs-provisioner -id=cephfs-provisioner-1
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=on-failure
+TimeoutStopSec=20s
+RestartSec=10s
+StartLimitInterval=30min
+StartLimitBurst=3
+
+
+[Install]
+WantedBy=multi-user.target
