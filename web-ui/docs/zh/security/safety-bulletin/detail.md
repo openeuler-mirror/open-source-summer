@@ -1,0 +1,3 @@
+<ClientOnly>
+  <security-bulletinDetail />
+</ClientOnly>
