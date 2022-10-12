@@ -1,0 +1,27 @@
+enclave {
+	include "secgear_urts.h"
+    from "secgear_tstdc.edl" import *;
+
+    trusted {
+		public void setRSAsource([in, size=len] char* src, size_t len);
+		public void getRSAresult([out, size=len] char* buf, size_t len);
+		public void calcEmbeddingResult();
+		public void initKeys([in] uint32_t *src);
+		public void registerSeed([in] uint32_t *src);
+		public void setKeys([in,count=2] uint32_t *K);
+		public void getKeys([out,count=2] uint32_t *K);
+		public void setD([in, size=len] char* src, size_t len);
+		public void setCD([in, size=len] char* src, size_t len);
+		public void setN([in, size=len] char* src, size_t len);
+		public void getCD([out, size=len] char* buf, size_t len);
+		public void getX([out, size=len] char* buf, size_t len);
+		public void getMu([out, size=len] char* buf, size_t len);
+		public void getK([out, size=len] char* buf, size_t len);
+		public void getNWID([out, size=len] char* buf, size_t len);
+		public void setNPW([in, size=len] char* src, size_t len);
+    };
+
+    untrusted {
+
+    };
+};

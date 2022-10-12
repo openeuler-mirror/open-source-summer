@@ -1,0 +1,16 @@
+enclave {
+	include "secgear_urts.h"
+    from "secgear_tstdc.edl" import *;
+
+    trusted {
+		public void setKeys([in, count=4] uint32_t *src);
+		public void setKeys([in, count=4] uint32_t *src);
+		public void callsm4test1();
+		public void callsm4test2();
+		public void getKeys([out, count=4] uint32_t *buf);
+    };
+
+    untrusted {
+
+    };
+};
