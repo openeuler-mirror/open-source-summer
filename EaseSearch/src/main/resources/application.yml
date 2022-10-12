@@ -1,0 +1,17 @@
+#es用户名 密码等配置
+elasticsearch:
+  host: ${eshost}
+  username: ${esusername}
+  password: ${espassword}
+  port: ${esport}
+
+#定时读取配置
+scheduled:
+  cron: 0 31 11 ? * *
+
+#openEuler    openGauss    openLookeng    mindSpore
+system: ${searchsystem:openEuler}
+docsversion: 20
+
+#formal test
+dep: ${depp:test}
