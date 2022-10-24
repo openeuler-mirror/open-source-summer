@@ -1,0 +1,16 @@
+host:
+  cpu_server: ip
+  gpu_server: ip
+
+elasticsearch:
+  host: ip
+  port: port
+  user: elastic
+  pwd: rock
+  index_name: r1.7
+
+neo4j:
+  url: ip
+  usr: user_account
+  key: user_password
+  table_name: 实体

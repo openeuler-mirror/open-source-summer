@@ -1,0 +1,45 @@
+共享内存通道
+功能描述
+系统容器提供容器与主机进程通过共享内存进行通信的功能，通过在容器创建时配置--host-channel参数，可以在容器与主机之间共享同一tmpfs，从而达到主机与容器间通信的功能。
+
+参数说明
+
+命令
+
+参数
+
+参数指定值说明
+
+isula create/run
+
+--host-channel
+
+字符串变量，格式为：
+<host path>:<container path>:<rw/ro>:<size limit>
+参数说明如下：
+<host path>：将在宿主机上挂载tmpfs的路径，必须是绝对路径。
+
+<container path>：将在容器内挂载tmpfs的路径，必须是绝对路径。
+
+<rw/ro>：在容器内挂载的文件系统的使用权限，只能配置为rw（可读写）或ro（只读），默认为rw。
+
+<size limit>：挂载的tmpfs能够使用的最大限制，最小支持1物理页（4KB），最大支持系统总物理内存的1/2 。默认为64MB。
+
+约束限制
+宿主机上挂载的tmpfs的生命周期为从容器启动到容器删除，容器删除并解除对空间的占用后会移除这片空间。
+容器删除时会将宿主机上挂载tmpfs的路径删除，所以不允许使用宿主机上已存在的目录。
+为了宿主机上非root用户运行的进程能够与容器内进行通信，宿主机上tmpfs挂载的权限为1777。
+使用示例
+创建容器时指定--host-channel参数：
+
+[root@localhost ~]# isula run --rm -it --host-channel /testdir:/testdir:rw:32M --system-container --external-rootfs /root/myrootfs none init 
+root@3b947668eb54:/# dd if=/dev/zero of=/testdir/test.file bs=1024 count=64K 
+dd: error writing '/testdir/test.file': No space left on device 
+32769+0 records in 
+32768+0 records out 
+33554432 bytes (34 MB, 32 MiB) copied, 0.0766899 s, 438 MB/s
+ 说明：
+
+使用–host-channel大小限制时，若在容器内创建共享文件，则会受到容器内的内存配额限制（在容器内存使用达到极限时可能会产生oom）。
+若用户在主机端创建共享文件，则不受容器内的内存配额限制。
+若用户需要在容器内创建共享文件，且业务为内存密集型，可以通过设置容器内存配额为在原本基础上加上–host-channel配置的大小来消除影响。

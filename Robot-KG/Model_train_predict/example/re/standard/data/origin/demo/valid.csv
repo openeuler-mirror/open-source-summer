@@ -1,0 +1,98 @@
+sentence,relation,head,head_offset,tail,tail_offset
+本文档介绍如何在Ascend 910环境的Linux系统上，使用Docker方式快速安装MindSpore。,上面安装,Linux,21,Ascend,8
+本文档介绍如何在Ascend 910环境的Linux系统上，使用Docker方式快速安装MindSpore。,版本,Ascend,8,910,15
+[Docker](https://docs.docker.com/get-docker/)是一个开源的应用容器引擎，让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中。通过使用Docker，可以实现MindSpore的快速部署，并与系统环境隔离。,使用参考,Docker,1,https://docs.docker.com/get-docker/,9
+[Docker](https://docs.docker.com/get-docker/)是一个开源的应用容器引擎，让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中。通过使用Docker，可以实现MindSpore的快速部署，并与系统环境隔离。,工具安装,Docker,93,MindSpore,104
+- [Docker方式安装MindSpore Ascend 910版本](\#docker方式安装mindspore-ascend-910版本),安装,Docker方式,3,MindSpore Ascend,13
+- [Docker方式安装MindSpore Ascend 910版本](\#docker方式安装mindspore-ascend-910版本),版本,MindSpore Ascend,13,910,30
+- [Docker方式安装MindSpore Ascend 910版本](\#docker方式安装mindspore-ascend-910版本),安装,docker方式,38,mindspore-ascend,48
+- [Docker方式安装MindSpore Ascend 910版本](\#docker方式安装mindspore-ascend-910版本),版本,mindspore-ascend,48,910,65
+\# Docker方式安装MindSpore Ascend 910版本,安装, Docker方式,1,MindSpore Ascend,12
+\# Docker方式安装MindSpore Ascend 910版本,版本,MindSpore Ascend,12,910,29
+注意：升级MindSpore Ascend版本conda安装包后请重新安装昇腾AI处理器配套软件包提供的whl包。首先卸载旧版本：,工具安装,MindSpore Ascend,5,conda,23
+注意：升级MindSpore Ascend版本conda安装包后请重新安装昇腾AI处理器配套软件包提供的whl包。首先卸载旧版本：,工具安装,昇腾AI处理器配套软件包,37,whl,52
+当需要升级MindSpore版本时，可执行如下命令：,使用安装,命令,23,MindSpore,5
+在联网状态下，安装Conda安装包时会自动下载MindSpore安装包的依赖项（依赖项详情参见[setup.py](https://gitee.com/mindspore/mindspore/blob/r1.7/setup.py)中的required_package），其余情况需自行安装。运行模型时，需要根据[ModelZoo](https://gitee.com/mindspore/models/tree/r1.7/)中不同模型指定的requirements.txt安装额外依赖，常见依赖可以参考[requirements.txt](https://gitee.com/mindspore/mindspore/blob/r1.7/requirements.txt)。,工具安装,Conda,9,MindSpore,23
+在联网状态下，安装Conda安装包时会自动下载MindSpore安装包的依赖项（依赖项详情参见[setup.py](https://gitee.com/mindspore/mindspore/blob/r1.7/setup.py)中的required_package），其余情况需自行安装。运行模型时，需要根据[ModelZoo](https://gitee.com/mindspore/models/tree/r1.7/)中不同模型指定的requirements.txt安装额外依赖，常见依赖可以参考[requirements.txt](https://gitee.com/mindspore/mindspore/blob/r1.7/requirements.txt)。,详情参考,依赖,40,https://gitee.com/mindspore/mindspore/blob/r1.7/setup.py,58
+在联网状态下，安装Conda安装包时会自动下载MindSpore安装包的依赖项（依赖项详情参见[setup.py](https://gitee.com/mindspore/mindspore/blob/r1.7/setup.py)中的required_package），其余情况需自行安装。运行模型时，需要根据[ModelZoo](https://gitee.com/mindspore/models/tree/r1.7/)中不同模型指定的requirements.txt安装额外依赖，常见依赖可以参考[requirements.txt](https://gitee.com/mindspore/mindspore/blob/r1.7/requirements.txt)。,详情参考,依赖,245,https://gitee.com/mindspore/mindspore/blob/r1.7/requirements.txt,270
+确认您处于Conda虚拟环境中，并执行如下命令安装最新版本的MindSpore。如需安装其他版本，可参考[版本列表](https://www.mindspore.cn/versions)在`mindspore-ascend=`后指定版本号。,使用安装,命令,21,MindSpore,30
+确认您处于Conda虚拟环境中，并执行如下命令安装最新版本的MindSpore。如需安装其他版本，可参考[版本列表](https://www.mindspore.cn/versions)在`mindspore-ascend=`后指定版本号。,使用参考,MindSpore,30,https://www.mindspore.cn/versions,59
+如果升级了昇腾AI处理器配套软件包，配套的whl包也需要重新安装，先将原来的安装包卸载，再参考上述命令重新安装。,使用安装,命令,49,昇腾AI处理器配套软件包,5
+如果升级了昇腾AI处理器配套软件包，配套的whl包也需要重新安装，先将原来的安装包卸载，再参考上述命令重新安装。,工具安装,昇腾AI处理器配套软件包,5,whl,21
+在虚拟环境中安装昇腾AI处理器配套软件包提供的whl包，whl包随配套软件包发布，升级配套软件包之后需要重新安装。,使用安装,虚拟环境,1,昇腾AI处理器配套软件包,8
+在虚拟环境中安装昇腾AI处理器配套软件包提供的whl包，whl包随配套软件包发布，升级配套软件包之后需要重新安装。,工具安装,昇腾AI处理器配套软件包,8,whl,23
+如果希望使用其他版本Python，只需更改以上命令中的Python版本。当前支持Python 3.7，Python 3.8和Python 3.9。,版本,Python ,40,3.7,47
+如果希望使用其他版本Python，只需更改以上命令中的Python版本。当前支持Python 3.7，Python 3.8和Python 3.9。,版本,Python ,51,3.8,58
+如果希望使用其他版本Python，只需更改以上命令中的Python版本。当前支持Python 3.7，Python 3.8和Python 3.9。,版本,Python ,62,3.9,69
+如果您希望使用Python3.7.5版本：,版本,Python,7,3.7.5,13
+可以通过以下命令编译安装[Open MPI](https://www.open-mpi.org/)。,参考,编译安装,8,https://www.open-mpi.org/,23
+安装完成后，可以为Conda设置清华源加速下载，参考[此处](https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/)。,使用参考,Conda,9,https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/,31
+安装完成后，可以为Conda设置清华源加速下载，参考[此处](https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/)。,使用安装,清华源,16,Conda,9
+执行以下指令安装Miniconda。,使用安装,指令,4,Miniconda,8
+安装包默认安装路径为`/usr/local/Ascend`。安装后确认当前用户有权限访问昇腾AI处理器配套软件包的安装路径，若无权限，需要root用户将当前用户添加到`/usr/local/Ascend`所在的用户组。,使用,用户,37,权限,40
+安装包默认安装路径为`/usr/local/Ascend`。安装后确认当前用户有权限访问昇腾AI处理器配套软件包的安装路径，若无权限，需要root用户将当前用户添加到`/usr/local/Ascend`所在的用户组。,进行安装,用户,37,昇腾AI处理器配套软件包,44
+安装包默认安装路径为`/usr/local/Ascend`。安装后确认当前用户有权限访问昇腾AI处理器配套软件包的安装路径，若无权限，需要root用户将当前用户添加到`/usr/local/Ascend`所在的用户组。,使用,用户,37,权限,64
+安装包默认安装路径为`/usr/local/Ascend`。安装后确认当前用户有权限访问昇腾AI处理器配套软件包的安装路径，若无权限，需要root用户将当前用户添加到`/usr/local/Ascend`所在的用户组。,使用,root用户,69,权限,40
+安装包默认安装路径为`/usr/local/Ascend`。安装后确认当前用户有权限访问昇腾AI处理器配套软件包的安装路径，若无权限，需要root用户将当前用户添加到`/usr/local/Ascend`所在的用户组。,进行安装,root用户,69,昇腾AI处理器配套软件包,44
+安装包默认安装路径为`/usr/local/Ascend`。安装后确认当前用户有权限访问昇腾AI处理器配套软件包的安装路径，若无权限，需要root用户将当前用户添加到`/usr/local/Ascend`所在的用户组。,使用,root用户,69,权限,64
+安装包默认安装路径为`/usr/local/Ascend`。安装后确认当前用户有权限访问昇腾AI处理器配套软件包的安装路径，若无权限，需要root用户将当前用户添加到`/usr/local/Ascend`所在的用户组。,使用,用户,78,权限,40
+安装包默认安装路径为`/usr/local/Ascend`。安装后确认当前用户有权限访问昇腾AI处理器配套软件包的安装路径，若无权限，需要root用户将当前用户添加到`/usr/local/Ascend`所在的用户组。,进行安装,用户,78,昇腾AI处理器配套软件包,44
+安装包默认安装路径为`/usr/local/Ascend`。安装后确认当前用户有权限访问昇腾AI处理器配套软件包的安装路径，若无权限，需要root用户将当前用户添加到`/usr/local/Ascend`所在的用户组。,使用,用户,78,权限,64
+安装包默认安装路径为`/usr/local/Ascend`。安装后确认当前用户有权限访问昇腾AI处理器配套软件包的安装路径，若无权限，需要root用户将当前用户添加到`/usr/local/Ascend`所在的用户组。,使用,用户组,105,权限,40
+安装包默认安装路径为`/usr/local/Ascend`。安装后确认当前用户有权限访问昇腾AI处理器配套软件包的安装路径，若无权限，需要root用户将当前用户添加到`/usr/local/Ascend`所在的用户组。,进行安装,用户组,105,昇腾AI处理器配套软件包,44
+安装包默认安装路径为`/usr/local/Ascend`。安装后确认当前用户有权限访问昇腾AI处理器配套软件包的安装路径，若无权限，需要root用户将当前用户添加到`/usr/local/Ascend`所在的用户组。,使用,用户组,105,权限,64
+详细安装方法请参考[Ascend Data Center Solution 22.0.RC1安装指引文档](https://support.huawei.com/enterprise/zh/doc/EDOC1100246310)。,版本,Ascend Data Center Solution ,10,22,38
+详细安装方法请参考[Ascend Data Center Solution 22.0.RC1安装指引文档](https://support.huawei.com/enterprise/zh/doc/EDOC1100246310)。,使用参考,Ascend Data Center Solution ,10,https://support.huawei.com/enterprise/zh/doc/EDOC1100246310,54
+|Ubuntu 18.04/CentOS 7.6/EulerOS 2.8/OpenEuler 20.03/KylinV10 SP1|-|编译和运行MindSpore的操作系统|,上面安装,Ubuntu 18.04,1,MindSpore,73
+|Ubuntu 18.04/CentOS 7.6/EulerOS 2.8/OpenEuler 20.03/KylinV10 SP1|-|编译和运行MindSpore的操作系统|,上面安装,CentOS 7.6,14,MindSpore,73
+|Ubuntu 18.04/CentOS 7.6/EulerOS 2.8/OpenEuler 20.03/KylinV10 SP1|-|编译和运行MindSpore的操作系统|,上面安装,EulerOS 2.8,25,MindSpore,73
+|Ubuntu 18.04/CentOS 7.6/EulerOS 2.8/OpenEuler 20.03/KylinV10 SP1|-|编译和运行MindSpore的操作系统|,上面安装,OpenEuler 20.03,37,MindSpore,73
+|Ubuntu 18.04/CentOS 7.6/EulerOS 2.8/OpenEuler 20.03/KylinV10 SP1|-|编译和运行MindSpore的操作系统|,上面安装,KylinV10 SP1,53,MindSpore,73
+下表列出了安装MindSpore所需的系统环境和第三方依赖。,使用安装,系统环境,19,MindSpore,7
+下表列出了安装MindSpore所需的系统环境和第三方依赖。,使用安装,依赖,27,MindSpore,7
+要激活虚拟环境，以Python 3.7为例，执行以下命令。,创建或使用关联,命令,26,虚拟环境,3
+要激活虚拟环境，以Python 3.7为例，执行以下命令。,版本,Python ,9,3.7,16
+自动安装脚本会为MindSpore创建名为`mindspore_pyXX`的虚拟环境。其中`XX`为Python版本，如Python 3.7则虚拟环境名为`mindspore_py37`。执行以下命令查看所有虚拟环境。,使用安装,脚本,4,MindSpore,8
+自动安装脚本会为MindSpore创建名为`mindspore_pyXX`的虚拟环境。其中`XX`为Python版本，如Python 3.7则虚拟环境名为`mindspore_py37`。执行以下命令查看所有虚拟环境。,创建或使用关联,脚本,4,虚拟环境,38
+自动安装脚本会为MindSpore创建名为`mindspore_pyXX`的虚拟环境。其中`XX`为Python版本，如Python 3.7则虚拟环境名为`mindspore_py37`。执行以下命令查看所有虚拟环境。,版本,Python,60,3.7,67
+#NAME?,工具安装,Conda,4,MindSpore Ascend,11
+#NAME?,工具安装,Conda,4,MindSpore,11
+#NAME?,使用安装,依赖,16,GCC,20
+#NAME?,使用安装,依赖,16,gmp,24
+\# 如需指定Python和MindSpore版本，以Python 3.9和MindSpore 1.6.0为例,版本,Python ,26,3.9,33
+\# 如需指定Python和MindSpore版本，以Python 3.9和MindSpore 1.6.0为例,版本,MindSpore ,37,1.6.0,47
+\# 默认安装Python 3.7以及最新版本的MindSpore,版本,Python ,6,3.7,13
+wget https://gitee.com/mindspore/mindspore/raw/r1.7/scripts/install/euleros-ascend-conda.sh,编译安装,wget ,0,mindspore,23
+使用以下命令获取自动安装脚本并执行。自动安装脚本仅支持安装MindSpore>=1.6.0。,使用安装,命令,4,MindSpore,29
+使用以下命令获取自动安装脚本并执行。自动安装脚本仅支持安装MindSpore>=1.6.0。,使用安装,脚本,12,MindSpore,29
+使用以下命令获取自动安装脚本并执行。自动安装脚本仅支持安装MindSpore>=1.6.0。,版本,MindSpore,29,1.6.0,40
+在使用自动安装脚本之前，需要确保系统正确安装了昇腾AI处理器配套软件包。如果没有安装，请先参考[安装昇腾AI处理器配套软件包](\#安装昇腾ai处理器配套软件包)小节进行安装。,使用安装,脚本,7,昇腾AI处理器配套软件包,23
+在使用自动安装脚本之前，需要确保系统正确安装了昇腾AI处理器配套软件包。如果没有安装，请先参考[安装昇腾AI处理器配套软件包](\#安装昇腾ai处理器配套软件包)小节进行安装。,使用安装,系统,16,昇腾AI处理器配套软件包,23
+- 如果您的系统是Ubuntu 18.04/CentOS 7.6/OpenEuler 20.03/KylinV10 SP1，或者已经安装了部分依赖，如CUDA，Conda，GCC等，则推荐参照[手动安装](\#手动安装)小节的安装步骤手动安装。,上面安装,Ubuntu 18.04,9,CUDA,75
+- 如果您的系统是Ubuntu 18.04/CentOS 7.6/OpenEuler 20.03/KylinV10 SP1，或者已经安装了部分依赖，如CUDA，Conda，GCC等，则推荐参照[手动安装](\#手动安装)小节的安装步骤手动安装。,上面安装,Ubuntu 18.04,9,Conda,80
+- 如果您的系统是Ubuntu 18.04/CentOS 7.6/OpenEuler 20.03/KylinV10 SP1，或者已经安装了部分依赖，如CUDA，Conda，GCC等，则推荐参照[手动安装](\#手动安装)小节的安装步骤手动安装。,上面安装,Ubuntu 18.04,9,GCC,86
+- 如果您的系统是Ubuntu 18.04/CentOS 7.6/OpenEuler 20.03/KylinV10 SP1，或者已经安装了部分依赖，如CUDA，Conda，GCC等，则推荐参照[手动安装](\#手动安装)小节的安装步骤手动安装。,上面安装,CentOS 7.6,22,CUDA,75
+- 如果您的系统是Ubuntu 18.04/CentOS 7.6/OpenEuler 20.03/KylinV10 SP1，或者已经安装了部分依赖，如CUDA，Conda，GCC等，则推荐参照[手动安装](\#手动安装)小节的安装步骤手动安装。,上面安装,CentOS 7.6,22,Conda,80
+- 如果您的系统是Ubuntu 18.04/CentOS 7.6/OpenEuler 20.03/KylinV10 SP1，或者已经安装了部分依赖，如CUDA，Conda，GCC等，则推荐参照[手动安装](\#手动安装)小节的安装步骤手动安装。,上面安装,CentOS 7.6,22,GCC,86
+- 如果您的系统是Ubuntu 18.04/CentOS 7.6/OpenEuler 20.03/KylinV10 SP1，或者已经安装了部分依赖，如CUDA，Conda，GCC等，则推荐参照[手动安装](\#手动安装)小节的安装步骤手动安装。,上面安装,OpenEuler 20.03,33,CUDA,75
+- 如果您的系统是Ubuntu 18.04/CentOS 7.6/OpenEuler 20.03/KylinV10 SP1，或者已经安装了部分依赖，如CUDA，Conda，GCC等，则推荐参照[手动安装](\#手动安装)小节的安装步骤手动安装。,上面安装,OpenEuler 20.03,33,Conda,80
+- 如果您的系统是Ubuntu 18.04/CentOS 7.6/OpenEuler 20.03/KylinV10 SP1，或者已经安装了部分依赖，如CUDA，Conda，GCC等，则推荐参照[手动安装](\#手动安装)小节的安装步骤手动安装。,上面安装,OpenEuler 20.03,33,GCC,86
+- 如果您的系统是Ubuntu 18.04/CentOS 7.6/OpenEuler 20.03/KylinV10 SP1，或者已经安装了部分依赖，如CUDA，Conda，GCC等，则推荐参照[手动安装](\#手动安装)小节的安装步骤手动安装。,上面安装,KylinV10 SP1,49,CUDA,75
+- 如果您的系统是Ubuntu 18.04/CentOS 7.6/OpenEuler 20.03/KylinV10 SP1，或者已经安装了部分依赖，如CUDA，Conda，GCC等，则推荐参照[手动安装](\#手动安装)小节的安装步骤手动安装。,上面安装,KylinV10 SP1,49,Conda,80
+- 如果您的系统是Ubuntu 18.04/CentOS 7.6/OpenEuler 20.03/KylinV10 SP1，或者已经安装了部分依赖，如CUDA，Conda，GCC等，则推荐参照[手动安装](\#手动安装)小节的安装步骤手动安装。,上面安装,KylinV10 SP1,49,GCC,86
+- 如果想在一个已经配置好昇腾AI处理器配套软件包的EulerOS 2.8上通过Conda安装MindSpore，可以使用[自动安装脚本](https://gitee.com/mindspore/mindspore/raw/r1.7/scripts/install/euleros-ascend-conda.sh)进行一键式安装，参见[自动安装](\#自动安装)小节。自动安装脚本会安装MindSpore及其所需的依赖。,上面安装,EulerOS 2.8,26,昇腾AI处理器配套软件包,13
+- 如果想在一个已经配置好昇腾AI处理器配套软件包的EulerOS 2.8上通过Conda安装MindSpore，可以使用[自动安装脚本](https://gitee.com/mindspore/mindspore/raw/r1.7/scripts/install/euleros-ascend-conda.sh)进行一键式安装，参见[自动安装](\#自动安装)小节。自动安装脚本会安装MindSpore及其所需的依赖。,上面安装,EulerOS 2.8,26,MindSpore,47
+- 如果想在一个已经配置好昇腾AI处理器配套软件包的EulerOS 2.8上通过Conda安装MindSpore，可以使用[自动安装脚本](https://gitee.com/mindspore/mindspore/raw/r1.7/scripts/install/euleros-ascend-conda.sh)进行一键式安装，参见[自动安装](\#自动安装)小节。自动安装脚本会安装MindSpore及其所需的依赖。,工具安装,Conda,40,MindSpore,47
+- 如果想在一个已经配置好昇腾AI处理器配套软件包的EulerOS 2.8上通过Conda安装MindSpore，可以使用[自动安装脚本](https://gitee.com/mindspore/mindspore/raw/r1.7/scripts/install/euleros-ascend-conda.sh)进行一键式安装，参见[自动安装](\#自动安装)小节。自动安装脚本会安装MindSpore及其所需的依赖。,参考,自动安装脚本,62,https://gitee.com/mindspore/mindspore/raw/r1.7/scripts/install/euleros-ascend-conda.sh,70
+本文档介绍如何在Ascend 910环境的Linux系统上，使用Conda方式快速安装MindSpore。,版本,Ascend,8,910,15
+本文档介绍如何在Ascend 910环境的Linux系统上，使用Conda方式快速安装MindSpore。,工具安装,Ascend,8,MindSpore,43
+本文档介绍如何在Ascend 910环境的Linux系统上，使用Conda方式快速安装MindSpore。,上面安装,Linux,21,MindSpore,43
+本文档介绍如何在Ascend 910环境的Linux系统上，使用Conda方式快速安装MindSpore。,安装,Conda方式,32,MindSpore,43
+[Conda](https://docs.conda.io/en/latest/)是一个开源跨平台语言无关的包管理与环境管理系统，允许用户方便地安装不同版本的二进制软件包与该计算平台需要的所有库。,参考,Conda,1,https://docs.conda.io/en/latest/,8
+[Conda](https://docs.conda.io/en/latest/)是一个开源跨平台语言无关的包管理与环境管理系统，允许用户方便地安装不同版本的二进制软件包与该计算平台需要的所有库。,进行安装,用户,67,二进制软件包,79
+- [Conda方式安装MindSpore Ascend 910版本](\#conda方式安装mindspore-ascend-910版本),安装,Conda方式,3,MindSpore Ascend,12
+- [Conda方式安装MindSpore Ascend 910版本](\#conda方式安装mindspore-ascend-910版本),版本,MindSpore Ascend,12,910,29
+- [Conda方式安装MindSpore Ascend 910版本](\#conda方式安装mindspore-ascend-910版本),安装,conda方式,37,mindspore-ascend,46
+- [Conda方式安装MindSpore Ascend 910版本](\#conda方式安装mindspore-ascend-910版本),版本,mindspore-ascend,46,910,63
+\# Conda方式安装MindSpore Ascend 910版本,安装,Conda方式,2,MindSpore Ascend,11
+\# Conda方式安装MindSpore Ascend 910版本,版本,MindSpore Ascend,11,910,28

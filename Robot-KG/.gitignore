@@ -1,0 +1,14 @@
+**/.idea
+**/__pycache__
+conf/conf.yaml
+
+Model_train_predict/example/ner/standard/checkpoints/*
+Model_train_predict/example/re/standard/checkpoints/*
+
+Model_train_predict/build/lib/deepke/name_entity_re/standard/models/__init__.py
+Model_train_predict/dist
+Model_train_predict/example/ner/standard/logs
+Model_train_predict/example/ner/standard/wandb
+Model_train_predict/example/re/standard/logs
+Model_train_predict/example/re/standard/neo4j_relation.csv
+Model_train_predict/src/deepke.egg-info

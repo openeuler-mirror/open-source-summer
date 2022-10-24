@@ -1,0 +1,2028 @@
+CRI接口
+CRI接口
+描述
+接口
+Runtime服务
+RunPodSandbox
+StopPodSandbox
+RemovePodSandbox
+PodSandboxStatus
+ListPodSandbox
+CreateContainer
+StartContainer
+StopContainer
+RemoveContainer
+ListContainers
+ContainerStatus
+UpdateContainerResources
+ExecSync
+Exec
+Attach
+ContainerStats
+ListContainerStats
+UpdateRuntimeConfig
+Status
+Image服务
+ListImages
+ImageStatus
+PullImage
+RemoveImage
+ImageFsInfo
+约束
+描述
+CRI API 接口是由kubernetes 推出的容器运行时接口，CRI定义了容器和镜像的服务接口。ISulad使用CRI接口，实现和kubernetes 的对接。
+
+因为容器运行时与镜像的生命周期是彼此隔离的，因此需要定义两个服务。该接口使用Protocol Buffer定义，基于gRPC。
+
+当前实现CRI版本为v1alpha1版本，官方API描述文件如下：
+
+https://github.com/kubernetes/kubernetes/blob/release-1.14/pkg/kubelet/apis/cri/runtime/v1alpha2/api.proto，
+
+ISulad使用的为pass使用的1.14版本API描述文件，与官方API略有出入，以本文档描述的接口为准。
+
+ 说明：
+CRI接口websocket流式服务，服务端侦听地址为127.0.0.1，端口为10350，端口可通过命令行–websocket-server-listening-port参数接口或者daemon.json配置文件进行配置。
+
+接口
+各接口中可能用到的参数清单如下，部分参数暂不支持配置，已在配置中标出。
+
+接口参数列表
+DNSConfig
+
+配置sandbox的DNS服务器和搜索域
+
+
+参数成员
+
+描述
+
+repeated string servers
+
+集群的DNS服务器列表
+
+repeated string searches
+
+集群的DNS搜索域列表
+
+repeated string options
+
+DNS可选项列表，参考https://linux.die.net/man/5/resolv.conf
+
+Protocol
+
+协议的enum值列表
+
+
+参数成员
+
+描述
+
+TCP = 0
+
+TCP协议
+
+UDP = 1
+
+UDP协议
+
+PortMapping
+
+指定sandbox的端口映射配置
+
+
+参数成员
+
+描述
+
+Protocol protocol
+
+端口映射使用的协议
+
+int32 container_port
+
+容器内的端口号
+
+int32 host_port
+
+主机上的端口号
+
+string host_ip
+
+主机IP地址
+
+MountPropagation
+
+挂载传播属性的enum列表
+
+
+参数成员
+
+描述
+
+PROPAGATION_PRIVATE = 0
+
+无挂载传播属性，即linux中的private
+
+PROPAGATION_HOST_TO_CONTAINER = 1
+
+挂载属性能从host传播到容器中，即linux中的rslave
+
+PROPAGATION_BIDIRECTIONAL = 2
+
+挂载属性能在host和容器中双向传播，即linux中的rshared
+
+Mount
+
+Mount指定host上的一个挂载卷挂载到容器中（只支持文件和文件夹)
+
+
+参数成员
+
+描述
+
+string container_path
+
+容器中的路径
+
+string host_path
+
+主机上的路径
+
+bool readonly
+
+是否配置在容器中是只读的， 默认值： false
+
+bool selinux_relabel
+
+是否设置SELinux标签（不支持配置）
+
+MountPropagation propagation
+
+挂载传播属性配置（取值0/1/2，分别对应private/rslave/rshared传播属性） 默认值：0
+
+NamespaceOption
+
+
+参数成员
+
+描述
+
+bool host_network
+
+是否使用host的网络命名空间
+
+bool host_pid
+
+是否使用host的PID命名空间
+
+bool host_ipc
+
+是否使用host的IPC命名空间
+
+Capability
+
+包含待添加与待删除的权能信息
+
+
+参数成员
+
+描述
+
+repeated string add_capabilities
+
+待新增的权能
+
+repeated string drop_capabilities
+
+待删除的权能
+
+Int64Value
+
+int64类型的封装
+
+
+参数成员
+
+描述
+
+int64 value
+
+实际的int64值
+
+UInt64Value
+
+uint64类型的封装
+
+
+参数成员
+
+描述
+
+uint64 value
+
+实际的uint64值
+
+LinuxSandboxSecurityContext
+
+配置sandbox的linux安全选项。
+
+注意，这些安全选项不会应用到sandbox中的容器中，也可能不适用于没有任何running进程的sandbox
+
+
+参数成员
+
+描述
+
+NamespaceOption namespace_options
+
+配置sandbox的命名空间选项
+
+SELinuxOption selinux_options
+
+配置SELinux选项（不支持）
+
+Int64Value run_as_user
+
+配置sandbox中进程的uid
+
+bool readonly_rootfs
+
+配置sandbox的根文件系统是否只读
+
+repeated int64 supplemental_groups
+
+配置除主GID之外的sandbox的1号进程用户组信息
+
+bool privileged
+
+配置sandbox是否为特权容器
+
+string seccomp_profile_path
+
+seccomp配置文件路径，有效值为：
+
+// unconfined: 不配置seccomp
+
+// localhost/<配置文件的全路径>： 安装在系统上的配置文件路径
+
+// <配置文件的全路径>： 配置文件全路径
+
+// 默认不配置，即unconfined。
+
+LinuxPodSandboxConfig
+
+设定和Linux主机及容器相关的一些配置
+
+
+参数成员
+
+描述
+
+string cgroup_parent
+
+sandbox的cgroup父路径，runtime可根据实际情况使用cgroupfs或systemd的语法。（不支持配置）
+
+LinuxSandboxSecurityContext security_context
+
+sandbox的安全属性
+
+map<string, string> sysctls
+
+sandbox的linux sysctls配置
+
+PodSandboxMetadata
+
+Sandbox元数据包含构建sandbox名称的所有信息，鼓励容器运行时在用户界面中公开这些元数据以获得更好的用户体验，例如，运行时可以根据元数据生成sandbox的唯一命名。
+
+
+参数成员
+
+描述
+
+string name
+
+sandbox的名称
+
+string uid
+
+sandbox的UID
+
+string namespace
+
+sandbox的命名空间
+
+uint32 attempt
+
+尝试创建sandbox的次数，默认为0
+
+PodSandboxConfig
+
+包含创建sandbox的所有必选和可选配置信息
+
+
+参数成员
+
+描述
+
+PodSandboxMetadata metadata
+
+sandbox的元数据，这项信息唯一标识一个sandbox，runtime必须利用此信息确保操作正确，runtime也可以根据此信息来改善用户体验，例如构建可读的sandbox名称。
+
+string hostname
+
+sandbox的hostname
+
+string log_directory
+
+配置sandbox内的容器的日志文件所存储的文件夹
+
+DNSConfig dns_config
+
+sandbox的DNS配置
+
+repeated PortMapping port_mappings
+
+sandbox的端口映射
+
+map<string, string> labels
+
+可用于标识单个或一系列sandbox的键值对
+
+map<string, string> annotations
+
+存储任意信息的键值对，这些值是不可更改的，且能够利用PodSandboxStatus接口查询
+
+LinuxPodSandboxConfig linux
+
+与linux主机相关的可选项
+
+PodSandboxNetworkStatus
+
+描述sandbox的网络状态
+
+
+参数成员
+
+描述
+
+string ip
+
+sandbox的ip地址
+
+string name
+
+sandbox内的网络接口名
+
+string network
+
+附加网络的名称
+
+Namespace
+
+命名空间选项
+
+
+参数成员
+
+描述
+
+NamespaceOption options
+
+Linux 命名空间选项
+
+LinuxPodSandboxStatus
+
+描述Linux sandbox的状态
+
+
+参数成员
+
+描述
+
+Namespace namespaces
+
+sandbox命名空间
+
+PodSandboxState
+
+sandbox状态值的enum数据
+
+
+参数成员
+
+描述
+
+SANDBOX_READY = 0
+
+sandbox处于ready状态
+
+SANDBOX_NOTREADY = 1
+
+sandbox处于非ready状态
+
+PodSandboxStatus
+
+描述Podsandbox的状态信息
+
+
+参数成员
+
+描述
+
+string id
+
+sandbox的ID
+
+PodSandboxMetadata metadata
+
+sandbox的元数据
+
+PodSandboxState state
+
+sandbox的状态值
+
+int64 created_at
+
+sandbox的创建时间戳，单位纳秒
+
+repeated PodSandboxNetworkStatus networks
+
+sandbox的多平面网络状态
+
+LinuxPodSandboxStatus linux
+
+Linux规范的sandbox状态
+
+map<string, string> labels
+
+可用于标识单个或一系列sandbox的键值对
+
+map<string, string> annotations
+
+存储任意信息的键值对，这些值是不可被runtime更改的
+
+PodSandboxStateValue
+
+对PodSandboxState的封装
+
+
+参数成员
+
+描述
+
+PodSandboxState state
+
+sandbox的状态值
+
+PodSandboxFilter
+
+用于列出sandbox时添加过滤条件，多个条件取交集显示
+
+
+参数成员
+
+描述
+
+string id
+
+sandbox的ID
+
+PodSandboxStateValue state
+
+sandbox的状态
+
+map<string, string> label_selector
+
+sandbox的labels，label只支持完全匹配，不支持正则匹配
+
+PodSandbox
+
+包含最小化描述一个sandbox的数据
+
+
+参数成员
+
+描述
+
+string id
+
+sandbox的ID
+
+PodSandboxMetadata metadata
+
+sandbox的元数据
+
+PodSandboxState state
+
+sandbox的状态值
+
+int64 created_at
+
+sandbox的创建时间戳，单位纳秒
+
+map<string, string> labels
+
+可用于标识单个或一系列sandbox的键值对
+
+map<string, string> annotations
+
+存储任意信息的键值对，这些值是不可被runtime更改的
+
+KeyValue
+
+键值对的封装
+
+
+参数成员
+
+描述
+
+string key
+
+键
+
+string value
+
+值
+
+SELinuxOption
+
+应用于容器的SELinux标签
+
+
+参数成员
+
+描述
+
+string user
+
+用户
+
+string role
+
+角色
+
+string type
+
+类型
+
+string level
+
+级别
+
+ContainerMetadata
+
+Container元数据包含构建container名称的所有信息，鼓励容器运行时在用户界面中公开这些元数据以获得更好的用户体验，例如，运行时可以根据元数据生成container的唯一命名。
+
+
+参数成员
+
+描述
+
+string name
+
+container的名称
+
+uint32 attempt
+
+尝试创建container的次数，默认为0
+
+ContainerState
+
+容器状态值的enum列表
+
+
+参数成员
+
+描述
+
+CONTAINER_CREATED = 0
+
+container创建完成
+
+CONTAINER_RUNNING = 1
+
+container处于运行状态
+
+CONTAINER_EXITED = 2
+
+container处于退出状态
+
+CONTAINER_UNKNOWN = 3
+
+未知的容器状态
+
+ContainerStateValue
+
+封装ContainerState的数据结构
+
+
+参数成员
+
+描述
+
+ContainerState state
+
+容器状态值
+
+ContainerFilter
+
+用于列出container时添加过滤条件，多个条件取交集显示
+
+
+参数成员
+
+描述
+
+string id
+
+container的ID
+
+PodSandboxStateValue state
+
+container的状态
+
+string pod_sandbox_id
+
+sandbox的ID
+
+map<string, string> label_selector
+
+container的labels，label只支持完全匹配，不支持正则匹配
+
+LinuxContainerSecurityContext
+
+指定应用于容器的安全配置
+
+
+参数成员
+
+描述
+
+Capability capabilities
+
+新增或去除的权能
+
+bool privileged
+
+指定容器是否未特权模式， 默认值：false
+
+NamespaceOption namespace_options
+
+指定容器的namespace选项
+
+SELinuxOption selinux_options
+
+SELinux context(可选配置项) 暂不支持
+
+Int64Value run_as_user
+
+运行容器进程的UID。 一次只能指定run_as_user与run_as_username其中之一，run_as_username优先生效
+
+string run_as_username
+
+运行容器进程的用户名。 如果指定，用户必须存在于容器映像中（即在映像内的/etc/passwd中），并由运行时在那里解析; 否则，运行时必须出错
+
+bool readonly_rootfs
+
+设置容器中根文件系统是否为只读 默认值由config.json配置
+
+repeated int64 supplemental_groups
+
+容器运行的除主GID外首进程组的列表
+
+string apparmor_profile
+
+容器的AppArmor配置文件 暂不支持
+
+string seccomp_profile_path
+
+容器的seccomp配置文件路径
+
+bool no_new_privs
+
+是否在容器上设置no_new_privs的标志
+
+LinuxContainerResources
+
+指定Linux容器资源的特定配置
+
+
+参数成员
+
+描述
+
+int64 cpu_period
+
+CPU CFS（完全公平调度程序）周期。 默认值：0
+
+int64 cpu_quota
+
+CPU CFS（完全公平调度程序）配额。 默认值：0
+
+int64 cpu_shares
+
+所占CPU份额（相对于其他容器的相对权重）。 默认值：0
+
+int64 memory_limit_in_bytes
+
+内存限制（字节）。 默认值：0
+
+int64 oom_score_adj
+
+OOMScoreAdj用于调整oom-killer。 默认值：0
+
+string cpuset_cpus
+
+指定容器使用的CPU核心。 默认值：“”
+
+string cpuset_mems
+
+指定容器使用的内存节点。 默认值：“”
+
+Image
+
+Image信息描述一个镜像的基本数据。
+
+
+参数成员
+
+描述
+
+string id
+
+镜像ID
+
+repeated string repo_tags
+
+镜像tag 名称 repo_tags
+
+repeated string repo_digests
+
+镜像digest信息
+
+uint64 size
+
+镜像大小
+
+Int64Value uid
+
+镜像默认用户UID
+
+string username
+
+镜像默认用户名称
+
+ImageSpec
+
+表示镜像的内部数据结构，当前，ImageSpec只封装容器镜像名称
+
+
+参数成员
+
+描述
+
+string image
+
+容器镜像名
+
+StorageIdentifier
+
+唯一定义storage的标识
+
+
+参数成员
+
+描述
+
+string uuid
+
+设备的UUID
+
+FilesystemUsage
+
+
+参数成员
+
+描述
+
+int64 timestamp
+
+收集文件系统信息时的时间戳
+
+StorageIdentifier storage_id
+
+存储镜像的文件系统UUID
+
+UInt64Value used_bytes
+
+存储镜像元数据的大小
+
+UInt64Value inodes_used
+
+存储镜像元数据的inodes个数
+
+AuthConfig
+
+
+参数成员
+
+描述
+
+string username
+
+下载镜像使用的用户名
+
+string password
+
+下载镜像使用的密码
+
+string auth
+
+下载镜像时使用的认证信息，base64编码
+
+string server_address
+
+下载镜像的服务器地址，暂不支持
+
+string identity_token
+
+用于与镜像仓库鉴权的令牌信息，暂不支持
+
+string registry_token
+
+用于与镜像仓库交互的令牌信息，暂不支持
+
+Container
+
+用于描述容器信息，例如ID, 状态等。
+
+
+参数成员
+
+描述
+
+string id
+
+container的ID
+
+string pod_sandbox_id
+
+该容器所属的sandbox的ID
+
+ContainerMetadata metadata
+
+container的元数据
+
+ImageSpec image
+
+镜像规格
+
+string image_ref
+
+代表容器使用的镜像，对大多数runtime来产，这是一个image ID值
+
+ContainerState state
+
+container的状态
+
+int64 created_at
+
+container的创建时间戳，单位为纳秒
+
+map<string, string> labels
+
+可用于标识单个或一系列container的键值对
+
+map<string, string> annotations
+
+存储任意信息的键值对，这些值是不可被runtime更改的
+
+ContainerStatus
+
+用于描述容器状态信息
+
+
+参数成员
+
+描述
+
+string id
+
+container的ID
+
+ContainerMetadata metadata
+
+container的元数据
+
+ContainerState state
+
+container的状态
+
+int64 created_at
+
+container的创建时间戳，单位为纳秒
+
+int64 started_at
+
+container启动时的时间戳，单位为纳秒
+
+int64 finished_at
+
+container退出时的时间戳，单位为纳秒
+
+int32 exit_code
+
+容器退出码
+
+ImageSpec image
+
+镜像规格
+
+string image_ref
+
+代表容器使用的镜像，对大多数runtime来产，这是一个image ID值
+
+string reason
+
+简要描述为什么容器处于当前状态
+
+string message
+
+易于人工阅读的信息，用于表述容器处于当前状态的原因
+
+map<string, string> labels
+
+可用于标识单个或一系列container的键值对
+
+map<string, string> annotations
+
+存储任意信息的键值对，这些值是不可被runtime更改的
+
+repeated Mount mounts
+
+容器的挂载点信息
+
+string log_path
+
+容器日志文件路径，该文件位于PodSandboxConfig中配置的log_directory文件夹下
+
+ContainerStatsFilter
+
+用于列出container stats时添加过滤条件，多个条件取交集显示
+
+
+参数成员
+
+描述
+
+string id
+
+container的ID
+
+string pod_sandbox_id
+
+sandbox的ID
+
+map<string, string> label_selector
+
+container的labels，label只支持完全匹配，不支持正则匹配
+
+ContainerStats
+
+用于列出container stats时添加过滤条件，多个条件取交集显示
+
+
+参数成员
+
+描述
+
+ContainerAttributes attributes
+
+容器的信息
+
+CpuUsage cpu
+
+CPU使用情况
+
+MemoryUsage memory
+
+内存使用情况
+
+FilesystemUsage writable_layer
+
+可写层使用情况
+
+ContainerAttributes
+
+列出container的基本信息
+
+
+参数成员
+
+描述
+
+string id
+
+容器的ID
+
+ContainerMetadata metadata
+
+容器的metadata
+
+map<string,string> labels
+
+可用于标识单个或一系列container的键值对
+
+map<string,string> annotations
+
+存储任意信息的键值对，这些值是不可被runtime更改的
+
+CpuUsage
+
+列出container的CPU使用信息
+
+
+参数成员
+
+描述
+
+int64 timestamp
+
+时间戳
+
+UInt64Value usage_core_nano_seconds
+
+CPU的使用值，单位/纳秒
+
+MemoryUsage
+
+列出container的内存使用信息
+
+
+参数成员
+
+描述
+
+int64 timestamp
+
+时间戳
+
+UInt64Value working_set_bytes
+
+内存的使用值
+
+FilesystemUsage
+
+列出container的读写层信息
+
+
+参数成员
+
+描述
+
+int64 timestamp
+
+时间戳
+
+StorageIdentifier storage_id
+
+可写层目录
+
+UInt64Value used_bytes
+
+镜像在可写层的占用字节
+
+UInt64Value inodes_used
+
+镜像在可写层的占用inode数
+
+Device
+
+指定待挂载至容器的主机卷
+
+
+参数成员
+
+描述
+
+string container_path
+
+容器内的挂载路径
+
+string host_path
+
+主机上的挂载路径
+
+string permissions
+
+设备的Cgroup权限，（r允许容器从指定的设备读取; w允许容器从指定的设备写入; m允许容器创建尚不存在的设备文件)
+
+LinuxContainerConfig
+
+包含特定于Linux平台的配置
+
+
+参数成员
+
+描述
+
+LinuxContainerResources resources
+
+容器的资源规范
+
+LinuxContainerSecurityContext security_context
+
+容器的Linux容器安全配置
+
+ContainerConfig
+
+包含用于创建容器的所有必需和可选字段
+
+
+参数成员
+
+描述
+
+ContainerMetadata metadata
+
+容器的元数据。 此信息将唯一标识容器，运行时应利用此信息来确保正确操作。 运行时也可以使用此信息来提升UX（用户体检设计），例如通过构造可读名称。(必选)
+
+ImageSpec image
+
+容器使用的镜像 (必选)
+
+repeated string command
+
+待执行的命令 默认值： "/bin/sh"
+
+repeated string args
+
+待执行命令的参数
+
+string working_dir
+
+命令执行的当前工作路径
+
+repeated KeyValue envs
+
+在容器中配置的环境变量
+
+repeated Mount mounts
+
+待在容器中挂载的挂载点信息
+
+repeated Device devices
+
+待在容器中映射的设备信息
+
+map<string, string> labels
+
+可用于索引和选择单个资源的键值对。
+
+map<string, string> annotations
+
+可用于存储和检索任意元数据的非结构化键值映射。
+
+string log_path
+
+相对于PodSandboxConfig.LogDirectory的路径，用于存储容器主机上的日志（STDOUT和STDERR）。
+
+bool stdin
+
+是否打开容器的stdin
+
+bool stdin_once
+
+当某次连接stdin的数据流断开时，是否立即断开其他与stdin连接的数据流（暂不支持）
+
+bool tty
+
+是否使用伪终端连接容器的stdio
+
+LinuxContainerConfig linux
+
+linux系统上容器的特定配置信息
+
+NetworkConfig
+
+Runtime的网络配置
+
+
+参数成员
+
+描述
+
+string pod_cidr
+
+Pod IP 地址使用的CIDR
+
+RuntimeConfig
+
+Runtime的网络配置
+
+
+参数成员
+
+描述
+
+NetworkConfig network_config
+
+Runtime的网络配置
+
+RuntimeCondition
+
+描述runtime的状态信息
+
+
+参数成员
+
+描述
+
+string type
+
+Runtime状态的类型
+
+bool status
+
+Runtime状态
+
+string reason
+
+简要描述runtime状态变化的原因
+
+string message
+
+具备可阅读性的信息表明runtime状态变化的原因
+
+RuntimeStatus
+
+Runtime的状态
+
+
+参数成员
+
+描述
+
+repeated RuntimeCondition conditions
+
+描述当前runtime状态的列表
+
+Runtime服务
+Runtime服务中包含操作pod和容器的接口，以及查询runtime自身配置和状态信息的接口。
+
+runpodsandbox
+接口原型
+rpc RunPodSandbox(RunPodSandboxRequest) returns (RunPodSandboxResponse) {}
+接口描述
+创建和启动一个pod sandbox，若运行成功，sandbox处于ready状态。
+
+注意事项
+启动sandbox的默认镜像为rnd-dockerhub.huawei.com/library/pause-${machine}:3.0， 其中${machine}为架构，在x86_64上，machine的值为amd64，在arm64上，machine的值为aarch64，当前rnd-dockerhub仓库上只有amd64和aarch64镜像可供下载，若机器上无此镜像，请确保机器能从rnd-dockerhub下载，若要使用其它镜像，请参考“iSulad部署配置”中的pod-sandbox-image指定镜像。
+由于容器命名以PodSandboxMetadata中的字段为来源，且以下划线"_“为分割字符，因此限制metadata中的数据不能包含下划线，否则会出现sandbox运行成功，但无法使用ListPodSandbox接口查询的现象。
+参数
+
+参数成员
+
+描述
+
+PodSandboxConfig config
+
+sandbox的配置
+
+string runtime_handler
+
+指定创建sandbox的runtime运行时，当前支持lcr、kata-runtime运行时类型。
+
+返回值
+
+返回值
+
+描述
+
+string pod_sandbox_id
+
+成功，返回response数据
+
+StopPodSandbox
+接口原型
+rpc StopPodSandbox(StopPodSandboxRequest) returns (StopPodSandboxResponse) {}
+接口描述
+停止pod sandbox，停止sandbox容器，回收分配给sandbox的网络资源（比如IP地址）。如果有任何running的容器属于该sandbox，则必须被强制停止。
+
+参数
+
+参数成员
+
+描述
+
+string pod_sandbox_id
+
+sandbox的id
+
+返回值
+
+返回值
+
+描述
+
+无
+
+无
+
+RemovePodSandbox
+接口原型
+rpc RemovePodSandbox(RemovePodSandboxRequest) returns (RemovePodSandboxResponse) {}
+接口描述
+删除sandbox，如果有任何running的容器属于该sandbox，则必须被强制停止和删除，如果sandbox已经被删除，不能返回错误。
+
+注意事项
+删除sandbox时，不会删除sandbox的网络资源，在删除pod前必须先调用StopPodSandbox才能清理网络资源，调用者应当保证在删除sandbox之前至少调用一次StopPodSandbox。
+参数
+
+参数成员
+
+描述
+
+string pod_sandbox_id
+
+sandbox的id
+
+返回值
+
+返回值
+
+描述
+
+无
+
+无
+
+PodSandboxStatus
+接口原型
+rpc PodSandboxStatus(PodSandboxStatusRequest) returns (PodSandboxStatusResponse) {}
+接口描述
+查询sandbox的状态，如果sandbox不存在，返回错误。
+
+参数
+
+参数成员
+
+描述
+
+string pod_sandbox_id
+
+sandbox的id
+
+bool verbose
+
+标识是否显示sandbox的一些额外信息。（暂不支持配置）
+
+返回值
+
+返回值
+
+描述
+
+PodSandboxStatus status
+
+sandbox的状态信息
+
+map<string, string> info
+
+sandbox的额外信息，key是任意string，value是json格式的字符串，这些信息可以是任意调试内容。当verbose为true时info不能为空。（暂不支持配置）
+
+ListPodSandbox
+接口原型
+rpc ListPodSandbox(ListPodSandboxRequest) returns (ListPodSandboxResponse) {}
+接口描述
+返回sandbox信息的列表，支持条件过滤。
+
+参数
+
+参数成员
+
+描述
+
+PodSandboxFilter filter
+
+条件过滤参数
+
+返回值
+
+返回值
+
+描述
+
+repeated PodSandbox items
+
+sandbox信息的列表
+
+CreateContainer
+grpc::Status CreateContainer(grpc::ServerContext *context, const runtime::CreateContainerRequest *request, runtime::CreateContainerResponse *reply) {}
+接口描述
+在PodSandbox内创建一个容器。
+
+注意事项
+请求CreateContainerRequest 中的sandbox_config与传递给RunPodSandboxRequest以创建PodSandbox的配置相同。 它再次传递，只是为了方便参考。 PodSandboxConfig是不可变的，在pod的整个生命周期内保持不变。
+由于容器命名以ContainerMetadata中的字段为来源，且以下划线”_“为分割字符，因此限制metadata中的数据不能包含下划线，否则会出现sandbox运行成功，但无法使用ListContainers接口查询的现象。
+CreateContainerRequest中无runtime_handler字段，创建container时的runtime类型和其对应的sandbox的runtime相同。
+参数
+
+参数成员
+
+描述
+
+string pod_sandbox_id
+
+待在其中创建容器的PodSandbox的ID。
+
+ContainerConfig config
+
+容器的配置信息
+
+PodSandboxConfig sandbox_config
+
+PodSandbox的配置信息
+
+补充
+可用于存储和检索任意元数据的非结构化键值映射。有一些字段由于cri接口没有提供特定的参数，可通过该字段将参数传入
+
+自定义
+
+
+自定义 key:value
+
+描述
+
+cgroup.pids.max:int64_t
+
+用于限制容器内的进/线程数（set -1 for unlimited）
+
+返回值
+
+返回值
+
+描述
+
+string container_id
+
+创建完成的容器ID
+
+StartContainer
+接口原型
+rpc StartContainer(StartContainerRequest) returns (StartContainerResponse) {}
+接口描述
+启动一个容器。
+
+参数
+
+参数成员
+
+描述
+
+string container_id
+
+容器id
+
+返回值
+
+返回值
+
+描述
+
+无
+
+无
+
+StopContainer
+接口原型
+rpc StopContainer(StopContainerRequest) returns (StopContainerResponse) {}
+接口描述
+停止一个running的容器，支持配置优雅停止时间timeout，如果容器已经停止，不能返回错误。
+
+参数
+
+参数成员
+
+描述
+
+string container_id
+
+容器id
+
+int64 timeout
+
+强制停止容器前的等待时间，默认值为0，即强制停止容器。
+
+返回值
+无
+
+RemoveContainer
+接口原型
+rpc RemoveContainer(RemoveContainerRequest) returns (RemoveContainerResponse) {}
+接口描述
+删除一个容器，如果容器正在运行，必须强制停止，如果容器已经被删除，不能返回错误。
+
+参数
+
+参数成员
+
+描述
+
+string container_id
+
+容器id
+
+返回值
+无
+
+ListContainers
+接口原型
+rpc ListContainers(ListContainersRequest) returns (ListContainersResponse) {}
+接口描述
+返回container信息的列表，支持条件过滤。
+
+参数
+
+参数成员
+
+描述
+
+ContainerFilter filter
+
+条件过滤参数
+
+返回值
+
+返回值
+
+描述
+
+repeated Container containers
+
+容器信息的列表
+
+ContainerStatus
+接口原型
+rpc ContainerStatus(ContainerStatusRequest) returns (ContainerStatusResponse) {}
+接口描述
+返回容器状态信息，如果容器不存在，则返回错误。
+
+参数
+
+参数成员
+
+描述
+
+string container_id
+
+容器id
+
+bool verbose
+
+标识是否显示sandbox的一些额外信息。（暂不支持配置）
+
+返回值
+
+返回值
+
+描述
+
+ContainerStatus status
+
+容器的状态信息
+
+map<string, string> info
+
+sandbox的额外信息，key是任意string，value是json格式的字符串，这些信息可以是任意调试内容。当verbose为true时info不能为空。（暂不支持配置）
+
+UpdateContainerResources
+接口原型
+rpc UpdateContainerResources(UpdateContainerResourcesRequest) returns (UpdateContainerResourcesResponse) {}
+接口描述
+该接口用于更新容器资源配置。
+
+注意事项
+该接口仅用于更新容器的资源配置，不能用于更新Pod的资源配置。
+当前不支持更新容器oom_score_adj配置。
+参数
+
+参数成员
+
+描述
+
+string container_id
+
+容器id
+
+LinuxContainerResources linux
+
+linux资源配置信息
+
+返回值
+无
+
+ExecSync
+接口原型
+rpc ExecSync(ExecSyncRequest) returns (ExecSyncResponse) {}
+接口描述
+以同步的方式在容器中执行命令，采用的gRPC通讯方式。
+
+注意事项
+执行执行一条单独的命令，不能打开终端与容器交互。
+
+参数
+
+参数成员
+
+描述
+
+string container_id
+
+容器ID
+
+repeated string cmd
+
+待执行命令
+
+int64 timeout
+
+停止命令的超时时间（秒）。 默认值：0（无超时限制）。 暂不支持
+
+返回值
+
+返回值
+
+描述
+
+bytes stdout
+
+捕获命令标准输出
+
+bytes stderr
+
+捕获命令标准错误输出
+
+int32 exit_code
+
+退出代码命令完成。 默认值：0（成功）。
+
+Exec
+接口原型
+rpc Exec(ExecRequest) returns (ExecResponse) {}
+接口描述
+在容器中执行命令，采用的gRPC通讯方式从CRI服务端获取url，再通过获得的url与websocket服务端建立长连接，实现与容器的交互。
+
+注意事项
+执行执行一条单独的命令，也能打开终端与容器交互。stdin/stdout/stderr之一必须是真的。如果tty为真，stderr必须是假的。 不支持多路复用, 在这种情况下, stdout和stderr的输出将合并为单流。
+
+参数
+
+参数成员
+
+描述
+
+string container_id
+
+容器ID
+
+repeated string cmd
+
+待执行的命令
+
+bool tty
+
+是否在TTY中执行命令
+
+bool stdin
+
+是否流式标准输入
+
+bool stdout
+
+是否流式标准输出
+
+bool stderr
+
+是否流式输出标准错误
+
+返回值
+
+返回值
+
+描述
+
+string url
+
+exec流服务器的完全限定URL
+
+Attach
+用法：docker attach [OPTIONS] CONTAINER
+
+功能：附加到一个运行着的容器
+
+选项：
+
+–no-stdin=false 不附加STDIN
+
+–sig-proxy=true 代理所有到容器内部的信号，不代理SIGCHLD, SIGKILL, SIGSTOP
+
+示例：
+
+$ sudo docker attach attach_test
+root@2988b8658669:/# ls bin  boot  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+ContainerStats
+接口原型
+rpc ContainerStats(ContainerStatsRequest) returns (ContainerStatsResponse) {}
+接口描述
+返回单个容器占用资源信息，仅支持runtime类型为lcr的容器。
+
+参数
+
+参数成员
+
+描述
+
+string container_id
+
+容器id
+
+返回值
+
+返回值
+
+描述
+
+ContainerStats stats
+
+容器信息。注：disk和inodes只支持oci格式镜像起的容器查询
+
+ListContainerStats
+接口原型
+rpc ListContainerStats(ListContainerStatsRequest) returns (ListContainerStatsResponse) {}
+接口描述
+返回多个容器占用资源信息，支持条件过滤
+
+参数
+
+参数成员
+
+描述
+
+ContainerStatsFilter filter
+
+条件过滤参数
+
+返回值
+
+返回值
+
+描述
+
+repeated ContainerStats stats
+
+容器信息的列表。注：disk和inodes只支持oci格式镜像启动的容器查询
+
+UpdateRuntimeConfig
+接口原型
+rpc UpdateRuntimeConfig(UpdateRuntimeConfigRequest) returns (UpdateRuntimeConfigResponse);
+接口描述
+提供标准的CRI接口，目的为了更新网络插件的Pod CIDR，当前CNI网络插件无需更新Pod CIDR，因此该接口只会记录访问日志。
+
+注意事项
+接口操作不会对系统管理信息修改，只是记录一条日志。
+
+参数
+
+参数成员
+
+描述
+
+RuntimeConfig runtime_config
+
+包含Runtime要配置的信息
+
+返回值
+无
+
+Status
+接口原型
+rpc Status(StatusRequest) returns (StatusResponse) {};
+接口描述
+获取runtime和pod的网络状态，在获取网络状态时，会触发网络配置的刷新。仅支持runtime类型为lcr的容器。
+
+注意事项
+如果网络配置刷新失败，不会影响原有配置；只有刷新成功时，才会覆盖原有配置。
+
+参数
+
+参数成员
+
+描述
+
+bool verbose
+
+是否显示关于Runtime额外的信息（暂不支持）
+
+返回值
+
+返回值
+
+描述
+
+RuntimeStatus status
+
+Runtime的状态
+
+map<string, string> info
+
+Runtime额外的信息，info的key为任意值，value为json格式，可包含任何debug信息；只有Verbose为true是才应该被赋值
+
+Image服务
+提供了从镜像仓库拉取、查看、和移除镜像的gRPC API。
+
+ListImages
+接口原型
+rpc ListImages(ListImagesRequest) returns (ListImagesResponse) {}
+接口描述
+列出当前已存在的镜像信息。
+
+注意事项
+为统一接口，对于embedded格式镜像，可以通过cri images查询到。但是因embedded镜像不是标准OCI镜像，因此查询得到的结果有以下限制：
+
+因embedded镜像无镜像ID，显示的镜像ID为镜像的config digest。
+因embedded镜像本身无digest仅有config的digest，且格式不符合OCI镜像规范，因此无法显示digest。
+参数
+
+参数成员
+
+描述
+
+ImageSpec filter
+
+筛选的镜像名称
+
+返回值
+
+返回值
+
+描述
+
+repeated Image images
+
+镜像信息列表
+
+ImageStatus
+接口原型
+rpc ImageStatus(ImageStatusRequest) returns (ImageStatusResponse) {}
+接口描述
+查询指定镜像信息。
+
+注意事项
+查询指定镜像信息，若镜像不存在，则返回ImageStatusResponse，其中Image设置为nil。
+为统一接口，对于embedded格式镜像，因不符合OCI格式镜像，缺少字段，无法通过本接口进行查询。
+参数
+
+参数成员
+
+描述
+
+ImageSpec image
+
+镜像名称
+
+bool verbose
+
+查询额外信息，暂不支持，无额外信息返回
+
+返回值
+
+返回值
+
+描述
+
+Image image
+
+镜像信息
+
+map<string, string> info
+
+镜像额外信息，暂不支持，无额外信息返回
+
+PullImage
+接口原型
+ rpc PullImage(PullImageRequest) returns (PullImageResponse) {}
+接口描述
+下载镜像。
+
+注意事项
+当前支持下载public镜像，使用用户名、密码、auth信息下载私有镜像，不支持authconfig中的server_address、identity_token、registry_token字段。
+
+参数
+
+参数成员
+
+描述
+
+ImageSpec image
+
+要下载的镜像名称
+
+AuthConfig auth
+
+下载私有镜像时的验证信息
+
+PodSandboxConfig sandbox_config
+
+在Pod上下文中下载镜像（暂不支持）
+
+返回值
+
+返回值
+
+描述
+
+string image_ref
+
+返回已下载镜像信息
+
+RemoveImage
+接口原型
+rpc RemoveImage(RemoveImageRequest) returns (RemoveImageResponse) {}
+接口描述
+删除指定镜像。
+
+注意事项
+为统一接口，对于embedded格式镜像，因不符合OCI格式镜像，缺少字段，无法通过本接口使用image id进行删除。
+
+参数
+
+参数成员
+
+描述
+
+ImageSpec image
+
+要删除的镜像名称或者ID
+
+返回值
+无
+
+ImageFsInfo
+接口原型
+rpc ImageFsInfo(ImageFsInfoRequest) returns (ImageFsInfoResponse) {}
+接口描述
+查询存储镜像的文件系统信息。
+
+注意事项
+查询到的为镜像元数据下的文件系统信息。
+
+参数
+无
+
+返回值
+
+返回值
+
+描述
+
+repeated FilesystemUsage image_filesystems
+
+镜像存储文件系统信息
+
+约束
+如果创建sandbox时，PodSandboxConfig参数中配置了log_directory，则所有属于该sandbox的container在创建时必须在ContainerConfig中指定log_path，否则可能导致容器无法使用CRI接口启动，甚至无法使用CRI接口删除。
+
+容器的真实LOGPATH=log_directory/log_path，如果log_path不配置，那么最终的LOGPATH会变为LOGPATH=log_directory。
+
+如果该路径不存在，isulad在启动容器时会创建一个软链接，指向最终的容器日志真实路径，此时log_directory变成一个软链接，此时有两种情况：
+
+第一种情况，如果该sandbox里其它容器也没配置log_path，在启动其它容器时，log_directory会被删除，然后重新指向新启动容器的log_path，导致之前启动的容器日志指向后面启动容器的日志。
+第二种情况，如果该sandbox里其它容器配置了log_path，则该容器的LOGPATH=log_directory/log_path，由于log_directory实际是个软链接，使用log_directory/log_path为软链接指向容器真实日志路径时，创建会失败。
+如果该路径存在，isulad在启动容器时首先会尝试删除该路径（非递归），如果该路径是个文件夹，且里面有内容，删除会失败，从而导致创建软链接失败，容器启动失败，删除该容器时，也会出现同样的现象，导致删除失败。
+
+如果创建sandbox时，PodSandboxConfig参数中配置了log_directory，且container创建时在ContainerConfig中指定log_path，那么最终的LOGPATH=log_directory/log_path，isulad不会递归的创建LOGPATH，因而用户必须保证dirname(LOGPATH)存在，即最终的日志文件的上一级路径存在。
+
+如果创建sandbox时，PodSandboxConfig参数中配置了log_directory，如果有两个或多个container创建时在ContainerConfig中指定了同一个log_path，或者不同的sandbox内的容器最终指向的LOGPATH是同一路径，若容器启动成功，则后启动的容器日志路径会覆盖掉之前启动的容器日志路径。
+
+如果远程镜像仓库中镜像内容发生变化，调用CRI Pull image接口重新下载该镜像时，若本地原来存储有原镜像，则原镜像的镜像名称、TAG会变更为“none”
+
+举例如下：
+
+本地已存储镜像：
+
+IMAGE                                        TAG                 IMAGE ID            SIZE
+rnd-dockerhub.huawei.com/pproxyisulad/test   latest              99e59f495ffaa       753kB
+远程仓库中rnd-dockerhub.huawei.com/pproxyisulad/test:latest 镜像更新后，重新下载后：
+
+IMAGE                                        TAG                 IMAGE ID            SIZE
+<none>                                       <none>              99e59f495ffaa       753kB
+rnd-dockerhub.huawei.com/pproxyisulad/test   latest              d8233ab899d41       1.42MB
+使用isula images 命令行查询，REF显示为”-"：
+
+REF                                               IMAGE ID               CREATED              SIZE       
+rnd-dockerhub.huawei.com/pproxyisulad/test:latest d8233ab899d41          2019-02-14 19:19:37  1.42MB     
+-                                                 99e59f495ffaa          2016-05-04 02:26:41  753kB
+返回顶部
+有奖捉虫
