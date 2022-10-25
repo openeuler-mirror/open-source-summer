@@ -1,0 +1,6 @@
+CanoKey 是开源的硬件密钥项目，支持 WebAuthn、OpenPGP、PIV 等多种协议，其完全开源的版本基于 STM32L432 单片机。nRF52840 是 Nordic Semiconductor 公司推出的芯片，与 STM32L432 相比多了密码运算等特性，且基于 nRF52840 的 USB 开发板更容易取得，方便了用户制作自己的开源安全密钥。本项目的预期目标是将 CanoKey 的固件移植到 nRF52840 上，使开发者可以有更多硬件选择。
+ 
+一个适用于 nRF52840 的 CanoKey 固件
+
+ARM 开发基础
+USB 协议栈

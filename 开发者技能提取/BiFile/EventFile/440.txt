@@ -1,0 +1,10 @@
+Buddy Compiler 是一个领域特定编译器基础设施，其中中间表示（IR, Intermediate Representation）层级需要领域特定的多层编译抽象支持。我们在技术路线上拥抱MLIR生态（MLIR是多层中间表示的编译基础设施）。本项目致力于为 Buddy Compiler 提供数字语音处理的多层编译抽象。项目需要选择 1-3 个数字语音处理操作，完成相应 DAP (Digital Audio Processing) Dialect Operation，C/C++ 接口，完整应用示例，性能评估。
+
+数字语音处理操作对应的 DAP (Digital Audio Processing) Dialect Operation
+数字语音处理操作对应的 C/C++ 接口
+数字语音处理操作对应的完整应用示例
+数字语音处理操作对应的性能评估
+
+熟练使用C++
+基础的 MLIR 背景知识
+基础语音处理背景知识

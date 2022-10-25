@@ -1,0 +1,6 @@
+Prometheus 是 Kubernetes 生态中的一个开源系统监控告警解决方案，在本任务中，你需要结合 Prometheus 为 GraphScope 系统提供一套统一的 UI，来帮助监控、追踪 GraphScope 集群的运行状态。
+
+一个 Prometheus Exporter，该 Exporter 可以是 Python 脚本，负责解析 GraphScope Store 服务日志并生成 Prometheus 可识别的日志信息
+在 GraphScope Coordinator 中暴露 Http 服务，负责生成 Prometheus 可识别的日志信息
+结合 Prometheus Grafana 的可视化展示页面
+

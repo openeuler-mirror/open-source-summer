@@ -1,0 +1,12 @@
+异步执行是大部分现代运行时都支持的功能，WamEdge 也提供了异步执行 Wasm 模块的特性。Java本身也提供了对异步操作的一些抽象，本项目需要结合两部分特性来实现Wasmedge Java SDK Async 特性，包含： 
+熟悉 WasmEdge 的异步API 
+抽象出一套在 Java SDK 层面的异步API 
+基于JNI 实现这些 API
+
+按照社区编码规范要求，完成特性编码
+提供编码示例和文档
+提供完善的测试用例
+
+1. 熟悉 Java 和 C 语言编程
+2. 熟悉 JNI 接口和编码
+3. 熟悉 Gradle 和 CMake 的使用

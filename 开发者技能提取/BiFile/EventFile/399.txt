@@ -1,0 +1,10 @@
+OpenYurt作为平台级边缘云原生项目，涉及到云原生和边缘计算两个领域。OpenYurt结合云原生生态系统，向下对接异构的边缘计算资源，包括CDN、ENS以及边缘IoT设备，向上提供标准的边缘资源及业务管理接口。为了屏蔽OpenYurt的复杂性，使很多边缘计算领域开发者能够快速上手OpenYurt平台，社区提供了OpenYurt体验中心，该中心以开箱即用的方式快速为开发者提供用于开发测试的OpenYurt集群。随着OpenYurt社区的快速发展，在云原生和边缘计算两个领域中，有越来越多的优秀项目在OpenYurt上集成，包括OpenYurt社区衍生的项目：Yurt-App-Manager、Raven、Node-Resource-Manager，以及一些三方的项目Edgex Foundry、EMQ ekuipper、OpenVINO、Prometheus等。未来，为了便于这些项目能够快速上体验中心，体验中心需要设计并实现一种通用的应用对接标准。所有项目按照这个标准提交到OpenYurt体验中心即可快速运行。通过本题目的挑战，同学们能更好的学习到云原生、边缘计算、Web开发等相关技术，接触到更加丰富的云原生在边缘计算领域的应用场景，深入地理解云边端一体化的价值。
+
+设计并实现OpenYurt体验平台中应用市场模块
+参考社区主流的服务接入机制像Open Service Broker，设计应用与OpenYurt平台的对接方案
+实现OpenYurt体验中心的应用市场管理功能，提供标准化的应用管理接口，包括应用的发布、下线、升级等
+
+了解云原生生态，有项目开发经验
+熟悉Web开发的相关语言与框架
+有Go语言开发经验
+对OpenYurt有较强学习兴趣

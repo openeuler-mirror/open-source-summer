@@ -1,0 +1,11 @@
+OpenDigger 可以支持开放一个 Nodejs 开发环境，和一些内置的分析函数帮助用户分析开源软件的相关指标。
+
+已实现的分析函数在仓库 /src/metrics 路径中可以看到。OpenDigger 计划实现一批 CHAOSS 项目中已发布的一些指标，每一个计划实现的指标都以一个 issue 的形式在仓库  issue 列表中进行追踪，具体可见https://github.com/X-lab2017/open-digger/issues 下以 [Metrics] 为开头的 issue 列表。
+
+本项目的内容包括：
+1. 参考 /src/metrics 下已有的分析函数，实现 issue570 - issue577 中的相关指标
+2. 连接到 Clickhouse 数据库，在 nodejs 环境下测试运行
+
+基于TypeScript语言编写的CHAOSS指标函数
+
+使用Plotly可视化运行的文档示例

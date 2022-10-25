@@ -1,0 +1,210 @@
+在,O
+ ,O
+c,B-Skill
+p,I-Skill
+u,I-Skill
+s,I-Skill
+e,I-Skill
+t,I-Skill
+ ,O
+模,O
+式,O
+下,O
+，,O
+K,B-Skill
+a,I-Skill
+t,I-Skill
+a,I-Skill
+ ,I-Skill
+C,I-Skill
+o,I-Skill
+n,I-Skill
+t,I-Skill
+a,I-Skill
+i,I-Skill
+n,I-Skill
+e,I-Skill
+r,I-Skill
+s,I-Skill
+ ,O
+的,O
+虚,B-Skill
+拟,I-Skill
+机,I-Skill
+ ,O
+v,O
+C,O
+P,O
+U,O
+ ,O
+目,O
+前,O
+是,O
+共,O
+享,O
+ ,O
+C,O
+P,O
+U,O
+ ,O
+资,O
+源,O
+的,O
+。,O
+本,O
+项,O
+目,O
+目,O
+标,O
+是,O
+实,O
+现,O
+ ,O
+v,O
+C,O
+P,O
+U,O
+ ,O
+线,O
+程,O
+和,O
+物,O
+理,O
+C,O
+P,O
+U,O
+的,O
+一,O
+一,O
+绑,O
+定,O
+，,O
+并,O
+让,O
+虚,O
+拟,O
+机,O
+ ,O
+c,O
+p,O
+u,O
+ ,O
+拓,O
+扑,O
+模,O
+拟,O
+物,O
+理,O
+ ,O
+C,O
+P,O
+U,O
+ ,O
+拓,O
+扑,O
+，,O
+从,O
+而,O
+减,O
+少,O
+在,O
+ ,O
+c,B-Skill
+p,I-Skill
+u,I-Skill
+s,I-Skill
+e,I-Skill
+t,I-Skill
+ ,O
+模,O
+式,O
+下,O
+ ,O
+v,O
+C,O
+P,O
+U,O
+ ,O
+线,O
+程,O
+之,O
+间,O
+的,O
+干,O
+扰,O
+。,O
+/,O
+n,O
+/,O
+n,O
+支,O
+持,O
+在,O
+H,O
+o,O
+s,O
+t,O
+/,O
+G,O
+u,O
+e,O
+s,O
+t,O
+之,O
+间,O
+绑,O
+定,O
+v,O
+C,O
+P,O
+U,O
+的,O
+K,B-Skill
+a,I-Skill
+t,I-Skill
+a,I-Skill
+ ,I-Skill
+C,I-Skill
+o,I-Skill
+n,I-Skill
+t,I-Skill
+a,I-Skill
+i,I-Skill
+n,I-Skill
+e,I-Skill
+r,I-Skill
+s,I-Skill
+/,O
+n,O
+/,O
+n,O
+了,O
+解,O
+虚,B-Skill
+拟,I-Skill
+化,I-Skill
+以,O
+及,O
+L,B-Skill
+i,I-Skill
+n,I-Skill
+u,I-Skill
+x,I-Skill
+ ,I-Skill
+c,I-Skill
+g,I-Skill
+r,I-Skill
+o,I-Skill
+u,I-Skill
+p,I-Skill
+，,O
+尤,O
+其,O
+是,O
+ ,O
+c,B-Skill
+p,I-Skill
+u,I-Skill
+s,I-Skill
+e,I-Skill
+t,I-Skill

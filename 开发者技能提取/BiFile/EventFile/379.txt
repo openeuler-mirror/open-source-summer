@@ -1,0 +1,17 @@
+题目描述：Apache RocketMQ Connect Clickhouse实现
+支持Apache RocketMQ Connect Sink到Clickhouse
+1、学习Apache RocketMQ Connect知识，详细了解RocketMQ Connect原理、使用方式、参数含义等
+2、根据Connect Api实现RocketMQ到Clickhouse数据同步的Connector
+3、在社区中提交Issue，完成相关代码，review后被社区合并
+
+文档类
+输出详细设计文档
+提交测试报告
+输出使用说明书
+代码类
+提交Apache RocketMQ Connect Sink到Clickhouse的代码，生成PR
+提交测试用例代码
+提交使用samples代码
+
+熟练掌握Java语言编程
+对connector中sink/source有所了解

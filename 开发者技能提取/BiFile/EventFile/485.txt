@@ -1,0 +1,10 @@
+Vineyard支持这两种方式来支持不同计算引擎之间的高效零拷贝数据共享，a. 内存映射，b. managed language（例如Java）可以通过高效的跨语言方法调用来访问对象的方法，并且这个过程中不会有特别多的跨语言调用的开销（众所周知，FFI（例如JNI）的执行效率一直是一个问题）。针对这个问题，Vineyard已经和FastFFI项目有很多共同的努力，并且也在实际应用中取得了一些比较好的结果。FastFFI将一部分JNI的JVM bytecode编译到UNSAFE代码和LLVM Bytecode来实现对JVM堆外对象（C++对象）的高效访问。
+
+但现在已有的优化器仍然不能很好的处理一些复杂的情形，比如访问和操作一些复合数据类型的迭代器（例如`struct edge_iter { int vid, int offset}`）仍然不能被很好的inline。这个任务中，候选人需要改进fastffi中现有的优化器，将更多的常见的跨语言调用模式（比如iterator）翻译到更高效的bytecode来提升性能。这个题目是Vineyard项目与FastFFI项目的合作题目，一部分工作可能会需要在FastFFI (https://github.com/alibaba/fastFFI) 项目中完成。
+
+提升跨语言访问复合数据类型的性能
+通过在已有的一些测试集上验证实现的优化的效果
+
+候选人需要有编写JNI代码的经验，并且对跨语言调用的低效等问题有一定程度的感知
+候选人需要有一些编译器和性能评测方面的经验
+候选人最好对JVM Bytecode和LLVM bytecode有一定程度的熟悉

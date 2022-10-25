@@ -1,0 +1,6 @@
+支持将KubeEdge边缘节点部署到OpenHarmony操作系统，支持小型化嵌入式设备。
+
+KubeEdge边缘节点在OpenHarmony操作系统设备运行起来
+在OpenHarmony操作系统设备上运行KubeEdge应用
+
+了解KubeEdge部署原理，了解OpenHarmony系统

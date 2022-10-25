@@ -1,0 +1,16 @@
+OpenDigger 目前已经内置了一个 JavaScript SDK，文件在仓库  /src/opendigger.js  路径下。通过这个开发工具包，用户可以快速对开源项目进行统计分析。
+
+为了满足更多开发者的需要，我们打算在已有的 JavaScript SDK 的基础上，实现一个 Python SDK。这样的话，在 Jupyter Notebook 中就可以方便的使用 Python SDK 进行开发。
+
+为了完成这个项目，申请者需要：
+
+1. 使用 GitHub 仓库的源代码构建项目，并运行。（使用数据镜像和修改过支持 Node.js 内核的 Notebook 镜像）
+2. 在 Notebook 中查看 handbook，使用 JavaScript SDK 进行一些分析工作。
+3. 通过一些分析任务，了解数据库中表的字段的含义。
+4. 在上述基础上，选择合适的工具实现一个 Python 的 SDK。
+
+Python 语言编写的开发包
+
+使用 Python3 进行开发
+能够读取配置文件连接 clickhouse 与 neo4j 数据库
+能够妥善处理异步请求

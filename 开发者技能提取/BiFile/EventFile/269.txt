@@ -1,0 +1,8 @@
+目前Seata支持了自定义协议格式参考 https://github.com/seata/seata/issues/893，需要进一步支持TXC/GTS 产品的通信协议，在seata-server侧能够无缝兼容2种通信协议并且支持TXC/GTS 的事务消息处理，以达到使用TXC/GTS  client的用户也可以通过 txc-client 使用 seata-server 提供的分布式事务服务。
+
+1. 完成 GTS 协议的适配和文档；
+2. 完成 GTS 事务消息的适配和事务处理逻辑；
+3. 完成以上适配的seata-sample 验证。
+
+1. 熟悉Java；
+2. 了解 Seata 和 Netty；

@@ -1,0 +1,5 @@
+BanyanDB是一款面向跟踪场景的数据库。其主要功能是搜集，分析并存储Metric，Logging和Tracing产生的数据。由于数据库使用gRPC作为其原生的交互协议，而其对终端用户是不友好的。故该项目的贡献者需要提供一款命令行工具通过访问 BanyanDB 的 API 来管理内部资源和数据
+
+将代码提交给Banyan DB的repositoy。CLI工具可以成功构建和运行
+
+有Go使用经验

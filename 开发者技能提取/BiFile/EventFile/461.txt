@@ -1,0 +1,13 @@
+Tiny SQL 是一个分布式关系型 DBMS 学习系统，由 Talent Plan 社区根据著名的 Ti DB 开发而成。
+
+它主要涵盖解析器、只读数据库、插入和更新、优化器和 MPP 模块。
+
+已有1500多名来自WW的学生完成了学习。
+
+该项目将通过包括新知识、文档、实验室和测试用例来改进 Tiny SQL。
+
+需要关系 DBMS 实现和围棋技能的知识，良好的技术写作技巧是加分项。
+
+完成所列出issue的Stage 1~4， Stage 5 is a plus
+
+完成所列出issue的Stage 1~4， Stage 5 is a plus

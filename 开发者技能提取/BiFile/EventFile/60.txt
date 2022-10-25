@@ -1,0 +1,11 @@
+JuiceFS 是一款面向云原生设计的高性能分布式文件系统，架构上使用事务数据库来管理元数据，使用对象存储来存储数据。JuiceFS 目前已支持多种元数据引擎，如 Redis，MySQL，TiKV 等。FoundationDB 是 Apple 开源的分布式事务 Key-Value 数据库，也可以用来管理 JuiceFS 的元数据。
+
+本项目希望能将两者对接起来，使 FoundationDB 成为 JuiceFS 元数据引擎的备选方案之一。
+
+1. 实现 FoundationDB 与 JuiceFS 对接，使其能被用来管理 JuiceFS 的元数据
+2. 测试并验证对接后系统稳定性，性能等，比较与已有元数据引擎的异同
+3. Bonus：较深入地了解 FoundationDB 实现机制和适用场景，编写最佳实践文档
+
+1. 基本了解分布式系统，文件系统，Key-Value 数据库
+2. 熟悉 Go 语言，GitHub 的使用和协作
+3. 能阅读英文文档

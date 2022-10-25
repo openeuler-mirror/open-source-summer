@@ -1,0 +1,11 @@
+本项目的主要目标是利用 SQLancer 完成对 Databend 的自动测试。
+
+SQLancer 是一款用于自动测试数据库管理系统（DBMS）的工具，以发现其实现中的逻辑错误。逻辑错误：即那些导致DBMS获取错误结果集的漏洞。
+
+完成 SQLancer 对 Databend 的初步支持
+构建合适的持续集成服务，完成打包 SQLancer 及自动测试
+进一步改善实现质量，争取合并到上游 SQLancer 中
+
+熟悉 Java
+了解数据库和解析器等相关领域知识
+熟悉 Git、GitHub 相关操作

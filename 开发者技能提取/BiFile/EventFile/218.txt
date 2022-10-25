@@ -1,0 +1,29 @@
+背景 : 
+Apache ShardingSphere 是一套分布式数据库中间件生态产品，除了提供数据分片功能，帮助用户搭建分布式数据库集群外，还提供数据加解密、SQL 审计、分布式权限、影子库、数据库管控等功能。借助ZooKeeper 及 Etcd，ShardingSphere 为用户提供了分布式数据库集群治理的功能，作为全球人气的数据库开源项目，越来越多社区用户希望 ShardingSphere 可使用 Nacos 进行分布式治理，即通过 Nacos 的 CURD 和事件通知来完成 ShardingSphere 集群下状态和规则同步。本项目主要完成该功能模块的研发、测试和交付，具体任务如下所示。 
+ 
+任务 : 
+这个任务目前是集成 Nacos 注册中心，下面是一些具体任务列表 :  
+ShardingSphere 引入 Nacos 依赖 
+在 shardingsphere-cluster-mode-repository-provider 工程下创建 shardingsphere-cluster-mode-repository-nacos 
+定义 Nacos 的配置项 
+新增 NacosInternalLockHolder 并内部实现 Lock 接口 
+实现 ClusterPersistRepository 接口 
+通过 SPI 默认加载该实现类 
+给 ClusterPersistRepository 接口的实现增加必要的单元测试 
+更新 shardingsphere-example-generator 模块，引入 Nacos 
+更新 ShardingSphere 官方文档 
+10 . 增加 Nacos 的测试用例 (https://github.com/SphereEx/auto-test)，验证 ShardingSphere-Proxy 集群之间配置共享 
+参考 : 
+你可以参考 Etcd 或 ZooKeeper 模块，来辅助完成这个任务：  
+shardingsphere-cluster-mode-repository-etcd  
+shardingsphere-cluster-mode-repository-zookeeper-curator 
+ 
+测试 : 
+完成集群模式集成 Nacos 之后，你需要在本地 ShardingSphere-Proxy 集群中进行简单测试 : 
+首先确保 ShardingSphere 集群中每个计算节点可以正常的启动 (https://shardingsphere.apache.org/document/current/en/quick-start/shardingsphere-proxy-quick-start/) 
+在单 Proxy 中创建逻辑数据库，此时在集群中其它计算节点均可以查看到所创建的 DATABASE 
+通过 DistSQL(https://shardingsphere.apache.org/document/current/cn/user-manual/shardingsphere-proxy/distsql/syntax/rdl/resource-definition/) RDL 新增资源，此时新增的资源应同步至其它计算节点
+
+ShardingSphere-Proxy 集群模式可通过 Nacos 注册中心完成各个计算节点的状态同步及配置和元数据的同步
+
+1. 精通 Java； 2. 熟悉 Nacos；3. 理解锁机制

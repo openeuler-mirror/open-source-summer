@@ -1,0 +1,7 @@
+Kruise Rollout 是一个面向 K8S 的旁路式、无侵入的应用发布组件，它不仅支持用户以分批的方式发布应用、同时支持流量分批灰度、A/B Test 等诸多应用发布策略。目前该项目已支持 Deployment、CloneSet 等类型的 k8S 工作负载，对于 Daemonset 支持还有所欠缺。非常欢迎同学们一块参与 Kruise Rollout 建设！
+
+实现 Kruise Rollout 对 DaemonSet 分批发布的支持
+
+熟悉 Kubernetes 基本原理；
+熟悉 Kubernetes DaemonSet 和 Kruise Advanced DaemonSet 代码；
+了解 Kubernetes Controller 标准扩展原理及其实现；

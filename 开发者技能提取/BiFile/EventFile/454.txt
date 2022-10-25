@@ -1,0 +1,12 @@
+完善XQUIC 网络诊断、故障排查工具需要 完善XQUIC的CI/CD能力 并 将XQUIC日志转换为标准qlog格式并在qvis上可视化；
+当前在Github Actions中查看单个测试用例运行结果较麻烦，希望集成到 Travis CI 或其他平台，能够分别查看各用例运行情况。
+了解QUIC协议(draft-ietf-quic-transport, draft-ietf-quic-http)，掌握qlog标准(draft-ietf-quic-qlog-main-schema, draft-ietf-quic-qlog-quic-events, draft-ietf-quic-qlog-h3-events)，将XQUIC日志转换为标准qlog格式，利用qvis平台(https://qvis.quictools.info)将qlog日志进行可视化
+
+对于刚接触XQUIC的新用户来说，当前QuickStart Guide还不够Quick，本项目旨在优化该文档，让用户以最简单和最快的方式完成项目构建和运行体验；
+
+将XQUIC日志转换为标准qlog格式； 正确在qvis平台(https://qvis.quictools.info)展示Sequence、Congestion、Multiplexing、Packetization、qlog stats；
+学习CI/CD框架的工作原理与配置方式，将XQUIC集成到Travis CI 或其他平台上，快速清晰地查看测试用例运行情况；
+简洁明了的QuickStart文档，任何人可以快速上手完成项目构建和功能体验，无任何歧义和不符合预期的地方；
+
+学习QUIC协议及XQUIC日志实现； 学习qlog标准并学习使用qviz平台 ;
+学习 XQUIC 的构建方式及测试流程； 了解 CI/CD；

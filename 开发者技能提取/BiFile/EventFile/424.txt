@@ -1,0 +1,5 @@
+完成dbt-openGauss适配插件，并在dbt社区新增支持openGauss的文档。
+
+1. 完成dbt-openGauss插件，并根据https://docs.getdbt.com/docs/contributing/testing-a-new-adapter完成测试 2. 完成基于dbt-openGauss的插件的demo，并合入到opengauss仓库。 3. 将dbt-openGauss adapter支持文档合入到https://github.com/dbt-labs/docs.getdbt.com
+
+1. 了解openGauss基础功能 2、 熟悉Python语言

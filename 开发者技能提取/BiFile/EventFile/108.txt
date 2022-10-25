@@ -1,0 +1,10 @@
+Casbin 是一个强大的、高效的开源访问控制框架，对主流语言都有相关实现，包括Python、PHP版本的Casbin。Casbin在业界具有广泛影响力，社区活跃。目前，目前PyCasbin/PHP-Casbin主库主要功能虽然相对完善和稳定，但仍然需要不断迭代演进，特别是对Python和PHP生态内各种框架、插件的集成，代码质量和性能还有调优的可能，所以我们希望对主库及其周边生态系统进行完善和优化，以增强Casbin在脚本语言Python和PHP领域的应用场景，提高外部系统接入Casbin效率和成本，进而扩大Casbin在Python和PHP领域的生态圈，使其能更好更快的发展。
+
+对分布式存储系统ETCD的适配etcd-adapter
+完善Py/PHP-Casbin的对Redis（redis-adapter）适配器
+引入Casbin核心引擎Casbin Core Engine (Golang)中的新功能
+对主流框架的支持增强，例如：如果在Python的Django的扩展中, 需要引入Django的Middleware, Caching, Logging, 集成Django的认证系统（authentication system）；而PHP主流框架Laravel中已有Laravel-Authz，但需要引入Laravel的Gates等
+解决PyCasbin或PHP-Casbin主库以及相关仓库中的issues
+
+熟悉Python、PHP任意一种语言即可
+熟悉Git、GitHub相关操作

@@ -1,0 +1,11 @@
+experimental/simd是一个为C++显式数据并行编程提供零开销C++类型的库，该库已经被包含进GCC官方的libstdc++库。我们正尝试将其移植到Clang/LLVM官方的libcxx库中。该项目需要完成对X86、ARM、PowerPC等多平台simd指令的支持，需要建立完善针对不同平台不同环境的测试框架。
+
+多平台测试框架设计文档
+LLVM/Clang内部多平台测试框架代码实现
+测试需覆盖simd库所有外部接口
+在X86、ARM、PowerPC上均能编译运行测试框架
+
+熟练使用C++，熟悉C++模板元编程及C++11/14/17新特性。
+了解libstdc++/libc++库的使用与开发流程。
+具备SIMD指令集相关基础知识，了解至少一种SIMD指令集及其intrinsic（SSE、AVX、AVX512、Arm Neon、PowerPC AltiVec）。
+具备基本的Linux操作基础和基本的git操作基础。

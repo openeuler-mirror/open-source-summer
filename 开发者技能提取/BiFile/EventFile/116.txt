@@ -1,0 +1,25 @@
+Apache ShenYu是一款高性能的API网关，社区十分活跃与友好，非常适合高校学生学习与参与,通过参与这次活动可以学习Apache项目的社区建设，后续有兴趣继续贡献，可以成为Apache Committer。
+
+
+该项目是将Apache ShenYu网关接受的请求日志，发送到Apache Pulsar中。需要设计请求日志实体，获取数据，调用Apache Pulsar的Java客户端进行发送（可以参考Logging-RockertMQ插件）。
+
+
+1.设计日志实体类
+2.通过网关插件的API上下文获取日志数据
+3.调用Apache Pulsar Java Client将日志数据发送到Apache Pulsar Server
+4.完成单元测试
+5.完成集成测试
+6.书写插件文档
+
+设计日志实体类
+通过网关插件的API上下文获取日志数据
+调用Apache Pulsar Java Client将日志数据发送到Apache Pulsar Server
+完成单元测试
+完成集成测试
+书写插件文档
+
+熟悉Java语言以及Reactor Java
+熟悉Spring Boot以及常见的设计模式
+熟悉Apache Pulsar 的Java 客户端API
+熟悉Junit单元测试框架
+熟悉Git工作流与docker

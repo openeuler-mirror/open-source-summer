@@ -1,0 +1,251 @@
+N,B-Skill
+e,I-Skill
+b,I-Skill
+u,I-Skill
+l,I-Skill
+a,I-Skill
+ ,I-Skill
+F,I-Skill
+l,I-Skill
+i,I-Skill
+n,I-Skill
+k,I-Skill
+ ,I-Skill
+C,I-Skill
+o,I-Skill
+n,I-Skill
+n,I-Skill
+e,I-Skill
+c,I-Skill
+t,I-Skill
+o,I-Skill
+r,I-Skill
+ ,O
+是,O
+一,O
+款,O
+帮,O
+助,O
+ ,O
+F,B-Skill
+l,I-Skill
+i,I-Skill
+n,I-Skill
+k,I-Skill
+ ,O
+用,O
+户,O
+快,O
+速,O
+访,O
+问,O
+ ,O
+N,B-Skill
+e,I-Skill
+b,I-Skill
+u,I-Skill
+l,I-Skill
+a,I-Skill
+ ,I-Skill
+G,I-Skill
+r,I-Skill
+a,I-Skill
+p,I-Skill
+h,I-Skill
+ ,O
+的,O
+连,O
+接,O
+器,O
+，,O
+支,O
+持,O
+从,O
+ ,O
+N,B-Skill
+e,I-Skill
+b,I-Skill
+u,I-Skill
+l,I-Skill
+a,I-Skill
+ ,I-Skill
+G,I-Skill
+r,I-Skill
+a,I-Skill
+p,I-Skill
+h,I-Skill
+ ,O
+图,B-Skill
+数,I-Skill
+据,I-Skill
+库,I-Skill
+中,O
+读,O
+取,O
+数,O
+据,O
+，,O
+或,O
+者,O
+将,O
+其,O
+他,O
+外,O
+部,O
+数,O
+据,O
+源,O
+读,O
+取,O
+的,O
+数,O
+据,O
+写,O
+入,O
+ ,O
+N,B-Skill
+e,I-Skill
+b,I-Skill
+u,I-Skill
+l,I-Skill
+a,I-Skill
+ ,I-Skill
+G,I-Skill
+r,I-Skill
+a,I-Skill
+p,I-Skill
+h,I-Skill
+ ,O
+图,B-Skill
+数,I-Skill
+据,I-Skill
+库,I-Skill
+。,O
+/,O
+n,O
+/,O
+n,O
+通,O
+过,O
+增,O
+强,O
+ ,O
+N,B-Skill
+e,I-Skill
+b,I-Skill
+u,I-Skill
+l,I-Skill
+a,I-Skill
+ ,I-Skill
+F,I-Skill
+l,I-Skill
+i,I-Skill
+n,I-Skill
+k,I-Skill
+ ,I-Skill
+C,I-Skill
+o,I-Skill
+n,I-Skill
+n,I-Skill
+e,I-Skill
+c,I-Skill
+t,I-Skill
+o,I-Skill
+r,I-Skill
+，,O
+提,O
+供,O
+ ,O
+S,B-Skill
+Q,I-Skill
+L,I-Skill
+ ,O
+C,O
+o,O
+n,O
+n,O
+e,O
+c,O
+t,O
+o,O
+r,O
+，,O
+熟,O
+悉,O
+ ,O
+S,B-Skill
+Q,I-Skill
+L,I-Skill
+ ,O
+的,O
+用,O
+户,O
+也,O
+可,O
+以,O
+快,O
+速,O
+上,O
+手,O
+图,B-Skill
+数,I-Skill
+据,I-Skill
+库,I-Skill
+ ,O
+N,B-Skill
+e,I-Skill
+b,I-Skill
+u,I-Skill
+l,I-Skill
+a,I-Skill
+。,O
+/,O
+n,O
+/,O
+n,O
+n,B-Skill
+e,I-Skill
+b,I-Skill
+u,I-Skill
+l,I-Skill
+a,I-Skill
+-,I-Skill
+f,I-Skill
+l,I-Skill
+i,I-Skill
+n,I-Skill
+k,I-Skill
+-,I-Skill
+c,I-Skill
+o,I-Skill
+n,I-Skill
+n,I-Skill
+e,I-Skill
+c,I-Skill
+t,I-Skill
+o,I-Skill
+r,I-Skill
+ ,O
+的,O
+ ,O
+S,B-Skill
+Q,I-Skill
+L,I-Skill
+ ,O
+C,O
+o,O
+n,O
+n,O
+e,O
+c,O
+t,O
+o,O
+r,O
+/,O
+n,O
+/,O
+n,O
+J,B-Skill
+a,I-Skill
+v,I-Skill
+a,I-Skill

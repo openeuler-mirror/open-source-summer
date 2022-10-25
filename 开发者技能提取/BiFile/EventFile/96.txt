@@ -1,0 +1,15 @@
+当前RocketMQ Raft模式主要是利用DLedger Commitlog替换原来的Commitlog，使Commitlog拥有选举复制能力，但这也造成了一些问题：（1）Raft模式下，Broker组内副本数必须是三副本及以上（2）RocketMQ存在两套HA复制流程，且Raft模式下的复制无法利用RocketMQ原生的存储能力。因此我们希望利用DLedger实现一个基于Raft的一致性模块（DLedger Controller），并当作一个可选的选主组件可以嵌入在Nameserver中，Broker通过与选主模块的交互完成选举以及统一的复制算法，从而解决上述问题。本题内容主要包括
+ 
+1. 详细设计整体的解决方案
+2. 为DLedger实现状态机
+3. 在RocketMQ中实现DLedger Controller
+4. 完成统一复制算法
+
+1. 为题目设计整体的解决方案，产出相关文档
+2. 为DLedger实现状态机，在OpenMessaging DLedger仓库被合并
+3. 结合RocketMQ实现DLedger Controller，在RocketMQ仓库中被合并
+4. 完成RocketMQ broker对接以及统一复制算法，在RocketMQ仓库中被合并
+
+1. 编程语言：java
+2. 熟悉RocketMQ或者其他消息队列
+3. 熟悉Raft或其他共识协议

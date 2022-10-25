@@ -1,0 +1,7 @@
+KubeVela 中使用 Cue 作为 IaC 管理，在 KubeVela 的工作流当中，用户可以通过使用内置的 Cue Action 来编写 Definition。但是目前的 Cue Action 缺少版本管理，每当 Action 内部进行参数变动时，会影响到之前的用户使用。需要考虑并设计一个合理的版本管理机制，帮助用户更好地使用 Cue Action。
+
+完成该功能的设计及开发，并贡献到 KubeVela 社区。
+
+学习 KubeVela 的概念
+学习 Cuelang 的语言机制
+设计 Cue Action 的版本管理机制

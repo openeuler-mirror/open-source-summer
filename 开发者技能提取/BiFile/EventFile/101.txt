@@ -1,0 +1,9 @@
+speexdsp是一个专利免费/源码开源的dsp库。其包含预处理、回声消除、jitter buffer、音频重采样、定点/浮点傅里叶变换等模块。
+
+适配OpenHarmony的构建体系
+满足OpenHarmony社区代码规范
+基于OpenHarmony平台通过demo/单元测试用例
+提交仓库到TPC
+输出本三方库在OpenHarmony下的能力，导出库对外提供的函数接口和已测试过的函数接口
+
+C，熟悉Makefile

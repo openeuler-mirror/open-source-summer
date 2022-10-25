@@ -1,0 +1,5 @@
+本项目期望通过 Telegraf 收集系统的指标，比如 CPU 使用率、内存使用率和系统负载，上报数据到 SkyWalking OAP，并且配置在 UI 中展示。通过该项目你能够深入了解 SkyWalking 的 Receiver 插件开发。
+
+在 Apache SkyWalking 中实现 Telegraf receiver 插件
+
+较强的自主学习能力，有一定编程基础，愿意学习 Java 语言

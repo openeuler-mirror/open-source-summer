@@ -1,0 +1,10 @@
+为 Databend中的 hashtable 模块添加 StringHashTable 。
+
+StringHashTable 服务于 Key 为 String 类型的 HashTable ，然后基于Key不同的长度应用不同的数据结构作插入读取优化，在真实的数据集上测试性能提升对比。
+
+添加 StringHashTable ：插入，查询，遍历等基本功能
+Databend 的 分组聚合查询，使用新的 StringHashTable 替换 HashTable
+持续优化实现，在真实场景下测试插入以及查询的性能对比
+
+熟悉 Rust
+熟悉 Git、GitHub 相关操作

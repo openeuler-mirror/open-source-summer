@@ -1,0 +1,5 @@
+Kata Containers 目前只支持 V1 版本 Linux cgroups。本项目目标是为 Kata Containers 添加 cgroups v2 支持，从而让 Kata Containers 在只支持 cgroups v2 的系统上也可以正常工作。
+
+能在宿主机上运行的 Kata Containers shim程序
+
+需要熟悉Linux系统以及cgroup

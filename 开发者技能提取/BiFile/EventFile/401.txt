@@ -1,0 +1,14 @@
+Karmada（Kubernetes Armada）是基于Kubernetes原生API的多集群管理系统。在多云和混合云场景下，Karmada提供可插拔，全自动化管理多集群应用，实现多云集中管理、高可用性、故障恢复和流量调度。
+
+本课题要求基于 docusaurus 来实现 Karmada 官网（含文档）的国际化支持，并完成中文文档的翻译。
+
+1. 社区已经启动docusaurus框架集成工作（详见https://github.com/karmada-io/website/pull/31），待该工作完成后需要进一步完善国际化文档架构设计；
+2. 翻译karmada仓库中现有英文文档（https://github.com/karmada-io/karmada/tree/master/docs）至中文，并提交到website仓库。
+
+支持i18n
+
+将文档翻译成中文
+
+熟悉Golang
+
+熟悉Kubernetes

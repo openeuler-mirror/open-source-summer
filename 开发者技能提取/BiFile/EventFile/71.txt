@@ -1,0 +1,5 @@
+开发昇思MindSpore CPU正向算子ApplyAddSign：根据 AddSign 算法更新相关条目
+
+1.算子功能符合要求、能力对齐标杆 2.代码满足社区规范、精度、性能等达到标准 3.实现相关功能，相关评估指标符合要求，代码合入社区
+
+深度学习，python，MindSpore

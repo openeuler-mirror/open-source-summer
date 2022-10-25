@@ -1,0 +1,7 @@
+在一个从商业数据库迁移到 openGauss 的项目中，业务 SQL 中可能会使用到部分原数据库系统提供的工具包。
+这些工具包中的功能可以在 openGauss 中通过已提供的系统接口，SQL或者过程性语言来获得对等的功能性实现。
+本项目希望通过使用 openGauss 中的自定义函数功能，在 openGauss 库中实现兼容能力。
+
+本项目希望通过使用 openGauss 中的自定义函数功能，在 openGauss 库中实现以下各个函数和存储过程。 对于其中涉及到的部分确实无法实现的函数或存储过程，需明确给出无法实现的原因。 可参考Oracle数据库的实现形态。 DBMS_DEBUG DBMS_DESCRIBE DBMS_SESSION UTL_FILE
+
+1. 熟悉PL/pgSQL代码编写

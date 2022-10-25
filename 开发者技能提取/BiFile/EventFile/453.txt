@@ -1,0 +1,20 @@
+由于 Idea 更新迭代频繁，现有 xmake-idea 插件编译存在很多的废弃 API 使用警告，并且最新 CLion 版本也不再支持，因此需要做一些更新支持
+
+并且需要新增一些配置选项用于支持最新版本的 Xmake 的配置
+
+- 兼容最新版本的 CLion
+- 移除所有废弃的 API 使用，并且在不影响功能的前提下，使用新的 API 进行替代
+- 配置面板增加一个工具链切换的配置选项
+- 更新现有配置中，平台，架构的选项列表
+- 检测 xmake.lua 改动自动更新生成 CMakeLists.txt 和 compile_commands.json 文件
+
+兼容最新版本的 CLion
+移除所有废弃的 API 使用，并且在不影响功能的前提下，使用新的 API 进行替代
+配置面板增加一个工具链切换的配置选项
+更新现有配置中，平台，架构的选项列表
+检测 xmake.lua 改动自动更新生成 CMakeLists.txt 和 compile_commands.json 文件
+
+熟悉 Kotlin, Java
+了解基本的 Idea 插件开发流程
+熟悉 C/C++ 的编译构建
+熟悉 Clion 的使用

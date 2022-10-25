@@ -1,0 +1,11 @@
+Flink Table Store 是一个流批统一的存储，用于在Flink中为流批处理建立动态表，支持实时流消费和实时OLAP查询。
+Flink Table Store 面向更新场景提供 OLAP 的能力，大量更新数据写入 Table Store 后，后台会合并相同主键的数据，默认是保留最后一条。
+我们可以引入更丰富的合并策略，其中已经引入的是PartialUpdateMergeFunction，合并时补全非NULL字段。我们可以引入更强大的合并策略，比如支持预聚合的合并。
+
+完成该功能的开发，并贡献到Flink Table Store社区。
+完成预聚合的API设计
+完成预聚合的E2E测试
+实现多个聚合算子
+MATERIALIZED VIEW 可选
+
+了解大数据计算相关知识，学习存储相关知识，学习Flink Table Store设计和架构

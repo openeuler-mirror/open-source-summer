@@ -1,0 +1,8 @@
+Milvus 是一个世界级的分布式向量数据库。我们希望通过引入 WebAssembly 将 UDF 添加到 Milvus 来进一步丰富它。
+该项目分为两部分：1）实现一个UDF框架，支持创建和删除function utility，并且支持运行web assembly。2）植入一些UDF触发点并实现一个关于UDF如何工作的小demo。
+
+一个完整的 UDF 框架
+一个针对此框架的demo
+
+GoWasmer 或其他用于 Go 的 Web 程序集运行时
+强烈建议了解其他数据库如何实现 UDF

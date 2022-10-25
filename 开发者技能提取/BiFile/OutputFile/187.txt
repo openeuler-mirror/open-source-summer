@@ -1,0 +1,393 @@
+背,O
+景,O
+：,O
+目,O
+前,O
+ ,O
+M,B-Skill
+e,I-Skill
+g,I-Skill
+E,I-Skill
+n,I-Skill
+g,I-Skill
+i,I-Skill
+n,I-Skill
+e,I-Skill
+ ,O
+开,O
+发,O
+时,O
+没,O
+有,O
+没,O
+有,O
+进,O
+行,O
+ ,O
+a,O
+p,O
+p,O
+l,O
+e,O
+ ,O
+a,O
+a,O
+r,O
+c,O
+h,O
+6,O
+4,O
+ ,O
+m,B-Skill
+a,I-Skill
+c,I-Skill
+o,I-Skill
+s,I-Skill
+ ,O
+操,B-Skill
+作,I-Skill
+系,I-Skill
+统,I-Skill
+的,O
+适,O
+配,O
+，,O
+M,O
+e,O
+g,O
+E,O
+n,O
+g,O
+i,O
+n,O
+e,O
+ ,O
+并,O
+没,O
+有,O
+发,O
+布,O
+适,O
+配,O
+ ,O
+a,O
+p,O
+p,O
+l,O
+e,O
+ ,O
+a,O
+a,O
+r,O
+c,O
+h,O
+6,O
+4,O
+ ,O
+m,B-Skill
+a,I-Skill
+c,I-Skill
+o,I-Skill
+s,I-Skill
+ ,O
+的,O
+安,O
+装,O
+包,O
+。,O
+随,O
+着,O
+ ,O
+a,O
+p,O
+p,O
+l,O
+e,O
+ ,O
+a,O
+a,O
+r,O
+c,O
+h,O
+6,O
+4,O
+ ,O
+m,B-Skill
+a,I-Skill
+c,I-Skill
+o,I-Skill
+s,I-Skill
+ ,O
+电,O
+脑,O
+越,O
+来,O
+越,O
+多,O
+，,O
+此,O
+需,O
+求,O
+日,O
+益,O
+剧,O
+增,O
+。,O
+/,O
+n,O
+/,O
+n,O
+需,O
+求,O
+：,O
+在,O
+ ,O
+M,B-Skill
+e,I-Skill
+g,I-Skill
+E,I-Skill
+n,I-Skill
+g,I-Skill
+i,I-Skill
+n,I-Skill
+e,I-Skill
+ ,O
+中,O
+适,O
+配,O
+ ,O
+a,O
+p,O
+p,O
+l,O
+e,O
+ ,O
+a,O
+a,O
+r,O
+c,O
+h,O
+6,O
+4,O
+ ,O
+m,B-Skill
+a,I-Skill
+c,I-Skill
+o,I-Skill
+s,I-Skill
+，,O
+完,O
+成,O
+ ,O
+M,O
+e,O
+g,O
+E,O
+n,O
+g,O
+i,O
+n,O
+e,O
+ ,O
+a,O
+p,O
+p,O
+l,O
+e,O
+ ,O
+a,O
+a,O
+r,O
+c,O
+h,O
+6,O
+4,O
+ ,O
+m,B-Skill
+a,I-Skill
+c,I-Skill
+o,I-Skill
+s,I-Skill
+ ,O
+安,O
+装,O
+包,O
+发,O
+布,O
+。,O
+/,O
+n,O
+/,O
+n,O
+在,O
+ ,O
+a,O
+p,O
+p,O
+l,O
+e,O
+ ,O
+a,O
+a,O
+r,O
+c,O
+h,O
+6,O
+4,O
+ ,O
+m,B-Skill
+a,I-Skill
+c,I-Skill
+o,I-Skill
+s,I-Skill
+ ,O
+上,O
+，,O
+产,O
+出,O
+ ,O
+M,O
+e,O
+g,O
+E,O
+n,O
+g,O
+i,O
+n,O
+e,O
+ ,O
+的,O
+ ,O
+w,O
+h,O
+e,O
+e,O
+l,O
+ ,O
+安,O
+装,O
+包,O
+。,O
+/,O
+n,O
+L,O
+0,O
+:,O
+ ,O
+M,B-Skill
+e,I-Skill
+g,I-Skill
+E,I-Skill
+n,I-Skill
+g,I-Skill
+i,I-Skill
+n,I-Skill
+e,I-Skill
+ ,O
+在,O
+ ,O
+a,O
+p,O
+p,O
+l,O
+e,O
+ ,O
+a,O
+a,O
+r,O
+c,O
+h,O
+6,O
+4,O
+ ,O
+m,B-Skill
+a,I-Skill
+c,I-Skill
+o,I-Skill
+s,I-Skill
+ ,O
+上,O
+可,O
+本,O
+地,O
+编,O
+译,O
+通,O
+过,O
+。,O
+/,O
+n,O
+L,O
+1,O
+:,O
+ ,O
+包,O
+具,O
+备,O
+分,O
+发,O
+性,O
+，,O
+可,O
+安,O
+装,O
+到,O
+其,O
+他,O
+ ,O
+a,O
+a,O
+r,O
+c,O
+h,O
+6,O
+4,O
++,O
+ ,O
+m,O
+a,O
+c,O
+b,O
+o,O
+o,O
+k,O
+ ,O
+上,O
+，,O
+且,O
+能,O
+正,O
+常,O
+运,O
+行,O
+。,O
+/,O
+n,O
+L,O
+2,O
+:,O
+ ,O
+安,O
+装,O
+后,O
+能,O
+训,O
+练,O
+一,O
+个,O
+模,O
+型,O
+。,O
+/,O
+n,O
+/,O
+n,O
+编,O
+译,O
+/,O
+n,O
+m,B-Skill
+a,I-Skill
+c,I-Skill
+o,I-Skill
+s,I-Skill

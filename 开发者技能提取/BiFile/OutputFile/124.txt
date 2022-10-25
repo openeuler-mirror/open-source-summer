@@ -1,0 +1,272 @@
+K,B-Skill
+u,I-Skill
+b,I-Skill
+e,I-Skill
+V,I-Skill
+e,I-Skill
+l,I-Skill
+a,I-Skill
+ ,O
+中,O
+使,O
+用,O
+ ,O
+C,O
+u,O
+e,O
+ ,O
+作,O
+为,O
+ ,O
+I,O
+a,O
+C,O
+ ,O
+管,O
+理,O
+，,O
+在,O
+ ,O
+K,B-Skill
+u,I-Skill
+b,I-Skill
+e,I-Skill
+V,I-Skill
+e,I-Skill
+l,I-Skill
+a,I-Skill
+ ,O
+的,O
+工,O
+作,O
+流,O
+当,O
+中,O
+，,O
+用,O
+户,O
+可,O
+以,O
+通,O
+过,O
+使,O
+用,O
+内,O
+置,O
+的,O
+ ,O
+C,O
+u,O
+e,O
+ ,O
+A,O
+c,O
+t,O
+i,O
+o,O
+n,O
+ ,O
+来,O
+编,O
+写,O
+ ,O
+D,O
+e,O
+f,O
+i,O
+n,O
+i,O
+t,O
+i,O
+o,O
+n,O
+。,O
+但,O
+是,O
+目,O
+前,O
+的,O
+ ,O
+C,O
+u,O
+e,O
+ ,O
+A,O
+c,O
+t,O
+i,O
+o,O
+n,O
+ ,O
+缺,O
+少,O
+版,O
+本,O
+管,O
+理,O
+，,O
+每,O
+当,O
+ ,O
+A,O
+c,O
+t,O
+i,O
+o,O
+n,O
+ ,O
+内,O
+部,O
+进,O
+行,O
+参,O
+数,O
+变,O
+动,O
+时,O
+，,O
+会,O
+影,O
+响,O
+到,O
+之,O
+前,O
+的,O
+用,O
+户,O
+使,O
+用,O
+。,O
+需,O
+要,O
+考,O
+虑,O
+并,O
+设,O
+计,O
+一,O
+个,O
+合,O
+理,O
+的,O
+版,O
+本,O
+管,O
+理,O
+机,O
+制,O
+，,O
+帮,O
+助,O
+用,O
+户,O
+更,O
+好,O
+地,O
+使,O
+用,O
+ ,O
+C,O
+u,O
+e,O
+ ,O
+A,O
+c,O
+t,O
+i,O
+o,O
+n,O
+。,O
+/,O
+n,O
+/,O
+n,O
+完,O
+成,O
+该,O
+功,O
+能,O
+的,O
+设,O
+计,O
+及,O
+开,O
+发,O
+，,O
+并,O
+贡,O
+献,O
+到,O
+ ,O
+K,O
+u,O
+b,O
+e,O
+V,O
+e,O
+l,O
+a,O
+ ,O
+社,O
+区,O
+。,O
+/,O
+n,O
+/,O
+n,O
+学,O
+习,O
+ ,O
+K,B-Skill
+u,I-Skill
+b,I-Skill
+e,I-Skill
+V,I-Skill
+e,I-Skill
+l,I-Skill
+a,I-Skill
+ ,O
+的,O
+概,O
+念,O
+/,O
+n,O
+学,O
+习,O
+ ,O
+C,B-Skill
+u,I-Skill
+e,I-Skill
+l,I-Skill
+a,I-Skill
+n,I-Skill
+g,I-Skill
+ ,O
+的,O
+语,O
+言,O
+机,O
+制,O
+/,O
+n,O
+设,O
+计,O
+ ,O
+C,B-Skill
+u,I-Skill
+e,I-Skill
+ ,I-Skill
+A,I-Skill
+c,I-Skill
+t,I-Skill
+i,I-Skill
+o,I-Skill
+n,I-Skill
+ ,O
+的,O
+版,O
+本,O
+管,O
+理,O
+机,O
+制,O

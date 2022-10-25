@@ -1,0 +1,190 @@
+K,B-Skill
+a,I-Skill
+t,I-Skill
+a,I-Skill
+ ,I-Skill
+C,I-Skill
+o,I-Skill
+n,I-Skill
+t,I-Skill
+a,I-Skill
+i,I-Skill
+n,I-Skill
+e,I-Skill
+r,I-Skill
+s,I-Skill
+ ,O
+目,O
+前,O
+只,O
+支,O
+持,O
+ ,O
+V,O
+1,O
+ ,O
+版,O
+本,O
+ ,O
+L,B-Skill
+i,I-Skill
+n,I-Skill
+u,I-Skill
+x,I-Skill
+ ,I-Skill
+c,I-Skill
+g,I-Skill
+r,I-Skill
+o,I-Skill
+u,I-Skill
+p,I-Skill
+s,I-Skill
+。,O
+本,O
+项,O
+目,O
+目,O
+标,O
+是,O
+为,O
+ ,O
+K,B-Skill
+a,I-Skill
+t,I-Skill
+a,I-Skill
+ ,I-Skill
+C,I-Skill
+o,I-Skill
+n,I-Skill
+t,I-Skill
+a,I-Skill
+i,I-Skill
+n,I-Skill
+e,I-Skill
+r,I-Skill
+s,I-Skill
+ ,O
+添,O
+加,O
+ ,O
+c,B-Skill
+g,I-Skill
+r,I-Skill
+o,I-Skill
+u,I-Skill
+p,I-Skill
+s,I-Skill
+ ,O
+v,O
+2,O
+ ,O
+支,O
+持,O
+，,O
+从,O
+而,O
+让,O
+ ,O
+K,B-Skill
+a,I-Skill
+t,I-Skill
+a,I-Skill
+ ,I-Skill
+C,I-Skill
+o,I-Skill
+n,I-Skill
+t,I-Skill
+a,I-Skill
+i,I-Skill
+n,I-Skill
+e,I-Skill
+r,I-Skill
+s,I-Skill
+ ,O
+在,O
+只,O
+支,O
+持,O
+ ,O
+c,B-Skill
+g,I-Skill
+r,I-Skill
+o,I-Skill
+u,I-Skill
+p,I-Skill
+s,I-Skill
+ ,O
+v,O
+2,O
+ ,O
+的,O
+系,O
+统,O
+上,O
+也,O
+可,O
+以,O
+正,O
+常,O
+工,O
+作,O
+。,O
+/,O
+n,O
+/,O
+n,O
+能,O
+在,O
+宿,O
+主,O
+机,O
+上,O
+运,O
+行,O
+的,O
+ ,O
+K,B-Skill
+a,I-Skill
+t,I-Skill
+a,I-Skill
+ ,I-Skill
+C,I-Skill
+o,I-Skill
+n,I-Skill
+t,I-Skill
+a,I-Skill
+i,I-Skill
+n,I-Skill
+e,I-Skill
+r,I-Skill
+s,I-Skill
+ ,I-Skill
+s,I-Skill
+h,I-Skill
+i,I-Skill
+m,I-Skill
+程,O
+序,O
+/,O
+n,O
+/,O
+n,O
+需,O
+要,O
+熟,O
+悉,O
+L,B-Skill
+i,I-Skill
+n,I-Skill
+u,I-Skill
+x,I-Skill
+系,I-Skill
+统,I-Skill
+以,O
+及,O
+c,B-Skill
+g,I-Skill
+r,I-Skill
+o,I-Skill
+u,I-Skill
+p,I-Skill

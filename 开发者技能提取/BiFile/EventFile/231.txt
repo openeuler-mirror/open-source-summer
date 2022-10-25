@@ -1,0 +1,6 @@
+openEuler Embedded主要面向嵌入式场景，当前还未支持RISC-V架构，本项目的目标是依托openEuler社区和其他开源社区打通RISC-V在openEuler Embedded的支持，并在QEMU或RISC-V常见开发板上进行演示
+
+在openEuler Embedded中集成RISC-V的构建（32和64），能够在QEMU或者RISC-V常见开发板上进行部署演示
+
+基本熟悉Yocto框架
+熟悉嵌入式Linux开发

@@ -1,0 +1,10 @@
+目标：
+BitBucket 是最流行的代码托管平台之一，收集它的数据可以使 DevLake 为 BitBucket 用户提供 Git 相关的数据分析应用。
+
+收集的数据范畴：
+Git (repos, commits, refs)
+PRs (prs, pr review data, etc.)
+
+给DevLake增加一个插件
+
+爱学习，有 Golang 编程基础，对 Git 有基本了解

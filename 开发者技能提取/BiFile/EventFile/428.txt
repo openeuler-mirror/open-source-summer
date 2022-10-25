@@ -1,0 +1,10 @@
+完成制作下面 12 个 C/C++ 包进入 Xmake 官方包仓库
+
+完成 wolfssl, apr, PDCurses, grpc, zydis, modm 库进入官方仓库
+完成 gdk-pixbuf, xtensor-io, git-crypt, thrust 库进入官方仓库
+完成 v8 包在 windows 上的编译
+完成 quickjs 包 port 到 windows，并能正常运行
+
+熟悉和了解 Lua 的基础语法
+熟悉和使用过 Xmake，了解 Xmake 的基本使用
+熟悉 C/C++ 相关的编译链接相关的基础知识

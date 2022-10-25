@@ -1,0 +1,9 @@
+seata控制台功能，是1.5版本后的重大特性功能，这是为用户展示事务信息，锁信息，及后续手动处理异常事务的管理入口。目前seata控制台逻辑和server耦合在一个模块中，需要将console模块独立出来。server 模块和 console 模块通过 openAPI 进行通信交互和数据获取。
+
+1. seata console 控制台模块和seata server服务端从代码架构层面分离，支持独立部署。
+2. console通过http方式与server端交互数据；
+3. 需要考虑权限安全问题；
+4. 提供接口文档；
+
+1.熟悉java语言；
+2.对seata有简单的了解；

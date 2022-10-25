@@ -1,0 +1,11 @@
+morphling采用client-server结构对服务容器在不同配置下的性能做出评估，client端需要根据server端提供的服务进行定制：服务访问方式（http、grpc call .etc）、request流量的并发控制、服务性能评价指标（tps、tps/(容器资源规格成本) .etc）。这些配置目前由client端容器镜像提供定制化配置，本项目旨在提供通用的client端镜像和标准化的配置接口，为不同场景下的压测机提供定制化配置。
+
+在morphling框架下，扩展微服务压测客户端框架，通过plugin提供通用可配置的微服务性能测试API
+在框架层面，为morphling的client端提供服务压测的逻辑控制API（压测步进逻辑、测试终止条件等），产出为base docker image
+在base docker image的基础上，在morphling crd层面提供通用的client端配置接口，包括但不限于： sync/async 的压测流量模式; 优化目标的RegExr定义：e.g. 优化目标是 maximize tps/容器资源规格成本，如何定义成本: 成本=cpu core*0.1 + gpu cards*0.5; 相关指标包括容器资源(cpu\gpu\mem)、服务性能指标(qps\error rate\tail rt)、优化目标的RegExr定义，在Prometheus metric的指标暴露
+在base docker image的基础上，为popular service提供开箱即用的性能测试数据集benchmark，方便用户在没有足够压测流量准备的场景下，对服务进行标准化测试，包括但不限于：AI 推理任务benchmarks：MNIST database (Modified National Institute of Standards and Technology database)、General Language Understanding Evaluation (GLUE), .etc；CPU 子系统测试工具SPEC CPU2017等涵盖的benchmark
+在用户定义的优化目标指标(qps\rt\resource cost)之外，对接popular performance evaluation works，从旁路收集数据，提供全面的性能测试报告，包括但不限于：服务容器资源利用率: cpu util\gpu sm util\.etc；底层硬件监控指标：cpu throttle\cpi\.etc； 首先以例如Prometheus-Grafana 的方式提供指标；其次可以进一步深入分析该服务容器的资源性能瓶颈等insight，输出分析报告
+
+了解Kubernetes基本原理，Morphling项目的整体架构和工作原理
+Client-server 结构的服务性能测试框架，JMeter等常用服务测试工具
+能够根据设计方案，有优秀的编码能力和单测覆盖度，最后也能根据实现结果给出详细的测评报告

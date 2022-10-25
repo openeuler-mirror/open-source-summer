@@ -1,0 +1,593 @@
+m,B-Skill
+i,I-Skill
+c,I-Skill
+a,I-Skill
+-,I-Skill
+m,I-Skill
+q,I-Skill
+t,I-Skill
+t,I-Skill
+ ,O
+是,O
+基,O
+于,O
+ ,O
+j,B-Skill
+a,I-Skill
+v,I-Skill
+a,I-Skill
+ ,O
+a,O
+i,O
+o,O
+ ,O
+网,O
+络,O
+框,O
+架,O
+ ,O
+t,O
+-,O
+i,O
+o,O
+ ,O
+实,O
+现,O
+的,O
+低,O
+延,O
+迟,O
+、,O
+高,O
+性,O
+能,O
+的,O
+ ,O
+m,B-Skill
+q,I-Skill
+t,I-Skill
+t,I-Skill
+ ,O
+c,O
+l,O
+i,O
+e,O
+n,O
+t,O
+ ,O
+组,O
+件,O
+和,O
+ ,O
+m,B-Skill
+q,I-Skill
+t,I-Skill
+t,I-Skill
+ ,O
+b,O
+r,O
+o,O
+k,O
+e,O
+r,O
+ ,O
+服,O
+务,O
+。,O
+/,O
+n,O
+/,O
+n,O
+项,O
+目,O
+任,O
+务,O
+描,O
+述,O
+：,O
+/,O
+n,O
+m,B-Skill
+q,I-Skill
+t,I-Skill
+t,I-Skill
+ ,I-Skill
+s,I-Skill
+e,I-Skill
+s,I-Skill
+s,I-Skill
+i,I-Skill
+o,I-Skill
+n,I-Skill
+ ,O
+可,O
+用,O
+来,O
+存,O
+储,O
+ ,O
+m,O
+q,O
+t,O
+t,O
+ ,O
+客,O
+户,O
+端,O
+的,O
+订,O
+阅,O
+关,O
+系,O
+、,O
+服,O
+务,O
+端,O
+大,O
+于,O
+0,O
+的,O
+q,O
+o,O
+s,O
+消,O
+息,O
+暂,O
+存,O
+等,O
+。,O
+/,O
+n,O
+在,O
+服,O
+务,O
+端,O
+可,O
+设,O
+定,O
+默,O
+认,O
+的,O
+ ,O
+s,O
+e,O
+s,O
+s,O
+i,O
+o,O
+n,O
+ ,O
+超,O
+时,O
+时,O
+间,O
+。,O
+/,O
+n,O
+m,B-Skill
+q,I-Skill
+t,I-Skill
+t,I-Skill
+ ,O
+客,O
+户,O
+端,O
+断,O
+开,O
+连,O
+接,O
+时,O
+将,O
+ ,O
+s,O
+e,O
+s,O
+s,O
+i,O
+o,O
+n,O
+ ,O
+转,O
+存,O
+到,O
+ ,O
+c,O
+a,O
+f,O
+f,O
+e,O
+i,O
+n,O
+e,O
+ ,O
+c,O
+a,O
+c,O
+h,O
+e,O
+ ,O
+中,O
+。,O
+/,O
+n,O
+m,B-Skill
+q,I-Skill
+t,I-Skill
+t,I-Skill
+ ,O
+客,O
+户,O
+端,O
+再,O
+次,O
+连,O
+接,O
+时,O
+如,O
+果,O
+ ,O
+c,O
+a,O
+f,O
+f,O
+e,O
+i,O
+n,O
+e,O
+ ,O
+c,O
+a,O
+c,O
+h,O
+e,O
+ ,O
+中,O
+存,O
+在,O
+对,O
+于,O
+的,O
+ ,O
+s,O
+e,O
+s,O
+s,O
+i,O
+o,O
+n,O
+ ,O
+则,O
+先,O
+恢,O
+复,O
+。,O
+/,O
+n,O
+考,O
+虑,O
+ ,O
+m,O
+q,O
+t,O
+t,O
+ ,O
+5,O
+.,O
+0,O
+ ,O
+s,O
+e,O
+s,O
+s,O
+i,O
+o,O
+n,O
+ ,O
+的,O
+支,O
+持,O
+。,O
+/,O
+n,O
+具,O
+体,O
+步,O
+骤,O
+大,O
+致,O
+如,O
+下,O
+：,O
+/,O
+n,O
+D,O
+e,O
+f,O
+a,O
+u,O
+l,O
+t,O
+M,O
+q,O
+t,O
+t,O
+S,O
+e,O
+r,O
+v,O
+e,O
+r,O
+P,O
+r,O
+o,O
+c,O
+e,O
+s,O
+s,O
+o,O
+r,O
+ ,O
+中,O
+放,O
+开,O
+注,O
+释,O
+的,O
+ ,O
+s,O
+e,O
+s,O
+s,O
+i,O
+o,O
+n,O
+ ,O
+代,O
+码,O
+片,O
+段,O
+。,O
+/,O
+n,O
+M,O
+q,O
+t,O
+t,O
+S,O
+e,O
+r,O
+v,O
+e,O
+r,O
+A,O
+i,O
+o,O
+L,O
+i,O
+s,O
+t,O
+e,O
+n,O
+e,O
+r,O
+ ,O
+中,O
+添,O
+加,O
+是,O
+否,O
+清,O
+除,O
+ ,O
+s,O
+e,O
+s,O
+s,O
+i,O
+o,O
+n,O
+ ,O
+逻,O
+辑,O
+。,O
+/,O
+n,O
+单,O
+机,O
+使,O
+用,O
+ ,O
+c,O
+a,O
+f,O
+f,O
+e,O
+i,O
+n,O
+e,O
+，,O
+断,O
+开,O
+时,O
+将,O
+ ,O
+s,O
+e,O
+s,O
+s,O
+i,O
+o,O
+n,O
+ ,O
+转,O
+存,O
+到,O
+ ,O
+c,O
+a,O
+f,O
+f,O
+e,O
+i,O
+n,O
+e,O
+ ,O
+中,O
+。,O
+I,O
+M,O
+q,O
+t,O
+t,O
+S,O
+e,O
+s,O
+s,O
+i,O
+o,O
+n,O
+M,O
+a,O
+n,O
+a,O
+g,O
+e,O
+r,O
+ ,O
+中,O
+早,O
+已,O
+预,O
+留,O
+相,O
+关,O
+接,O
+口,O
+。,O
+/,O
+n,O
+/,O
+n,O
+完,O
+成,O
+ ,O
+m,B-Skill
+i,I-Skill
+c,I-Skill
+a,I-Skill
+-,I-Skill
+m,I-Skill
+q,I-Skill
+t,I-Skill
+t,I-Skill
+ ,O
+单,O
+机,O
+版,O
+的,O
+ ,O
+s,O
+e,O
+s,O
+s,O
+i,O
+o,O
+n,O
+ ,O
+管,O
+理,O
+/,O
+n,O
+输,O
+出,O
+相,O
+关,O
+使,O
+用,O
+和,O
+配,O
+置,O
+文,O
+档,O
+/,O
+n,O
+/,O
+n,O
+了,O
+解,O
+并,O
+熟,O
+悉,O
+ ,O
+m,B-Skill
+q,I-Skill
+t,I-Skill
+t,I-Skill
+ ,O
+协,O
+议,O
+/,O
+n,O
+了,O
+解,O
+ ,O
+m,B-Skill
+q,I-Skill
+t,I-Skill
+t,I-Skill
+ ,I-Skill
+s,I-Skill
+e,I-Skill
+s,I-Skill
+s,I-Skill
+i,I-Skill
+o,I-Skill
+n,I-Skill
+ ,O
+作,O
+用,O
+和,O
+原,O
+理,O
+/,O
+n,O
+了,O
+解,O
+ ,O
+c,B-Skill
+a,I-Skill
+f,I-Skill
+f,I-Skill
+e,I-Skill
+i,I-Skill
+n,I-Skill
+e,I-Skill
+ ,I-Skill
+c,I-Skill
+a,I-Skill
+c,I-Skill
+h,I-Skill
+e,I-Skill
+ ,O
+的,O
+使,O
+用,O
+/,O
+n,O
+熟,O
+悉,O
+ ,O
+m,B-Skill
+i,I-Skill
+c,I-Skill
+a,I-Skill
+-,I-Skill
+m,I-Skill
+q,I-Skill
+t,I-Skill
+t,I-Skill
+ ,O
+开,O
+源,O
+项,O
+目,O

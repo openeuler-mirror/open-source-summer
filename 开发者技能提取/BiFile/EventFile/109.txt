@@ -1,0 +1,6 @@
+实现 MySQL 到 Nebula Graph 的数据实时同步功能，可采用 Canal / FlinkCDC / Debezium/ 等等数据同步工具实现。
+
+Nebula 的数据实时同步能力
+
+java
+了解 Canal 或 FlinkCDC 或 Debezium 等等数据同步工具

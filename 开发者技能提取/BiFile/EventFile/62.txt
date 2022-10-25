@@ -1,0 +1,9 @@
+Hmily是柔性分布式事务解决方案，提供了TCC 与 TAC 模式。它以零侵入以及快速集成方式能够方便的被业务进行整合。在性能上，日志存储异步（可选）以及使用异步执行的方式，不损耗业务方法方法。
+        Hmily XA已经完成了部分Rpc的支持，定义了XA模式的实现接口。现需要实现Hmily XA支持Spring cloud。可参考Dubbo的实现来完成Spring cloud的支持。
+
+完成Hmily XA支持Spring cloud
+Spring cloud使用 Hmily xa 可以正常commit。
+Spring cloud使用 Hmily xa 可以正常rollback。
+
+熟悉Spring cloud.
+了解XA 基本概念与原理.

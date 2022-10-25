@@ -1,0 +1,310 @@
+本,O
+项,O
+目,O
+基,O
+于,O
+ ,O
+C,B-Skill
+l,I-Skill
+o,I-Skill
+u,I-Skill
+d,I-Skill
+ ,I-Skill
+L,I-Skill
+a,I-Skill
+b,I-Skill
+ ,O
+开,O
+源,O
+项,O
+目,O
+开,O
+发,O
+一,O
+套,O
+ ,O
+C,B-Skill
+T,I-Skill
+F,I-Skill
+ ,O
+训,O
+练,O
+实,O
+验,O
+环,O
+境,O
+：,O
+p,B-Skill
+w,I-Skill
+n,I-Skill
+ ,I-Skill
+l,I-Skill
+a,I-Skill
+b,I-Skill
+，,O
+专,O
+门,O
+为,O
+ ,O
+p,B-Skill
+w,I-Skill
+n,I-Skill
+ ,O
+方,O
+向,O
+的,O
+选,O
+手,O
+入,O
+门,O
+设,O
+计,O
+，,O
+确,O
+保,O
+可,O
+以,O
+在,O
+ ,O
+W,O
+i,O
+n,O
+d,O
+o,O
+w,O
+s,O
+，,O
+L,O
+i,O
+n,O
+u,O
+x,O
+，,O
+M,O
+a,O
+c,O
+O,O
+S,O
+ ,O
+等,O
+操,B-Skill
+作,I-Skill
+系,I-Skill
+统,I-Skill
+上,O
+更,O
+加,O
+轻,O
+松,O
+、,O
+快,O
+捷,O
+地,O
+部,O
+署,O
+ ,O
+p,B-Skill
+w,I-Skill
+n,I-Skill
+ ,O
+环,O
+境,O
+，,O
+并,O
+且,O
+提,O
+供,O
+快,O
+捷,O
+命,O
+令,O
+更,O
+换,O
+ ,O
+g,B-Skill
+l,I-Skill
+i,I-Skill
+b,I-Skill
+c,I-Skill
+ ,O
+版,O
+本,O
+以,O
+及,O
+部,O
+署,O
+部,O
+分,O
+经,O
+典,O
+ ,O
+p,O
+w,O
+n,O
+ ,O
+题,O
+目,O
+。,O
+/,O
+n,O
+/,O
+n,O
+为,O
+ ,O
+C,B-Skill
+T,I-Skill
+F,I-Skill
+ ,O
+选,O
+手,O
+ ,O
+p,B-Skill
+w,I-Skill
+n,I-Skill
+ ,O
+环,O
+境,O
+提,O
+供,O
+完,O
+善,O
+的,O
+做,O
+题,O
+环,O
+境,O
+/,O
+n,O
+可,O
+以,O
+在,O
+本,O
+地,O
+快,O
+速,O
+部,O
+署,O
+ ,O
+p,B-Skill
+w,I-Skill
+n,I-Skill
+ ,O
+题,O
+目,O
+/,O
+n,O
+使,O
+用,O
+命,O
+令,O
+快,O
+速,O
+更,O
+换,O
+ ,O
+g,B-Skill
+l,I-Skill
+i,I-Skill
+b,I-Skill
+c,I-Skill
+ ,O
+版,O
+本,O
+以,O
+适,O
+应,O
+不,O
+同,O
+题,O
+目,O
+环,O
+境,O
+/,O
+n,O
+撰,O
+写,O
+开,O
+发,O
+手,O
+册,O
+和,O
+使,O
+用,O
+文,O
+档,O
+并,O
+录,O
+制,O
+使,O
+用,O
+演,O
+示,O
+视,O
+频,O
+/,O
+n,O
+/,O
+n,O
+L,B-Skill
+i,I-Skill
+n,I-Skill
+u,I-Skill
+x,I-Skill
+ ,O
+基,O
+本,O
+操,O
+作,O
+/,O
+n,O
+熟,O
+悉,O
+ ,O
+C,B-Skill
+l,I-Skill
+o,I-Skill
+u,I-Skill
+d,I-Skill
+ ,I-Skill
+L,I-Skill
+a,I-Skill
+b,I-Skill
+ ,O
+并,O
+在,O
+此,O
+基,O
+础,O
+上,O
+开,O
+发,O
+/,O
+n,O
+熟,O
+悉,O
+ ,O
+p,B-Skill
+w,I-Skill
+n,I-Skill
+ ,O
+题,O
+目,O
+的,O
+各,O
+种,O
+环,O
+境,O
+/,O
+n,O
+熟,O
+悉,O
+ ,O
+p,B-Skill
+w,I-Skill
+n,I-Skill
+ ,O
+题,O
+目,O
+的,O
+靶,O
+场,O

@@ -1,0 +1,5 @@
+把大数据常用的impala组件引入到openEuler社区，即完成源码构建，在openEuler上安装成功，并在openEuler上成功运行。代码和spec文件需要上传到仓库，CI通过并合入
+
+将impala引入到openEuler，并正常运行，tar包、patch、spec文件合入到仓库
+
+将impala引入到openEuler

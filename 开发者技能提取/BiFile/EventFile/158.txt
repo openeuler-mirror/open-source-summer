@@ -1,0 +1,10 @@
+Tomcat是由Apache软件基金会属下Jakarta项目开发的Servlet容器，实现了对Servlet和JavaServer Page的支持，并提供了作为Web服务器的一些特有功能；本项目需要对Tomcat应用进行性能调优，目标性能提升5% ~ 10%。
+
+分析&选择benchmark
+输出tomcat基线性能报告
+对应用进行调优，性能在基线的基础上提升5%以上
+输出可在A-Tune上执行的自动化调优脚本
+
+有linux操作系统开发基础
+掌握基本的性能调优方法
+对A-Tune调优功能有所了解

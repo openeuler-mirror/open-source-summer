@@ -1,0 +1,7 @@
+DiskANN ( https://github.com/microsoft/DiskANN ) 是一个可扩展的基于图的索引，用于近似最近邻搜索。我们希望将 DiskANN 引入 Milvus 并使其成为 Milvus 可以支持的索引类型之一（其他索引类型包括Faiss、HNSW、Annoy、NGT 和 ScaNN）
+
+DiskANN 成为 Milvus 中的一种可靠的索引类型，具有合理的性能。
+
+研究型论文阅读能力
+熟练的cpp程序员
+（加分项）了解和掌握cmake

@@ -1,0 +1,9 @@
+metadata具体指服务分组、服务版本、服务名、方法列表、方法参数列表、超时时间等信息，目前dubbo-go metadata 模块实现并不完善，代码实现及功能实现都有很大优化空间，需要参考java实现，制定一套完整的元数据结构。完成 cli 工具对元数据的获取、展示与调用。
+
+和 dubbo java 版本 metadata 兼容
+通过metadata 获取服务的信息
+尝试使用 dubbo-go-cli通过metadata拿到服务信息发起服务调用
+
+学习现有rpc框架中的解决方案（如 grpc 中的 reflection 包）
+优化dubbo-go metadata 代码逻辑
+熟悉go语言

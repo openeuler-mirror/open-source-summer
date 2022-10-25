@@ -1,0 +1,26 @@
+Alexa Voice Service （AVS）协议是亚马逊开发的，用于设备端（亚马逊Echo音箱等）与服务端之间的相互通信的协议。 AVS 协议具有通用和协议扩展性强等优点，被其他厂商（小米、百度、腾讯和阿里巴巴等）广泛使用或借鉴。
+
+通过为 Wechaty 增加 AVS 协议的支持，就可以让 Wechaty 开发者通过 Wechaty 直接和 AVS 兼容的设备（智能音箱等）通讯。从而可以实现用户通过语音、触控和按钮使用 Wechaty 开发者提供的服务，极大的增加了 Wechaty 的适用范围。
+
+实现一个简单的 AVS 协议服务器框架
+该框架支持 AVS 所用的 HTTP/2 协议
+框架具有良好的可扩展性
+能够很方便的支持 context 和 event 的解析和处理
+为下发指令提供简单易用的脚手架功能
+实现 AVS 协议服务器和 Wechaty 的适配服务
+将 AVS 服务器收到的信息经过适配向 Wechaty 服务发送过去
+接受来自 Wechaty 发送的消息，并经过适配后下发给 AVS 设备端
+打通简单场景下的 AVS 兼容的设备与 Wechaty 服务的双向通讯
+新建一个 wechaty 服务，提供诸如报时等简单的服务
+使用 AVS 服务器框架搭建 AVS 服务器，使之能够正确的处理报时等请求的context 和 event上传和解析，并能够正确的下发对应的响应指令
+利用 AVS 和 Wechaty 的适配功能，将 AVS 设备端的报时请求转换并转发至 Wechaty 服务，并将 Wechaty 服务返回的响应转发并转发 AVS 设备端
+
+熟悉 HTTP
+熟悉 HTTP 的 header 和 body 结构，以及 POST 和 GET 方法
+熟悉 HTTP 抓包分析技术
+熟悉 Python
+熟悉 Python 语言
+熟悉常见的 Python 服务器设计模式
+熟悉 Wechaty
+熟悉 WeChaty 的基本概念
+熟悉 Wechaty 服务的搭建

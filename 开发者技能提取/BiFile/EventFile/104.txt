@@ -1,0 +1,7 @@
+作为一个数据库，milvus 提供了 python、java、go、nodejs、cpp 和 restful SDK。
+ 该项目旨在为 milvus 实现一个生产就绪的 rust SDK，因为 Rust 因其速度和安全性而在数据处理、高性能计算和许多其他领域越来越受欢迎。
+
+具有至少 90% 单元测试覆盖率的生产就绪 rust API
+
+了解grpc和protobuf的相关知识
+（加分项）掌握 Go 或 Python 其中一门语言

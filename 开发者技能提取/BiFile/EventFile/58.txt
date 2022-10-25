@@ -1,0 +1,11 @@
+Apache APISIX 即将迎来 V3 版本，而 Apache APISIX Dashboard 也需要对 V3 版本进行适配，借此机会，我们需要将 Dashboard 的前端部分进行重构，以解决历史问题，并带来更好的体验。
+
+使用 TypeScript 作为主要的编程语言
+梳理项目结构，制定合理的重构计划
+完成重构方案中路由与页面的重构工作
+协助解决项目中现存的 issue
+
+熟悉 TypeScript、React、NodeJS，以及相关生态
+能使用 Git 和 GitHub 进行协作开发
+了解 React 和 NodeJS 相关生态者优先
+了解 Apache APISIX 者优先

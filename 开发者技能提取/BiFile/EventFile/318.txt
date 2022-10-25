@@ -1,0 +1,11 @@
+为了构建基于openEuler的HPC应用生态，需要将目前广泛使用的开源HPC应用迁移到openEuler。OpenLB项目为lattice Boltzmann方法提供了一个c++的实现，该包足够通用，可以解决大量的传输问题，例如计算流体动力学。源代码是公开的，并以易于阅读的模块化方式构造。可以快速实现简单的学术测试问题和高级工程应用程序。它还可以很容易地扩展以包含新的物理实验。
+
+1、OpenLB的X86和ARM配置文件创建并归档至hpcrunner社区templates目录
+2、自动化脚本执行OpenLB用例，并输出用例执行结果，脚本上传test目录
+3、《基于openEuler的OpenLB软件移植指南》、《基于openEuler的OpenLB软件测试报告》，报告覆盖规范性自检、功能性测试、性能、精度测试结果，以word形式存放到代码仓库的doc目录。
+4、若适配过程中有patch文件或者第三方依赖安装包产生，请上传至porting或者package目录。
+
+1.掌握HPC相关技术，如MPI使用、openmp使用；
+2.掌握编译技术，如GCC使用、Clang使用、解决编译报错的能力；
+3.掌握编程语言，Fortran、C/C++；
+4.掌握Python语法、Shell语法。

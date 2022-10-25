@@ -1,0 +1,9 @@
+目前，如果想参与 OI Wiki 的编辑，就需要 clone 整个仓库进行构建，我们希望在即将上线的基于 Gatsby 的网站中，支持在线编辑 markdown 文档。由于我们使用了一些 remark 插件，Github 自带的 markdown 预览功能相比之下比较匮乏。我们编写了基于 VSCode 插件实现的在线预览插件，希望你在本项目中可以将其完善，提供同步预览等功能。
+
+与目前编码风格保持一致，尽量以 Typescript 为主要编程语言
+实现在线编辑插件
+协助解决目前项目中存在的 issue
+
+前端开发的相关知识（HTML/CSS/Javascript/Typescript/React）
+能使用 Git 进行协作开发
+熟悉 remark 工具链者优先

@@ -1,0 +1,13 @@
+目前RISCV的kprobe通过将内核任意地址上的指令替换成ebreak指令，以实现代码插桩的功能。但通过ebreak劫持正常指令流会带来较大的性能开销。目前社区在arm，x86，powerpc指令集上实现了kprobe optimizer的功能，这个功能是将桩点的ebreak指令替换成跳转指令，既能劫持原指令流又不会引入断点异常。本项目用于在riscv的Linux内核上实现kprobe optimizer的方案。
+
+1.包含在Linux内核源码里的kprobe optimizer代码实现。
+2.在用户态和内核态的kprobe optimizer测试代码。
+3.基于跳转实现的kprobe能实现插桩和删桩，并通过tracing文件系统获取被插入桩点的调用信息。
+4.内核稳定运行，不会出现性能和功能的回归。
+5.代码能合入到Linux内核社区或者openeuler内核社区。
+
+1.熟悉Linux内核的编译和构建。(Required)
+2.熟悉RISCV指令集，尤其是异常处理流程和分支指令，原子指令，ldl/stc指令。(Required)
+3.熟悉Linux内核的kprobe，livepatch，function trace等相关技术原理。(Preferable)
+4.熟悉可执行程序ELF格式或者动态加载的原理。（Preferable）
+5. 有在多核环境下编写程序的经验。（Preferable）

@@ -1,0 +1,8 @@
+目前 OpenMLDB 支持 Java/Python SDK。这两者在底层其实都是通过调用同一套 C++ APIs 来实现。但是目前 C++ APIs 并没有抽象成为一个可以供开发者友好使用的 SDK。在这个项目中，你将重新整理目前的 C++ APIs，通过合理的重构，发布一个面向外部开发者友好的 OpenMLDB C++ SDK。
+
+分离出 C++ SDK 需要的头文件，放到 include/sdk 目录里
+编产出 C++ SDK 的静态库文件
+补充 C++ SDK test cases
+补充 C++ SDK 相关文档
+
+熟悉 C++ 编程以及相应的编译技术

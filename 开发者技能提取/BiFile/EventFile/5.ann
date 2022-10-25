@@ -1,0 +1,10 @@
+T1	Skill 0 4	U2PL
+T2	Skill 7 10	半监督
+T3	Skill 10 14	语义分割
+T4	Skill 20 23	半监督
+T5	Skill 254 258	U2PL
+T6	Skill 258 262	语义分割
+T7	Skill 292 301	MindSpore
+T8	Skill 344 348	深度学习
+T9	Skill 349 355	python
+T10	Skill 356 365	MindSpore

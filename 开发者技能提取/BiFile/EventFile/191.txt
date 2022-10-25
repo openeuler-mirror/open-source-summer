@@ -1,0 +1,8 @@
+DPDK是Linux平台下的高性能用户态网络协议栈，Rust异步编程是非常适合IO密集型应用的编程框架。本项目要求采用Rust异步编程方式实现DPDK的API编程接口封装，使得Rust开发者可以在Linux平台上开发DPDK应用。
+
+1、用Rust异步编程方式实现DPDK编程API接口的封装；
+2、完成Rust实现的DPDK编程接口文档。
+
+1、熟悉Rust编程语言；
+2、熟悉Rust异步编程；
+3、熟悉DPDK开发高性能网络应用。

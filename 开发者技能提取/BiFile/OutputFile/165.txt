@@ -1,0 +1,299 @@
+目,O
+前,O
+ ,O
+O,B-Skill
+p,I-Skill
+e,I-Skill
+n,I-Skill
+M,I-Skill
+L,I-Skill
+D,I-Skill
+B,I-Skill
+ ,O
+尚,O
+未,O
+支,O
+持,O
+ ,O
+G,B-Skill
+o,I-Skill
+ ,O
+S,O
+D,O
+K,O
+。,O
+随,O
+着,O
+ ,O
+G,B-Skill
+o,I-Skill
+ ,O
+使,O
+用,O
+群,O
+体,O
+的,O
+快,O
+速,O
+增,O
+长,O
+，,O
+提,O
+供,O
+一,O
+个,O
+ ,O
+G,B-Skill
+o,I-Skill
+ ,O
+S,O
+D,O
+K,O
+ ,O
+将,O
+会,O
+是,O
+一,O
+件,O
+非,O
+常,O
+有,O
+价,O
+值,O
+的,O
+事,O
+情,O
+。,O
+在,O
+这,O
+个,O
+项,O
+目,O
+里,O
+，,O
+你,O
+将,O
+会,O
+参,O
+照,O
+ ,O
+O,B-Skill
+p,I-Skill
+e,I-Skill
+n,I-Skill
+M,I-Skill
+L,I-Skill
+D,I-Skill
+B,I-Skill
+ ,O
+现,O
+有,O
+的,O
+ ,O
+J,B-Skill
+a,I-Skill
+v,I-Skill
+a,I-Skill
+ ,O
+S,O
+D,O
+K,O
+，,O
+高,O
+优,O
+实,O
+现,O
+其,O
+中,O
+的,O
+核,O
+心,O
+ ,O
+A,O
+P,O
+I,O
+。,O
+/,O
+n,O
+/,O
+n,O
+参,O
+照,O
+ ,O
+J,B-Skill
+a,I-Skill
+v,I-Skill
+a,I-Skill
+ ,O
+S,O
+D,O
+K,O
+ ,O
+和,O
+ ,O
+G,B-Skill
+o,I-Skill
+ ,O
+S,B-Skill
+Q,I-Skill
+L,I-Skill
+ ,O
+标,O
+准,O
+接,O
+口,O
+，,O
+实,O
+现,O
+所,O
+需,O
+要,O
+的,O
+核,O
+心,O
+功,O
+能,O
+，,O
+至,O
+少,O
+实,O
+现,O
+如,O
+下,O
+接,O
+口,O
+：,O
+ ,O
+O,O
+p,O
+e,O
+n,O
+。,O
+ ,O
+E,O
+x,O
+e,O
+c,O
+C,O
+o,O
+n,O
+t,O
+e,O
+x,O
+t,O
+。,O
+ ,O
+Q,O
+u,O
+e,O
+r,O
+y,O
+C,O
+o,O
+n,O
+t,O
+e,O
+x,O
+t,O
+。,O
+ ,O
+Q,O
+u,O
+e,O
+r,O
+y,O
+R,O
+o,O
+w,O
+C,O
+o,O
+n,O
+t,O
+e,O
+x,O
+t,O
+/,O
+n,O
+整,O
+理,O
+相,O
+关,O
+文,O
+档,O
+，,O
+附,O
+上,O
+使,O
+用,O
+说,O
+明,O
+和,O
+样,O
+例,O
+/,O
+n,O
+添,O
+加,O
+接,O
+口,O
+的,O
+ ,O
+U,O
+T,O
+ ,O
+测,O
+试,O
+/,O
+n,O
+/,O
+n,O
+熟,O
+悉,O
+ ,O
+O,B-Skill
+p,I-Skill
+e,I-Skill
+n,I-Skill
+M,I-Skill
+L,I-Skill
+D,I-Skill
+B,I-Skill
+ ,O
+S,O
+D,O
+K,O
+ ,O
+所,O
+需,O
+要,O
+的,O
+基,O
+础,O
+操,O
+作,O
+/,O
+n,O
+熟,O
+练,O
+掌,O
+握,O
+ ,O
+G,B-Skill
+o,I-Skill
+，,O
+可,O
+以,O
+高,O
+质,O
+量,O
+独,O
+立,O
+开,O
+发,O
+ ,O
+G,B-Skill
+o,I-Skill
+ ,O
+S,O
+D,O
+K,O

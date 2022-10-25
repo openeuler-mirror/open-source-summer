@@ -1,0 +1,7 @@
+通过Nacos元数据（Metadata）染色，通过标签路由，对服务实例实现基于版本号和可用区（Zone）蓝绿流量分流
+
+对Spring Cloud Alibaba服务实现蓝绿部署，通过Http Header传递路由信息，达到流量隔离的目的
+实现区域亲和性功能，优先选取给定的可用区实现亲和性，不满足则路由全体区域， 支持粗粒度和细粒度双重亲和
+
+熟悉Spring Cloud负载均衡器、Spring Cloud Alibaba Nacos元数据埋点、Spring Matcher通配算法和Http Header全链路传递相关知识者优先。
+良好的沟通和协作能力，不畏难，能在导师指导下克服困难完成题目和答辩。

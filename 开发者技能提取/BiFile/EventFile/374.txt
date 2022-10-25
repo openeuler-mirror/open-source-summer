@@ -1,0 +1,7 @@
+开发Swift版本的Casbin，支持iOS App、Swift服务器端应用等生态。或实现Casdoor单点登录系统大前端应用 ios、安卓、flutter、uinapp、小程序等sdk的开发
+
+实现 Casbin 的 Swift 版本，或设计前端友好的casdoor api,完成安卓，ios，flutter，uniapp，小程序的sdk
+解决 SwiftCasbin 主仓库&相关仓库中的 issues：https://github.com/casbin/SwiftCasbin/issues
+
+熟悉 Swift/Dart/Java/Kotlin/js 语言的一种，或熟悉 iOS/andriod/flutter/小程序/uniapp框架中的一种
+熟悉 Git、GitHub 相关操作

@@ -1,0 +1,5 @@
+当前opengauss_exporter 已经可以对数据库信息进行采集，并通过grafana进行展示，本项目需要多节数据库内核已经支持的anomaly_detection模块，进行可视化输出，提供运行状态及资源使用的预测能力。
+
+1、不影响当前exporter正常运行，可以兼容原exporter; 2、了解anomaly_detection模块（https://opengauss.org/zh/docs/2.0.0/docs/Developerguide/%E6%A6%82%E8%BF%B0-43.html），与exporter相结合; 3、作为一个可选项，由客户决定是否开启预测功能
+
+1、了解Prometheus + grafana 监控体系; 2、熟悉openGauss数据库日常使用; 3、具备golang编码能力

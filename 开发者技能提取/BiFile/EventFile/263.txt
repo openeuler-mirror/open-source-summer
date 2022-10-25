@@ -1,0 +1,31 @@
+为了使Volcano易于使用和理解，你的任务是改进阅读材料。具体如下：
+添加更多关于Volcano作业API的介绍和用户指南，包括生命周期管理、作业插件等。
+
+添加更多关于队列API的介绍和用户指南，包括资源划分、配额管理等。
+
+添加更多关于poggroup API的介绍和用户指南，包括基本功能和如何与操作员合作。
+
+添加更多关于设备插件的介绍和用户指南。
+
+提供Volcano Rest API和SDK的列表。
+
+提供Volcano关键功能和用户指南的列表。
+
+将上述文档以中英文上传至github存储库和官方网站
+
+关于Volcano作业API的介绍文档
+
+关于Volcano作业插件的用户指南，包括ssh、env和svc
+
+关于队列API的介绍文档
+
+关于podgroup API的介绍文档
+
+关于设备插件的介绍和用户指南
+
+关于Volcanorest api和sdk列表的文档
+
+关于Volcano关键功能和用户指南列表的文档
+
+Kubernetes
+English

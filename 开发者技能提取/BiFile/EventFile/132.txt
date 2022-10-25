@@ -1,0 +1,7 @@
+当前Seata采用的私有协议进行RPC传输，增加gRPC协议传输的支持，TC，RM，TM在传输协议上增加一套gRPC协议传输的实现。
+
+1. 完成gRPC的适配。
+2. 配合gRPC的验证完成对应的seata-sample。
+
+1. 有一定的java基础 ；
+2. 了解netty 和 gRPC;

@@ -1,0 +1,5 @@
+Tair Modules是阿里云基于Redis开发的一系列模块，现已开源TairHash、TairZset、TairString三个模块，在交易、风控、社交等场景获得广泛应用。目前已经实现Tair jedis sdk支持java生态的业务接入，后续需要其他语言生态支持，例如开发适配Tair Modules的Go/Python/Node.js语言客户端。
+
+基于 redis-py/go-redis/node-redis 等开源客户端实现对 Tair Module 的 API 支持。
+
+有一定 Go/Python/Node.js 语言基础，对 Redis 有一定了解。

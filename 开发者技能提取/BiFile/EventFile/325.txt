@@ -1,0 +1,15 @@
+基于openEuler构建一站式大数据体验平台，至少包括Apache Kyuubi、Apache Spark、Apache Flink：
+Apache Kyuubi是一个Serverless SQL的平台，可以对接Spark、Flink等大数据平台。
+Apache Spark是一种多语言引擎，用于在单节点机器或集群上执行数据工程、数据科学和机器学习。
+Apache Flink是一个框架和分布式处理引擎，用于对无界和有界数据流进行状态计算。
+通过构建大数据体验平台发现并完善openEuler在大数据场景的不足，打造基于openEuler的大数据开源解决方案的雏形。
+
+1、完成基于openEuler构建大数据体验平台（至少包括Apache Kyuubi、Apache Spark、Apache Flink）。
+引入基于openEuler的Kyuubi、Spark、Flink的容器镜像，Dockerfile提交至openEuler官方容器镜像仓，并完成x86/Arm架构的发布。
+对不满足条件的操作系统软件包进行升级和添加，并上传至：https://gitee.com/src-openeuler
+2、在Apache Kyuubi社区上线基于openEuler的大数据体验平台。
+3、基于openEuler Mooc Studio上线大数据体验平台的课程，通过课程完成构建步骤的教学（例如安装依赖、一键部署、demo运行等）。
+
+1、掌握java/scala编程语言。对Dockerfile熟悉的同学优先
+2、熟练使用Linux。
+3、对容器化有一定了解。使用（了解）过Spark、Flink、Kyuubi的同学优先。

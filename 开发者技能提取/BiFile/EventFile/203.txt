@@ -1,0 +1,5 @@
+dbeaver(https://github.com/dbeaver/dbeaver)是一个流行的开源图形化数据库操作管理工具，增加对于openGauss数据库的兼容支持。
+
+对openGauss进行如下适配： 1. dbeaver现在驱动管理默认下没有openGauss数据库,增加openGauss数据库适配并支持org.opengauss驱动; 2. dbeaver适配openGauss后并新增openGauss job 创建/删除/查询/启动/停止功能; 3. dbeaver适配openGauss分区表,可以在表的详情下查询分区列表并在生成正常DDL语法查看
+
+1. 了解openGauss基本操作，了解openGauss中job和分区表的原理及操作方式; 2. 对于原开源Java代码具备阅读和修改的能力

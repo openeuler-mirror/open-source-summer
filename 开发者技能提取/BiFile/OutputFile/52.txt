@@ -1,0 +1,320 @@
+P,B-Skill
+r,I-Skill
+o,I-Skill
+m,I-Skill
+e,I-Skill
+t,I-Skill
+h,I-Skill
+e,I-Skill
+u,I-Skill
+s,I-Skill
+ ,O
+是,O
+ ,O
+K,B-Skill
+u,I-Skill
+b,I-Skill
+e,I-Skill
+r,I-Skill
+n,I-Skill
+e,I-Skill
+t,I-Skill
+e,I-Skill
+s,I-Skill
+ ,O
+生,O
+态,O
+中,O
+的,O
+一,O
+个,O
+开,O
+源,O
+系,O
+统,O
+监,O
+控,O
+告,O
+警,O
+解,O
+决,O
+方,O
+案,O
+，,O
+在,O
+本,O
+任,O
+务,O
+中,O
+，,O
+你,O
+需,O
+要,O
+结,O
+合,O
+ ,O
+P,B-Skill
+r,I-Skill
+o,I-Skill
+m,I-Skill
+e,I-Skill
+t,I-Skill
+h,I-Skill
+e,I-Skill
+u,I-Skill
+s,I-Skill
+ ,O
+为,O
+ ,O
+G,B-Skill
+r,I-Skill
+a,I-Skill
+p,I-Skill
+h,I-Skill
+S,I-Skill
+c,I-Skill
+o,I-Skill
+p,I-Skill
+e,I-Skill
+ ,O
+系,O
+统,O
+提,O
+供,O
+一,O
+套,O
+统,O
+一,O
+的,O
+ ,O
+U,B-Skill
+I,I-Skill
+，,O
+来,O
+帮,O
+助,O
+监,O
+控,O
+、,O
+追,O
+踪,O
+ ,O
+G,B-Skill
+r,I-Skill
+a,I-Skill
+p,I-Skill
+h,I-Skill
+S,I-Skill
+c,I-Skill
+o,I-Skill
+p,I-Skill
+e,I-Skill
+ ,O
+集,O
+群,O
+的,O
+运,O
+行,O
+状,O
+态,O
+。,O
+/,O
+n,O
+/,O
+n,O
+一,O
+个,O
+ ,O
+P,B-Skill
+r,I-Skill
+o,I-Skill
+m,I-Skill
+e,I-Skill
+t,I-Skill
+h,I-Skill
+e,I-Skill
+u,I-Skill
+s,I-Skill
+ ,I-Skill
+E,I-Skill
+x,I-Skill
+p,I-Skill
+o,I-Skill
+r,I-Skill
+t,I-Skill
+e,I-Skill
+r,I-Skill
+，,O
+该,O
+ ,O
+E,B-Skill
+x,I-Skill
+p,I-Skill
+o,I-Skill
+r,I-Skill
+t,I-Skill
+e,I-Skill
+r,I-Skill
+ ,O
+可,O
+以,O
+是,O
+ ,O
+P,B-Skill
+y,I-Skill
+t,I-Skill
+h,I-Skill
+o,I-Skill
+n,I-Skill
+ ,O
+脚,O
+本,O
+，,O
+负,O
+责,O
+解,O
+析,O
+ ,O
+G,B-Skill
+r,I-Skill
+a,I-Skill
+p,I-Skill
+h,I-Skill
+S,I-Skill
+c,I-Skill
+o,I-Skill
+p,I-Skill
+e,I-Skill
+ ,O
+S,O
+t,O
+o,O
+r,O
+e,O
+ ,O
+服,O
+务,O
+日,O
+志,O
+并,O
+生,O
+成,O
+ ,O
+P,B-Skill
+r,I-Skill
+o,I-Skill
+m,I-Skill
+e,I-Skill
+t,I-Skill
+h,I-Skill
+e,I-Skill
+u,I-Skill
+s,I-Skill
+ ,O
+可,O
+识,O
+别,O
+的,O
+日,O
+志,O
+信,O
+息,O
+/,O
+n,O
+在,O
+ ,O
+G,B-Skill
+r,I-Skill
+a,I-Skill
+p,I-Skill
+h,I-Skill
+S,I-Skill
+c,I-Skill
+o,I-Skill
+p,I-Skill
+e,I-Skill
+ ,O
+C,O
+o,O
+o,O
+r,O
+d,O
+i,O
+n,O
+a,O
+t,O
+o,O
+r,O
+ ,O
+中,O
+暴,O
+露,O
+ ,O
+H,B-Skill
+t,I-Skill
+t,I-Skill
+p,I-Skill
+ ,O
+服,O
+务,O
+，,O
+负,O
+责,O
+生,O
+成,O
+ ,O
+P,B-Skill
+r,I-Skill
+o,I-Skill
+m,I-Skill
+e,I-Skill
+t,I-Skill
+h,I-Skill
+e,I-Skill
+u,I-Skill
+s,I-Skill
+ ,O
+可,O
+识,O
+别,O
+的,O
+日,O
+志,O
+信,O
+息,O
+/,O
+n,O
+结,O
+合,O
+ ,O
+P,B-Skill
+r,I-Skill
+o,I-Skill
+m,I-Skill
+e,I-Skill
+t,I-Skill
+h,I-Skill
+e,I-Skill
+u,I-Skill
+s,I-Skill
+ ,I-Skill
+G,I-Skill
+r,I-Skill
+a,I-Skill
+f,I-Skill
+a,I-Skill
+n,I-Skill
+a,I-Skill
+ ,O
+的,O
+可,B-Skill
+视,I-Skill
+化,I-Skill
+展,O
+示,O
+页,O
+面,O
+/,O
+n,O
+/,O
+n,O

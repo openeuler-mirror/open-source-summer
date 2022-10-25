@@ -1,0 +1,9 @@
+openGauss支持isula容器部署
+
+1、openGauss各版本均可以基于isula进行容器化部署，支持单机和一主多备形态部署，支持可选带om或CM
+2、输出相关的镜像、镜像构建代码以及镜像使用方法相关文档
+3、适配k8s部署
+
+1、熟悉镜像构建和容器化部署，包括docker、isula
+2、熟悉openGauss集群部署流程
+3、熟悉shell脚本编写

@@ -1,0 +1,8 @@
+Reactive Stream 提供了一套标准的异步流处理 API， 在能够让应用写出事件驱动的程序的同时，也通过 backpressure 的方式保证了节点的稳定。Triple 协议在通信协议层面为 Dubbo 框架增加了流式场景的支持，在此基础上能够实现上层包括大文件传输和推送机制的业务需求。但目前的用户 API 较为原始，需要用户实现 StreamObserver 。而 Reactive Stream 作为反应式编程的事实标准，反压策略也能最大程度的保证处理大规模流数据时不会产生 Buffer Overflow 。Dubbo + Reactive Stream Stub的组合模式可以给用户带来最方便的流式使用方式以及全链路异步性能提升。
+目标 Dubbo Compiler 的 code generator 支持生成 Reative Stream Stub API ，如 reactor / rxjava ，提供相应使用文档和实例，支持 backpressure。
+
+Dubbo Compiler 的 code generator 支持生成 Reative Stream Stub API ，如 reactor / rxjava
+提供相应使用文档和实例
+
+熟练使用 Java 语言
+了解 Reactive Stream 模式

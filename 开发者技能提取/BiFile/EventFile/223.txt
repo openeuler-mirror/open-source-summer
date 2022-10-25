@@ -1,0 +1,7 @@
+Apache APISIX Ingress controller 是一个使用 Apache APISIX 作为数据面的 Kubernetes Ingress controller 实现。Gateway API 旨在通过许多供应商实现并具有广泛行业支持的富有表现力、可扩展和面向角色的接口来发展 Kubernetes 服务网络。
+
+使 APISIX Ingress controller 可以使用 Gateway API 中的 TCPRoute 配置 4 层流量代理；
+完整的 e2e test case.
+
+需要熟悉基于 Kubernetes 的 controller 开发；
+有一定的 Go 开发经验

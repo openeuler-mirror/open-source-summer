@@ -1,0 +1,117 @@
+提,O
+供,O
+不,O
+同,O
+版,O
+本,O
+的,O
+多,O
+个,O
+ ,O
+K,B-Skill
+u,I-Skill
+b,I-Skill
+e,I-Skill
+r,I-Skill
+n,I-Skill
+e,I-Skill
+t,I-Skill
+e,I-Skill
+s,I-Skill
+ ,O
+集,O
+群,O
+的,O
+统,O
+一,O
+ ,O
+A,O
+P,O
+I,O
+，,O
+比,O
+如,O
+一,O
+个,O
+ ,O
+A,O
+P,O
+I,O
+ ,O
+可,O
+以,O
+同,O
+时,O
+ ,O
+C,O
+U,O
+R,O
+D,O
+ ,O
+1,O
+.,O
+1,O
+7,O
+ ,O
+版,O
+本,O
+和,O
+ ,O
+1,O
+.,O
+2,O
+3,O
+ ,O
+版,O
+本,O
+的,O
+集,O
+群,O
+资,O
+源,O
+。,O
+/,O
+n,O
+/,O
+n,O
+以,O
+ ,O
+P,O
+R,O
+ ,O
+的,O
+方,O
+式,O
+提,O
+交,O
+代,O
+码,O
+/,O
+n,O
+/,O
+n,O
+掌,O
+握,O
+ ,O
+G,B-Skill
+o,I-Skill
+ ,O
+，,O
+了,O
+解,O
+ ,O
+K,B-Skill
+u,I-Skill
+b,I-Skill
+e,I-Skill
+r,I-Skill
+n,I-Skill
+e,I-Skill
+t,I-Skill
+e,I-Skill
+s,I-Skill
+ ,O
+相,O
+关,O
+概,O
+念,O

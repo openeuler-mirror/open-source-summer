@@ -1,0 +1,7 @@
+einsum 是一个通用性很强的op，可以用简洁的形式表达多种计算；在 Paddle Lite 移动端推理中，高效实现 einsum 算子，适配 Arm CPU，OpenCL等设备。
+
+Paddle Lite ：一个高性能、轻量级、灵活性强且易于扩展的深度学习推理框架，定位于支持包括移动端、嵌入式以及服务器端在内的多硬件平台。
+
+在 Paddle Lite 上实现 einsum 算子的开发 (必需支持 Arm CPU，可选支持 OpenCL)
+
+熟悉 C++

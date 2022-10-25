@@ -1,0 +1,7 @@
+背景：PolarDB PostgreSQL中核心数据结构，运行期内存，以及数据库进程分布在不同的NUMA Node上，导致跨频繁的跨NUMA远程访问内存。
+
+方案：对PostgreSQL核心数据结构架构升级，使得一个用户数据库进程的CPU和相关内存聚集到单个NUMA Node上，减少跨NUMA。
+
+PolarDB PostgreSQL能够感知NUMA，提升数据库在众核下的并发性能
+
+对C语言熟悉，了解CPU架构

@@ -1,0 +1,8 @@
+Linux社区引入页表检查（page table check）特性[1][2][3]，可以在page table操作时增加校验，从而检查是否存在非法共享，提前发现问题，确保防止某些内存损坏。
+
+合入Linux社区 page table check 特性到 openEuler5.10内核
+新增arm64的支持到openEuler5.10
+相关的bugfix合入到openEuler5.10
+
+熟悉Linux内存模块（如页表相关操作等）
+熟悉Linux内核开发

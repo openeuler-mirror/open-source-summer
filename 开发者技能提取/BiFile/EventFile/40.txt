@@ -1,0 +1,8 @@
+背景：MegEngine Hub 中实现了常用的分类检测等算法，但是还缺少一些最新的深度学习研究领域的算法实现
+
+需求：用 MegEngine 中，添加 CLIP、VQGAN、DALL·E、BigSleep 模型的推理代码，确保精度与其他框架中一致，并添加到 MegEngine Hub 上。
+
+在 https://github.com/MegEngine/ 下贡献一个代码实现的 repo 并有对应的使用文档说明
+模型运行与其他框架结果可对应（比如实现 CLIP，可与 https://github.com/openai/CLIP 进行模型对分）
+
+深度学习

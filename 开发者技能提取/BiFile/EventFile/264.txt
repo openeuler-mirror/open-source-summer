@@ -1,0 +1,13 @@
+Serverless Devs拥有诸多的功能和组件，但是更希望有一些针对性的案例可以对开发者和用户更友好，助力大家可以更快速的完成体验，所以选择该题目的同学，需要了解Serverless架构，参与开发和设计体验案例。
+
+按照Project开发完成音视频处理类的案例
+完成Project中的图片水印应用
+完成Project中的Markdown与图床工具应用
+完成Project中的大文件上传应用
+完成Project中的文本关键词检索应用
+完成Project中的OSS文件解压应用
+对应用文档进行规范化整理（具体规范社区会议会进行讨论）
+对Serverless有一定的了解，或者愿意学习和了解Serverless架构
+
+对Node.js，Typescript等语言有所了解，或者具有较强能力可以快速学习Typescript语言
+了解并熟悉对Github等使用方法

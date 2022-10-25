@@ -1,0 +1,20 @@
+mica-mqtt 是基于 java aio 网络框架 t-io 实现的低延迟、高性能的 mqtt client 组件和 mqtt broker 服务。
+
+项目任务描述：
+mqtt session 可用来存储 mqtt 客户端的订阅关系、服务端大于0的qos消息暂存等。
+在服务端可设定默认的 session 超时时间。
+mqtt 客户端断开连接时将 session 转存到 caffeine cache 中。
+mqtt 客户端再次连接时如果 caffeine cache 中存在对于的 session 则先恢复。
+考虑 mqtt 5.0 session 的支持。
+具体步骤大致如下：
+DefaultMqttServerProcessor 中放开注释的 session 代码片段。
+MqttServerAioListener 中添加是否清除 session 逻辑。
+单机使用 caffeine，断开时将 session 转存到 caffeine 中。IMqttSessionManager 中早已预留相关接口。
+
+完成 mica-mqtt 单机版的 session 管理
+输出相关使用和配置文档
+
+了解并熟悉 mqtt 协议
+了解 mqtt session 作用和原理
+了解 caffeine cache 的使用
+熟悉 mica-mqtt 开源项目

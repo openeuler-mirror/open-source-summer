@@ -1,0 +1,6 @@
+昇思MindSpore CPU正向算子开发：ExtractVolumePatches，包含CPU正向算子开发 + C++ infer函数实现：
+从输入中提取patches并将它们放在“depth”输出维度中。 extract_image_patches 的 3D 扩展。
+
+1.算子功能符合要求、能力对齐标杆 2.代码满足社区规范、精度、性能等达到标准 3.实现相关功能，相关评估指标符合要求，代码合入社区
+
+深度学习，python，MindSpore

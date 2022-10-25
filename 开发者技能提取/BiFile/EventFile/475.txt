@@ -1,0 +1,10 @@
+实现Sentinel各种规则的灵活粒度配置以及提供一定的熔断限流可观测能力
+
+实现 Sentinel 各种规则灵活粒度配置，可以不再依赖 Sentinel 动态数据源，直接利用 Spring Cloud 的动态刷新能力，能直接对资源或者路径配置流控，降级等规则。
+对Spring Cloud Alibaba服务进行多方位，多细粒度的熔断，结合Nacos配置中心进行动态熔断规则变更
+对Spring Cloud Alibaba服务熔断时候，通过调用链方式进行实时界面化追踪，有助于脱离日志分析， 即见即所得的分析各种熔断信息
+
+暑期6~9月期间保证每周有至少有40个小时参与项目。
+熟悉 Spring Cloud 动态刷新原理，对 Sentinel 的特性比较熟悉。
+了解Nacos注册中心和OpenTracing、Prometheus和Jaeger等链路追踪组件。
+良好的沟通和协作能力，不畏难，能在导师指导下克服困难完成题目和答辩。

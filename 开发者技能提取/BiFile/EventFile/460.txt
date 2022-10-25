@@ -1,0 +1,5 @@
+ShardingSphere-Proxy 是 ShardingSphere 产品中作为代理中间件出现的产品。现阶段 Proxy 缺乏在 kubernetes 中部署和自动运维的能力。Operator 作为 kubernetes 中可以帮助运维人员去解决一些特定的应用的自动化处理流程的工具，可以帮助 Proxy 更好的实现在 kubernetes 环境或者云环境上的部署和自动运维的能力。
+
+能够完成在Operator中对ShardingSphere-Proxy 的全生命周期管理。
+
+熟悉 Kubernetes Operator

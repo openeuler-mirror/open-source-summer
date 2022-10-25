@@ -1,0 +1,11 @@
+T1	Skill 0 6	Milvus
+T2	Skill 70 76	Milvus
+T3	Skill 117 121	数据校验
+T4	Skill 122 126	数据清洗
+T5	Skill 127 133	数据类型转换
+T6	Skill 161 163	算法
+T7	Skill 164 168	数据结构
+T8	Skill 174 177	分布式
+T9	Skill 191 196	numpy
+T10	Skill 197 201	json
+T11	Skill 202 209	parquet

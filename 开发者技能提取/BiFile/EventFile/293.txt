@@ -1,0 +1,6 @@
+Project C CPU 调度器对Linux LTS 5.10 分支的支持。
+
+移植最新的Project C CPU Scheduler实现到linux-5.10.y-prjc-lts分支
+
+提交应该符合社区现有的代码风格/格式
+提交应该通过必要的测试

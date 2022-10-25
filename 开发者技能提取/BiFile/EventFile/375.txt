@@ -1,0 +1,8 @@
+Sedna是边云协同AI框架，ModelBox是AI应用框架。本项目基于Sedna构建一个高频的端到端的端云协同应用案例，并使用ModelBox格式打包该应用。
+
+1、功能完善的应用案例
+2、基于Sedna和ModelBox实现
+
+1、C++编程语言
+2、Go编程语言
+3、AI开发经验

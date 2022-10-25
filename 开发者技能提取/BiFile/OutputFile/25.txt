@@ -1,0 +1,488 @@
+自,B-Skill
+动,I-Skill
+化,I-Skill
+程,I-Skill
+序,I-Skill
+验,I-Skill
+证,I-Skill
+（,O
+a,O
+u,O
+t,O
+o,O
+-,O
+a,O
+c,O
+t,O
+i,O
+v,O
+e,O
+ ,O
+v,O
+e,O
+r,O
+i,O
+f,O
+i,O
+c,O
+a,O
+t,O
+i,O
+o,O
+n,O
+）,O
+是,O
+一,O
+种,O
+有,O
+前,O
+景,O
+的,O
+形,O
+式,O
+化,O
+验,O
+证,O
+手,O
+段,O
+，,O
+是,O
+构,O
+建,O
+正,O
+确,O
+、,O
+可,O
+靠,O
+的,O
+系,O
+统,O
+的,O
+基,O
+础,O
+设,O
+施,O
+（,O
+更,O
+多,O
+具,O
+体,O
+概,O
+念,O
+可,O
+以,O
+参,O
+考,O
+学,O
+习,O
+ ,O
+D,O
+a,O
+f,O
+n,O
+y,O
+ ,O
+项,O
+目,O
+文,O
+档,O
+）,O
+。,O
+S,O
+i,O
+m,O
+p,O
+l,O
+e,O
+C,O
+o,O
+m,O
+p,O
+i,O
+l,O
+e,O
+r,O
+目,O
+前,O
+支,O
+持,O
+了,O
+一,O
+个,O
+C,O
+9,O
+9,O
+标,O
+准,O
+的,O
+子,O
+集,O
+的,O
+语,O
+言,O
+，,O
+本,O
+项,O
+目,O
+期,O
+望,O
+在,O
+S,O
+i,O
+m,O
+p,O
+l,O
+e,O
+C,O
+o,O
+m,O
+p,O
+i,O
+l,O
+e,O
+r,O
+的,O
+语,O
+言,O
+上,O
+原,O
+生,O
+支,O
+持,O
+ ,O
+r,O
+e,O
+q,O
+u,O
+i,O
+r,O
+e,O
+。,O
+ ,O
+e,O
+n,O
+s,O
+u,O
+r,O
+e,O
+，,O
+i,O
+n,O
+v,O
+a,O
+r,O
+i,O
+a,O
+n,O
+t,O
+等,O
+操,O
+作,O
+，,O
+并,O
+通,O
+过,O
+S,O
+M,O
+T,O
+ ,O
+S,O
+o,O
+l,O
+v,O
+e,O
+r,O
+实,O
+现,O
+自,O
+动,O
+验,O
+证,O
+。,O
+/,O
+n,O
+/,O
+n,O
+在,O
+S,O
+i,O
+m,O
+p,O
+l,O
+e,O
+C,O
+o,O
+m,O
+p,O
+i,O
+l,O
+e,O
+r,O
+的,O
+语,O
+言,O
+上,O
+原,O
+生,O
+支,O
+持,O
+ ,O
+r,O
+e,O
+q,O
+u,O
+i,O
+r,O
+e,O
+。,O
+ ,O
+e,O
+n,O
+s,O
+u,O
+r,O
+e,O
+，,O
+i,O
+n,O
+v,O
+a,O
+r,O
+i,O
+a,O
+n,O
+t,O
+等,O
+操,O
+作,O
+，,O
+实,O
+现,O
+以,O
+下,O
+例,O
+子,O
+的,O
+自,O
+动,O
+化,O
+程,O
+序,O
+验,O
+证,O
+：,O
+ ,O
+`,O
+`,O
+`,O
+c,O
+ ,O
+i,O
+n,O
+t,O
+ ,O
+v,O
+e,O
+r,O
+i,O
+f,O
+y,O
+(,O
+i,O
+n,O
+t,O
+ ,O
+n,O
+),O
+ ,O
+{,O
+ ,O
+r,O
+e,O
+q,O
+u,O
+i,O
+r,O
+e,O
+(,O
+n,O
+ ,O
+>,O
+=,O
+ ,O
+0,O
+),O
+;,O
+ ,O
+i,O
+n,O
+t,O
+ ,O
+x,O
+。,O
+ ,O
+y,O
+;,O
+ ,O
+x,O
+ ,O
+=,O
+ ,O
+n,O
+;,O
+ ,O
+y,O
+ ,O
+=,O
+ ,O
+0,O
+;,O
+ ,O
+w,O
+h,O
+i,O
+l,O
+e,O
+ ,O
+(,O
+x,O
+ ,O
+>,O
+ ,O
+0,O
+),O
+ ,O
+{,O
+ ,O
+i,O
+n,O
+v,O
+a,O
+r,O
+i,O
+a,O
+n,O
+t,O
+(,O
+x,O
+ ,O
+>,O
+=,O
+ ,O
+0,O
+),O
+;,O
+ ,O
+i,O
+n,O
+v,O
+a,O
+r,O
+i,O
+a,O
+n,O
+t,O
+(,O
+x,O
+ ,O
++,O
+ ,O
+y,O
+ ,O
+=,O
+=,O
+ ,O
+n,O
+),O
+;,O
+ ,O
+x,O
+ ,O
+=,O
+ ,O
+x,O
+ ,O
+-,O
+ ,O
+1,O
+;,O
+ ,O
+y,O
+ ,O
+=,O
+ ,O
+y,O
+ ,O
++,O
+ ,O
+1,O
+;,O
+ ,O
+},O
+ ,O
+e,O
+n,O
+s,O
+u,O
+r,O
+e,O
+(,O
+y,O
+ ,O
+=,O
+=,O
+ ,O
+n,O
+),O
+;,O
+ ,O
+r,O
+e,O
+t,O
+u,O
+r,O
+n,O
+ ,O
+y,O
+;,O
+ ,O
+},O
+ ,O
+`,O
+`,O
+`,O
+/,O
+n,O
+/,O
+n,O
+C,B-Skill
+/,O
+C,B-Skill
++,I-Skill
++,I-Skill
+/,O
+n,O
+了,O
+解,O
+霍,B-Skill
+尔,I-Skill
+逻,I-Skill
+辑,I-Skill
+（,O
+H,O
+o,O
+a,O
+r,O
+e,O
+ ,O
+L,O
+o,O
+g,O
+i,O
+c,O
+）,O
+与,O
+符,O
+号,O
+执,O
+行,O

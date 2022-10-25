@@ -1,0 +1,321 @@
+D,B-Skill
+u,I-Skill
+b,I-Skill
+b,I-Skill
+o,I-Skill
+ ,O
+拥,O
+有,O
+多,O
+种,O
+治,O
+理,O
+规,O
+则,O
+，,O
+如,O
+基,O
+于,O
+标,O
+签,O
+路,O
+由,O
+等,O
+，,O
+这,O
+些,O
+规,O
+则,O
+都,O
+是,O
+基,O
+于,O
+ ,O
+D,B-Skill
+u,I-Skill
+b,I-Skill
+b,I-Skill
+o,I-Skill
+ ,O
+A,O
+d,O
+m,O
+i,O
+n,O
+ ,O
+中,O
+心,O
+化,O
+进,O
+行,O
+管,O
+控,O
+。,O
+目,O
+前,O
+ ,O
+D,B-Skill
+u,I-Skill
+b,I-Skill
+b,I-Skill
+o,I-Skill
+ ,O
+A,O
+d,O
+m,O
+i,O
+n,O
+ ,O
+需,O
+要,O
+独,O
+立,O
+部,O
+署,O
+一,O
+个,O
+中,O
+心,O
+化,O
+的,O
+集,O
+群,O
+作,O
+为,O
+服,O
+务,O
+端,O
+，,O
+同,O
+时,O
+对,O
+配,O
+置,O
+中,O
+心,O
+等,O
+进,O
+行,O
+连,O
+接,O
+。,O
+/,O
+n,O
+本,O
+题,O
+目,O
+希,O
+望,O
+将,O
+ ,O
+D,O
+u,O
+b,O
+b,O
+o,O
+ ,O
+A,O
+d,O
+m,O
+i,O
+n,O
+ ,O
+的,O
+ ,O
+A,O
+P,O
+I,O
+ ,O
+迁,O
+移,O
+到,O
+ ,O
+D,B-Skill
+u,I-Skill
+b,I-Skill
+b,I-Skill
+o,I-Skill
+ ,I-Skill
+Q,I-Skill
+o,I-Skill
+S,I-Skill
+ ,O
+中,O
+，,O
+将,O
+ ,O
+D,B-Skill
+u,I-Skill
+b,I-Skill
+b,I-Skill
+o,I-Skill
+ ,O
+A,O
+d,O
+m,O
+i,O
+n,O
+ ,O
+变,O
+成,O
+一,O
+个,O
+静,O
+态,O
+的,O
+资,O
+源,O
+部,O
+署,O
+，,O
+以,O
+此,O
+来,O
+达,O
+到,O
+不,O
+需,O
+要,O
+部,O
+署,O
+ ,O
+D,B-Skill
+u,I-Skill
+b,I-Skill
+b,I-Skill
+o,I-Skill
+ ,O
+A,O
+d,O
+m,O
+i,O
+n,O
+ ,O
+的,O
+后,O
+端,O
+程,O
+序,O
+即,O
+可,O
+对,O
+集,O
+群,O
+进,O
+行,O
+管,O
+控,O
+的,O
+目,O
+的,O
+。,O
+/,O
+n,O
+/,O
+n,O
+D,B-Skill
+u,I-Skill
+b,I-Skill
+b,I-Skill
+o,I-Skill
+ ,I-Skill
+Q,I-Skill
+o,I-Skill
+S,I-Skill
+ ,O
+支,O
+持,O
+暴,O
+露,O
+集,O
+群,O
+管,O
+控,O
+ ,O
+A,O
+P,O
+I,O
+/,O
+n,O
+D,B-Skill
+u,I-Skill
+b,I-Skill
+b,I-Skill
+o,I-Skill
+ ,O
+A,O
+d,O
+m,O
+i,O
+n,O
+ ,O
+网,O
+页,O
+支,O
+持,O
+连,O
+接,O
+到,O
+任,O
+意,O
+一,O
+台,O
+ ,O
+D,B-Skill
+u,I-Skill
+b,I-Skill
+b,I-Skill
+o,I-Skill
+ ,I-Skill
+Q,I-Skill
+o,I-Skill
+S,I-Skill
+ ,O
+服,O
+务,O
+端,O
+进,O
+行,O
+管,O
+控,O
+/,O
+n,O
+/,O
+n,O
+熟,O
+练,O
+使,O
+用,O
+ ,O
+J,B-Skill
+a,I-Skill
+v,I-Skill
+a,I-Skill
+ ,O
+语,O
+言,O
+/,O
+n,O
+熟,O
+练,O
+使,O
+用,O
+ ,O
+V,B-Skill
+u,I-Skill
+e,I-Skill
+/,O
+n,O
+了,O
+解,O
+ ,O
+D,B-Skill
+u,I-Skill
+b,I-Skill
+b,I-Skill
+o,I-Skill
+ ,O
+基,O
+础,O
+原,O
+理,O

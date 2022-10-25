@@ -1,0 +1,6 @@
+Duo 是一个为 Rust 应用提供 logging 和 tracing 两种能力的简单易用的可观测性方案。传统的可观测性方案功能强大（比如 ELK，jaegertracing 等），但是部署和维护异常复杂，duo 的定位是提供相对较少但足够完善的可观测性功能，但是部署和运维异常简单。不过目前 duo 的数据全部是存储在内存中，程序退出后数据全部都会丢失。这个项目就是为了给 duo 增加数据持久化的能力。考虑到 duo 的定位是简单易用，我们的持久化方案暂时不考虑数据库之类的方案，而是借鉴 Redis 成熟且久经考验的 RDB 和 AOF 方案。此次任务需要实现任意一种类似 Redis 的 snapshots 或 append-only files 的持久化方案。
+
+有一个可以跑通的 duo 数据持久化的 demo，并且 demo 能够很好工作
+
+熟悉 Rust 编程语言，了解 async/await, tokio, tracing 等异步编程知识
+熟悉 Redis RDB 和 AOF 两种持久化方案

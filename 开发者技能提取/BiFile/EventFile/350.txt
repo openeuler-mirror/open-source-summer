@@ -1,0 +1,12 @@
+构建/移植基于openEuler的一站式机器学习开发体验生产平台，功能包含数据采集、数据清洗、数据存储、特征工程、模型训练、模型管理、模型推理等，支持对接mindspore、tensorflow、pytorch等至少两种框架。
+通过构建机器学习开发体验生产平台发现并完善openEuler在人工智能场景的不足，打造基于openEuler的人工智能解决方案，降低在openEuler上进行人工智能开发成本。
+
+1、构建/移植基于openEuler构建机器学习平台，支持x86_64和aarch64；
+2、机器学习平台包含数据采集、数据清洗、数据存储、特征工程、模型训练、模型管理、模型推理等能力；
+3、至少支持mindspore、tensorflow、pytorch等主流框架的两种；
+4、基于构建的平台完成ML、DL、RL典型应用demo覆盖全流程；
+
+1、掌握python/js/java等编程语言。对Dockerfile熟悉的同学优先
+2、熟练使用Linux。
+3、熟练使用tensorflow、pytorch、mindspore等一个或多个框架。
+4、掌握ML、DL、RL等类型基本算法原理，如SVM、KNN、RNN、Q-Learning；

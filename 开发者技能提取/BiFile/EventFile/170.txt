@@ -1,0 +1,9 @@
+Inclavare Containers是由阿里云和蚂蚁集团主导研发，并联合Intel等合作伙伴打造的业界首个面向机密计算场景的开源容器运行时。Inclavare Containers目前已经是CNCF sandbox项目之一。Inclavare Containers抹平了机密计算的高使用门槛，为用户的工作负载提供多种不同的 Enclave 形态，在安全和成本之间提供更多的选择和灵活性。后续需要在Anolis OS上进行适配，出包，并且基于Github CI/CD 完成集成测试等工作。
+
+完成Inclavare Containers在Anolis OS上的功能适配
+完成Inclavare Containers在Anolis OS上的出包
+学习Github Action并完成 CI/CD 集成测试。
+
+对操作系统和安全感兴趣，熟练掌握Linux
+有一定的C语言基础
+了解出包流程和集成测试流程

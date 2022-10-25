@@ -1,0 +1,7 @@
+StratoVirt当前还不支持vhost-user-blk磁盘，需要对接SPDK，支持vhost-user-blk磁盘
+
+1、支持标准虚机配置vhost-user-blk磁盘启动，支持正常读写。
+
+1、熟悉rust语言
+2、熟悉虚拟化基本原理
+3、熟悉SPDK

@@ -1,0 +1,7 @@
+Flink 目前采用一个 JobManager + 多个 TaskManager 的进程模型，其中 JobManager 进程中又包含了 Dispatcher、ResourceManager、JobMasters 等多个组件。这一进程模型在部分特殊场景下存在一些问题，例如在组成超大规模集群时存在单点可用性及性能瓶颈、在 IoT 嵌入式设备上使用时资源开销过大等。请针对这些问题，对 Flink 的进程模型进行优化改造。
+
+基础要求：设计并开发实现 Flink JobManager 进程拆分方案，并贡献社区。
+进阶要求（可选）：Flink JobManager 进程拆分方案下，Dispatcher、ResourceManager 故障作业无需重启；
+进阶要求（可选）：设计并开发实现 Flink 单进程模式，并贡献社区。
+
+学习 Flink 的进程部署模型、分布式协调机制、高可用机制

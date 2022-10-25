@@ -1,0 +1,17 @@
+用 ceph 实现 layotto 的 file API 组件，并通过 SOFABoot 调通。
+
+首先熟悉layotto的架构设计，基于现在的file接口实现ceph文件系统（此处需要调研layotto的file组件的可移植性以及ceph文件系统，判断当前的layotto接口能否满足ceph文件系统）
+通过sofaboot和layotto打通，可以通过sofaboot应用调通layotto的file接口。
+
+
+对于ceph文件系统的实现，需要先调研当前ceph文件系统所具有的能力以及layotto当前的file接口能否满足需求。当前的file接口比较简单的，可能需要做拓展。同时要考虑文件系统的可移植性，即能满足不同文件系统之间的无感迁移。
+
+对于sofaboot和layotto的打通，可以通过sofaboot工程调用layotto的接口，将sofaBoot的中间件能力下沉到layotto中去
+
+CEPH文件系统的调研文档产出
+调研一下CEPH文件系统和当前Layotto文件接口，产出两者适配的文档
+实现ceph文件系统实现，代码合并到master分支
+sofaboot调通layotto的接口，sofaboot工程使用layotto，实现文件操作
+
+了解云原生运行时的概念
+了解 java 和 go 语言

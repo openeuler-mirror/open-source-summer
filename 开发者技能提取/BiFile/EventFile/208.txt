@@ -1,0 +1,5 @@
+基于PiFlow框架，改造PiFlow代码，将PiFlow-Server、PiFlow-Web拆分为三个镜像，通过编排实现PiFlow项目的容器化快速部署。
+
+三个容器镜像，基于docker-compose和kubernetes的编排文件
+
+熟悉大数据知识，了解容器技术，Scala

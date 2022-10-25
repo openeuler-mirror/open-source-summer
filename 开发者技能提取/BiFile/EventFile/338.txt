@@ -1,0 +1,10 @@
+利用内核ebpf机制，实现通过ebpf修改寄存器的接口并给出demo，后续基于该工作，可以进一步通过ebpf实施内核故障注入方案。
+
+1、参考bpf_override_return接口(位于kernel/trace/bpf_trace.c)，编写用于修改其他寄存器的ebpf helper接口
+2、编写使用该接口的demo程序，用于修改函数调用的入参寄存器
+3、代码合入指定仓库指定分支
+4、提供测试报告，确定测试符合预期
+
+1、熟悉linux内核ebpf机制
+2、熟悉arm或x86函数调用ABI
+3、遵守linux代码规范

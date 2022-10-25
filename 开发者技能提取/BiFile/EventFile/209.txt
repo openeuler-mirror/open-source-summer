@@ -1,0 +1,8 @@
+为支持openEuler和OpenHarmony两大社区生态互通，实现边端设备的协同，需要将OpenHarmony上已有的设备认证hichain模块（仓库名为deviceauth）迁移到openEuler社区。进而支持欧拉和鸿蒙之间的设备认证，以支撑分布式软总线等模块的使用。
+
+1、将OpenHarmony的deviceauth模块迁移和运行在openEuler上，支持点对点的设备认证能力
+2、支持分布式软总线对deviceauth的接口调用，打通欧拉和鸿蒙之间的设备认证
+
+1、熟悉OpenHarmony和openEuler的开发
+2、熟练C编程
+3、了解对称、非对称加密、秘钥交换等原理

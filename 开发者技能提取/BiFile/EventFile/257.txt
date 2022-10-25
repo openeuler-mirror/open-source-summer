@@ -1,0 +1,12 @@
+通过兼容层可以使目前正在使用FreeRTOS的工程师快速转入RT-Thread，让他们可以继续沿用FreeRTOS的编程经验来使用RT-Thread，在使用过程中逐渐向RT-Thread过渡，以降低其学习门槛。
+此外通过兼容层也可以让之前基于FreeRTOS编写的应用程序和模块可以无缝地在RT-Thread上运行。 
+
+实现RT-Thread对FreeRTOS API的兼容
+代码内部符合RT-Thread编写规范
+API符合FreeRTOS命名规范
+最大限度保证FreeRTOS开发的程序可以无缝、无感对接到RT-Thread
+有完善的README说明文档
+
+之前使用过FreeRTOS。了解FreeRTOS内核源码，熟悉API及其特性
+使用过RT-Thread，了解RT-Thread内核 API
+对这两种操作系统的相同之处和不同之处有自己的看法和理解

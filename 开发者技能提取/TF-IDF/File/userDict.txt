@@ -1,0 +1,73 @@
+scikit-learn
+机器学习
+朴素贝叶斯
+随机森林
+词嵌入
+情感分析
+主题建模
+计算机视觉
+深度学习
+余弦相似度
+Spark GraphX
+图计算
+Spark RDD
+Analytical engine
+Spark RDD Reader
+Polar FileSystem
+块存储系统
+PFS+CurveBS
+云原生数据库
+CentOS7/8
+Debian9/10
+CI测试
+Bash script
+Kruise Rollouts
+流量路由
+渐进式发布
+Pod IP
+RolloutHistory CRD
+Kubernetes Controller
+半监督
+Every Pixel Matters
+无标签
+per-pixel entropy
+低熵
+高熵
+伪标签
+语义分割
+Apache Doris
+计算层
+w/o
+TPC-H
+数据库存储、
+存储层
+可编程控制器
+IEC61131-3
+智能代码复用
+easy copy&paste
+非结构数据
+AI for code
+算法优化
+页表检查
+page table check
+page table
+Linux内核
+数据时效性
+流计算
+Puppet-xp
+Frida-compile
+动态跟踪调试
+代码插桩
+kprobe optimizer
+function trace
+RT-Thread Smart
+Inter-Process Communication
+RT-Smart
+网络协议栈
+channel & shared memory
+软件生态
+sig-ROS
+src-openeuler
+MQTT-SN
+加分项
+增删改查

@@ -1,0 +1,8 @@
+nfs client 可通过 /proc/net/rpc/nfs 文件输出统计信息，nfs server 可通过 /proc/net/rpc/nfsd 文件输出统计信息，如：调用 read, write 等方法的次数，但现在的nfs统计信息中没有包含时间信息（如 client 调用 read 等方法的耗时）。nfs 性能分析时，时间的统计信息将会很有帮助，故增加每个方法调用的最大、最小、平均耗时时间。
+
+nfs client 的 /proc/net/rpc/nfs 文件输出增加几行，如针对 nfsv4： proc4delmax: 69 100 80 ... 总共69个方法，第一个方法最大耗时100ms，第二个方法最大耗时80ms proc4delmin: 69 60 50 ... 总共69个方法，第一个方法最小耗时60ms，第二个方法最小耗时50ms proc4delavg: 69 80 70 ... 总共69个方法，第一个方法平均耗时80ms，第二个方法平均耗时70ms
+nfs server 的 /proc/net/rpc/nfsd 文件输出增加几行，如针对 nfsv4： proc4delmax: 76 50 40 ... 总共76个方法，第一个方法最大耗时50ms，第二个方法最大耗时40ms proc4delmin: 76 30 20 ... 总共76个方法，第一个方法最小耗时30ms，第二个方法最小耗时20ms proc4delavg: 76 40 30 ... 总共76个方法，第一个方法平均耗时40ms，第二个方法平均耗时30ms
+
+使用C语言编程；
+熟悉 nfs 环境搭建、使用；
+了解 procfs 的实现；

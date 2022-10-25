@@ -1,0 +1,12 @@
+数据库中SQL函数可以大致分为以下几类：内部函数、系统生成的函数、用户定义的函数(UDF)，其中用户定义的函数是指由用户通过CREATE FUNCTION显示创建并命名的函数 ，其语义也由用户自己确定。
+
+本任务包含的功能点：
+1. PolarDB-X支持CREATE FUNCTION 创建UDF
+2. UDF同时注册到CN和DN，确保关联UDF的计算尽可能下推到DN；不能下推的计算将发生在CN侧；
+3. 支持一些系统视图，可以方便查询和管理已注册UDF
+
+PolarDB-X支持CREATE FUNCTION 创建UDF
+UDF同时注册到CN和DN，确保关联UDF的计算尽可能下推到DN；不能下推的计算将发生在CN侧；
+支持一些系统视图，可以方便查询和管理已注册UDF
+
+熟悉Java语言、了解UDF

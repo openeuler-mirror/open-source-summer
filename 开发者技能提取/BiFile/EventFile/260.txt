@@ -1,0 +1,14 @@
+随着嵌入式应用的复杂性越来越高，对存储空间的需求也越来越高。有时甚至需要几十、上百兆的存储空间，这时选用Nor Flash作为存储设备就不太合适了，价格低廉的Nand Flash就变成了一种更好的选择。
+在RT-Thread上可以基于逻辑块管理组件（LPM），管理多种存储设备（NOR Flash、Nand Flash），目前LPM组件已经支持了多块NOR Flash的管理，希望在此基础上再增加上Nand Flash的支持。
+希望可以做到：
+
+完善 LPM 组件对 NAND Flash 的支持，可以提供一套接口供Nand Flash 对接。
+对接 LPM 组件到RT-Thread MTD Nand 设备框架上，只要对接到RT-Thread 设备驱动框架上的 Nand Flash 设备，都可以无缝的接入到LPM组件。
+欢迎有更多的想法，如果能支持EMMC更好了。
+
+完善 LPM 组件对 NAND Flash 的支持，可以提供一套接口供Nand Flash 对接
+对接 LPM 组件到RT-Thread MTD Nand 设备框架上，只要对接到RT-Thread 设备驱动框架上的 Nand Flash 设备，都可以无缝的接入到LPM组件
+可以基于一款硬件平台(可使用ART-Pi)，制作完整演示示例，包括：Nand Flash支持，及对应的读写性能参数
+
+熟练掌握RT-Thread操作系统
+熟悉Nand Flash的特性

@@ -1,0 +1,9 @@
+KubeOS是在openEuler社区孵化，基于openEuler的容器操作系统（简称为容器OS），KubeOS是面向云原生场景，专为容器和集群运行而设计的轻量化操作系统。目前KubeOS已支持在虚拟机的部署，并提供虚拟机镜像的构建工具，本项目期望是开发工具来支持KubeOS在物理机部署。
+
+1、开发工具（使用shell或者go语言）支持KubeOS可以在物理机部署。
+2、保证KubeOS原有升级功能正常。
+3、输出设计文档及使用文档。
+
+1、熟悉shell或者go语言
+2、了解Linux安装及启动流程
+3、了解Kubernetes

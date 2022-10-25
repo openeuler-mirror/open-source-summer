@@ -1,0 +1,11 @@
+OpenChaos 框架借鉴了混沌工程的理念，通过建立预期模型和模拟各种故障模拟，检测分布式基础设施在故障下是否仍然符合预期的检测指标，建立分布式基础设施承受生产环境中湍流条件能力的信心。本题主要内容是将 OpenChaos 对接 RabbitMQ与Elasticsearch ，支持在对其测试中注入故障的能力。
+学习 Openmessaging OpenChaos 知识，了解 OpenChaos 原理、使用方式、参数含义等。
+实现 OpenChaos 的 RabbitMQ/Elasticsearch  Driver，支持对 RabbitMQ/Elasticsearch  进行故障注入与特有分析模型。
+
+driver 设计文档
+实现rabbit 故障模型和分析模型，添加事务模型
+实现ElasticSearch 故障模型和分析模型，实现查准与查全分析模型
+代码覆盖率不低于85百分
+
+单元测试用例不低于80%
+能够通过图表进行结果展示

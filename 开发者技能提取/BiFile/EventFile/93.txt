@@ -1,0 +1,9 @@
+目前 Nydusd 的 FUSE 和 virtiofs 两种模式是分开编译成两个不同的二进制文件，这为用户的部署和使用造成了不便。本项目目标是把 FUSE/virtiofs 两种模式融合到同一个二进制文件中，为用户提供统一的运行时接口。
+
+重构 fuse-backend-rs 库以支持统一的 fusedev/virtiofs 编译模式
+同时支持 FUSE 和 virtiofs 的 nydusd 二进制文件
+
+容器镜像
+容器运行时
+FUSE 和 virtiofs
+Rust

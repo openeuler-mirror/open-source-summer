@@ -1,0 +1,18 @@
+mica 是一个 Spring Cloud 微服务开发核心工具集。基础工具类、验证码、http、redis、ip2region、xss 等组件开箱即用。
+
+任务说明：
+mica-openapi 是对 springdoc-openapi 增强，目前只做了依赖，添加了更好用的 knife4j。
+
+任务步骤：
+完成 swagger 配置，具体配置项可参考 mica-swagger。
+可配置通用 header 和 oauth2 认证。
+knife4j 目前需要添加配置才可以展示，检测到 knife4j 添加默认的 env 配置。
+
+完成 springdoc 基础配置，具体配置项可参考 mica-swagger。
+可配置通用 header 和 oauth2 认证。
+knife4j 目前需要添加配置才可以展示，检测到 knife4j 添加默认的 env 配置。
+完成配置文档和使用文档
+
+熟悉 spring boot stater 自动配置和配置项
+了解 swagger 和 springdoc
+了解 mica 相关组件

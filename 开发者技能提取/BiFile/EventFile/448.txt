@@ -1,0 +1,11 @@
+目标：支持 python java 等语言的 remark 插件，以及支持对 LaTeX 格式的数学公式进行格式化
+
+目前 OI-Wiki 仓库中使用的代码语言包括 C/C++, Rust, Java, Python 等等，但是我们目前只对 C/C++ 语言编写了格式化插件，调用clang-format进行了格式化。希望你能编写remark插件，来格式化其他的语言。另一方面，由于LaTeX数学公式的语法较为复杂，目前市面上暂时还没有LaTeX公式的格式化器，我们还希望你能编写LaTeX公式的格式化器。
+
+实现 python java 等编程语言的格式化插件
+实现数学公式的格式化
+协助解决目前项目中存在的 issue
+
+前端开发的相关知识（HTML/CSS/Javascript/Typescript/React）
+能使用 Git 进行协作开发
+熟悉 remark 工具链者优先

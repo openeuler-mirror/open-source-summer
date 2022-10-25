@@ -1,0 +1,10 @@
+Spark GraphX 是基于 Spark 的开源图计算系统，在社区和工业界有着大量用户。但是受限于Spark的本身，以及 Java/Scala 的语言限制，其性能远远落后于近些年来涌现的基于C++实现的图计算系统，例如GraphScope。作为一站式图计算解决方案，GraphScope希望积极拥抱Java图计算生态，使得GraphX算法可以无缝运行在 GraphScope 图分析引擎上，且获得大幅性能提升。
+为了达成这个目的，我们需要将 Spark RDD 中的数据提供给 GraphScope，从而进行计算。由于 GraphScope 的 Analytical engine 会以MPI进程组的方式启动，所以你需要通过跨进程通信将数据传输给 GraphScope。
+通过完成这个任务，你将帮助 GraphScope 跨越和 GraphX 之间的数据交互障碍，最终使得 GraphX 算法可以运行在 GraphScope 的计算引擎上，从而获得运行性能的大幅提升
+
+设计并实现一套方案，使得存储在Spark RDD中的数据可以传输到另外一个C++进程中，通过封装好的接口，C++进程可以读取存储在该Spark RDD中的数据。
+完整的Spark RDD Reader的实现，支持在C++进程中读取Spark RDD中的数据。
+性能测试报告，在较大规模数据集上RDD Reader的表现
+
+你的方案应该至少支持基础类型数据和scala.Tuple
+可供参考的方案：共享内存/rpc/pip

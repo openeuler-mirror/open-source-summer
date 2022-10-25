@@ -1,0 +1,7 @@
+Skywalking PHP是一个用 C 编写的 PHP 扩展库，遵循 Apache SkyWalking 的 tracing 和 metrics 格式收集上报数据。目前该扩展已经支持包括但不限于cURL, PDO, Mysqli,gRPC,Redis等项目或框架的支持，本次项目目标是为每一个特性添加开关，让使用者灵活配置他们关注的指标
+
+本地创建开发环境
+熟悉每一个特性的代码，并找到切入点
+为每一个特性添加开关
+
+较强的自主学习能力，了解或愿意学习 C 语言和PHP扩展

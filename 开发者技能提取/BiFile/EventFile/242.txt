@@ -1,0 +1,10 @@
+在嵌入式场景下，内存和flash等资源紧张，往往要通过内核裁剪进行镜像小型化来满足业务需求。内核裁剪的策略通常是优先裁剪掉体积大而又不重要的特性，在这个过程中就对各个特性及CONFIG控制的镜像体积可视化提出了诉求。
+
+1、编写python或shell脚本实现如下需求。
+a. 支持用户指定编译的架构和编译工具链
+b. 支持用户输入原始的config配置文件，脚本基于此config配置进行解析
+c. 支持用户在不输入config配置文件的情况下，脚本能基于仓库全量CONFIG进行解析
+2、执行脚本，能够输出日志，描述各个CONFIG可裁剪的镜像体积。 例如：./parse_config ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- -i base_config -o xxx.log
+
+1、内核编译
+2、python/shell脚本语言

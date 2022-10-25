@@ -1,0 +1,12 @@
+HertzBeat 是一款易用友好的云监控系统。无需Agent，拥有强大自定义监控能力。
+目前支持的自定义监控协议有 HTTP协议，SSH协议，JDBC协议，用户可以通过这些协议只需要配置yml就能适配一款自己想要的监控类型。比如，通过JDBC协议，用户可以通过写SQL来采集想要的指标数据。
+【在HertzBeat支持JMX协议通用自定义监控能力，并适配两款JMX应用类型监控】此项目需要参考hertzbeat原有协议的基础上，新增支持JMX通用协议，使其支持自定义监控能力。并对支持JMX监控的监控应用进行适配，比如 tomcat, jetty等。
+在支持JMX协议完成后若有能力，可以适配promethus协议，使heartbeat能通过promethus协议来采集promethus exporter暴露出来的指标数据接口，集成promethus生态中的指标采集能力。
+
+特性代码能以PR的形式合入仓库
+支持herztbeat拥有JMX协议监控能力
+支持两款JMX监控应用类型
+
+对开源抱有热情和强烈兴趣
+熟悉Java语言
+了解Hertzbeat或监控系统

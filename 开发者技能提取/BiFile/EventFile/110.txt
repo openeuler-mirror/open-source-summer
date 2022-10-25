@@ -1,0 +1,5 @@
+让 nebula-net 通过 .NET 的 LINQ 语法实现 select 功能，让用户不需要感知熟悉 nGQL 语法，也可以通过熟悉的 LINQ 语法对 Nebula 数据库进行查询匹配。
+
+Nebula-net LINQ 支持
+
+.NET

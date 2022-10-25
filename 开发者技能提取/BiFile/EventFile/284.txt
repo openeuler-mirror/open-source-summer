@@ -1,0 +1,5 @@
+Redis支持使用monitor命令来监听对数据的操作，但是目前monitor功能比较基础，只能够监听所有的数据操作，无法支持对指定IP、命令、key等级别的过滤。同时由于Redis单worker的设计方式，monitor命令监听所有命令对性能有很大损耗，在功能和性能上都不能完全满足用户需求。该题目旨在对monitor命令进行较高维度的扩展，结合Redis ACL功能，实现对ip/user/command/command category/key/pattern等过滤，使得monitor filter能够满足用户丰富的审计需求。
+
+实现monitor filter功能，能够对指定ip/user/command/command category/key/pattern等条件过滤
+
+熟练掌握C语言，对Redis有一定的了解

@@ -1,0 +1,9 @@
+RDMA是常用于超算中心和高端存储领域的高性能网络协议，RDMA在内核的驱动主要包括两部分，一部分是对接用户态Verbs编程接口，另一部分是对接RDMA硬件设备。本项目要求用Rust实现RDMA内核驱动，需要包括上述两部分功能。
+
+1、用Rust实现RDMA的内核驱动里跟上层用户态Verbs API接口对接的模块；
+2、用Rust实现RDMA的内核驱动里跟RDMA硬件适配的模块。
+
+1、熟悉Rust编程语言；
+2、熟悉Rust在Linux内核编程Rust for Linux；
+3、熟悉RDMA协议栈；
+4、熟悉RDMA的Verbs编程接口。

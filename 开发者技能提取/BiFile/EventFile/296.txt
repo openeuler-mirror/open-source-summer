@@ -1,0 +1,12 @@
+Sentinel 是阿里巴巴开源的，面向云原生、分布式服务架构的高可用治理组件，主要以流量为切入点，从限流、流量整形、熔断降级、系统自适应保护、热点防护等多个维度来帮助开发者保障微服务的稳定性，目前已有 Go/Java/C++/Rust 原生版本。当前 Sentinel 正在朝着 2.0 云原生智能化的方向演进，其中一个重要的部分就是 云原生服务自愈决策中心组件 (Cluster Policy Brain)。Brain 设计可以针对任意流量稳定性的场景做一些控制的策略，这里面包括但不限于：分布式流控、访问控制、流量清洗、服务权重调整/调度等。
+
+Brain 期望基于 Sentinel Go 实现，作为弱中心化的独立云原生组件，对外提供分布式流控、并发控制、自适应过载保护等服务自愈能力。Sentinel Go SDK 配合 brain 来做实例级别和集群级别的策略控制，其中一些策略控制（如 Sentinel 现有的单机流控、熔断）等还是在 SDK 侧进行判断，但是策略由 brain 自动生成（或经传统 rule CRD 手动配置）。Cluster Policy Brain 需要贴近云原生生态，支持声明式的配置，同时提供统一的标准接口对外透出 gRPC endpoint 提供服务。
+
+基于 gRPC 抽出 Sentinel 标准策略接口及通信层实现，以便 SDK 与 brain 进行通信与策略判断
+设计 Sentinel 标准策略接口，给定 policy descriptor（如接口名、参数、调用上下文信息），返回相应的策略（如请求正常通过，拒绝部分比例等）
+结合 gRPC-go 实现 Sentinel 策略接口的通信层，供 brain 及 Sentinel Go 使用，建议采用 bidirectional streaming RPC 模型
+Sentinel Brain 项目搭建骨架，并开发基础的分布式流控、并发控制能力，基于上述标准接口对外提供服务，可独立运行
+Sentinel Go SDK 适配 brain gRPC service，并适配 Sentinel 规则 CRD
+提供通用的 Kubernetes workload 部署指南
+
+熟悉 Go 语言，对分布式系统、微服务、云原生相关技术有一定了解和实践；熟悉 Kubernetes, gRPC, Istio 等技术为佳

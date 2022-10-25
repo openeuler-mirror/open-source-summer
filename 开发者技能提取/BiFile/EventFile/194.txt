@@ -1,0 +1,7 @@
+当前 Seata AT模式 SQL 语法支持了insert/update/delete的简单操作，以及MySQL的insert into on duplicate key update语法，期望可以对实现InsertOrUpdateExecutor的基类以及为其实现包括 insert ignore into, replace into, insert select, oracle IGNORE_ROW_ON_DUPKEY_INDEX 在内的语法支持，
+
+1. 中期报告前需要完成对于 Seata 的 AT 模式的流程的梳理，熟悉 DMLExecutor 和 UndoLogManage 的原理和流程，输出PDF/思维导图(具体形式不限)流程图，完成对 SelectOrUpdate 的抽象。
+2. 终期报告前需要完成至少3个 SelectOrUpdate 的语法的支持。
+
+1.熟悉java语言；
+2.对seata有简单的了解；

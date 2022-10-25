@@ -1,0 +1,12 @@
+随着 WebAssembly 越来越多地被用作服务端应用程序的 Runtime，WebAssembly 应用程序（例如 serverless 函数和嵌入式函数）需要访问关系数据库。 这可以通过与数据库服务器的 socket 连接来完成。 但是，WebAssembly 还不支持 POSIX socket API。 这意味着 MySQL 的标准 Rust（或 JavaScript）连接器将无法在 WebAssembly 中正确运行。
+
+ 
+WasmEdge 为 WebAssembly 提供了自己的 networking socket 扩展。 使用 WasmEdge Rust 和 JavaScript SDK，开发者可以编写高性能和非阻塞 I/O 应用程序，包括数据库连接器。 用于 networking socket 的 WasmEdge Rust SDK 类似于 Tokio 的低级 API。
+
+ 
+在这个项目中，参与者将利用 WasmEdge Rust SDK 实现 MySQL 数据库的连接器。 最终的交付物应该类似于 MySQL 的官方 Rust 连接器。
+
+有一个能在 MySQL 上运行创建、更新、读取和删除语句的 demo，并且 demo 能够很好工作
+
+熟悉C、C++、Go和Rust
+愿意通过本项目学习Rust

@@ -1,0 +1,9 @@
+BGMProvider是为毕昇JDK生态提供国密TLS协议Java实现，它包括 jca、jsse、tomcat-adaptor等模块。目前BGMProvider jca模块实现的国密相关算法依赖于bouncycastle。为了将来更好地扩展，需要将BGMProvider和bouncycastle解耦，并且在BGMProvider上实现国密相关算法。【需求描述】在BGMProvider上实现国密相关算法
+实现SM2/SM3/SM4/HmacSM3/SM3WithSM2 国密算法；
+实现国密证书解析相关的算法
+
+实现SM2/SM3/SM4/HmacSM3/SM3WithSM2国密算法以及相关功能测试用例；
+BGMProvider与bouncycastle解耦，去除与bouncycastle相关类的依赖；
+
+熟悉掌握Java语言；
+熟悉JDK Service Provider机制，熟悉TLS协议；

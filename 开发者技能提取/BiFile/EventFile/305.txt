@@ -1,0 +1,10 @@
+Apollo ConfigService 数据库里的 Release 表随着配置发布次数增加，Release 表所占空间会越来越大，直至超出限制的最大值，除此之外，还会降低 Release 表的 IO 响应时间。实际上 Release 表中，历史比较久远的数据，是可以被清理掉的。
+期望封装一些 api，让用户可以通过 api 来手动清理 Release 表；
+在 api 的基础之上，在 Portal 模块添加管理界面，支持用户通过界面来查看 Release 表的指标，并进行手动清理；
+在 api 的基础之上，在 Portal 模块添加管理界面，支持用户配置 Release 表的清理策略，如只保留最近 1 年的记录，或者只保留最近 100 次的记录等等。
+
+1. 实现一个用户友好的管理界面（管理员权限），支持配置 Release 表的清理策略，用户也可以在界面上进行手动清理
+2. 完善的单元测试
+3. 设计文档和使用文档
+
+熟悉 Java 开发语言、熟悉 Spring Boot 、熟悉Spring Data JPA和MySQL、对微服务体系有一定了解，如RPC、有前端开发经验，如 Html、Angular JS 等

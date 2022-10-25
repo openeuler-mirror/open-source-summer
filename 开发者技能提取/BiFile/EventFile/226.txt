@@ -1,0 +1,9 @@
+用于容器场景的堆叠文件系统(overlayfs)将几个文件系统通过层次(upper layer、lowerlayer)的方式组合在一起，容器对upper文件层可读写，lower文件层是只读层；在当前的实现，写文件触发整个文件从lower layer拷贝到upper layer，性能开销以及page cache开销大。
+
+1. 在overlayfs中实现基于block的COW机制, 代码到达内核合入的标准。
+2. 在容器环境中，结合典型测试集(sysbench)测试性能数据
+3. 技术文档：设计描述与性能测试分析。
+
+1.内核文件系统
+2.容器
+3.C语言

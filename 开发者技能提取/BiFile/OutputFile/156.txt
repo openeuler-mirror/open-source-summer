@@ -1,0 +1,288 @@
+异,B-Skill
+步,I-Skill
+执,O
+行,O
+是,O
+大,O
+部,O
+分,O
+现,O
+代,O
+运,O
+行,O
+时,O
+都,O
+支,O
+持,O
+的,O
+功,O
+能,O
+，,O
+W,B-Skill
+a,I-Skill
+m,I-Skill
+E,I-Skill
+d,I-Skill
+g,I-Skill
+e,I-Skill
+ ,O
+也,O
+提,O
+供,O
+了,O
+异,O
+步,O
+执,O
+行,O
+ ,O
+W,O
+a,O
+s,O
+m,O
+ ,O
+模,O
+块,O
+的,O
+特,O
+性,O
+。,O
+J,B-Skill
+a,I-Skill
+v,I-Skill
+a,I-Skill
+本,O
+身,O
+也,O
+提,O
+供,O
+了,O
+对,O
+异,O
+步,O
+操,O
+作,O
+的,O
+一,O
+些,O
+抽,O
+象,O
+，,O
+本,O
+项,O
+目,O
+需,O
+要,O
+结,O
+合,O
+两,O
+部,O
+分,O
+特,O
+性,O
+来,O
+实,O
+现,O
+W,O
+a,O
+s,O
+m,O
+e,O
+d,O
+g,O
+e,O
+ ,O
+J,O
+a,O
+v,O
+a,O
+ ,O
+S,O
+D,O
+K,O
+ ,O
+A,O
+s,O
+y,O
+n,O
+c,O
+ ,O
+特,O
+性,O
+，,O
+包,O
+含,O
+：,O
+ ,O
+/,O
+n,O
+熟,O
+悉,O
+ ,O
+W,B-Skill
+a,I-Skill
+s,I-Skill
+m,I-Skill
+E,I-Skill
+d,I-Skill
+g,I-Skill
+e,I-Skill
+ ,O
+的,O
+异,O
+步,O
+A,O
+P,O
+I,O
+ ,O
+/,O
+n,O
+抽,O
+象,O
+出,O
+一,O
+套,O
+在,O
+ ,O
+J,B-Skill
+a,I-Skill
+v,I-Skill
+a,I-Skill
+ ,O
+S,O
+D,O
+K,O
+ ,O
+层,O
+面,O
+的,O
+异,O
+步,O
+A,O
+P,O
+I,O
+ ,O
+/,O
+n,O
+基,O
+于,O
+J,B-Skill
+N,I-Skill
+I,I-Skill
+ ,O
+实,O
+现,O
+这,O
+些,O
+ ,O
+A,O
+P,O
+I,O
+/,O
+n,O
+/,O
+n,O
+按,O
+照,O
+社,O
+区,O
+编,O
+码,O
+规,O
+范,O
+要,O
+求,O
+，,O
+完,O
+成,O
+特,O
+性,O
+编,O
+码,O
+/,O
+n,O
+提,O
+供,O
+编,O
+码,O
+示,O
+例,O
+和,O
+文,O
+档,O
+/,O
+n,O
+提,O
+供,O
+完,O
+善,O
+的,O
+测,O
+试,O
+用,O
+例,O
+/,O
+n,O
+/,O
+n,O
+1,O
+.,O
+ ,O
+熟,O
+悉,O
+ ,O
+J,B-Skill
+a,I-Skill
+v,I-Skill
+a,I-Skill
+ ,O
+和,O
+ ,O
+C,B-Skill
+ ,O
+语,O
+言,O
+编,O
+程,O
+/,O
+n,O
+2,O
+.,O
+ ,O
+熟,O
+悉,O
+ ,O
+J,B-Skill
+N,I-Skill
+I,I-Skill
+ ,O
+接,O
+口,O
+和,O
+编,O
+码,O
+/,O
+n,O
+3,O
+.,O
+ ,O
+熟,O
+悉,O
+ ,O
+G,B-Skill
+r,I-Skill
+a,I-Skill
+d,I-Skill
+l,I-Skill
+e,I-Skill
+ ,O
+和,O
+ ,O
+C,B-Skill
+M,I-Skill
+a,I-Skill
+k,I-Skill
+e,I-Skill
+ ,O
+的,O
+使,O
+用,O

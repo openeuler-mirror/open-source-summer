@@ -1,0 +1,11 @@
+为了构建基于openEuler的HPC应用生态，需要将目前广泛使用的开源HPC应用迁移到openEuler。Scanorama利用了全景拼接的算法，将来源于不同技术的单细胞的datasets进行整合。
+
+1、scanorama的X86和ARM配置文件创建并归档至hpcrunner社区templates目录。
+2、自动化脚本执行scanorama用例，并输出用例执行结果，脚本上传test目录。
+3、《基于openEuler的scanorama软件移植指南》、《基于openEuler的scanorama软件测试报告》，报告覆盖规范性自检、功能性测试、性能、精度测试结果，以word形式存放到代码仓库的doc目录。
+4、若适配过程中有patch文件或者第三方依赖安装包产生，请上传至porting或者package目录。
+
+1.掌握HPC相关技术，如MPI使用、openmp使用；
+2.掌握编译技术，如GCC使用、Clang使用、解决编译报错的能力；
+3.掌握编程语言，Fortran、C/C++；
+4.掌握Python语法、Shell语法。

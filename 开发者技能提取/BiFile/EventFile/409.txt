@@ -1,0 +1,26 @@
+ShardingSphere Parser Engine 帮助用户将 SQL 语句解析为抽象语法树，并从语法树生成对应的 SQL Statement 对象。Parser Engine 目前支持 `MySQL`, `PostgreSQL`, `SQLServer`, `openGauss` 和 `Oracle` 等多种数据库方言，为了提升对于不同数据库方言的支持度，我们需要对 Parser Engine 中未支持的 SQL 进行优化。
+
+这个任务的目的是解决这个文件中的不支持解析的语句，下面是一些具体任务列表： 
+LISTEN 
+LOCK 
+MOVE 
+NOTIFY 
+PREPARE TRANSACTION 
+REASSIGN OWNED 
+REFRESH MATERIALIZED VIEW 
+REINDEX 
+RESET 
+SECURITY LABEL 
+TRUNCATE 
+UNLISTEN 
+你可以从这里获得更多关于语法解析的参考。为了完成这个任务，你首先需要了解它为什么不支持？是因为 antlr4 语法解析异常，还是因为没有实现 visit 函数？你可以使用 antlr4 插件 去帮助你分析，你可能需要访问官方文档来检查语法。 
+修复问题之后，记得提交一些 SQL 测试用例，并把解析结果写在 XML 中。 
+运行 SQLParserParameterizedTest 和 UnsupportedSQLParserParameterizedTest 去确保没有异常。 
+此外，你可以参考一些示例，来辅助完成这个任务： 
+support alter foreign table for pg/og 
+support alter materialized view for pg/og 
+完成 SQL 解析优化之后，你需要测试在 ShardingSphere 读写分离场景下，该 SQL 是否能够正常执行，并且根据 SQL 的语句，将 SQL 路由至写库或读库。完成读写分离功能的测试后，需要在 ShardingSphere 集成测试 shardingsphere-integration-test 中添加对应场景的测试用例。
+
+能够对自己的代码进行测试，保证提交代码的正确性
+
+1. 精通 java；2. 理解 Antlr4 语法；3. 熟悉 PostgreSQL 数据库

@@ -1,0 +1,8 @@
+DataX 是阿里巴巴研发的异构数据源离线数据同步工具，而 Nebula Graph 是 vesoft.Inc 研发的开源分布式图数据库。
+
+基于 DataX 实现 Nebula Graph 的 reader 和 writer 插件，可方便用户图数据库使用者实现数据同步。
+
+nebula 支持 DataX
+
+Java
+了解 DataX

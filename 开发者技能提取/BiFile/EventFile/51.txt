@@ -1,0 +1,10 @@
+机器人操作系统 (ROS) 是斯坦福最早 2007 年开发的一系列软件包，帮助快速开发机器人应用。如今第一代 ROS 在应用中暴露出了一些问题，但是解决这些问题会导致无法兼容以前的程序，于是 ROS 社区直接发布了第二代 ROS。ROS2 原本是运行在 Linux 上的软件包, microROS 希望能在 MCU 上使用 ROS2 的 API, 将 MCU 接入 ROS2。
+这个项目则是希望能在 RT-Thread 上使用 microROS。现在 RT-Thread 已经有 micro_ros 软件包(https://github.com/wuhanstudio/micro_ros)，但是还有一些问题需要解决：UDP 通信偶尔掉包断开连接，service 相关的例程不够丰富，MCU 编译需要使用预编译的静态库 (rmw，rcl，rclc 源码不在软件包内)，还无法集成到 micro_ros 官方的编译系统提供 benchmark 结果。
+
+提供 micro_ros 使用 UART/UDP 稳定通信的 service 例程
+分离 rcl / rclc 和 rmw 的源码，不需要预编译的静态库，直接 RTT 源码编译 micro_ros
+集成到 micro_ros 官方的编译系统，并提供在 RT-Thread 上的 benchmark 结果
+
+熟悉 ROS2 的 C API
+熟悉 ROS2 Stack (rcl / rclc，rmw，dds) 和对应的实现
+熟悉 RT-Thread 的 UART/UDP 通信以及软件包开发
