@@ -1,0 +1,18 @@
+背景：
+
+1. istio 是 ServiceMesh 方向上一个非常火热的解决方案，默认使用 envoy 作为数据面。
+2. mosn 作为一个对标 envoy 的另一种数据面实现，也可以跟 istio 集成，作为 envoy 的一种替代方案。
+3. layotto 作为 Application Runtime 的一种实现，基于 mosn 开发，期望可以结合 Service Mesh 跟 Application Runtime 两种思想。
+
+任务描述：
+
+既然 istio 可以集成 mosn ，且 layotto 跟 mosn 是一体的，因此本次的任务是把 layotto 作为数据面跟 istio 进行集成，以服务调用为例，在应用通过 layotto 的 invokeService API 去调用目标服务时可以直接复用 istio 强大的治理能力，比如流量控制、故障注入等等。
+
+layotto 之前就已经可以跟 istio 1.5.x 集成，由于落后当时的 istio 版本太多，最终没有合并到主干，本次任务希望可以集成 1.10.x 之后的istio。
+
+用 layotto 替换 istio 中的 envoy 作为数据面部署
+通过 layotto 发起的服务调用可以复用 istio 强大的流量治理能力
+
+可以使用Go语言进行编程
+了解 istio 集成数据面的原理
+了解 istio 各种流量治理能力的用法

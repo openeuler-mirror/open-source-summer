@@ -1,0 +1,7 @@
+用户在启动DolphinScheduler服务后，可以使用demo-tool程序预置工作流demo，包括但不限于简单的shell任务、逻辑组件任务（switch、dependent、subprocess、condition）、参数传递等功能， 引导用户更方便地使用DolphinScheduler。
+
+预置工作流demo的tool程序
+服务启动脚本添加 init模式
+工作流demo包括但不限于shell任务、逻辑组件任务（switch、dependent、subprocess、condition）、参数传递等
+
+熟悉Java、Shell

@@ -1,0 +1,9 @@
+OpenStack是云计算领域知名并广泛部署的云计算基础设施。但OpenStack本身项目繁多，部署和升级难度较大，易用性较差。有一种解决方案是使用容器化部署。Kubernetes(K8S)是目前容器化领域应用最广泛的平台，越来越多的用户或企业在工作、生产环境中使用K8S，那么为什么不把OpenStack部署在K8S上呢？其实OpenStack已经通过OpenStack-helm项目支持了K8S容器化部署。OpenStack-heml通过使用helm工具提供了一系列的部署脚本。Helm是K8S生态中应用较广的K8S app部署工具。目前，openEuler并不支持OpenStack-helm。本项目目标是把OpenStack-helm引入到openEuler中。
+
+1、引入openstack-helm、openstack-helm-images项目到openeuler中，编写RPM spec，构建对应的RPM包
+2、测试引入的openstack-helm软件，保证功能正常，输出部署文档到openstack sig。
+3、修改openstack-helm-image，新增openEuler容器镜像支持，输出修改PR和使用文档。
+
+1、掌握python编程语言。对jinja、go、Dockerfile熟悉的同学优先。
+2、熟练使用Linux。
+3、对虚拟化、容器化有一定了解。使用（了解）过OpenStack或K8S的同学优先。

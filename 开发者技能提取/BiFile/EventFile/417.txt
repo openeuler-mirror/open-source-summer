@@ -1,0 +1,10 @@
+GraphX 是一个 Spark API，它用于图和分布式图的计算。
+
+基于 GraphX 实现从 Nebula Graph 里读取子图操作后进行图计算，实现局部数据分析。
+
+子图的图计算
+
+GraphX
+Java
+Scala
+Spark

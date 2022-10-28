@@ -1,0 +1,9 @@
+OpenSumi 为 IDE 的底层框架，不仅提供了可以运行远程容器的 Cloud IDE 版本，也提供了本地桌面版，甚至还提供了无需后端容器，直接将 IDE 运行在纯浏览器的 Lite 版本。本题目会基于 OpenSumi Lite 版本，实现一个对接 Github OpenAPI 的 Code Review 模块，支持在 IDE 模式下来对 Github 的仓库进行代码评审。
+
+将 CodeReview 及代码服务抽象为模块，并且和 Github 对接，最终在 opensumi.com 集成该包含评审代码功能的 IDE Lite 组件
+详细的功能集成及使用文档
+
+学习 OpenSumi 框架机制
+学习 Github API 文档
+熟练掌握 NodeJS
+具备一定的 TypeScript 及 React 编码能力

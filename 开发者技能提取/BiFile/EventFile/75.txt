@@ -1,0 +1,10 @@
+LMP 项目面向 eBPF 初学者和爱好者，现已成为 eBPF 想象力孵化池，其中子项目 eBPF_Visualization 目标是提供一个易用的轻量级的 eBPF 程序管理系统，专注于 eBPF 数据存储和可视化及 BPF 程序管理编排。当前该子项目正处于方案重构阶段，需要开发者参与 web/cli 管理系统方案重构设计和落地，基础功能包括 eBPF 数据持久化存储，eBPF 程序下发及生命周期管理，与前端配合实现数据的可视化展示。
+
+RESTful API 文档
+项目代码提交到仓库
+详尽的项目文档
+
+了解 Git、Github（或Gitee）相关操作
+了解 Rustful API
+了解 Go Web 开发
+对 eBPF 有初步的认知

@@ -1,0 +1,9 @@
+本项目分为两部分来探索 Sentinel Go 在 Mesh 层及网络层的流量治理能力。
+（1）期望利用 Envoy WASM 扩展机制，结合 Sentinel Go 版本，基于 proxy-wasm-go-sdk 实现 Envoy WASM Sentinel 流控插件，可以支持现有 Sentinel Go 的所有能力，支持通过 Sentinel CRD 标准方式配置规则，并确保 Sentinel 自身性能损耗不会很大；
+（2）期望结合 eBPF 实现 Sentinel 拦截插件，探索在底层进行端口、IP、流量维度的流量控制能力，并对 Sentinel Go 进行一定的性能优化与轻量化来满足底层控制的需要。
+
+基于 Sentinel Go 与 proxy-go (github.com/tetratelabs/proxy-wasm-go-sdk) 实现 Envoy WASM extension，支持针对 HTTP 流量及 gRPC 服务进行流量治理，并支持通过 Sentinel CRD 标准方式配置规则
+基于 Sentinel Go 结合 eBPF 实现 Sentinel 拦截插件，探索在底层进行端口、IP、流量维度的流量控制能力，并对 Sentinel Go 进行一定的性能优化与轻量化来满足底层控制的需要
+
+熟悉 Go 语言，对分布式系统、微服务、云原生相关技术有一定了解和实践
+熟悉 Envoy, eBPF, Linux 内核相关技术为佳

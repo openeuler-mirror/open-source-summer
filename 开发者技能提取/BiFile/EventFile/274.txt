@@ -1,0 +1,13 @@
+Arm Virtual Hardware是基于云端的虚拟开发平台，为应用程序开发人员提供虚拟的基于 Arm 的 SoC，同时虚拟了内存和外围设备，为敏捷软件开发（包括CI/CD、DevOps和MLOps工作流）提供快速便利的开发和测试环境。
+AliOS Things 是阿里云IoT事业部发布的面向IoT领域的、高可伸缩的物联网操作系统。拥有弹性内核rhino，和丰富的云端一体的IoT组件，以及HaaS Python/JS框架以支持利用Python/JS语言进行开发。目前已被广泛应用于智能音箱、IP摄像头等智能家居、安防等领域。
+
+Github上AliOS Things的仓库，包括能够在Arm Virtual Hardware上运行演示应用所需要的源代码、配置文件和说明文档 本项目的目标是将AliOS Things移植到Arm Virtual Hardware提供的基于Cortex-M55 CPU+Ethos-U NPU的虚拟IoT平台上，并顺利运行以下演示应用：
+1. “Hello World”
+2. 通过MQTT协议连接阿里云
+3. 基于TFLMicro的AI演示程序
+
+有较好的 C++ 功底
+有较好的操作系统理解
+基本的Docker操作
+了解IoT基础结构
+对AI算法，深度学习有一定的了解

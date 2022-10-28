@@ -1,0 +1,10 @@
+背景：
+Airbyte是当前数据整合（Data Integration）领域非常火的一款产品。其开源设置维护了数量庞大的数据源端和目的端的连接器，以方便用户在不同数据源之间同步或传输数据库。我们需要为Airbyte贡献Doris Connector。 
+
+需求： 
+调研Airbyte连接器的开发流程，包括连接器是设计与实现、如何贡献与维护Connector。
+实现Doris的Source和Destination连接器。
+
+1. 实现Doris的Source和Destination连接器。 2. 将连接器贡献给AirByte社区。
+
+对 Java语言熟悉。

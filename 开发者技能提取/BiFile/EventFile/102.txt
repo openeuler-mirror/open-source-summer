@@ -1,0 +1,5 @@
+为 KubeVela 制作面向开发者以及平台级的插件功能，KubeVela 插件（addon）可以将 kubernetes 生态当中丰富的功能集成进 KubeVela 所管理的多集群的环境当中。基于 KubeVela 的 addon 体系，制作 apisix， istio，linkerd，envovy ，dapr 等相关插件，制作用户友好的各种defintion，产出关于多集群环境下服务治理的典型应用场景案例，并撰写最佳实践相关文档和demo。
+
+产出微服务领域场景中三个典型的 KubeVela addon，优化端到端的各项体验，并最终产出一个基于微服务的典型用户故事
+
+1.对开源抱有热情 2.有一定编程基础 3.愿意学习golang语言 4.愿意学习kubernetes 和 KubeVela

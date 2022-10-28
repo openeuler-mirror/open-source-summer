@@ -1,0 +1,5 @@
+在 cpuset 模式下，Kata Containers 的虚拟机 vCPU 目前是共享 CPU 资源的。本项目目标是实现 vCPU 线程和物理CPU的一一绑定，并让虚拟机 cpu 拓扑模拟物理 CPU 拓扑，从而减少在 cpuset 模式下 vCPU 线程之间的干扰。
+
+支持在Host/Guest之间绑定vCPU的Kata Containers
+
+了解虚拟化以及Linux cgroup，尤其是 cpuset

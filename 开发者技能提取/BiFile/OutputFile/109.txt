@@ -1,0 +1,149 @@
+实,O
+现,O
+ ,O
+M,B-Skill
+y,I-Skill
+S,I-Skill
+Q,I-Skill
+L,I-Skill
+ ,O
+到,O
+ ,O
+N,B-Skill
+e,I-Skill
+b,I-Skill
+u,I-Skill
+l,I-Skill
+a,I-Skill
+ ,I-Skill
+G,I-Skill
+r,I-Skill
+a,I-Skill
+p,I-Skill
+h,I-Skill
+ ,O
+的,O
+数,B-Skill
+据,I-Skill
+实,I-Skill
+时,I-Skill
+同,I-Skill
+步,I-Skill
+功,O
+能,O
+，,O
+可,O
+采,O
+用,O
+ ,O
+C,B-Skill
+a,I-Skill
+n,I-Skill
+a,I-Skill
+l,I-Skill
+ ,O
+/,O
+ ,O
+F,B-Skill
+l,I-Skill
+i,I-Skill
+n,I-Skill
+k,I-Skill
+C,I-Skill
+D,I-Skill
+C,I-Skill
+ ,O
+/,O
+ ,O
+D,B-Skill
+e,I-Skill
+b,I-Skill
+e,I-Skill
+z,I-Skill
+i,I-Skill
+u,I-Skill
+m,I-Skill
+/,O
+ ,O
+等,O
+等,O
+数,O
+据,O
+同,O
+步,O
+工,O
+具,O
+实,O
+现,O
+。,O
+/,O
+n,O
+/,O
+n,O
+N,B-Skill
+e,I-Skill
+b,I-Skill
+u,I-Skill
+l,I-Skill
+a,I-Skill
+ ,O
+的,O
+数,B-Skill
+据,I-Skill
+实,I-Skill
+时,I-Skill
+同,I-Skill
+步,I-Skill
+能,O
+力,O
+/,O
+n,O
+/,O
+n,O
+j,B-Skill
+a,I-Skill
+v,I-Skill
+a,I-Skill
+/,O
+n,O
+了,O
+解,O
+ ,B-Skill
+C,B-Skill
+a,I-Skill
+n,I-Skill
+a,I-Skill
+l,I-Skill
+ ,O
+或,O
+ ,B-Skill
+F,B-Skill
+l,I-Skill
+i,I-Skill
+n,I-Skill
+k,I-Skill
+C,I-Skill
+D,I-Skill
+C,I-Skill
+ ,O
+或,O
+ ,B-Skill
+D,B-Skill
+e,I-Skill
+b,I-Skill
+e,I-Skill
+z,I-Skill
+i,I-Skill
+u,I-Skill
+m,I-Skill
+ ,O
+等,O
+等,B-Skill
+数,B-Skill
+据,I-Skill
+同,I-Skill
+步,I-Skill
+工,O
+具,O
+/,O
+n,O

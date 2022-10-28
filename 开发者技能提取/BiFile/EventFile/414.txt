@@ -1,0 +1,15 @@
+拟优化相关功能如下：        
+创建卷时，当需要分配的容量（segment）不足时，阻止新的卷的创建， issue https://github.com/opencurve/curve/issues/1059
+分配卷的容量时，使用的分配相关的容量值与统计工具的容量值需要统一，issue https://github.com/opencurve/curve/issues/1058
+curve块存储运维工具curve_ops_tool显示容量命令需要优化，如显示集群space时，需要按逻辑池去显示， issue https://github.com/opencurve/curve/issues/1055
+其他相关优化
+
+pr的方式提至curve仓库 https://github.com/opencurve/curve/pulls
+简要方案设计，可以以issue的方式提至https://github.com/opencurve/curve/issues
+代码开发，需符合curve遵循的代码规范，补充单元测试，并单元测试覆盖率通过，CI测试通过，并经过curve项目组code review完成合入。
+
+具备以下技术能力：
+熟悉C++软件开发，熟悉gtest等相关单元测试框架，能够完成单元测试等工作。
+熟悉linux上的编译，调试命令，如gcc，gdb等。
+了解curvebs的单机部署，能完成相关的功能测试。
+了解curvebs集群容量管理方式，容量分配策略，集群扩容等相关内容

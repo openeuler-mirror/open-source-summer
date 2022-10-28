@@ -1,0 +1,24 @@
+T1	Skill 0 28	ShardingSphere Parser Engine
+T2	Skill 35 38	SQL
+T3	Skill 44 49	抽象语法树
+T4	Skill 61 74	SQL Statement
+T5	Skill 78 91	Parser Engine
+T6	Skill 98 103	MySQL
+T7	Skill 107 117	PostgreSQL
+T8	Skill 121 130	SQLServer
+T9	Skill 134 143	openGauss
+T10	Skill 148 154	Oracle
+T11	Skill 159 162	数据库
+T12	Skill 173 176	数据库
+T13	Skill 189 202	Parser Engine
+T14	Skill 209 212	SQL
+T15	Skill 555 558	SQL
+T16	Skill 585 611	SQLParserParameterizedTest
+T17	Skill 614 651	UnsupportedSQLParserParameterizedTest
+T18	Skill 776 779	SQL
+T19	Skill 819 822	SQL
+T20	Skill 837 840	SQL
+T21	Skill 847 850	SQL
+T22	Skill 979 983	java
+T23	Skill 990 996	Antlr4
+T24	Skill 1006 1020	PostgreSQL 数据库

@@ -1,0 +1,11 @@
+Sedna是边云协同工具，可以实现跨边云的协同训练和协同推理能力。MindSpore是端边云全场景的国内主流AI计算框架，为全场景AI的模型开发、模型运行、模型部署提供端到端能力。TinyMS是基于晟思MindSpore开发的高阶API工具。但是目前Sedna只支持sklearn的xgboost和Tensorflow、Keras。本项目旨在基于Sedna的lib开发接口，实现Sedna Python SDK对MindSpore和MindSpore 高阶API工具TinyMS 的支持。
+
+实现代码，设计demo，跑通demo，并提交pr
+代码标准符合规定的开源协议和安全编码规范
+成功跑通代码，并通过测试用例
+成功并入kubeedge/sedna
+相关文档：使用文档、用例报告
+
+熟悉Python
+熟悉MindSpore框架或TinyMS，了解sklearn、TensorFlow、Keras其中一种
+有一定的AI开发经验和框架开发经验

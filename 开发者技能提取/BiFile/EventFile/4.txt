@@ -1,0 +1,8 @@
+Kruise Rollouts是一个 Bypass 组件，它为一系列 Kubernetes 工作负载(如deployment和CloneSet)提供了高级部署功能，如金丝雀、流量路由和渐进式发布功能。但是 Rollouts 和工作负载之间是 1v1 的关系，无法记录部署过程中的快照信息，因此我们要实现一个 CRD 来记录每次执行 rollout 的相关信息，比如 Pod IP, Name, 当次部署策略、类型等。
+
+根据设计文档实现 RolloutHistory CRD
+能够实现 RolloutHistory 基本功能，例如记录 rollout 的发布过程中的信息
+Cli命令行展示 rollout 过程可见性
+
+熟悉 kubenetes 基本原理
+了解 Kubernetes Controller 标准扩展原理及其实现

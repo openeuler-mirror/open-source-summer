@@ -1,0 +1,8 @@
+openLooKeng支持sql子查询下推到数据源执行(sub-query pushdow)，利用该能力可以减少openLooKeng与数据源之间的数据传输量，提升sql语句的端到端执行效率。由于openLooKeng与数据源的语法、数据类型表示的差异，高效的生成下推到数据源的子查询语句成为算子下推特性的关键环节，请对openLooKeng算子下推流程进行分析，并做算法、工作流程优化，提高查询执行效率。
+
+1. 项目设计文档
+2. 优化效果测试报告
+
+1. 数据库原理基础
+2. JAVA、SQL编程技术
+3. 开源openLooKeng/presto/trino引擎使用

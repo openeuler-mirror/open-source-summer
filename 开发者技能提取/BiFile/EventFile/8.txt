@@ -1,0 +1,7 @@
+提供Java类型的调度任务，包括Jar和自定义Java代码两种方式，通过WEBUI定义Java运行时所需要的Resources、Libs资源文件和JVM参数，覆盖定时任务调用Java程序场景并提升用户方便配置。
+
+可执行的Java类型任务插件
+Java类型插件支持Jar方式，提供Resources、Libs资源文件和JVM参数的动态参数输入
+Java类型插件支持WebUI自定义Java代码方式，提供Java类即时编译，执行
+
+熟悉Shell、Java、SPI、Java compiler、VUE3、TypeScript

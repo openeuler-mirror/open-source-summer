@@ -1,0 +1,11 @@
+背景：目前 MegEngine 开发时没有没有进行 apple aarch64 macos 操作系统的适配，MegEngine 并没有发布适配 apple aarch64 macos 的安装包。随着 apple aarch64 macos 电脑越来越多，此需求日益剧增。
+
+需求：在 MegEngine 中适配 apple aarch64 macos，完成 MegEngine apple aarch64 macos 安装包发布。
+
+在 apple aarch64 macos 上，产出 MegEngine 的 wheel 安装包。
+L0: MegEngine 在 apple aarch64 macos 上可本地编译通过。
+L1: 包具备分发性，可安装到其他 aarch64+ macbook 上，且能正常运行。
+L2: 安装后能训练一个模型。
+
+编译
+macos

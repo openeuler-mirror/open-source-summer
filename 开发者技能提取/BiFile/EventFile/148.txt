@@ -1,0 +1,17 @@
+为了构建毕昇编译器生态，毕昇编译器已融入openEuler yum源，并持续迁移各个领域的应用，在迁移过程中存在和其他编译器的兼容性问题需要解决。
+
+1、毕昇编译器无法识别的选项类兼容性问题 支持毕昇编译器以下选项的识别，并打印告警提示用户已使用毕昇编译器支持的选项或者忽略该选项。
+A、-ip 选项 选项功能：Enables additional interprocedural optimizations for single-file compilation 说明：该选项不支持，直接屏蔽该选项 告警屏蔽方式：Warning: unsupported option '-ip', ignore it.
+B、-assume byterecl 选项 选项功能：Determines whether units for the OPEN statement RECL specifier (record length) value in unformatted files are in bytes or longwords (four-byte units) 说明：该选项不支持，直接屏蔽该选项 告警屏蔽方式：Warning: unsupported option '-assume byterecl', ignore it.
+C、-fdec 选项 选项功能：Enables extensions and other features that mimic the default behavior of older compilers (such as DEC) 说明：该选项不支持，直接屏蔽该选项 告警屏蔽方式：Warning: unsupported option '-fdec', ignore it.
+D、-convert big_endian/-convert little_endian 选项 选项功能：Generate big-endian/little-endian code 说明：支持同功能选项-mbig-endian/-mlittle-endian，自动使用该选项替换上述选项 告警替换方式（以big-endian为例）：unsupported option '-convert big_endian', use '-mbig-endian' instead.
+要求：实现支持高扩展性，后续如需添加更多屏蔽/替换选项时，可以轻松通过加表项等方式实现。
+2、毕昇编译器目前无法支持的功能类兼容性问题
+A、-print-multi-os-directory 选项 选项说明：Print the path to OS libraries for the selected multilib 参考说明：毕昇编译器已有实现类似选项-print-multi-directory，且GCC支持该选项 https://gcc.gnu.org/onlinedocs/gcc/Developer-Options.html#Developer-Options 要求：实现选项相关功能，正确打印相关路径
+B、部分intrinsic的不完全支持 Intrinsic列表： i) __builtin_longjmp/__builtin_setjmp：不支持长跳转intrinsic ii) __builtin_prefetch：预取intrinsic不支持变量类型的入参 用例： #include <stdbool.h> void prefetchAddress(const void *address, bool forWrite) { if (__builtin_constant_p(forWrite)) { __builtin_prefetch(address, forWrite); } } 错误： error: argument to '__builtin_prefetch' must be a constant integer __builtin_prefetch(address, forWrite); ^ 要求：正确实现支持上述intrinsic功能，保证逻辑正确
+C、-aux-info filename 选项 选项说明：Output to the given filename prototyped declarations for all functions declared and/or defined in a translation unit, including those in header files https://gcc.gnu.org/onlinedocs/gcc/C-Dialect-Options.html#C-Dialect-Options 要求：实现选项相关功能，输出编译单元内函数声明
+3、开发过程可以使用开源llvm 12.0.1版本进行，过程中形成的源码patch等，请上传对应clang/llvm仓库
+
+1、掌握编译器的使用，如GCC、LLVM的使用；
+2、熟悉编译器源码的架构和调试方法；
+3、掌握编程语言C、C++和Fortran

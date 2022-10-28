@@ -1,0 +1,9 @@
+Emacs，距今已经有45年的发展历史的“编辑器”，在这45年内，全世界最顶级的黑客在贡献自己的智慧和想象力，一起构建了Emacs这个伟大的开发者工具生态。Emacs的劣势也是因为它太古老了，导致在多线程和图形扩展能力已经无法跟上时代的步伐。EAF是在保留Emacs古老的黑客文化和庞大的开发者插件生态前提下扩展Emacs的多线程和图形渲染能力，实现Live In Emacs的理想。因此，本项目的目标是基于Vue.js和SMTP，IMAP/POP3，通过EAF将Elisp和JavaScript连接起来，实现一个图形表现力强的邮件客户端。需要同时了解Emacs，Python和Vue.js图形开发的黑客来报名参加。 
+
+基于Vue.js实现图形界面，使用SMTP，IMAP/POP3实现邮件客户端
+在符合Emacs键盘操作习惯的前提下，用键盘收发邮件
+拥有邮件客户端的基本功能，具备发送邮件，读取邮件等功能
+优先确保在Linux和Gnome/KDE能成功运行，时间允许下可以调试Windows/macOS平台
+
+熟练使用Linux和GNU Emacs
+熟悉ELisp或类似Lisp方言

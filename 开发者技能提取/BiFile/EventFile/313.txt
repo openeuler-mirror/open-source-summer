@@ -1,0 +1,7 @@
+当前 Apollo 支持 properties 格式的比对功能，可以比对不同环境、不同集群的两个 Namespace 的差异。通过这种方式用户可以直观的查看配置环境间的差异。但是目前还不支持文本类型的 Namespace 比对能力，例如：yml、xml、json 格式的。所以期望支持其它文件类型格式的比对功能。
+
+1. 对非 properties 格式的 namespace 支持文本比较功能，高亮显示不一致的行
+2. 完善的单元测试
+3. 设计文档和使用文档
+
+熟悉 Java 开发语言、熟悉 Spring Boot 、熟悉Spring Data JPA和MySQL、对微服务体系有一定了解，如RPC、有前端开发经验，如 Html、Angular JS 等

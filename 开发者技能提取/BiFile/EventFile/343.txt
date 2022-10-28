@@ -1,0 +1,10 @@
+cloudpods 是一个多云管理平台，可以管理不同公有云或者私有云上的资源，现在已经支持阿里云、OpenStack、VMware 等平台的纳管。
+
+Proxmox 也是一个常用的虚拟机管理平台，现在需要将 Proxmox 平台的虚拟机等资源对接到 cloudpods 多云管理平台。
+
+实现功能，以 PR 的方式提交代码到 cloudpods upstream 仓库
+1. 将 Proxmox 的虚拟机、网络和存储资源纳管到 cloudpods 平台，实现只读操作；
+2. 实现虚拟机资源的创建、删除操作；
+3. 编写纳管 Proxmox 对接文档。
+
+了解 Go 开发，了解云计算相关概念

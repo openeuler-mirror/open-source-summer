@@ -1,0 +1,15 @@
+Pulsar IO 连接器支持我们轻松创建、部署和管理 Pulsar 与外部系统交互的连接器，比如 Apache Cassandra 、Aerospike 等等。 
+现在，Pulsar 的 MongoDB 连接器还是 Demo 阶段，我们需要一个能跑在生产环境上的 MongoDB 连接器版本。我们需要该连接器支持 Sink 和 Source、全部数据传输和多表数据传输等。
+
+项目验收标准
+理解并使用 Pulsar Connector
+编写该功能的设计文档
+交付本功能的代码实现
+添加单元测试和集成测试
+编写本功能的说明文档
+
+项目技术要求
+了解 Pulsar IO 连接器原理
+熟悉 Java 编程
+熟悉基本的 Git 和 GitHub 操作
+了解 MongoDB 数据库基本原理

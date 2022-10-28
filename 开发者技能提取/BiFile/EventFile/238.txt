@@ -1,0 +1,11 @@
+Vagrant 是一种用于在单个工作流中构建和管理虚拟机环境的工具。凭借易于使用的工作流程和对自动化的关注，Vagrant 缩短了开发环境的设置时间，提高了生产平价性；Vagrant 是为每个人设计的，是创建虚拟化环境的最简单、最快捷的方式！
+vagrant可方便地管理各种类型的虚拟机，包括virtualbox、hyper-v、docker、vmware、kvm。它是vmware/virtualbox/hyperv等虚拟化管理工具的上层集成式管理工具、虚拟机自动化配置工具、虚拟机批量管理工具。支持Windows、MAC以及Linux。
+
+1、引入vagrant，vagrant-libvirt，vagrant-hostmanager，vagrant-lxc
+2、在openEuler上使用rpmbuild工具完成RPM打包
+3、在openEuler Gitee软件仓库中创建vagrant，vagrant-libvirt，vagrant-hostmanager，vagrant-lxc软件仓库，并提交对应Spec文件
+4、可以在openeuler上使用vagrant批量创建虚拟机，覆盖aarch64，x86_64架构
+
+1、熟练使用Linux操作系统
+2、熟悉rpmbuild打包，可以使用obs构建
+3、熟悉虚拟化libvirt，qemu等

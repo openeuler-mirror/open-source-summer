@@ -1,0 +1,127 @@
+让,O
+ ,O
+n,B-Skill
+e,I-Skill
+b,I-Skill
+u,I-Skill
+l,I-Skill
+a,I-Skill
+-,I-Skill
+n,I-Skill
+e,I-Skill
+t,I-Skill
+ ,O
+通,O
+过,O
+ ,O
+.,B-Skill
+N,I-Skill
+E,I-Skill
+T,I-Skill
+ ,O
+的,O
+ ,O
+L,B-Skill
+I,I-Skill
+N,I-Skill
+Q,I-Skill
+ ,O
+语,O
+法,O
+实,O
+现,O
+ ,O
+s,O
+e,O
+l,O
+e,O
+c,O
+t,O
+ ,O
+功,O
+能,O
+，,O
+让,O
+用,O
+户,O
+不,O
+需,O
+要,O
+感,O
+知,O
+熟,O
+悉,O
+ ,O
+n,B-Skill
+G,I-Skill
+Q,I-Skill
+L,I-Skill
+ ,O
+语,O
+法,O
+，,O
+也,O
+可,O
+以,O
+通,O
+过,O
+熟,O
+悉,O
+的,O
+ ,O
+L,O
+I,O
+N,O
+Q,O
+ ,O
+语,O
+法,O
+对,O
+ ,O
+N,B-Skill
+e,I-Skill
+b,I-Skill
+u,I-Skill
+l,I-Skill
+a,I-Skill
+ ,I-Skill
+数,I-Skill
+据,I-Skill
+库,I-Skill
+进,O
+行,O
+查,O
+询,O
+匹,O
+配,O
+。,O
+/,O
+n,O
+/,O
+n,O
+N,B-Skill
+e,I-Skill
+b,I-Skill
+u,I-Skill
+l,I-Skill
+a,I-Skill
+-,I-Skill
+n,I-Skill
+e,I-Skill
+t,I-Skill
+ ,I-Skill
+L,I-Skill
+I,I-Skill
+N,I-Skill
+Q,I-Skill
+ ,O
+支,O
+持,O
+/,O
+n,O
+/,O
+n,O
+.,B-Skill
+N,I-Skill
+E,I-Skill
+T,I-Skill

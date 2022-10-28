@@ -1,0 +1,8 @@
+本项目期望通过收集和展示 Python 的 PVM 指标，包括但不限于 CPU 使用率，内存使用量，线程/协程使用数量，垃圾回收数量等指标，并且配置在 UI 上显示，让 Python 用户能够快速直观了解 Python 应用程序的运行状态。
+
+
+分布式追踪是 SkyWalking 的核心功能之一，当有了这些追踪（Traces），SkyWalking 可以分析出包括 CPM，成功率，错误率，Apdex 等的服务指标。SkyWalking 也支持直接从探针（Agent） 接受指标，所以在本任务里，我们希望 Python Agent 可以支持上报其 Python 虚拟机 (PVM) 指标，包括但不限于 - CPU 使用率 (%)，内存使用量 (MB)，线程/协程数量，垃圾回收（GC）等。
+
+在本任务里，我们希望 Python Agent 可以支持上报其 Python 虚拟机 (PVM) 指标，包括但不限于 - CPU 使用率 (%)，内存使用量 (MB)，线程/协程数量，垃圾回收（GC）等。
+
+较强的自主学习能力，有一定python编程基础

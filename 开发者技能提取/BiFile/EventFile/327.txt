@@ -1,0 +1,8 @@
+openEuler Embedded主要面向嵌入式场景，当前没有基本的嵌入式图形协议栈，因此本项目的目标是依托openEuler社区和其他开源社区打通openEuler Embedded的嵌入式图形协议栈，并在QEMU或者树莓派4B上进行演示，建议图形协议栈的具体组成为（Wayland+QT)
+
+1.openEuler Embedded中集成嵌入式图形协议栈, 建议Wayland+QT的组合
+2.在QEMU或者树莓派4B上进行演示
+
+1.基本熟悉Yocto框架
+2.熟悉嵌入式图新协议栈（Wayland+QT)
+3.熟悉嵌入式Linux开发

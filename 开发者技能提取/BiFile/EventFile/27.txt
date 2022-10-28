@@ -1,0 +1,5 @@
+基于GO语言，实现一套面向openGauss的对象关系映射ORM框架，类似Java里面Hibernete的功能
+
+1、基于Go语言完成openGauss的ORM框架。 2、输出相关的设计和使用样例文档。 3、完善相关的单元测试用例和功能测试用例。
+
+1、了解openGauss的基础功能 2、熟悉Go等常用的编程语言

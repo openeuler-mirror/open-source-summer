@@ -1,0 +1,10 @@
+ARM PMU(Performance Monitor Unit)，性能监测单元，可以收集关于处理器和内存的各种统计信息。在虚拟机内，开启PMU特性，可以有效帮助开发和维护人员分析虚拟机性能，完成系统优化。在vCPU初始化时，开启PMU特性
+将PMU添加到arm fdt/acpi表
+使用StratoVirt PMU特性，可以监视虚拟机性能。
+
+输出特性设计文档
+为 StratoVirt 实现监测虚拟机性能特性(PMU)
+输出特性使用文档，展示性能监测结果
+
+熟悉 Rust 编程语言
+了解操作系统，虚拟化技术

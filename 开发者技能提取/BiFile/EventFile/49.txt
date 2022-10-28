@@ -1,0 +1,9 @@
+Nacos新增规范化的2.0版openAPI接口，并增添相应的文档。
+
+梳理并以新风格规范实现2.0版本的OpenAPI（包含服务发现模块、配置中心模块及核心模块）；
+以新风格规范实现2.0版本新增的以客户端维度进行查询的OpenAPI；
+在Nacos的官方文档中添加新OpenAPI的相应文档；
+
+熟悉Java
+熟悉Spring Boot优先
+熟悉Markdown优先

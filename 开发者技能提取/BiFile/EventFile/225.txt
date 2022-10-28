@@ -1,0 +1,19 @@
+Apache Wayang[1]是一个元处理框架：您可以通过Apache Wayang的API之一指定您的数据处理应用程序，然后Apache Wayang将选择经典处理框架的最佳配置，例如Java Streams或Apache Spark，来运行您的应用程序。最后，Apache Wayang还将执行，从而隐藏不同的特定平台API并协调平台间通信。
+
+这种方法旨在使数据工程师和软件开发人员摆脱了解不同数据处理系统、其API、优缺点的负担；协调和整合不同处理平台的复杂性；以及绑定到固定处理平台集时的灵活性。到目前为止，Apache Wayang已经内置了对以下处理平台的支持：
+
+Java 8 Streams
+Apache Spark
+GraphChi
+Postgres
+SQLite
+
+本主题要求能够完成Spark、Postgres和SQLite的E2 E测试开发，并且您需要能够使用真实的容器环境来完成这些处理平台的自动测试。这一过程要求您对Docker和测试容器[2]以及Github操作有一定的了解，这不是强制性的（讲师将指导您，但仅当您对自动测试感兴趣时）
+
+完成Spark的e2e测试
+
+完成Postgres和SQLite e2e测试
+
+能够与Github Activo集成
+
+这个过程要求您对Docker和测试容器以及Github操作有一定的了解，这不是强制性的（讲师会指导您，但只有当您对自动测试感兴趣时

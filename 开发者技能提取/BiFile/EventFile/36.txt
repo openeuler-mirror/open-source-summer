@@ -1,0 +1,13 @@
+
+OpenPPL 是高性能深度学习推理引擎，而 LSTM、GRU 以及 OneHot 是 NLP/语音领域的经典算子，这些算子在 OpenPPL 中的支持正处于缺失抑或是未经深度优化的状态。
+
+通过添加这些算子，可以帮助熟悉 OpenPPL 的前后端交互逻辑；通过优化这些算子，可以帮助掌握的一些高性能优化技巧，熟悉并掌握 CPU-Bound 和 I/O-Bound 的判别和优化方法，熟悉 X86 SIMD 的特性和使用方法。
+
+你将在本次课题中提供这些算子的实现并进行性能优化，帮助 OpenPPL 打通 NLP 领域的高性能推理
+
+在 OpenPPL 的 X86 Engine 上完成 GRU/LSTM/OneHot 算子的多线程推理支持以及优化，提供 AVX512/FMA 指令集支持，并达成一定的优化目标
+基于 OpenPPL X86 Engine 中现有的 LSTM 实现进行计算优化
+在 OpenPPL X86 Engine 中实现 GRU 并进行计算优化
+在 OpenPPL X86 Engine 中实现 OneHot 并进行计算优化
+
+熟悉 C++ 编程语言，掌握一定的 CPU 架构计算优化方法，掌握一定的多线程编程技术比如 OpenMP，了解深度学习基本原理和 Pytorch 的使用

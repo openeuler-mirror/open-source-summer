@@ -1,0 +1,6 @@
+自动化程序验证（auto-active verification）是一种有前景的形式化验证手段，是构建正确、可靠的系统的基础设施（更多具体概念可以参考学习 Dafny 项目文档）。SimpleCompiler目前支持了一个C99标准的子集的语言，本项目期望在SimpleCompiler的语言上原生支持 require, ensure，invariant等操作，并通过SMT Solver实现自动验证。
+
+在SimpleCompiler的语言上原生支持 require, ensure，invariant等操作，实现以下例子的自动化程序验证： ```c int verify(int n) { require(n >= 0); int x, y; x = n; y = 0; while (x > 0) { invariant(x >= 0); invariant(x + y == n); x = x - 1; y = y + 1; } ensure(y == n); return y; } ```
+
+C/C++
+了解霍尔逻辑（Hoare Logic）与符号执行

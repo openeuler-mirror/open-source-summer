@@ -1,0 +1,10 @@
+Serverless Devs目前拥有可观测、Edit等相关能力，但是都是零散的单页面内容，选择该题目的同学，需要具备已经的Serverless基础，以及Web应用开发基础，通过对Serverless的进一步学习，可以开发Serverless Devs UI，并贡献给社区。
+
+针对已支持的可观测性，EDIT等相关功能进行Serverless UI的整体汇总与设计,针对设计结果，进行相关功能的开发，并贡献到Serverless Devs社区
+完成 Edit 能力的支持
+完成 TraceId 查询能力的支持
+完成UI开发与功能对接
+
+对Serverless有一定的了解，或者愿意学习和了解Serverless架构
+对Node.js，Typescript等语言有所了解，或者具有较强能力可以快速学习Typescript语言
+了解并熟悉对Github等使用方法

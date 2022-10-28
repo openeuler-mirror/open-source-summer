@@ -1,0 +1,8 @@
+OpenID-Connect 是一套基于 OAuth2.0 协议的轻量级规范，OpenID-Connect 允许客户端基于授权服务器或身份提供商（IdP）进行的身份验证来验证最终用户的身份，并获得用户的相关信息。Apache APISIX Dashboard 支持以 OpenID-Connect 协议对接其他身份提供商，例如 Okta，Auth0 等平台，从而实现无需在控制面保存账号密码即可轻松登陆。
+
+向 Apache APISIX Dashboard 提交支持 OpenID-Connect 协议功能的 PR，并在经过代码评审后合并进入主分支。
+向 Apache APISIX Dashboard 提交OpenID-Connect 协议测试的 PR，完成对接其他平台的测试，并在经过代码评审后合并进入主分支。
+向 Apache APISIX Dashboard 提交功能使用文档，并在评审和合并进入主干分支；
+
+建议实现时采用小步快跑的模式，拆分若干个 PR 进行提交（小 PR 更易于评审，且效率更高）；
+向 Apache APISIX Dashboard 提交 PR 时，需要附上完整的测试用例覆盖；

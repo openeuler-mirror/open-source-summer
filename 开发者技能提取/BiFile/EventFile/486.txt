@@ -1,0 +1,10 @@
+在RT-Thread Smart上完成cyclone dds（https://github.com/eclipse-cyclonedds/cyclonedds）移植：以CMake方式进行移植，并可以在vscode + smart插件中进行编译，下载，调试。开发板可基于ART-Pi smart（32位单核），树莓派 4B（64位多核）等硬件开发板。
+
+完成cyclone dds软件包，并移植到RT-Thread Smart的用户态下
+移植cyclone dds的例程，并给出性能测试指标
+提交cyclone dds软件包代码到RT-Thread的软件包中
+给出基本的文档，覆盖cyclone dds的基本结构及一些主要场景的流程序列图
+
+熟悉C语言，熟悉TCP/IP网络
+熟悉git操作
+熟悉操作系统

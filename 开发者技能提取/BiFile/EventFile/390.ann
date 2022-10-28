@@ -1,0 +1,13 @@
+T1	Skill 3 8	IoTDB
+T2	Skill 96 107	Transformer
+T3	Skill 120 131	Transformer
+T4	Skill 164 175	Transformer
+T5	Skill 531 536	IoTDB
+T6	Skill 585 591	MPP 框架
+T7	Skill 593 610	TransformOperator
+T8	Skill 613 625	ScanOperator
+T9	Skill 628 642	FilterOperator
+T10	Skill 662 667	Flink
+T11	Skill 670 676	Presto
+T12	Skill 876 880	Java
+T13	Skill 896 900	Java

@@ -1,0 +1,5 @@
+SWCK是基于 Kubebuilder 开发的 Operator，部署在 Kubernetes 环境中，为用户提供自定义资源（CRD）以及管理资源的控制器（Controller），用户可以基于该平台使用、升级和维护 SkyWalking 相关组件。BanyanDB 是为 SkyWalking 设计的云原生数据库，该项目需要在 SWCK 中为 BanyanDB 设计 CRD 以及 Controller 模块。
+
+在SWCK中添加BanyanDB的CRD以及Controller
+
+较强的自主学习能力，有一定编程基础，愿意学习kubernetes和Go语言

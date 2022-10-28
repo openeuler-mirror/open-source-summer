@@ -1,0 +1,8 @@
+目前 OpenMLDB 尚未支持 Go SDK。随着 Go 使用群体的快速增长，提供一个 Go SDK 将会是一件非常有价值的事情。在这个项目里，你将会参照 OpenMLDB 现有的 Java SDK，高优实现其中的核心 API。
+
+参照 Java SDK 和 Go SQL 标准接口，实现所需要的核心功能，至少实现如下接口： Open, ExecContext, QueryContext, QueryRowContext
+整理相关文档，附上使用说明和样例
+添加接口的 UT 测试
+
+熟悉 OpenMLDB SDK 所需要的基础操作
+熟练掌握 Go，可以高质量独立开发 Go SDK

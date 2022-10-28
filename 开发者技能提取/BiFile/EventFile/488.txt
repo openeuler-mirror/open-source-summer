@@ -1,0 +1,19 @@
+为 EMQX Rule Engine 的 SQL 语法添加 Map/Reduce 语法。
+ 
+1. 设计 Map/Reduce 语法，提交实现建议到 EIP审核。
+2. 编码实现，合并到 https://github.com/emqx/rulesql
+3. 完成此功能的文档编写
+
+交付设计文档
+完成设计文档，提交到 emqx/eip 并通过审核
+设计文档规范工整
+完成代码实现
+完成编码并提交到 emqx/rulesql 项目
+代码实现简单整洁
+交付功能文档
+完成功能文档并提交到 emqx/emqx-docs 项目
+功能文档详细明了
+
+能撰写规范的文档，保持代码整洁
+使用过多种编程语言，并对语法设计有自己的见解
+熟悉 Erlang 编程语言

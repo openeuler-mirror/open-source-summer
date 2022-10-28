@@ -1,0 +1,10 @@
+Multi-Gen LRU 是关于内存回收策略优化一个特性，根据谷歌测试，借助MGLRU，kswapd CPU使用率降低了40%，在75%内存占用时减少了85%的后台误杀情况，在50%的内存占用时降低了18%的渲染延迟，该特性目前已合入linux-next分支，现需要将该特性回合到openEuler中，通过该项目可以对linux内存回收机制有进一步的理解。
+
+1、将linux社区Multi-Gen特性合入到openEuler5.10内核
+2、相关的bugfix合入到openEuler5.10
+3、使用压测工具（如fio，stress）构造内存压力，测试Multi-Gen LRU在kswap cpu使用率方面的优化情况
+
+1、熟悉linux内核内存管理
+2、熟悉git的基本操作
+3、熟悉linux内核开发
+4、熟悉linux代码规范

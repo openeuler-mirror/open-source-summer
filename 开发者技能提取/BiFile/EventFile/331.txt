@@ -1,0 +1,28 @@
+背景 
+ShardingSphere Parser Engine 帮助用户将 SQL 语句解析为抽象语法树，并从语法树生成对应的 SQL Statement 对象。更多关于 Parser Engine 的介绍请参考：https://shardingsphere.apache.org/document/current/en/reference/sharding/parse/。 
+
+任务 
+具体任务列表如下： 
+ ALTER INDEXTYPE doc 
+ ALTER INMEMORY JOIN GROUP doc 
+ ALTER JAVA doc 
+ ALTER LIBRARY doc 
+ ALTER LOCKDOWN PROFILE doc 
+ ALTER MATERIALIZED VIEW doc 
+ ALTER MATERIALIZED VIEW LOG doc 
+ ALTER MATERIALIZED ZONEMAP doc 
+ ALTER OPERATOR doc 
+ ALTER OUTLINE doc 
+ ALTER PACKAGE doc 
+ ALTER PLUGGABLE DATABASE doc 
+你可以从这里获得更多关于语法解析的参考。为了完成这个任务，你首先需要了解它为什么不支持？是因为 antlr4 语法解析异常，还是因为没有实现 visit 函数？你可以使用 antlr4 插件 去帮助你分析，你可能需要访问官方文档来检查语法。 
+修复问题之后，记得添加 SQL 测试用例，并且把解析期望的结果写入 期望的 XML； 
+运行 SQLParserParameterizedTest 和 UnsupportedSQLParserParameterizedTest 确保没有异常； 
+此外，你可以参考一些示例，来辅助完成这个任务： 
+Add Oracle SQL - CREATE DATABASE LINK 
+Add Oracle SQL-DROP DATABASE LINK 
+完成 SQL 解析优化之后，你需要测试在 ShardingSphere 读写分离场景下，该 SQL 是否能够正常执行，并且根据 SQL 的语句，将 SQL 路由至写库或读库。完成读写分离功能的测试后，需要在 ShardingSphere 集成测试 shardingsphere-integration-test 中添加对应场景的测试用例，更多关于集成测试的信息，可以参考：https://shardingsphere.apache.org/document/current/cn/reference/test/integration-test/。
+
+能够对自己的代码进行测试，保证提交代码的正确性
+
+1. 精通 java；2. 理解 Antlr4 语法；3. 熟悉 Oracle 数据库

@@ -1,0 +1,9 @@
+Dubbo 拥有多种治理规则，如基于标签路由等，这些规则都是基于 Dubbo Admin 中心化进行管控。目前 Dubbo Admin 需要独立部署一个中心化的集群作为服务端，同时对配置中心等进行连接。
+本题目希望将 Dubbo Admin 的 API 迁移到 Dubbo QoS 中，将 Dubbo Admin 变成一个静态的资源部署，以此来达到不需要部署 Dubbo Admin 的后端程序即可对集群进行管控的目的。
+
+Dubbo QoS 支持暴露集群管控 API
+Dubbo Admin 网页支持连接到任意一台 Dubbo QoS 服务端进行管控
+
+熟练使用 Java 语言
+熟练使用 Vue
+了解 Dubbo 基础原理

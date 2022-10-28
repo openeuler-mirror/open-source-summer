@@ -1,0 +1,9 @@
+Apache Iceberg是一种开放的表格格式，专为巨大的PB级表格而设计，是目前市面上流行的三大开源数据湖方案之一。当前，openLooKeng还没有支持Iceberg,因此需要开发Iceberg connector。
+
+1. Iceberg connector设计文档
+2. Iceberg connector代码与相关测试用例
+3. 性能测试结果
+
+1. SQL、Java编程
+2. openLooKeng connector原理与设计
+3. 了解iceberg使用与设计

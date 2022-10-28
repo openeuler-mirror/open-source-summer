@@ -1,0 +1,7 @@
+CernVM-FS 是欧洲核子中心研发的基于 HTTP 的只读文件系统，它优秀的缓存性能令它成为软件分发的优秀载体，被大科学仪器如江门中微子实验等采用。CernVM-FS 的官方创建了 Debian 软件包，但是不符合 Debian 社区的官方标准。你的任务是制作符合 Debian 官方标准的 CernVM-FS 软件包，包括服务端和客户端，方便在 Debian 系统上快速部署科学软件。
+
+完成符合 Debian 要求的 CernVM-FS 包，并被 Debian 官方采纳。
+
+有一年以上 Debian 使用经验；
+熟练使用 Git；
+了解 Debian 包管理器原理。

@@ -1,0 +1,31 @@
+针对SpinalHDL库中现有Stream相关的基础模块验证主要采用仿真验证带来的测试状态空间覆盖不明确问题，针对性增加相应的形式化验证代码提高其生成硬件设计的稳定性。
+
+【产出标准】：
+
+1、实现Stream类型通用形式化验证函数；
+
+2、实现StreamFifo、StreamFifoCC类型模块形式化验证案例（需本项目开发的通用形式化验证函数）；
+
+3、实现StreamFork、StreamJoin类型模块形式化验证案例（需本项目开发的通用形式化验证函数）；
+
+4、实现StreamArbiter、StreamMux、StreamDeMux、StreamDispatcherSequential类形式化验证案例（需本项目开发的通用形式化验证函数）；
+
+合格标准：上述验证案例均需通过cover, bmc, prove三类验证。
+
+
+【技术要求】：
+
+1、具有同步数字逻辑设计思想，完成过VerilogHDL设计者优先；
+
+2、具有面向对象程序设计思想，使用过一门面向对象程序设计语言；
+
+3、使用过git进行版本管理；
+
+4、具有一定的英语阅读和交流能力；
+
+5、具有较好的自学能力和自我管理能力；
+
+SpinalHDL
+Formal Verification
+Scala
+Verilog

@@ -1,0 +1,10 @@
+为了构建完善的基于openEuler的ROS软件生态，需要将以ROS为载体的部分VIO算法迁移至openEuler。VIO算法作为当前自动驾驶/AI领域关键的模块之一，能在openEuler的ROS上运行起来有着重要意义。当前应用广泛的开源VO/VIO算法有很多，开源的SVO/DSO/ORB/VINS等均用C++实现，可以作为很好的入门软件进行学习。还可以作为一个入口，扩展更多的相关软件包进入基于openEuler的ROS软件生态
+
+1、选取的VIO算法软件包以rpm包形式提交到src-openeuler对应仓库（由sig-ROS创建）；
+2、自动化脚本执行VIO算法测试数据集，并输出数据集执行结果，脚本同步上传src-openeuler对应仓库；
+3、《基于openEuler的VIO软件移植指南》、《基于openEuler的VIO软件测试报告》，报告覆盖ROS安装与基础功能测试、规范性自检、功能性测试、测试结果，以word形式存放到代码仓库的doc目录。
+
+1.熟悉ROS，可以进行基本的ROS软件开发；
+2.了解VO/VIO/VSLAM算法；
+3.熟悉C++编程语言，熟悉CMake;
+4.熟悉linux

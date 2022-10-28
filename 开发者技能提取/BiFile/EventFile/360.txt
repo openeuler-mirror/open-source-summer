@@ -1,0 +1,7 @@
+openEuler Embedded主要面向嵌入式场景，嵌入式场景对性能、底噪等要求苛刻，因此对语言的要求很高，当前的主流编译型编程语言为C/C++。Rust作为一门新兴的系统级编程语言，主打安全、性能，效率，是C/C++的强有力挑战者。因此，本项目的目标是依托开源社区在openEuler Embedded引入Rust编译器支持，并在QEMU或者树莓派上演示使用Rust编写的用户态程序。
+
+1.在 openEuler Embedded 上引入Rust编译器支持。
+2.编写、编译一个Rust程序，并在 openEuler Embedded QEMU/树莓派上演示。
+
+熟悉YOCTO框架
+基本熟悉Rust语言

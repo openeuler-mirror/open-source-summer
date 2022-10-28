@@ -1,0 +1,16 @@
+Serverless Devs作为Serverless领域的专业开发者工具，致力于在Serverless应用全生命周期发挥作用，随着时间的发展，一方面，Serverless Devs已经可以支持诸多厂商的FaaS产品，但是对于BaaS产品的支持比较薄弱；另一方面，Serverless Devs 应该对生态集成有更为深入的探索，例如资源创建和管理相关操作要交给Terraform等。所以本题目要求同学：
+学习和了解Serverless，Serverless Devs相关知识，并完成阿里云API网关、CDN、OSS等组件的设计和开发;
+参与调研和设计Serverless Devs与Terraform结合点，并开发出Serverless Devs Terraform组件；
+
+Serverless Devs BaaS 组件开发
+开发完成API网关组件，贡献到社区
+开发完成OSS网关组件，贡献到社区
+开发完成CDN网关组件，贡献到社区
+输出3篇关于API网关组件、CDN组件以及OSS组件的文章，进行社区布道
+Serverless Devs Terrafrom组件开发
+产出 Serverless devs 与 Terraform结合具体方案
+针对产出方案，并涉及相关组件和功能，贡献到社区
+
+对Serverless有一定的了解，或者愿意学习和了解Serverless架构
+对Node.js，Typescript等语言有所了解，或者具有较强能力可以快速学习Typescript语言
+了解并熟悉对Github等使用方法

@@ -1,0 +1,58 @@
+MNN是淘系技术自研的全平台轻量级高性能深度学习引擎。目前MNN Model Hub已带有一定数量的模型（https://market.mnn.zone/s/#/modelmarket/list/）。
+此项目希望参与的同学阅读CV、NLP、ASR等SOTA论文，将其中模型转为MNN格式并贡献至MNN开源社区
+
+开源之夏MNN项目选题论文、完成要求与申报提示：
+
+类别1. 分类、分割、语言、视频类经典或最新模型
+论文参考：
+（1）MobileNet   v3；分类模型mobilenet的结构优化，用于上手练习。
+（2）<Training   Deep Networks for Facial Expression Recognition with Crowd-Sourced Label   Distribution>；情绪识别。
+（3）mobileNext   <Rethinking Bottleneck Structure for Efficient Mobile Network   Design>；分类模型结构优化。
+（4）bert-squad   <BERT: Pre-training of Deep Bidirectional Transformers for Language   Understanding>；语义理解模型。
+（5）ALBERT   V1<ALBERT: A Lite BERT for Self-supervised Learning of Language   Representations>；语义理解模型。
+（6）ALBERT   V2；语义理解模型。
+（7）<Masked   Autoencoders Are Scalable Vision Learners>；CV自监督学习方法。
+（8）ConvNext   <A ConvNet for the 2020s>；卷积网络在视频领域从被transformer超过到反超。
+（9）GPT-2,   https://openai.com/blog/better-language-models/；语义大模型 gpt-2比gpt-3小,可在PC   GPU或高端手机运行, 参考onnx   https://github.com/onnx/models/tree/main/text/machine_comprehension/gpt-2。
+（10）<SparseTT:   Visual Tracking with Sparse Transformers>；视觉追踪。
+必选任务：复现论文转化为MNN模型,提交社区
+进阶任务：典型输入，在自己机器或手机上得到推理耗时、功能指标
+高阶任务：修改代码，更新模型，加速推理
+
+类别2. 神经渲染，三维重建，部分需要写代码复现
+论文参考：
+（1）<NeRF:   Representing Scenes as Neural Radiance Fields for View   Synthesis>；开创性方法，复杂场景神经渲染合成指定视图。
+（2）<MINE:   Towards Continuous Depth MPI with NeRF for Novel View   Synthesis>；基于nerf，单张图片重建。
+（3）<Mip-NeRF   360: Unbounded Anti-Aliased Neural Radiance Fields>；360度全景图 神经渲染三维重建。
+（4）<Ref-NeRF:   Structured View-Dependent Appearance for Neural Radiance   Fields>；提升真实性的神经渲染。
+（5）<Block-NeRF:   Scalable Large Scene Neural View Synthesis>；大场景神经渲染。
+必选任务：复现论文转化为MNN模型,提交社区
+进阶任务：典型输入，在自己机器或手机上得到推理耗时、功能指标
+高阶任务：修改代码，更新模型，加速推理
+
+类别3. 点云，场景
+论文参考：
+（1）RepSurf-U   <Surface Representation for Point Clouds>；从三维点云重建表面的模型，极轻量。  
+（2）PointMLP   <Rethinking Network Design and Local Geometry in Point Cloud: A Simple   Residual MLP Framework>；从三维点云重建表面的模型，极轻量。
+（3）<READ:   Large-Scale Neural Scene Rendering for Autonomous Driving>；大场景合成，用于自动驾驶仿真。
+必选任务：复现论文转化为MNN模型,提交社区
+进阶任务：典型输入，在自己机器或手机上得到推理耗时、功能指标
+高阶任务：修改代码，更新模型，加速推理
+
+类别4. 难度高,分值大, 20选1即可! GPU推理加速。
+（1）AStitch: Enabling a New Multi-Dimensional Optimization Space for Memory-Intensive ML Training and Inference on Modern SIMT Architectures；优化算子间的数据通信,优化加速推理；
+必选任务：原文在tf上实现,复现其结果。
+进阶任务：典型输入，在自己GPU或手机上得到推理耗时、功能指标
+高阶任务：在 tvm或mnn开源代码上实现此方案
+（2）Design Principles for Sparse Matrix Multiplication on the GPU；设计GPU的稠密与稀疏矩阵乘法,加速推理；
+必选任务：复现其结果。
+进阶任务：典型输入，在自己GPU或手机上得到推理耗时、功能指标
+高阶任务：在 tvm或mnn开源代码上实现此方案
+
+添加CV、NLP、ASR等领域SOTA MNN模型（10+）
+贡献至MNN Github开源社区
+产出技术文档
+
+熟悉Python语言
+对深度学习引擎有兴趣
+（可选）对MNN推理引擎有使用经验

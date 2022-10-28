@@ -1,0 +1,21 @@
+背景：
+ShardingSphere 现有的未支持的 SQL Parser 测试引擎是 `org.apache.shardingsphere.test.sql.parser.parameterized.engine.UnsupportedSQLParserParameterizedTest`，测试用例在：`src/main/resources/sql/unsupported/unsupported.xml`。
+
+我们需要创建一个全新的动态测试引擎，名称暂定 `DynamicLoadingSQLParserParameterizedTest`。
+它可以动态的从 MySQL[1] 和 PostgreSQL[2] 中读取测试用例并断言兼容性。
+
+实现步骤：
+1. 从 MySQL 和 PostgreSQL 的官方 GitHub repo 中读取测试用例；
+2. 创建用于 @Parameterized 测试的数组；
+3. 运行 `SQLParserEngine.parse()` 去尝试解析 SQL；
+4. 断言解析结果；
+5. 捕获不支持的 SQL 异常；
+6. 记录并打印异常计数和信息；最终目标是没有异常，但现阶段还达不到，请不要直接断言解析错误，导致 `mvn install` 失败；
+7. 请定义测试引擎为整合测试（IT），并且只在 GitHub Action 运行，单元测试的常规 `mvn install` 请不要依赖网络环境。
+
+符合 ShardingSphere 代码规范，且达到以下要求：
+1. 自动化加载全量的 MySQL 和 PostgreSQL 测试集，并且可以在30分钟之内运行完成；
+2. 自动通过 GitHub Action 运行，每天晚上定期运行一次；
+3. 不兼容 SQL 报表。
+
+熟悉 Java 和 Junit

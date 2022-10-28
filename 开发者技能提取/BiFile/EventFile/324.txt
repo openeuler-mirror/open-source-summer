@@ -1,0 +1,15 @@
+本项目包含工作内容：
+
+扩展DeepRec对模型格式类型的支持，当前DeepRec支持导出模型为checkpoint，但不同用户存在着若干其他格式的需求，比如导出为LevelDB、Redis、RocksDB可以加载的格式，此外支持可查看Variable参数的工具，包括查看EmbeddingVariable的某个特征值的查找。
+
+支持导出LevelDB可加载文件， 完成LevelDB可以加载的导出格式 完成用户使用文档
+支持导出Redis可加载文件，完成Redis可以加载的导出格式 完成用户使用文档
+支持导出RocksDB可加载文件，完成RocksDB可以加载的导出格式 完成用户使用文档
+完成文件查看工具，可查看Variable/EmbeddingVariable值，及具备基础的查看、搜索功能
+项目技术要求
+
+熟练掌握C++
+熟练掌握Python
+能够在导师的指导下熟悉并理解DeepRec相关的代码并完成开发
+对搜索、推荐、广告领域有兴趣
+对深度学习稀疏模型训练/预测引擎有兴趣

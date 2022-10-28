@@ -1,0 +1,5 @@
+基于JavaScript语言,使开源工具PDManer适配openGauss
+
+1、参照PDManer适配openGauss数据库,包括设计、类型、生成java代码等。 2、代码改动尽量集中，满足社区编码规范，提供单元测试用例。 3、代码改动需合入PDManer项目(无法推动可以拉分支到openGauss社区)。 4、提供设计文档（包含修改说明）和测试文档。
+
+1、了解PowerDesigner或类似软件的使用 2、了解openGauss数据库的常用SQL语法及类型 3、熟悉javascript和java编程语言,了解ORM框架。

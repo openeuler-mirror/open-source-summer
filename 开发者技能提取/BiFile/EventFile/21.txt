@@ -1,0 +1,20 @@
+Embedding功能完善包含三个子工作：
+
+1. DeepRec EmbeddingVariable算子并行性能优化
+EmbeddingVariable（EV）是DeepRec中提供的保存稀疏特征embedding数据的Variable，在训练的前向过程中通过查询EV中hash table获取对应特征的embedding数据，反向过程则会更新EV中的数据。目前为了加速前后向的过程，使用了Shard并行的方式进行加速。但是目前在使用Shard时传入的cost是一个静态的值，这导致并行效率并不高，我们需要通过优化cost来提高并行效率。通过这个项目，你可以熟悉推荐场景中的各种模型，了解推荐场景中前沿的技术以及学习工业界的深度学习引擎的设计与开发思路。
+
+2. DeepRec 支持通过feature_column API使用multi-hash功能
+为了减少推荐模型中稀疏部分的大小，multi-hash是一种常用的方法。目前DeepRec中支持通过底层API get_multihash_variable接口使用multi-hash功能，但是不支持通过feature_column使用。为了完善整体的功能性，我们需要支持通过feature_column接口使用multi-hash功能。在这个项目中你会了解到推荐场景中前沿的技术、学习工业界的深度学习引擎的设计与开发思路。
+
+3. DeepRec 动态维度embedding功能优化
+DeepRec支持了动态维度的embedding功能，但是目前这个功能目前还需要进一步优化，一方面这个功能需要用户通过构造Variable来记录频次，这在特征数目经常变动的推荐场景中给用户带来了使用困难；另一方面，目前的实现中更高的特征维度会带来更高的查询开销，会影响整体的性能。我们需要你从易用性和性能两方面进行优化。在这个项目中，在这个项目中你会了解到推荐场景中前沿的技术、学习工业界的深度学习引擎的设计与开发思路。
+
+优化后的KvResourceGatherOp 优化后的多个ApplyOp
+支持通过feature_column API使用multi-hash功能 相关功能的unit test
+优化后的动态维度embedding功能 相关功能的unit test
+
+熟练掌握C++
+熟练掌握Python
+能够在导师的指导下熟悉并理解DeepRec相关的代码并完成开发
+对搜索、推荐、广告领域有兴趣
+对深度学习稀疏模型训练/预测引擎有兴趣

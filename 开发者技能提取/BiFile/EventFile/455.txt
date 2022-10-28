@@ -1,0 +1,10 @@
+MNN是淘系技术自研的全平台轻量级高性能深度学习引擎。它已支持TF、Torchscript、ONNX、TFLite、Caffe等模型格式。本项目希望将MNN模型格式与TVM IR打通互转，从而支持MNN模型可被TVM进一步优化；对于动态形状的模型，由MNN经过resize步骤后转至TVM，进一步编译优化
+
+完成MNN - TVM IR互转
+贡献至MNN Github 开源社区
+产出技术文档
+
+熟悉C++、Python语言
+了解TVM
+对深度学习引擎、高性能计算有兴趣
+（可选）对MNN推理引擎有使用经验

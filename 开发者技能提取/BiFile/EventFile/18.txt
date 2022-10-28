@@ -1,0 +1,19 @@
+MindSpore拥有多种常用创建Tensor的方法，但还不够完善，现需要补齐创建Tensor的方法 10+。
+参考：torch.from_numpy
+torch.bernoulli
+torch.multinomial
+torch.poisson
+torch.rand_like
+torch.randint_like
+torch.randn_like
+torch.sparse_coo_tensor
+torch.as_tensor
+torch.as_strided
+torch.frombuffer
+torch.empty_strided
+torch.randperm
+基于MindSpore实现上述方法
+
+1.补齐10+MindSpore 创建Tensor的方法 2. 相关能力对标标杆、接口设计符合社区规范 3.实现相关功能，相关评估指标符合要求，代码合入社区
+
+深度学习，python，MindSpore

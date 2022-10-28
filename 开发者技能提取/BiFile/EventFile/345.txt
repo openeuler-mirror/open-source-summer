@@ -1,0 +1,20 @@
+Gazelle缺少示例程序，既可作为编程使用用例给开发者参考，又可作为功能测试工具。示例需要覆盖各种网络编程模型以及各种posix网络接口。由于很多开发环境没有多余网卡给Gazelle使用，所以希望利用dpdk的ring PMD设备实现收发环回，在大部分环境都可以实现示例使用测试。
+
+1、支持TCP、unix非阻塞通讯；
+2、支持多线程网络IO复用模型，线程之间相互独立。TCP的listen、epoll、read、write、connect等接口都在同一线程内。connect连接数可配；
+3、支持多线程网络非对称模型，一个listen线程，若干个读写线程。listen线程和读写线程使用poll/epoll监听事件;
+4、支持recvmsg、sendmsg、recv、send、getpeername、getsockopt、epoll_ctl等posix接口;
+5、网络通讯报文采用问答方式，丢包或者内容错误则报错并停止通讯。报文内容有变化，长度可配；
+6、支持dpdk的ring PMD设备实现收发环回，也可配置成使用网卡通讯（可选要求）
+7、使用参数控制网络模型，posix接口，是否收发环回，作为服务端还是客户端等
+8、开源标准TCP benchmark测试报告
+
+1、支持TCP、unix非阻塞通讯；
+2、支持多线程网络IO复用模型，线程之间相互独立。TCP的listen、epoll、read、write、connect等接口都在同一线程内。connect连接数可配；
+3、支持多线程网络非对称模型，一个listen线程，若干个读写线程。listen线程和读写线程使用poll/epoll监听事件;
+4、支持recvmsg、sendmsg、recv、send、getpeername、getsockopt、epoll_ctl等posix接口;
+5、网络通讯报文采用问答方式，丢包或者内容错误则报错并停止通讯。报文内容有变化，长度可配；
+6、支持dpdk的ring PMD设备实现收发环回，也可配置成使用网卡通讯（可选要求）
+7、使用参数控制网络模型，posix接口，是否收发环回，作为服务端还是客户端等
+8、开源标准TCP benchmark测试报告
+项目技术要求

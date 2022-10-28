@@ -1,0 +1,17 @@
+OpenFunction 是一个云原生的开源函数即服务（FaaS，Functions-as-a-Service）平台，旨在让用户专注于他们的业务逻辑，而不必担心底层运行环境和基础设施。用户只需要以函数的形式提交业务相关的源代码，即可将服务按需运行在集群中。
+
+OpenFunction 0.6.0 的发布带来了许多值得关注的功能，包括函数插件、函数的分布式跟踪、控制自动缩放、HTTP 函数触发异步函数等。同时，异步运行时定义也被重构了。核心 API 也已经从 v1alpha1 升级到 v1beta1。
+
+0.6.0 版本中有两个重要的功能是基于函数框架的支撑来完成的，它们分别是：
+函数插件：在 OpenFunction 的函数 CRD 中，允许用户定义在主体（Main）函数运行前/后执行的插件（Plugin）函数，并在函数运行时依靠函数框架保障插件的运行及其运行关系。您可以参见此案例中的插件定义来初步了解。
+函数可观测：第二项重要的功能是使用 SkyWalking 为 OpenFunction 提供可观测能力。类似的，这些功能也需要函数框架的支持来使得 SkyWalking 可以正确的构建函数关系和追踪链路。
+目前 OpenFunction Go Function Framework 是完整支持上述两项功能的，我们期望在本项目中使得 Node.js Function Framework 也具备这两项能力。所以，本项目的目标：升级现有的 OpenFunction Node.js Function Framework（函数框架），使之对齐 OpenFunction 0.6.0 两大主体功能 —— 函数插件和可观测能力。
+
+为 Node.js Function Framework 新增函数插件和可观测能力支持
+为新增功能编写对应的测试用例、样例函数和使用说明
+产出您关于 OpenFunction、Node.js Functions Framework 的认知与理解
+
+Node.js
+Kubernetes
+OpenFunction
+Cloud Native Buildpacks

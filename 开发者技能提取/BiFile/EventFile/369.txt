@@ -1,0 +1,9 @@
+当前Nacos-CoreDNS模块只支持以短连接方式访问Nacos服务端，本题目致力于让该模块支持以gRPC连接Nacos服务端。
+
+设计出Nacos CoreDNS模块支持gRPC的方案，输出详细设计文档；
+根据设计文档，对Nacos CoreDNS模块进行开发；
+提供新Nacos CoreDNS模块的使用示例和文档。
+
+熟悉Golang
+熟悉Nacos优先
+熟悉CoreDNS优先

@@ -1,0 +1,203 @@
+本,O
+项,O
+目,O
+期,O
+望,O
+通,O
+过,O
+ ,O
+T,B-Skill
+e,I-Skill
+l,I-Skill
+e,I-Skill
+g,I-Skill
+r,I-Skill
+a,I-Skill
+f,I-Skill
+ ,O
+收,O
+集,O
+系,O
+统,O
+的,O
+指,O
+标,O
+，,O
+比,O
+如,O
+ ,O
+C,O
+P,O
+U,O
+ ,O
+使,O
+用,O
+率,O
+、,O
+内,O
+存,O
+使,O
+用,O
+率,O
+和,O
+系,O
+统,O
+负,O
+载,O
+，,O
+上,O
+报,O
+数,O
+据,O
+到,O
+ ,O
+S,B-Skill
+k,I-Skill
+y,I-Skill
+W,I-Skill
+a,I-Skill
+l,I-Skill
+k,I-Skill
+i,I-Skill
+n,I-Skill
+g,I-Skill
+ ,I-Skill
+O,I-Skill
+A,I-Skill
+P,I-Skill
+，,O
+并,O
+且,O
+配,O
+置,O
+在,O
+ ,O
+U,B-Skill
+I,I-Skill
+ ,O
+中,O
+展,O
+示,O
+。,O
+通,O
+过,O
+该,O
+项,O
+目,O
+你,O
+能,O
+够,O
+深,O
+入,O
+了,O
+解,O
+ ,O
+S,B-Skill
+k,I-Skill
+y,I-Skill
+W,I-Skill
+a,I-Skill
+l,I-Skill
+k,I-Skill
+i,I-Skill
+n,I-Skill
+g,I-Skill
+ ,O
+的,O
+ ,O
+R,O
+e,O
+c,O
+e,O
+i,O
+v,O
+e,O
+r,O
+ ,O
+插,O
+件,O
+开,O
+发,O
+。,O
+/,O
+n,O
+/,O
+n,O
+在,O
+ ,O
+A,B-Skill
+p,I-Skill
+a,I-Skill
+c,I-Skill
+h,I-Skill
+e,I-Skill
+ ,I-Skill
+S,I-Skill
+k,I-Skill
+y,I-Skill
+W,I-Skill
+a,I-Skill
+l,I-Skill
+k,I-Skill
+i,I-Skill
+n,I-Skill
+g,I-Skill
+ ,O
+中,O
+实,O
+现,O
+ ,O
+T,B-Skill
+e,I-Skill
+l,I-Skill
+e,I-Skill
+g,I-Skill
+r,I-Skill
+a,I-Skill
+f,I-Skill
+ ,I-Skill
+r,I-Skill
+e,I-Skill
+c,I-Skill
+e,I-Skill
+i,I-Skill
+v,I-Skill
+e,I-Skill
+r,I-Skill
+ ,O
+插,O
+件,O
+/,O
+n,O
+/,O
+n,O
+较,O
+强,O
+的,O
+自,O
+主,O
+学,O
+习,O
+能,O
+力,O
+，,O
+有,O
+一,O
+定,O
+编,O
+程,O
+基,O
+础,O
+，,O
+愿,O
+意,O
+学,O
+习,O
+ ,O
+J,B-Skill
+a,I-Skill
+v,I-Skill
+a,I-Skill
+ ,O
+语,O
+言,O

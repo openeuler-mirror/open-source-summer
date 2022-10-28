@@ -1,0 +1,7 @@
+Kustomize 自带的 resource generator 可以非常方便地帮助用户生成资源的 yaml 文件，比如 configMap, secret 等。OpenKruise 中的 ResourceDistribution 组件能够帮助用户分发、管理 configMap、secret 资源，但是 ResourceDistribution 的 yaml 文件编写与维护很不方便，所以需要实现具备类似 kustomize generator 功能的 plugin。
+
+实现 ResourceDistribution generator 的功能
+
+熟悉 kubenetes 基本原理
+了解 kustomize 使用及 plugin 扩展
+了解 kubectl plugin 开发

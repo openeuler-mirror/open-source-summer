@@ -1,0 +1,9 @@
+LMP 项目面向 eBPF 初学者和爱好者，现已成为 eBPF 想象力孵化池，其中子项目 eBPF_Visualization 目标是提供一个易用的轻量级的 eBPF 程序管理系统，专注于 eBPF 数据存储和可视化及 BPF 程序管理编排。其功能包括：eBPF程序管理、eBPF 程序所采集数据管理和可视化等。
+本题目要求对系统的前端页面进行视觉与交互优化，并优化 eBPF 程序采集数据的展示效果。
+
+重构网站 UI 显示效果和交互逻辑
+使用 AntV/G2Plot 统计图表库将 eBPF 程序采集的数据进行可视化展示，针对不同eBPF程序采用不同图表进行展示
+
+了解 Git、Github（或Gitee）相关操作
+了解 Rustful API
+熟悉 Vue 或 React 框架，了解 TypeScript

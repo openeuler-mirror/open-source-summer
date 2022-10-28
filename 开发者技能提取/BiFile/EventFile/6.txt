@@ -1,0 +1,9 @@
+Halo 是一款现代化的开源博客/CMS 系统，但主题的多样性和数量还不够丰富，需要不断开发新的主题，给 Halo 社区用户更多的选择。
+目前，Halo 的服务端仅支持 Freemarker 模板渲染引擎，主题创作者需要结合该模板引擎、HTML、CSS 和 JavaScript 来实现一款完整的博客主题。
+
+完成一款全新的 Halo 主题并发布至 Halo 社区
+根据社区的反馈并持续优化
+
+熟悉 HTML、CSS 和 JavaScript 前端技术栈
+了解模板渲染引擎：Freemarker
+熟练掌握代码版本管理工具：Git

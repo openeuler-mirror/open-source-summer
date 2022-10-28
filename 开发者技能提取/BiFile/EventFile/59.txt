@@ -1,0 +1,10 @@
+1. 增强layotto的java-sdk的功能，使其与go-sdk对齐。现在的java-sdk有file、lock、pubsub、sequencer、state 的API，缺少secret、config等API。
+2. 完善 layotto-sdk-springboot, 将layotto的更多功能集成进spring-boot。layotto-sdk-springboot的设计目标是帮助 spring-boot 的用户低成本接入 Layotto，比如用户在代码中添加一个java注解后，就能方便的进行消息监听、收到新消息后自动调用方法。
+3. 在 layotto-sdk-springboot 的基础上，开发 layotto-sdk-sofaboot, 方便 sofaboot 用户使用 layotto。
+
+增加layotto-java-sdk的api
+增加layotto-spring-boot的功能
+增加layotto-sdk-sofaboot的功能
+
+了解云原生运行时的概念
+了解java和go语言

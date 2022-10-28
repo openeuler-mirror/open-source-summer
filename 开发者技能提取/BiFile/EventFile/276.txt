@@ -1,0 +1,8 @@
+目前主流的oauth2认证授权服务器都以单server的形式提供服务，spring security 也开发了 Spring Authorization Server替换已经过时的Spring Security OAuth2.0。我们计划参照spring最新开源的Spring Authorization Server，作为server提供token签发，认证，注销，刷新等端点和scope授权，客户端注册等功能，在sureness的基础上设计开发一款简易的oauth2 server。
+
+特性代码能以PR的形式合入仓库
+一款简易的oauth2 server
+
+对开源抱有热情和强烈兴趣
+熟悉Java语言
+了解sureness或spring security或spring oauth2 server

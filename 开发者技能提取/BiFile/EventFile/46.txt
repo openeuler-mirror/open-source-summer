@@ -1,0 +1,12 @@
+本项目需要的编程语言为 JavaScript/TypeScript，涉及的技术栈包括 Node.js、Vue 3、esbuild 等。需要对 Element Plus 的代码有一定了解。
+
+本项目主要的目标为优化项目结构和构建流程。
+使用 monorepo 管理项目结构，并分别发包到 npm registry；
+优化构建速度；
+优化和简化发布版本流程
+
+使用 monorepo 管理项目结构，并分别发包到 npm registry
+优化构建速度
+优化和简化发布版本流程
+
+Node.js、Vue 3、esbuild

@@ -1,0 +1,9 @@
+Xdelta3是一种优秀的、被广泛使用的差量更新算法，它在操作上既有对新文件和旧文件的差分又有对产生的patch包进行压缩，我们将产生patch包的过程统称为加密，而将合成新文件的过程统称为解密。Xdelta3和经典的压缩算法LZ’77一样，也是将source file划分成一个个不相交而又连续的window，然后进行加密和解密。
+
+适配OpenHarmony的构建体系
+满足OpenHarmony社区代码规范
+基于OpenHarmony平台通过demo/单元测试用例
+提交仓库到TPC
+输出本三方库在OpenHarmony下的能力，导出库对外提供的函数接口和已测试过的函数接口
+
+C，熟悉Makefile

@@ -1,0 +1,9 @@
+PFS(Polar FileSystem)是阿里开源的针对数据库的文件系统；CurveBS是网易开源的分布式块存储系统。PFS+CurveBS旨在打造云原生数据库的存储解决方案。当前PFS和CurveBS已经对接、联调完成，但是缺乏在物理机上简易的部署方式。
+
+支持PFS+CurveBS的客户端在CentOS7/8、Debian9/10、Ubuntu打包
+有install工具可以一键安装并启动服务
+通过CI测试，验证打包的正确性
+
+熟悉基本的 Linux 命令
+熟悉脚本语言 Bash script
+熟悉 fpm 工具使用

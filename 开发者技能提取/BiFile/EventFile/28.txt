@@ -1,0 +1,9 @@
+CurveAdm 是为提高 Curve 系统易用性而打造的工具，其主要用于部署和运维 CurveBS/CurveFS 集群
+
+CurveAdm 查看服务状态时显示服务监听的所有端口
+保证现有 CurveAdm 功能正常
+curveadm status 输出有端口显示这一列
+
+了解 Curve/CurveAdm 项目的部署使用
+了解 Go 语言
+了解 Docker 基本操作

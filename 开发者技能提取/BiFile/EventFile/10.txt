@@ -1,0 +1,5 @@
+说出一段话描述代码功能，就能得到相应的代码，是智能代码复用（easy copy&paste）的重要基础。Towhee 通过AI能力生成embedding，使得一切非结构数据都能高效地被存储和搜索。随着工程代码以几何速度增长，很多人希望Towhee这样的开源项目能够提供自然语言到代码的查询能力，并在此基础上，构建实用又好玩的AI for code工具。
+
+一个基于Towhee的natural laguage-programming laguage retrieval demo
+
+Solid knowledge of python and hands-on experience of algorithm optimization

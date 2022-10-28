@@ -1,0 +1,6 @@
+把大数据常用的ambari组件引入到openEuler社区，即完成源码构建，在openEuler上安装成功，并在openEuler上成功运行。代码和spec文件需要上传到仓库，CI通过并合入。
+
+将ambari引入到openEuler，生成rpm包能安装成功，并正常运行。
+
+1、熟悉使用maven编译java项目。
+2、熟悉java语言。

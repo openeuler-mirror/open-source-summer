@@ -1,0 +1,11 @@
+目前，ApacheAPISIX没有一个非常有用的配置文件工具来分析CPU或内存，开发人员只能使用基准测试或打印日志来分析ApacheAPISIX。
+使用eBPF为ApacheAPISIX创建配置文件工具，使用eBPF捕获ApacheAPISIX中的Lua调用堆栈信息，并将其绘制成CPU火焰图。
+
+使用eBPF捕获和解析Apache APISIX中的lua调用堆栈信息，对其进行汇总并生成cpu火焰图。
+利用eBPF同时捕获和解析C和Lua混合调用堆栈信息，对其进行总结，生成cpu火焰图。
+支持获取在Docker中运行的Apache APISIX进程
+支持获取Apache APISIX Openresty luajit 32/luajit 64模式
+
+熟悉Lua/C
+对eBPF和Openresty有一些了解。
+对profiling有一定了解

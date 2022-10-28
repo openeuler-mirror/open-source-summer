@@ -1,0 +1,13 @@
+软件供应链安全是要保证软件的安全，如何通过软件供应链来确保软件供应链安全，
+就与软件物料清单（SBOM）有关。该需求是基于开源项目https://github.com/anchore/syft进行二次开发，
+需要对openeuler系统相关版本的所有rpm包源码进行处理，并输出对应格式SBOM。
+
+1、完成对 anchore/syft 开源项目的二次开发，能处理.rpm文件格式，并能像支持其他格式一样进行输 出；
+2、能对openeuler系统相关版本的所有rpm包源码进行处理；
+3、支持json、text、cyclonedx-json、spdx-json等多种格式，并把数据存储到数据库，方便后续处理。
+
+1、掌握golang/Python编程语言；
+2、熟练使用Linux；
+3、熟练使用MySQL/MongoDB数据库；
+4、基于openEuler系统开发；
+5、对软件供应链安全有了解。

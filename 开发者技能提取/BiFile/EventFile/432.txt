@@ -1,0 +1,7 @@
+Index tree是Linux常用的索引数据结构，诸如Linux文件系统用B+ tree实现文件索引，而且Index tree的性能往往是系统性能瓶颈。本项目要求用Rust语言在多线程场景下，实现支持并发操作的Index tree，为了提高throughput和降低latency，而且出于性能考虑，Index tree的并发操作要求是lock-free。
+
+1、支持并发查找，修改
+2、支持范围查找
+
+1、熟悉Rust语言
+2、熟悉Btree B+tree数据结构

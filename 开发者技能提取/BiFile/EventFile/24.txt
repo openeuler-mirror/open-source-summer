@@ -1,0 +1,5 @@
+完成Elasticsearch对接适配openGauss，使得openGauss可以使用ES来提供更强大的文本检索能力
+
+1、参照ZomboDB中的实现方式，完成openGauss和Elasticsearch的集成对接 2、输出相关设计文档、使用方法和测试用例 3、提供使用ES前后的性能对比数据
+
+1、了解openGauss基础功能与插件扩展 2、熟悉Rust语言

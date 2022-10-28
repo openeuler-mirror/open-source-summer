@@ -1,0 +1,9 @@
+作为Serverless应用全生命周期管理工具，Serverless Devs目前还是以命令行的形式存在，故在开发态的支持比较弱。选择该题目的同学，需要了解Serverless Devs相关内容以及具备基本的业务开发能力，完成Serverless Devs的VSCode插件设计与开发。
+
+完成Serverless Devs 的插件开发并贡献给社区
+按照需求https://github.com/Serverless-Devs/Serverless-Devs/discussions/444，完成功能开发
+完成与FC组件的对接
+
+对Serverless有一定的了解，或者愿意学习和了解Serverless架构
+对Node.js，Typescript等语言有所了解，或者具有较强能力可以快速学习Typescript语言
+了解并熟悉对Github等使用方法

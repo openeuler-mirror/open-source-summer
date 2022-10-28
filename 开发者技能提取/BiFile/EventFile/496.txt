@@ -1,0 +1,8 @@
+Emacs，距今已经有45年的发展历史的“编辑器”，在这45年内，全世界最顶级的黑客在贡献自己的智慧和想象力，一起构建了Emacs这个伟大的开发者工具生态。Emacs的劣势也是因为它太古老了，导致在多线程和图形扩展能力已经无法跟上时代的步伐。EAF是在保留Emacs古老的黑客文化和庞大的开发者插件生态前提下扩展Emacs的多线程和图形渲染能力，实现Live In Emacs的理想。因此，本项目的目标是基于Knova Canvas这类NodeJS库拓展Emacs自身的图片处理能力，通过EAF将JavaScript与Emacs连接起来，需要同时了解Emacs，Python和Vue.js图形开发的黑客来报名参加。
+
+基于Knova Canvas或类似npm库，通过EAF实现图片编辑和处理
+在符合Emacs键盘操作习惯的前提下，用键盘控制图片处理指令
+优先确保在Linux和Gnome/KDE能成功运行，时间允许下可以调试Windows/macOS平台
+
+熟练使用Linux和GNU Emacs
+熟悉ELisp或类似Lisp方言

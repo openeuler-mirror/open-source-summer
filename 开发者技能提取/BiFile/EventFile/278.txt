@@ -1,0 +1,6 @@
+DolphinScheduler支持各种各样的作业，比如Python、Shell等，其中一个很基础的功能就是收集这些作业创建的Yarn Job的application id。现在的实现方式是用一个正则表达式从作业的日志中解析，但这并不是一个完美的实现方式，本课题的任务就是用一种新的方式去自动收集、报错Yarn Job的application id信息，当然了，必须对用户透明，即对用户创建的作业无侵入。
+
+自动收集、报错Yarn Job的application id信息
+必须对用户透明，即对用户创建的作业无侵入
+
+熟悉 Java, Yarn, Hive, Spark SQL, AOP

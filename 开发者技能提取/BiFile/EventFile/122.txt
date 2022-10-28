@@ -1,0 +1,19 @@
+目前Apache EventMesh分别支持RocketMQ作为事件存储，以及Standalone模式的内存存储，目标是基于现有api扩充EventMesh可支持的事件存储组件，即Kafka，对于Kafka事件存储的集成对接可以提高社区在事件存储领域扩展能力，挖掘更多的应用场景。
+
+本题目主要包括如下内容：
+1.熟悉现有的EventMesh项目具备的功能，能对EventMesh 的pub/sub实现有一定了解
+2.对Kafka客户端与服务端的交互有一定的了解，能够使用Kafka客户端进行收发消息
+3.支持基于cloudevents协议实现事件存储Kafka的pub/sub能力
+4.补充相关测试用例
+5.完善相关使用文档指引
+
+文档类
+提交issue到官方仓库包含实现EventMesh对接事件存储Kafka的pub/sub的详细设计
+提交文档到官方仓库包含实现特性的使用说明指引
+代码类
+提交基于cloudevents协议实现事件存储Kafka的pub/sub代码PR到官方仓库，并合入
+提交单元测试用例代码到官方仓库PR，并合入
+
+掌握Apache EventMesh知识，能对EventMesh 的pub/sub实现有一定了解
+掌握Kafka消息通信pub/sub知识，能够使用Kafka客户端进行收发消息
+熟悉Java语言

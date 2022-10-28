@@ -1,0 +1,7 @@
+Nebula Flink Connector 是一款帮助 Flink 用户快速访问 Nebula Graph 的连接器，支持从 Nebula Graph 图数据库中读取数据，或者将其他外部数据源读取的数据写入 Nebula Graph 图数据库。
+
+通过增强 Nebula Flink Connector，提供 SQL Connector，熟悉 SQL 的用户也可以快速上手图数据库 Nebula。
+
+nebula-flink-connector 的 SQL Connector
+
+Java

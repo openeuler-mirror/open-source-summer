@@ -1,0 +1,12 @@
+RK3588采用 ARM 架构，是瑞芯微新一代旗舰级高端处理器。RK3588 凭借其高性能、低功耗、超强多媒体、丰富接口等特点，可广泛应用于高端平板、ARM PC、边缘计算、AR/VR 等领域。本项目的目标是将 openEuler 移植到 RK3588 上，并保证 RK3588的外设均可用。
+
+1.openEuler 的 RK3588的镜像
+a.基于 openEuler 20.03 LTS 内核 + openEuler 文件系统
+b.镜像支持 DNF/YUM 安装软件源中的软件
+c.USB口、WiFi、蓝牙等外设均可用
+2.镜像制作脚本和文档
+3.RK3588的 USB口、WiFi、蓝牙等外设的使用文档
+
+基本的 Linux 命令
+DNF/RPM 包管理
+具备一种脚本语言，如 Python、Bash script 等

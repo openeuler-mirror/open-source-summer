@@ -1,0 +1,17 @@
+Apache ShenYu是一款高性能的API网关，社区十分活跃与友好，非常适合高校学生学习与参与,通过参与这次活动可以学习Apache项目的社区建设，后续有兴趣继续贡献，可以成为Apache Committer。
+
+该项目是建设Apache ShenYu的官网(https://shenyu.apache.org/），包括主页设计，配图设计，博客页面设计，新闻事件页面设计，以及文档的更新。
+
+1.设计与开发Apache ShenYu官网主页
+2.设计与开发博客页面
+3.设计与开发新闻页面
+4.优化与书写文档
+
+设计与开发Apache ShenYu官网主页
+设计与开发博客页面
+设计与开发新闻页面
+优化与书写文档
+
+熟悉与使用JavaScript
+熟悉Java语言以及常见的设计模式
+熟悉Spring Boot

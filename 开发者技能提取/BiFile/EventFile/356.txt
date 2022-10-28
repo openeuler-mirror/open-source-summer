@@ -1,0 +1,7 @@
+昇思MindSpore CPU正反向算子 + bprop函数开发和实现：包含Dilation2D、Dilation2DBackpropFilter、Dilation2DBackpropInput
+计算 4-D 输入和 3-D 过滤器张量的灰度膨胀。
+输入张量的形状为 [batch, in_height, in_width, depth]，过滤器张量的形状为 [filter_height, filter_width, depth]，即每个输入通道都独立于其他通道进行处理，并具有自己的结构函数。输出张量的形状为 [batch, out_height, out_width, depth]。输出张量的空间维度取决于填充算法。
+
+1.算子功能符合要求、能力对齐标杆 2.代码满足社区规范、精度、性能等达到标准 3.实现相关功能，相关评估指标符合要求，代码合入社区
+
+深度学习，python，MindSpore

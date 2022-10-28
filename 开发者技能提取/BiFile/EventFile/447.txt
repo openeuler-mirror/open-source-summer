@@ -1,0 +1,7 @@
+目前 Flink 的 Source 原生不支持限流，基于Flink Source的 CDC 连接器也无法实现限流功能，当并发从上游数据库读取数据时存在风险，本题目通过在 Flink Source上提供限流功能，CDC 连接器适配后，便可实现读取数据时限流。
+
+学习 Flink CDC 技术原理，在开源社区设计并实现通用的 CDC 数据源限流方案，提升 Flink CDC 在大规模数据业务场景下的稳定性。
+在 Flink 社区 完成 Source 数据限流 API 设计
+基于限流 API， 在Flink CDC 社区实现 MySQL CDC 数据限流功能
+
+学习 Flink，CDC，数据集成等相关技术，学习 Flink CDC 的技术架构和实现。

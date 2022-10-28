@@ -1,0 +1,17 @@
+参考 The Document System (https://documentation.divio.com/) 以及基于 MkDocs (https://github.com/mkdocs/mkdocs/) 实现一个对用户更加友好简单的中文文档系统，其中包括：介绍（Introduction）、使用指南（Tutorial）、应用实践（How-To Guides）、API文档（Reference Guides）、常见问题和解答（Explanation/FAQ）等五个部分模块。
+
+完成介绍模块
+包含安装、基本概念介绍、整体架构介绍等
+完成使用指南模块
+包含好友、群聊、好友关系、标签、小程序、FileBox 等模块
+完成应用实践模块
+包含如何启动 Token Service、如何编写插件、如何保证机器人的鲁棒性、如何与第三方包嵌入
+完成API文档模块
+从代码中生成API文档，同时也需要完善代码中的 docstring
+完成常见问题模块
+检索常见问题并给出解决方案
+
+基于 MKDocs 编写文档
+实现文档的基本上呈现，没有明显错误
+使用 mkdocstring 生成 API 文档
+将多个项目的 API 文档都整合到一起

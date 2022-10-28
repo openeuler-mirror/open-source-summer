@@ -1,0 +1,9 @@
+ChaosBlade 包含故障注入工具,通过部署 chaosblade-operator 实现云原生故障场景注入，KubeVela 是一个现代软件交付平台，可让您在当今的混合多云环境中更轻松、更快速、更可靠地部署和操作应用程序。KubeVela 提供自定义扩展组件 Addon 的能力 ，可以很好的在应用生命周期内调用执行。
+
+现需要完成将 ChaosBlade 作为 KubeVela Addon 组件集成到 KubeVela 中，支持 chaosblade-operator 部署，通过创建 trait 实现故障注入，并将测试结果上传到 prometheus 中，在 KubeVela grafana中看到注入情况。
+
+基于 KubeVela 组件规范完成 ChaosBlade Addon 组件扩展
+实现故障注入指标导入到 Prometheus 中
+实现在 KubeVela 提供的 Grafana 控制台中展示
+
+熟悉 Kubernetes Operator

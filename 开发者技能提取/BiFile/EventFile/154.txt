@@ -1,0 +1,11 @@
+Nix 是以函数式编程语言去声明，可重复构建的，且信赖的包管理和操作系统。
+Julia2Nix 项目旨在为 Julia 编程语言提供友好的 Nix 的接口和探索可能性，方便以 Nix/NixOS 为生态基础的开发者和用户轻松且方便地使用 Julia 生态。
+
+本项目的核心功能在于将安装 Julia 包和项目所需要的内容以 Nix 的形式进行打包，并借助 Nix store 进行存储和分发
+
+基于 Nix 的方式实现 Julia 数据的可重复构建和可重复分发
+提供必要的函数功能将 julia2nix 编译到 Nix Store 中
+用 Nix 构建 Julia 包以及 Julia 自身
+
+了解 Julia 语言
+（加分）了解 Nix 的构建模式

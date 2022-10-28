@@ -1,0 +1,6 @@
+BackupAndRestore callback 是具有故障自动备份和恢复功能的Callback方法。
+基于当前MindSpore的Callback机制，实现该方法，具体功能可参考 Tensorflow。
+
+1.实现BackupAndRestore Callback方法、补齐MindSpore相关功能 2. 相关能力对标标杆、场景支持完备 3.实现相关功能，相关评估指标符合要求，代码合入社区
+
+深度学习，python，MindSpore

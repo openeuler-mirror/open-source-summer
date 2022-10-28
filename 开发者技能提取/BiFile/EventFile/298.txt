@@ -1,0 +1,13 @@
+目前，sofa tracer依赖于开放式跟踪版本0.22.0。这个版本已经过时很长时间了，我们需要更新到官方推荐的稳定版本。此外，我们需要提供一个API层来适应Opent电测法
+
+1、 升级opentracing版本至release-0.33.0
+
+2、 适配https://opentelemetry.io/docs/migration/opentracing/
+
+3、 提供集成文档和指南
+
+测试用例和快速入门指南
+
+集成文档
+
+java

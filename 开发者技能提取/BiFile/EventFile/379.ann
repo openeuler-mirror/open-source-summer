@@ -1,0 +1,12 @@
+T1	Skill 370 379	connector
+T2	Skill 359 363	Java
+T3	Skill 380 384	sink
+T4	Skill 385 391	source
+T5	Skill 342 349	samples
+T6	Skill 279 307	Apache RocketMQ Connect Sink
+T7	Skill 308 318	Clickhouse
+T8	Skill 5 39	Apache RocketMQ Connect Clickhouse
+T9	Skill 45 73	Apache RocketMQ Connect Sink
+T10	Skill 74 84	Clickhouse
+T11	Skill 90 113	Apache RocketMQ Connect
+T12	Skill 120 136	RocketMQ Connect

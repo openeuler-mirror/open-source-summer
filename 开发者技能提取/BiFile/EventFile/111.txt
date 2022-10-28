@@ -1,0 +1,5 @@
+QMIX 是一种基于 Value-Based 的多智能体强化学习算法（MARL），其基本思想来源于 Actor-Critic 与 DQN 的结合。使用中心式学习（Centralized Learning）分布式执行（Distributed Execution）的方法，利用中心式 Critic 网络接受全局状态用于指导 Actor 进行更新。QMIX 中 Critic 网络的更新方式和 DQN 相似，使用 TD-Error 进行网络自更新。除此之外，QMIX 中为 Critic 网络设立了 evaluate net 和 target net， 这和 DQN 中的设计思想完全相符。
+
+1.实现QMIX强化学习网络模型 2.精度、性能等相关指标达到论文标准 3.代码满足MindSpore models仓规范要求 4.实现相关功能，相关评估指标符合要求，代码合入社区
+
+深度学习，python，MindSpore

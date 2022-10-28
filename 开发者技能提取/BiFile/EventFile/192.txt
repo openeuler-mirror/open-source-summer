@@ -1,0 +1,16 @@
+目前Arthas主要是单机的诊断支持，目前社区对集群管理功能需求强烈。
+
+因此，考虑实现一种支持大规模集群管控的方式，基本实现原理如下：
+
+1. 在应用服务器上，启动一个常驻的Native Agent
+2. Native Agent可以考虑用rust/java GraalVM/go 等实现
+3. Native Agent负责连接远程管理平台，接收管理平台的Attach命令，负责中转Arthas的执行命令和结果
+4. 管理平台添加对Native Agent的支持
+
+完整的Native Agent项目
+agent支持动态attach java进程
+基本的后端管理能力
+
+Native Agent对安全性，资源消耗比较高
+Native Agent支持TLS的方式连接到管理平台
+Native Agent需尽可能的减少对环境的依赖和资源消耗

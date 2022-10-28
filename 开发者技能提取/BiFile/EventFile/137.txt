@@ -1,0 +1,7 @@
+通过openLooKeng查询hive数据源数据，例如当执行sql是select count(*) from table时，需要表所有数据取回，取回数据均为无用数据，浪费网络带宽。当把count、max、min这种推到hive数据源执行时，只需要读取表元数据信息即可，从而减少数据传输，使得openLooKeng执行时间缩短。
+
+支持count、max、min算子下推到hive
+输出对应文档说明
+
+SQL、Java编程能力
+数据库内核引擎相关技术

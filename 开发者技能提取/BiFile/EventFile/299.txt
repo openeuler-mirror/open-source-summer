@@ -1,0 +1,8 @@
+libvirt是一套用于管理硬件虚拟化的开源API、守护进程与管理工具。此套组可用于管理KVM、Xen、VMware ESXi、QEMU及其他虚拟化技术。openEuler操作系统当前使用的是libvirt 6.2.0版本，希望能够引入libvirt 8.2.0版本，能够兼容openEuler的接口。
+
+1、构建成功libvirt-8.2.0 rpm包，基本功能正常
+2、回合openEuler libvirt-6.2.0版本社区补丁
+
+1、掌握C编程语言
+2、熟练使用Linux
+3、对虚拟化有一定了解

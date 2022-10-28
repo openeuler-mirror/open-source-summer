@@ -1,0 +1,8 @@
+OpenFunction 是一个云原生的开源 FaaS 平台，旨在让开发者聚焦于业务逻辑而无需关心运行时的环境和设施。Apache APISIX 是一个开源的云原生 API 网关。本项目将结合二者，进而能够让用户通过 Apache APISIX 代理托管在 OpenFunction 之上的函数，从而触发函数的运行。
+
+向 Apache APISIX 提交实现 OpenFunction 插件的 PR，并在经过代码评审后合并进入主干分支；
+向 Apache APISIX 提交 OpenFunction 插件文档和，并在评审和合并进入主干分支；
+输出一篇博客介绍 Apache APISIX 是如何集成 OpenFunction 的；
+
+建议实现时采用小步快跑的模式，拆分若干个 PR 进行提交（小 PR 更易于评审，且效率更高）；
+向 Apache APISIX 提交 PR 时，需要附上完整的测试用例覆盖；

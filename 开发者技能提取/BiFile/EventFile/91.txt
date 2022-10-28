@@ -1,0 +1,10 @@
+cloudpods 是一个多云管理平台，可以管理不同公有云或者私有云上的资源，比如虚拟机、IP 子网等。
+
+其中 DNS 记录也是被管理的一种资源，本项目需要导出各个云平台的 DNS 资源记录。
+
+实现功能，以 PR 的方式提交代码到 cloudpods upstream 仓库
+1. 能够过滤选择需要导出的 DNS 记录和字段，比如只导出 A 记录，CNAME 等;
+2. 能够将记录以不同的格式导出，比如 json 格式，或者 CSV 等文本格式；
+3. 实现 Zone 格式文件的导出，Zone 文件是 DNS 服务器上存储的域名配置文件，根据 RFC 标准文档制定。比如导出文件 domain.com.zip，解压后得到 domain.com.default_line.zone。
+
+了解 Go 开发，了解 DNS 相关概念

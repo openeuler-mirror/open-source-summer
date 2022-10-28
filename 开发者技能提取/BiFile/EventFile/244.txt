@@ -1,0 +1,5 @@
+SM3是中国定义的哈希算法，coreutils是GNU/linux的基础软件工具包，coreutils工具包已经支持了sha256sum, md5sum这一类用于计算哈希的工具，虽然最新的版本通过cksum -a sm3形式支持了SM3算法，由于用户习惯，以及版本原因，OpenAnolis社区仍然需要一款sm3sum工具，用于计算SM3哈希摘要，需要保持跟md5sum这类工具使用习惯的一致性。
+
+完成sm3sum工具的开发，测试与出包，在风格上需要保持跟md5sum的一致性
+
+扎实的C语言功底

@@ -1,0 +1,6 @@
+在TEE/Enclave中运行软件TPM，保证软件TPM访问的数据不会透出到TEE/Enclave之外，解决虚拟化场景中vTPM的后端安全问题。
+
+实现eTPM技术原型
+
+熟练掌握C编程语言
+对TPM工作原理比较了解，有TPM相关的开发经验

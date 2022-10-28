@@ -1,0 +1,7 @@
+StratoVirt是计算产业中面向云数据中心的企业级虚拟化平台，实现了一套架构统一支持虚拟机、容器、 Serverless三种场景。StratoVirt在轻量低噪、软硬协同、Rust语言级安全等方面具备关键技术竞争优势。目前Stratovirt标准机型已经支持PCIe Native机制的热插拔，希望支持ACPI机制的PCI设备热插拔。
+
+支持ACPI机制的PCI设备热插拔
+
+熟悉Rust语言
+了解ACPI机制
+了解PCI设备的热插拔机制

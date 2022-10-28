@@ -1,0 +1,14 @@
+RapidJSON是一个用于C++的JSON解析器和生成器。
+1）RapidJSON 小而全。它同时支持 SAX 和 DOM 风格的 API。SAX 解析器只有约 500 行代码。
+2）RapidJSON 快。它的性能可与 strlen() 相比。可支持 SSE2/SSE4.2 加速。
+3）RapidJSON 独立。它不依赖于 BOOST 等外部库。它甚至不依赖于 STL。
+4）RapidJSON 对内存友好。在大部分 32/64 位机器上，每个 JSON 值只占 16 字节。它预设使用一个快速的内存分配器，令分析器可以紧凑地分配内存。
+5）RapidJSON 对 Unicode 友好。它支持 UTF-8、UTF-16、UTF-32 (大端序／小端序)，并内部支持这些编码的检测、校验及转码。例如，RapidJSON 可以在分析一个 UTF-8 文件至 DOM 时，把当中的 JSON 字符串转码至 UTF-16。它也支持代理对（surrogate pair）及 "\u0000"（空字符）。
+
+适配OpenHarmony的构建体系，参考https://gitee.com/openharmony/docs/blob/OpenHarmony-3.1-Release/zh-cn/device-dev/subsystems/subsys-build-standard-large.md
+满足OpenHarmony社区代码规范，参考https://gitee.com/openharmony/docs/blob/OpenHarmony-3.0-LTS/zh-cn/contribute/%E8%B4%A1%E7%8C%AE%E4%BB%A3%E7%A0%81.md
+基于OpenHarmony平台通过demo/单元测试用例
+提交仓库到TPC
+输出本三方库在OpenHarmony下的能力，导出库对外提供的函数接口和已测试过的函数接口
+
+C，C++，熟悉Makefile

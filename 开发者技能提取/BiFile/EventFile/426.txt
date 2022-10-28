@@ -1,0 +1,24 @@
+sealer是CNCF沙箱项目。
+
+一种工具，用于将应用程序的所有依赖项和kubernete封装到云图中，通过云图将此应用程序分发到任何位置，并在一个命令中在任何集群中运行。
+
+sealer支持kubeadm初始化集群，我们称之为运行时，sealer将在功能上支持多运行时，如支持k0s k3s。。。
+```
+
+来自k0s
+
+复制mysql。
+
+CMD kubectl apply-f mysql
+
+```
+
+sealer build-t k0s mysql集群。
+
+sealer运行k0s mysql群集
+
+然后sealer将在kubernetes上初始化mysql集群。
+
+Souce代码和e2e测试，k0s和k3s云图
+
+熟悉kubernetes和golang

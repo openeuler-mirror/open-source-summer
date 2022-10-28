@@ -1,0 +1,8 @@
+secGear是面向计算产业的机密计算安全应用开发套件，旨在不同的硬件设备上提供统一开发框架，让用户不感知底层各种机密计算架构和接口的差异，目前secGear支持Intel SGX硬件和ARM Trustzone(安全os支持iTrustee)。
+SGX提供了sgx protected fs, Trustzone提供了安全存储，本项目开发secGear安全文件系统接口，封装SGX和Trustzone，对用户提供统一接口。
+
+1、secGear统一安全文件系统接口功能正常
+2、安全文件系统接口测试用例
+
+1、掌握C语言。
+2、了解机密计算的优先

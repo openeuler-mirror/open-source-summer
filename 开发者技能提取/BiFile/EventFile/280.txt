@@ -1,0 +1,9 @@
+背景：MegEngine 作为训推一体框架，其在 Arm 上的推理性能也非常重要，目前 MegEngine Arm 推理性能经过 benchmark 在业界处于第一梯队，主要优化方式是在Arm上支持 NC4HW4的layout，Layout 的详细解释见：知乎回答（https://www.zhihu.com/question/337513515 ），目前反卷积 Forward 算子中没有支持这种 Layout 形式优化，希望通过支持这种 Layout 达到优化性能的目的。
+
+需求：在 ArmCommon 中 ConvolutionBackwardDataImpl 中支持 NC4HW4 layout 的计算，使得 ConvolutionBackwardDataImpl 可以在 NC4HW4 的 layout 下完成计算，并且性能不差于目前的 NCHW layout。
+
+代码规范
+相同 shape 下，性能超过目前 nchw
+
+反卷积计算原理
+Arm neon 优化

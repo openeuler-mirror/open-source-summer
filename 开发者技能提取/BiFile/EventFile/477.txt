@@ -1,0 +1,8 @@
+目前Arthas里依赖的Async Profiler版本是2.6，但是Arthas的功能特性都是基于Async Profiler 1.8版本开发的。
+
+1. 因此需要升级Arthas里依赖的Async Profiler到2.8版本
+2. 适配最新版本的Async Profiler的功能和特性，提升或者增加Arthas产品特性
+
+在arthas中适配新版本的Async Profiler
+
+调整参数支持，支持Async Profiler新特性

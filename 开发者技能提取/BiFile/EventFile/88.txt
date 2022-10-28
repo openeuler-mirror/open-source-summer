@@ -1,0 +1,9 @@
+Delta Lake是目前市面上流行的三大开源数据湖方案之一。当前，openLooKeng还没有支持Delta Lake,因此需要开发Delta Connector。Delta Connector使用Delta Lake提供的Delta Standalone Library (DSR)来读取表元数据。
+
+Delta Lake Connector设计文档
+Delta Lake Connector代码与相关测试用例
+性能测试结果
+
+SQL、Java编程
+openLooKeng Connector原理与设计
+了解Delta Lake使用与设计

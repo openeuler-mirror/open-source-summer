@@ -1,0 +1,347 @@
+K,B-Skill
+u,I-Skill
+s,I-Skill
+t,I-Skill
+o,I-Skill
+m,I-Skill
+i,I-Skill
+z,I-Skill
+e,I-Skill
+ ,O
+自,O
+带,O
+的,O
+ ,O
+r,O
+e,O
+s,O
+o,O
+u,O
+r,O
+c,O
+e,O
+ ,O
+g,O
+e,O
+n,O
+e,O
+r,O
+a,O
+t,O
+o,O
+r,O
+ ,O
+可,O
+以,O
+非,O
+常,O
+方,O
+便,O
+地,O
+帮,O
+助,O
+用,O
+户,O
+生,O
+成,O
+资,O
+源,O
+的,O
+ ,O
+y,O
+a,O
+m,O
+l,O
+ ,O
+文,O
+件,O
+，,O
+比,O
+如,O
+ ,O
+c,O
+o,O
+n,O
+f,O
+i,O
+g,O
+M,O
+a,O
+p,O
+。,O
+ ,O
+s,O
+e,O
+c,O
+r,O
+e,O
+t,O
+ ,O
+等,O
+。,O
+O,B-Skill
+p,I-Skill
+e,I-Skill
+n,I-Skill
+K,I-Skill
+r,I-Skill
+u,I-Skill
+i,I-Skill
+s,I-Skill
+e,I-Skill
+ ,O
+中,O
+的,O
+ ,O
+R,O
+e,O
+s,O
+o,O
+u,O
+r,O
+c,O
+e,O
+D,O
+i,O
+s,O
+t,O
+r,O
+i,O
+b,O
+u,O
+t,O
+i,O
+o,O
+n,O
+ ,O
+组,O
+件,O
+能,O
+够,O
+帮,O
+助,O
+用,O
+户,O
+分,O
+发,O
+、,O
+管,O
+理,O
+ ,O
+c,O
+o,O
+n,O
+f,O
+i,O
+g,O
+M,O
+a,O
+p,O
+、,O
+s,O
+e,O
+c,O
+r,O
+e,O
+t,O
+ ,O
+资,O
+源,O
+，,O
+但,O
+是,O
+ ,O
+R,O
+e,O
+s,O
+o,O
+u,O
+r,O
+c,O
+e,O
+D,O
+i,O
+s,O
+t,O
+r,O
+i,O
+b,O
+u,O
+t,O
+i,O
+o,O
+n,O
+ ,O
+的,O
+ ,O
+y,O
+a,O
+m,O
+l,O
+ ,O
+文,O
+件,O
+编,O
+写,O
+与,O
+维,O
+护,O
+很,O
+不,O
+方,O
+便,O
+，,O
+所,O
+以,O
+需,O
+要,O
+实,O
+现,O
+具,O
+备,O
+类,O
+似,O
+ ,O
+k,O
+u,O
+s,O
+t,O
+o,O
+m,O
+i,O
+z,O
+e,O
+ ,O
+g,O
+e,O
+n,O
+e,O
+r,O
+a,O
+t,O
+o,O
+r,O
+ ,O
+功,O
+能,O
+的,O
+ ,O
+p,O
+l,O
+u,O
+g,O
+i,O
+n,O
+。,O
+/,O
+n,O
+/,O
+n,O
+实,O
+现,O
+ ,O
+R,O
+e,O
+s,O
+o,O
+u,O
+r,O
+c,O
+e,O
+D,O
+i,O
+s,O
+t,O
+r,O
+i,O
+b,O
+u,O
+t,O
+i,O
+o,O
+n,O
+ ,O
+g,O
+e,O
+n,O
+e,O
+r,O
+a,O
+t,O
+o,O
+r,O
+ ,O
+的,O
+功,O
+能,O
+/,O
+n,O
+/,O
+n,O
+熟,O
+悉,O
+ ,O
+k,B-Skill
+u,I-Skill
+b,I-Skill
+e,I-Skill
+n,I-Skill
+e,I-Skill
+t,I-Skill
+e,I-Skill
+s,I-Skill
+ ,O
+基,O
+本,O
+原,O
+理,O
+/,O
+n,O
+了,O
+解,O
+ ,O
+k,B-Skill
+u,I-Skill
+s,I-Skill
+t,I-Skill
+o,I-Skill
+m,I-Skill
+i,I-Skill
+z,I-Skill
+e,I-Skill
+ ,O
+使,O
+用,O
+及,O
+ ,O
+p,O
+l,O
+u,O
+g,O
+i,O
+n,O
+ ,O
+扩,O
+展,O
+/,O
+n,O
+了,O
+解,O
+ ,O
+k,B-Skill
+u,I-Skill
+b,I-Skill
+e,I-Skill
+c,I-Skill
+t,I-Skill
+l,I-Skill
+ ,I-Skill
+p,I-Skill
+l,I-Skill
+u,I-Skill
+g,I-Skill
+i,I-Skill
+n,I-Skill
+ ,O
+开,O
+发,O

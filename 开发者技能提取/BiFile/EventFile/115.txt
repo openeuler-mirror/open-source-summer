@@ -1,0 +1,9 @@
+1. 目前Arthas有web console，本质上还是一个web terminal。
+2. 另外Arthas有一个简单的UI： http://127.0.0.1:8563/ui ，但这个只是json结果的展示
+
+Arthas需要以现代web方式，构建一个全新的UI，所有的数据结构尽量以更友好的图形化方式展示。
+需要学生有良好的web基础，有一定的设计能力。
+
+完成Arthas新的管理UI
+
+以现代web方式构建，工程要符合开发规范

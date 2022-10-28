@@ -1,0 +1,12 @@
+SLI(service level indicator)是度量服务可用性的指标，常见的SLI包括延迟、吞吐量、可用性和错误率等。
+openGauss[1]是华为自研的一款企业级开源关系型数据库，RTT是其重点关注的SLI，且由于数据库的时延敏感性，对SLI的采集和上报需要在尽量低底噪的条件下进行。
+openEuler gopher[2]是基于eBPF的低负载探针框架，致力于提供裸机/虚机/容器场景下的云原生观测引擎。
+本项目要求基于openEuler gopher开发eBPF探针，实现openGauss场景的SLI测量和上报。
+
+1、基于openEuler gopher开发eBPF探针，实现对openGauss服务端的SLI的测量和定期上报
+2、代码合入指定仓库指定分支
+3、提供测试报告，确定测试符合预期
+
+1、熟悉linux内核ebpf机制
+2、熟悉openGauss使用和通信协议
+3、遵守linux代码规范

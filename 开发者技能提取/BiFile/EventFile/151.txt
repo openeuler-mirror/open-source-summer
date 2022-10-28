@@ -1,0 +1,12 @@
+DLedger 为基于 raft 协议的分布式一致性框架， RocketMQ 的 Raft 模式使用了 DLedger 作为底层存储引擎。当前一主两从的部署模式下，从节点资源利用率低，存在较大的资源浪费，因此我们希望实现 multi-raft， 即单台节点上同时存在多个独立的 raft group，通过 preferred leader 方式将主节点分布在不同的节点， 从而充分利用每台节点资源
+学习 raft 实现原理、DLedger 实现和使用方法。
+为 DLedger 实现 multi-raft 支持
+在 RocketMQ 中集成 multi-raft ，实现多 commitlog，将 topic 分配到不同 commitlog
+与此同时，对于有余力地选手，还可以帮助项目实现SSL加密传输功能，快照功能等高阶能力。
+
+产出 multi-raft module， 能够通过PR形式提交并通过社区审核
+实现SSL 传输加密功能，支持单向，双向验证模式
+
+单元测试不低于80%
+支持30%以上资源利用率提升
+支持SSL通讯

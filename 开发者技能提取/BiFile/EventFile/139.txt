@@ -1,0 +1,5 @@
+提供不同版本的多个 Kubernetes 集群的统一 API，比如一个 API 可以同时 CURD 1.17 版本和 1.23 版本的集群资源。
+
+以 PR 的方式提交代码
+
+掌握 Go ，了解 Kubernetes 相关概念

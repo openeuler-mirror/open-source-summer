@@ -1,0 +1,21 @@
+Hypercrx有两大职能，其一是作为Hypertrons的前端，其二是可视化X-lab开放实验室提供的基于GitHub全域日志分析得到的数据。此项目同时涉及到这两个职能。
+
+任务1。Hypercrx在Repo页面运行时会尝试获取该Repo的.github/hypertrons.json中的部分信息，从而调整相关配置。现在我们希望实现一个功能：当Repo维护者在hypertrons.json中添加一个名为“repo_banner_text”的键值对后，安装了Hypercrx的用户就能在Repo页面看到一个横幅，横幅中滚动播放着“repo_banner_text”中的文字。
+
+任务2。我们曾经基于Anichart.js实现了动态柱状图（见#221），用于展示项目贡献者的活跃度变化情况。但在实际应用中，我们发现Anichart.js存在诸多缺陷，并且数据来源也存在不足之处，所以我们暂时下架了该功能。经过调研，我们认为Echarts具备实现动态柱状图的能力，希望你能利用Echarts使动态柱状图重出江湖。
+
+任务3。该任务与项目2有关联。我们希望在项目2的中选者完成“AVC机制”的设计后，你能用此机制将两个React组件注入到GitHub页面中。在此之前，你可以模仿现有的旧方式将组件注入到页面中预览效果。
+
+3个任务的具体要求之后会在相应的issue中给出。另外，当Summer2022开发阶段开始后，为了更好地了解中选者的项目进度，我们希望你能在指定issue中，以每两周一次的频率更新你的进展。
+
+最后，欢迎前往项目仓库的Discussions栏与我们交流！
+
+设计并实现React组件ScrollingBannerText
+设计并实现React组件DynamicBar
+遵循“AVC机制”将两个组件注入到GitHub页面中
+
+了解Chrome Extension的开发方式
+了解Hypercrx的工作机制
+熟悉HTML、CSS、JavaScript、TypeScript
+熟悉Echarts
+熟悉Git和GitHub

@@ -1,0 +1,8 @@
+WebAssembly 或者 WASM 是一个可移植、体积小、加载快并且兼容 Web 的全新格式。目前，wasm 技术的应用越来越广泛，并逐步扩展到边缘i算应用（例如 WasmEdge 应用）。本项目的目标是利用 WASM 的 go SDK, 完成 eKuiper SQL 调用 WASM 函数的功能，方便用户使用 WASM 函数扩展 eKuiper 的处理能力。
+
+完成代码开发并提交PR到社区
+设计文档，提交社区评审
+代码实现和对应的单元测试
+完成使用文档
+
+了解或愿意学习 WASM
